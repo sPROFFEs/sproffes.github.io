@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>CiberDocs</title>
   <subtitle>Explorando la seguridad cibernética.</subtitle>
-  <updated>2025-01-18T22:57:24+01:00</updated>
+  <updated>2025-01-19T00:28:42+01:00</updated>
   <author>
     <name>Pr0ff3</name>
     <uri>http://localhost:4000/</uri>
@@ -20,42 +20,23 @@
 
   
   <entry>
-    <title>Ejemplo de Post en Jekyll Chirpy</title>
-    <link href="http://localhost:4000/posts/titulo-del-post/" rel="alternate" type="text/html" title="Ejemplo de Post en Jekyll Chirpy" />
-    <published>2025-01-18T11:00:00+01:00</published>
+    <title>"asdasdasda"</title>
+    <link href="http://localhost:4000/posts/blog-post/" rel="alternate" type="text/html" title="&amp;quot;asdasdasda&amp;quot;" />
+    <published>2025-01-19T00:22:44+01:00</published>
   
-    <updated>2025-01-18T11:00:00+01:00</updated>
+    <updated>2025-01-19T00:22:44+01:00</updated>
   
-    <id>http://localhost:4000/posts/titulo-del-post/</id>
-    <content type="text/html" src="http://localhost:4000/posts/titulo-del-post/" />
+    <id>http://localhost:4000/posts/blog-post/</id>
+    <content type="text/html" src="http://localhost:4000/posts/blog-post/" />
     <author>
       <name>Pr0ff3</name>
     </author>
 
   
     
-    <category term="Blog" />
-    
-    <category term="Ejemplo" />
-    
   
 
-  <summary>¡Bienvenido a este post de ejemplo para Jekyll Chirpy! 🎉 Este tema es excelente para crear blogs elegantes y modernos. En este post, exploraremos cómo crear contenido con el tema Chirpy.
-
-Encabezados y Formato
-
-Puedes usar encabezados para organizar tu contenido de forma clara:
-
-Subtítulo 1
-
-Texto introductorio o explicativo aquí.
-
-Subtítulo 2
-
-Más detalles sobre tu tema aquí.
-
-Listas y Código
-...</summary>
+  <summary>asdasdasd</summary>
 
   </entry>
 
