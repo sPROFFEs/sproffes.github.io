@@ -1,0 +1,21 @@
+[
+  
+  {
+    "title": "Ejemplo de Post en Jekyll Chirpy",
+    "url": "/posts/titulo-del-post/",
+    "categories": "Blog, Ejemplo",
+    "tags": "jekyll, chirpy, tutorial",
+    "date": "2025-01-18 11:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "¡Bienvenido a este post de ejemplo para Jekyll Chirpy! 🎉 Este tema es excelente para crear blogs elegantes y modernos. En este post, exploraremos cómo crear contenido con el tema Chirpy.Encabezados...",
+    "content": "¡Bienvenido a este post de ejemplo para Jekyll Chirpy! 🎉 Este tema es excelente para crear blogs elegantes y modernos. En este post, exploraremos cómo crear contenido con el tema Chirpy.Encabezados y FormatoPuedes usar encabezados para organizar tu contenido de forma clara:Subtítulo 1Texto introductorio o explicativo aquí.Subtítulo 2Más detalles sobre tu tema aquí.Listas y CódigoListas  Este es un elemento de lista  Otro elemento          Un sub-elemento      CódigoIncluye fragmentos de código fácilmente:```rubydef ejemplo  puts “Hola desde Jekyll Chirpy!”end"
+  }
+  
+]
+
