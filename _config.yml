@@ -109,7 +109,7 @@ toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: giscus # [disqus | utterances | giscus]
+  provider:  # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname:  # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -119,10 +119,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: sproffes/sproffes.github.io
-    repo_id: MDEwOlJlcG9zaXRvcnkyNDc3MzQ2NTQ=
-    category: Announcements
-    category_id: DIC_kwDOB0-z-84CU-1Y
+    repo: 
+    repo_id: 
+    category: 
+    category_id: 
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
