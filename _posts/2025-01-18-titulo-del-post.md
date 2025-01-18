@@ -4,7 +4,7 @@ date: 2025-01-18 10:00:00 +0000
 categories: [Blog, Ejemplo]
 tags: [jekyll, chirpy, tutorial] # Etiquetas separadas por comas
 pin: true # Opción para destacar el post
-image: /assets/images/ejemplo-post.jpg # Ruta a una imagen destacada (opcional)
+# image: /assets/images/ejemplo-post.jpg # Ruta a una imagen destacada (opcional)
 ---
 
 ¡Bienvenido a este post de ejemplo para Jekyll Chirpy! 🎉 Este tema es excelente para crear blogs elegantes y modernos. En este post, exploraremos cómo crear contenido con el tema Chirpy.
