@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>CiberDocs</title>
   <subtitle>Explorando la seguridad cibernética.</subtitle>
-  <updated>2025-01-19T15:27:21+01:00</updated>
+  <updated>2025-01-19T15:32:08+01:00</updated>
   <author>
     <name>Pr0ff3</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,11 @@
 
   
   <entry>
-    <title>"Guía de Instalación y Configuración de Velociraptor en Ubuntu Server"</title>
-    <link href="http://localhost:4000/posts/blog-post/" rel="alternate" type="text/html" title="&amp;quot;Guía de Instalación y Configuración de Velociraptor en Ubuntu Server&amp;quot;" />
+    <title>Guía de Instalación y Configuración de Velociraptor en Ubuntu Server</title>
+    <link href="http://localhost:4000/posts/blog-post/" rel="alternate" type="text/html" title="Guía de Instalación y Configuración de Velociraptor en Ubuntu Server" />
     <published>2025-01-19T12:58:38+01:00</published>
   
-    <updated>2025-01-19T12:58:38+01:00</updated>
+    <updated>2025-01-19T15:31:50+01:00</updated>
   
     <id>http://localhost:4000/posts/blog-post/</id>
     <content type="text/html" src="http://localhost:4000/posts/blog-post/" />
