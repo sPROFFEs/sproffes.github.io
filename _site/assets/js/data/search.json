@@ -3,7 +3,7 @@
   {
     "title": "Guía de Instalación y Configuración de Velociraptor en Ubuntu Server",
     "url": "/posts/velociraptor_guia/",
-    "categories": "tutorial, defensivo",
+    "categories": "Defensivo, Velociraptor",
     "tags": "ids, velociraptor, defensivo",
     "date": "2025-01-19 12:58:38 +0100",
     
@@ -20,7 +20,7 @@
   {
     "title": "Análisis de NTFS",
     "url": "/posts/analisis-ntfs/",
-    "categories": "Forensics, Práctica",
+    "categories": "Forense, Práctica",
     "tags": "forensics, ntfs, windows, file-system",
     "date": "2024-01-19 00:00:00 +0100",
     

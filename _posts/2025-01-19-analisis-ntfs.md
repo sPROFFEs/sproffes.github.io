@@ -2,7 +2,7 @@
 title: Análisis de NTFS
 author: Author Name
 date: 2024-01-19
-categories: [Forensics, Práctica]
+categories: [Forense, Práctica]
 tags: [forensics, ntfs, windows, file-system]
 pin: true
 math: true

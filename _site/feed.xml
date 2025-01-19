@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>CiberDocs</title>
   <subtitle>Explorando la seguridad cibernética.</subtitle>
-  <updated>2025-01-19T16:25:10+01:00</updated>
+  <updated>2025-01-19T16:26:42+01:00</updated>
   <author>
     <name>Pr0ff3</name>
     <uri>http://localhost:4000/</uri>
@@ -34,9 +34,9 @@
 
   
     
-    <category term="tutorial" />
+    <category term="Defensivo" />
     
-    <category term="defensivo" />
+    <category term="Velociraptor" />
     
   
 
@@ -71,7 +71,7 @@ wget https://github.com/Velocidex...</summary>
     <link href="http://localhost:4000/posts/analisis-ntfs/" rel="alternate" type="text/html" title="Análisis de NTFS" />
     <published>2024-01-19T00:00:00+01:00</published>
   
-    <updated>2024-01-19T00:00:00+01:00</updated>
+    <updated>2025-01-19T16:25:18+01:00</updated>
   
     <id>http://localhost:4000/posts/analisis-ntfs/</id>
     <content type="text/html" src="http://localhost:4000/posts/analisis-ntfs/" />
@@ -81,7 +81,7 @@ wget https://github.com/Velocidex...</summary>
 
   
     
-    <category term="Forensics" />
+    <category term="Forense" />
     
     <category term="Práctica" />
     
