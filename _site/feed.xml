@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>CiberDocs</title>
   <subtitle>Explorando la seguridad cibernética.</subtitle>
-  <updated>2025-01-19T15:39:05+01:00</updated>
+  <updated>2025-01-19T16:23:47+01:00</updated>
   <author>
     <name>Pr0ff3</name>
     <uri>http://localhost:4000/</uri>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>Guía de Instalación y Configuración de Velociraptor en Ubuntu Server</title>
-    <link href="http://localhost:4000/posts/blog-post/" rel="alternate" type="text/html" title="Guía de Instalación y Configuración de Velociraptor en Ubuntu Server" />
+    <link href="http://localhost:4000/posts/velociraptor_guia/" rel="alternate" type="text/html" title="Guía de Instalación y Configuración de Velociraptor en Ubuntu Server" />
     <published>2025-01-19T12:58:38+01:00</published>
   
-    <updated>2025-01-19T15:31:50+01:00</updated>
+    <updated>2025-01-19T12:58:38+01:00</updated>
   
-    <id>http://localhost:4000/posts/blog-post/</id>
-    <content type="text/html" src="http://localhost:4000/posts/blog-post/" />
+    <id>http://localhost:4000/posts/velociraptor_guia/</id>
+    <content type="text/html" src="http://localhost:4000/posts/velociraptor_guia/" />
     <author>
       <name>Pr0ff3</name>
     </author>
@@ -62,6 +62,50 @@ Descargar Velociraptor
 
 # Verificar la última versión en https://github.com/Velocidex/velociraptor/releases
 wget https://github.com/Velocidex...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Análisis de NTFS</title>
+    <link href="http://localhost:4000/posts/analisis-ntfs/" rel="alternate" type="text/html" title="Análisis de NTFS" />
+    <published>2024-01-19T00:00:00+01:00</published>
+  
+    <updated>2024-01-19T00:00:00+01:00</updated>
+  
+    <id>http://localhost:4000/posts/analisis-ntfs/</id>
+    <content type="text/html" src="http://localhost:4000/posts/analisis-ntfs/" />
+    <author>
+      <name>Author Name</name>
+    </author>
+
+  
+    
+    <category term="Forensics" />
+    
+    <category term="NTFS" />
+    
+  
+
+  <summary>Tabla de Contenidos
+
+  Active Disk Editor
+  Identificación a bajo nivel
+  MFT2CSV
+  NTFSLogFile
+  UsnJrnl2Csv
+  ANJP
+  Análisis del origen de archivos
+  Indx2Csv
+  Recuva VS FTK Imager
+
+
+1. Active Disk Editor
+
+Vamos a identificar con la herramienta ADE, mediante la inspección de los registros MFT (1KB), cuales de ellos han sido borrados en base a la propiedad FLAGS (campo “in use” = ‘0’)
+
+
+Vemo...</summary>
 
   </entry>
 
