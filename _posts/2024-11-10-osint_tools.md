@@ -19,7 +19,7 @@ tags: [osint, security, investigation, tools]
 | Messengers                                | [Explore](#messengers)                       |
 | Code                                      | [Explore](#code)                       |
 | Search engines                            | [Explore](#search-engines)                       |
-| IOT                                       | [Explore](#iot)                       |
+| IOT                                       | [Explore](#IOT-ip-search-engines)                       |
 | Archives                                  | [Explore](#archives)                       |
 | Passwords                                  | [Explore](#passwords)                       |
 | Emails                                  | [Explore](#emails)                       |
@@ -132,11 +132,11 @@ tags: [osint, security, investigation, tools]
     - [Filesharing Search Engines](#filesharing-search-engines)
     - [Tools for DuckDuckGo](#tools-for-duckduckgo)
     - [Tools for Google](#tools-for-google)
-- [IOT](#iot)
+- [IOT](#IOT-ip-search-engines)
 - [Archives](#archives)
     - [Tools for working with web archives](#tools-for-working-with-web-archives)
     - [Archives of documents/newspapers](#archives-of-documentsnewspapers)
-    - [Tools for working with WARC (WebARChive) files](#warc)
+    - [Tools for working with WARC (WebARChive) files](#tools-for-working-with-warc-WebARChive-files)
 - [Datasets](#datasets)
 - [Science](#science)
 - [Passwords](#passwords)
@@ -1693,7 +1693,7 @@ Google lens is not too user friendly for investigations. But this tool will help
 
 
 
-### [](#iot)IOT (ip search engines)
+### [](#IOT-ip-search-engines)IOT (ip search engines)
 
 | Link | Description |
 | --- | --- |
@@ -1747,7 +1747,7 @@ Google lens is not too user friendly for investigations. But this tool will help
 
 
 
-### [](#warc)Tools for working with WARC (WebARChive) files
+### [](#tools-for-working-with-warc-WebARChive-files)Tools for working with WARC (WebARChive) files
 
 | Link | Description |
 | --- | --- |
