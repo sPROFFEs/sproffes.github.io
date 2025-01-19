@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Maltego</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Maltego</h1><br/><p></p><p></p><p>Una de las herramientas más amplias y profesionales de recopilación de información pasiva.</p><p></p><p></p><p>La vamos a instalar en kali.</p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> apt <span style="color:#000000;font-weight:700">install</span> maltego</pre></div></p><p></p><p>Nos pedirá registrar una cuenta en su web, es gratis no hay problema así que una vez configurado todo tenemos algo como esto:</p><p></p><p><img src="images/81-1.png" alt="images/81-1.png" /></p><p></p><p>Vamos a revisar actualizaciones:</p><p></p><p><img src="images/81-2.png" alt="images/81-2.png" /></p><p></p><p></p><p></p><p><h3>Vamos a comenzar con su uso entendiendo un par de conceptos sobre el mismo</h3>.</p><p><ul><li>Transformador:</li></ul></p><p>Todas las consultas hacen una query a una base de datos y ejecutan unos comandos que indexan la información. Estas consultas se denominan &quot;transforms&quot; que se ejecutan sobre diferentes bases de datos y que podemos asociar a diferentes entidades.</p><p></p><p>Empresas de terceros pueden hacer sus propios transformers para hacer querys a sus bases de datos.</p><p></p><p><img src="images/81-3.png" alt="images/81-3.png" /></p><p></p><p><img src="images/81-4.png" alt="images/81-4.png" /></p><p></p><p>Instalamos algunas que nos interesen teniendo en cuenta que algunas como shodan, virustotal, etc pueden pedir API keys.</p><p></p><p>Creamos un nuevo grafo.</p><p><ul><li>Grafos:</li></ul></p><p>Se trata un lienzo en el podremos arrastrar entidades que se tratan de diferentes tipos de información sobre los que podremos buscar en fuentes públicas haciendo uso de los transformadores.</p><p></p><p><img src="images/81-5.png" alt="images/81-5.png" /></p><p></p><p>Podemos ejecutar un análisis utilizando estos transformadores para recaudar datos de un nombre concreto o una entidad, incluso asociar una persona o serie de personas a una entidad y realizar una busqueda más concreta, etc.</p><p></p><p>Podemos exportar el reporte:</p><p></p><p><img src="images/81-6.png" alt="images/81-6.png" /></p></div>
+</body>
+</html>

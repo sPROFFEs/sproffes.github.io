@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Instalando WindowsServer</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Instalando WindowsServer</h1><br/><p><strong><h1>Descargada la ISO y creada la maquina virtual en VMWARE</h1></strong></p><p></p><p></p><p><h3>Comenzamos la configuración del Domain Controller empezando por establecer una IP estática.</h3></p><p></p><p><h3>para esto click derecho en el icono de red, adaptadores ethernet y vamos a las propiedades de protocolo IPV4</h3>:</p><p><img src="images/9-1.png" alt="images/9-1.png" /></p><p></p><p><h3>En este caso la tenemos conectada a una red virtual creada por VMWARE en la que tenemos la subred 192.168.20.x</h3></p><p></p><p></p><p><img src="images/9-2.png" alt="images/9-2.png" /></p><p></p><p><h3>Cambiamos el nombre de la maquina a DC01</h3></p><p></p><p><h3>En el administrador del servidor configuramos roles y características</h3></p><p><img src="images/9-3.png" alt="images/9-3.png" /></p><p></p><p><h3>En la instalación seleccionamos los servicios para un AD DC (Active directory domain controler)</h3></p><p><img src="images/9-4.png" alt="images/9-4.png" /></p><p></p><p><h3>Terminamos la instalación y reiniciamos la máquina</h3></p><p></p><p><img src="images/9-5.png" alt="images/9-5.png" /></p><p></p><p><h3>Configuramos las características necesarias para promover el servidor como controlador de dominio</h3></p><p></p><p><img src="images/9-6.png" alt="images/9-6.png" /></p><p></p><p><h3>Agregamos un nuevo bosque</h3></p><p></p><p><img src="images/9-7.png" alt="images/9-7.png" /></p><p></p><p>Establecer una contraseña</p><p></p><p><h3>En el nombre de NETBIOS dejamos el que genera y en las rutas de acceso por ahora las dejamos por defecto también.</h3></p><p></p><p><img src="images/9-8.png" alt="images/9-8.png" /></p><p></p><p><h3>Terminamos la configuración, instalamos y reiniciamos.</h3></p></div>
+</body>
+</html>

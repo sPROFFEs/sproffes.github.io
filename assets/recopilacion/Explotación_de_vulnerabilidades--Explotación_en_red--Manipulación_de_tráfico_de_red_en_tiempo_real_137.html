@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Manipulación de tráfico de red en tiempo real</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Manipulación de tráfico de red en tiempo real</h1><br/><p></p><p></p><p>Estas técnicas no solo se basan en interferir los paquetes sino que se van a modificar en tiempo real para falsear los datos en los paquetes.</p><p></p><p>La herramienta que vamos a utilizar es Polymorph</p><p></p><p><a href="https://github.com/shramos/polymorph">https://github.com/shramos/polymorph</a></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> <span style="color:#000000;font-weight:700">su</span><br /><span style="color:#000000;font-weight:700">sudo</span> apt <span style="color:#000000;font-weight:700">install</span> build-essential python3-dev libnetfilter-queue-dev tshark tcpdump python3-pip wireshark git</pre></div></p><p></p><p><div class="codebox"><pre><br />pip3 <span style="color:#000000;font-weight:700">install</span> git+https<span style="color:#000000;font-weight:700">://</span>github.com<span style="color:#000000;font-weight:700">/</span>kti<span style="color:#000000;font-weight:700">/</span>python-netfilterqueue<br />pip3 <span style="color:#000000;font-weight:700">install</span> polymorph<br /></pre></div></p><p></p><p><div class="codebox"><pre><br />polymorph</pre></div></p><p></p><p><img src="images/137-1.png" alt="images/137-1.png" /></p><p></p><p>Primero capturamos un paquete igual al que queremos modificar.</p><p></p><p>Una vez que tenemos ese paquete capturado, genera lo que llama una plantilla y a partir de esa plantilla  vamos a poder ejecutar funciones de código en Python sobre los nuevos paquetes de red que se estén intercambiando entre dos máquinas, de manera que podamos modificar su contenido.</p><p></p><p></p><p></p></div>
+</body>
+</html>

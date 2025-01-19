@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>UAC Bypass</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>UAC Bypass</h1><br/><p></p><p><strong><h1>User Account Control</h1></strong></p><p></p><p><img src="images/142-1.png" alt="images/142-1.png" /></p><p></p><p>Esto evita que cuando nosotros establecemos una conexión remota mediante una terminal y tratamos de ejecutar un payload como administradores lógicamente si sale esta pestaña que nosotros tenemos que aceptar, entonces no podemos hacerlo de manera remota.</p><p></p><p></p><p>Consiste en que existen determinados binarios dentro del sistema operativo que realizan esta elevación de privilegios de manera automática, es decir, hacer un auto elevate sin necesidad de que nosotros tengamos que pulsar el aceptar.</p><p></p><p>El problema que tiene esto es que algunos de estos binarios que tienen esta característica que pueden auto elevarse sin necesidad de utilizar el UAC, invocan determinados componentes que van cargando y ejecutando en el proceso de ejecución.</p><p></p><p>Aquí es donde aprovechamos para modificar los componentes que se cargan de fondo.</p><p></p><p>Existe un ejecutable que necesita permisos elevados pero no es afectado por el UAC el problema es que este programa llama aun proceso del registro de windows que puede ser ejecutado sin privilegios por lo que es sencillamente modificar ese proceso para que cuando ese ejecutable lo llame active el payload auto escalando privilegios.</p><p></p><p></p><p>Con la sesion meterpreter creada anteriormente vamos a suponer que no tenemos privilegios. </p><p>En meterpreter.</p><p></p><p><img src="images/142-2.png" alt="images/142-2.png" /></p><p></p><p><img src="images/142-3.png" alt="images/142-3.png" /></p><p></p><p><img src="images/142-4.png" alt="images/142-4.png" /></p><p></p><p><img src="images/142-5.png" alt="images/142-5.png" /></p><p></p><p><img src="images/142-6.png" alt="images/142-6.png" /></p><p></p><p></p><p></p></div>
+</body>
+</html>

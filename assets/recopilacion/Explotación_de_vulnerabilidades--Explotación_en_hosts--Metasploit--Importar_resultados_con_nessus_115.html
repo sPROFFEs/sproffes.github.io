@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Importar resultados con nessus</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Importar resultados con nessus</h1><br/><p></p><p></p><p>Podemos usar la integración de nessus con metasploit. </p><p></p><p>Iniciamos nessus y abrimos msfconsole.</p><p></p><p>Podemos directamente realizar todos los escaneos, establecer políticas, etc desde la consola de metasploid utilizando el plugin nessus</p><p></p><p><div class="codebox"><pre><br />load nessus</pre></div></p><p></p><p><img src="images/115-1.png" alt="images/115-1.png" /></p><p></p><p><img src="images/115-2.png" alt="images/115-2.png" /></p><p></p><p></p><p>Desde la interfaz de nessus podemos coger el resultado de un análisis y lo podemos exportar como nessus.</p><p></p><p><img src="images/115-3.png" alt="images/115-3.png" /></p><p></p><p>Los importamos en msfconsole:</p><p></p><p><div class="codebox"><pre><br />db_import <span style="color:#000000;font-weight:700">/</span>home<span style="color:#000000;font-weight:700">/</span>kali<span style="color:#000000;font-weight:700">/</span>Downloads<span style="color:#000000;font-weight:700">/</span>test_0lceux.nessus</pre></div></p><p></p><p><img src="images/115-4.png" alt="images/115-4.png" /></p><p></p><p>Ahora nosotros podemos interactuar con la base de datos de metasploit para ver la información del escaneo.</p><p></p><p><div class="codebox"><pre><br />hosts</pre></div></p><p></p><p><img src="images/115-5.png" alt="images/115-5.png" /></p><p></p><p><div class="codebox"><pre><br />services 192.168.20.128</pre></div></p><p></p><p><img src="images/115-6.png" alt="images/115-6.png" /></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">help</span> vulns</pre></div></p><p></p><p><img src="images/115-7.png" alt="images/115-7.png" /></p><p></p><p><div class="codebox"><pre><br />vulns -p 21<br />vulns 192.168.20.128<br /></pre></div></p><p></p><p><img src="images/115-8.png" alt="images/115-8.png" /></p><p></p><p>Con esto directamente podemos buscar el CVE en metasploit:</p><p></p><p><div class="codebox"><pre><br />search cve<span style="color:#000000;font-weight:700">:</span>2010-2075</pre></div></p><p></p><p><img src="images/115-9.png" alt="images/115-9.png" /></p><p></p><p></p><p></p></div>
+</body>
+</html>

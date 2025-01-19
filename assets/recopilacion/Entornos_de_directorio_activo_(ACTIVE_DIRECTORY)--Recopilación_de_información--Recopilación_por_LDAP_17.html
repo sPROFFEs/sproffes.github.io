@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Recopilación por LDAP</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Recopilación por LDAP</h1><br/><p><h3>Junto con Powerview vamos a utilizar otro modulo que se encuentra en cualquier servidor promovido a domain controler</h3>.</p><p></p><p></p><p>El motivo de esto es que en el servidor domain controller podemos hacer uso de comandos como: </p><p><div class="codebox"><pre><br /><span style="color:#edd400;font-weight:400">Get-ADDomain</span></pre></div></p><p></p><p>Para listar la información del controlador del dominio debido a que este windows server tiene una librería especifica para ello por lo que si intentamos ejecutar este comando en un sistema windows sin esta libreria dirá que no existe tal expresión.</p><p></p><p>Para esto cogeremos la dll del windows server y la copiaremos a nuestra maquina.</p><p></p><p><em><span style="text-decoration:underline;">C:\Windows\Microsoft.NET\assembly\GAC_64\Microsoft.ActiveDirectory.Management\v4.0_10.0.0.0__31bf3856ad364e35</span></em></p><p></p><p>En esa dirección podremos encontrar el archivo dll con la configuración y librerías llamado : <strong>Microsoft.ActiveDirectory.Management.dll</strong></p><p></p><p>Lo pasamos a la maquina WS01 y lo importamos </p><p></p><p><div class="codebox"><pre><br /><span style="color:#729fcf;font-weight:400">Import-Module</span> .<span style="color:#000000;font-weight:700">\</span>Microsoft.ActiveDirectory.Management.dll </pre></div></p><p></p><p>De esta manera podremos listar datos del dominio desde la maquina:</p><p><img src="images/17-1.png" alt="images/17-1.png" /></p><p></p><p>Una cosa a tener en cuenta es que el protocolo utilizado para recibir la información son paquetes <strong>TCP y no DCE/RPC,</strong> es decir que estamos haciendo querys al controlador de dominio.</p><p></p><p></p><p>Sin embargo si volvemos a las WS01 donde teníamos nuestro powerview y hacemos esto mismo podremos ver:</p><p></p><p><img src="images/17-2.png" alt="images/17-2.png" /></p><p></p><p>Que nos devuelve información pero esta vez en Wireshark veremos que el protocolo utilizado es LDAP lo que significa que se está comunicando directamente con la interfaz de data controller con ese protocolo.</p></div>
+</body>
+</html>

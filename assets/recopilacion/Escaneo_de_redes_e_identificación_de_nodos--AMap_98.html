@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>AMap</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>AMap</h1><br/><p></p><p></p><p><h2>Es una alternativa a NMAP algo menos completa pero nos sirve para contrastar resultados.</h2></p><p></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> apt <span style="color:#000000;font-weight:700">install</span> amap</pre></div></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v --reason -sS -oA servicios.amap 192.168.20.128</pre></div></p><p></p><p><img src="images/98-1.png" alt="images/98-1.png" /></p><p></p><p><div class="codebox"><pre><br />amap -i servicios.amap.gnmap -B</pre></div></p><p></p><p>Lo que hace a AMap es tratar de consultar los diferentes puertos que tenemos abiertos en búsqueda de ese banner y nos muestra por pantalla el banner de manera que podamos identificar nosotros qué tipo de servicio es.</p><p></p><p><img src="images/98-2.png" alt="images/98-2.png" /></p></div>
+</body>
+</html>

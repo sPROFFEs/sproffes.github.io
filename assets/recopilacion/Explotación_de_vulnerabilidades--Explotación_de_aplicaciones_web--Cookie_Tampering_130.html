@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Cookie Tampering</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Cookie Tampering</h1><br/><p></p><p>Una cookie es una porción de información que solicita el servidor para que el navegador la mantenga almacenada y que al hacer peticiones la introduzca.</p><p></p><p>Esa información le permite al servidor que si por ejemplo añadimos productos en amazon al carrito y volvemos a abrirlo al día siguiente, los productos sigan ahí.</p><p></p><p>Esto se almacena de forma local en las cookies del navegador.</p><p></p><p>Estas cookies también pueden realizar seguimiento ya que si vamos navegando y esto se almacena en estas, el servidor al que se las vamos mandando sabe nuestro movimientos online.</p><p></p><p>Es por eso que con nuevas leyes como GDPR se intenta controlar que cookies puede recolectar el navegador y cuales no.</p><p></p><p> Si capturamos con <a href="Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--BurpSuite_118.html">BurpSuite</a>.</p><p> </p><p> <img src="images/130-1.png" alt="images/130-1.png" /></p><p> </p><p> Vemos algunas de las cookies almacenadas.</p><p> </p><p>El problema de este fallo de seguridad viene cuando la aplicación web comienza a controlar temas relacionados con la autenticación o autorización de los usuarios con cookies que se acaban almacenando en el navegador del usuario.</p><p></p><p>Todo lo que se almacena o tiene de alguna manera contacto con el navegador de un cliente del usuario puede ser modificado.</p><p></p><p>Si iniciamos sesion.</p><p></p><p><img src="images/130-2.png" alt="images/130-2.png" /></p><p></p><p>En la respuesta del servidor nos almacena el uid y el usuario en cookies.</p><p></p><p><img src="images/130-3.png" alt="images/130-3.png" /></p><p></p><p>Al hacer peticiones podemos modificarlas para hacernos pasar por otro usuario.</p><p></p><p><img src="images/130-4.png" alt="images/130-4.png" /></p><p></p><p><img src="images/130-5.png" alt="images/130-5.png" /></p><p></p><p>Y estamos loggeados como admin.</p><p></p><p>También podemos copiar ese token de sesion, PHPSESSID.</p></div>
+</body>
+</html>

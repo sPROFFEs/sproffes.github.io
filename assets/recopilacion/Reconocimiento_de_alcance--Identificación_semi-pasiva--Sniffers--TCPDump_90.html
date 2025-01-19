@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>TCPDump</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>TCPDump</h1><br/><p></p><p></p><p>Se diferencia de wireshark en que utiliza un interfaz de consola de comandos.</p><p></p><p></p><p><img src="images/90-1.png" alt="images/90-1.png" /></p><p></p><p>Estas son solo algunas de las opciones que ofrece, en su documentación se pueden encontrar muchas más.</p><p><ul><li>Mostrar interfaces de red:</p><p></li></ul><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> tcpdump -D</pre></div></p><p></p><p><img src="images/90-2.png" alt="images/90-2.png" /></p><p><ul><li>Capturar en interfaz de red:</p><p></li></ul><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> tcpdump -i eth0<br /></pre></div></p><p></p><p><img src="images/90-3.png" alt="images/90-3.png" /></p><p><ul><li>Mostrar mas información:</p><p></li></ul><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> tcpdump -v -i eth0</pre></div></p><p><ul><li>Filtrar protocolos:</p><p></li></ul><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> tcpdump icmp -i eth0</pre></div></p><p></p><p><img src="images/90-4.png" alt="images/90-4.png" /></p><p><ul><li>Filtrar por dirección del host:</p><p></li></ul><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> tcpdump host 185.230.63.107 -i eth0</pre></div></p><p></p><p><img src="images/90-5.png" alt="images/90-5.png" /></p><p><ul><li>Guardar la captura para ser posteriormente analizada con Wireshark:</p><p></li></ul><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> tcpdump -i eth0 -w Desktop<span style="color:#000000;font-weight:700">/</span>capture.pcap</pre></div></p><p><ul><li>Abrir la captura pero con TCPDump y filtrar protocolos:</p><p></li></ul><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -n port 53 -v -r capture.pcap<br /><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -n port 80 -v -r capture.pcap <span style="color:#000000;font-weight:700">|</span> <span style="color:#000000;font-weight:700">grep</span> gamivo.com<br /></pre></div></p></div>
+</body>
+</html>

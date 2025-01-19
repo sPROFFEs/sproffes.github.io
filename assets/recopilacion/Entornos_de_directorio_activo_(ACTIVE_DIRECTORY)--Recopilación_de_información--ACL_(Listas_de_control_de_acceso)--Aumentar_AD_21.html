@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Aumentar AD</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Aumentar AD</h1><br/><p><h2>En nuestro Active Directory de pruebas encontramos muy pocos usuarios y relaciones por lo que vamos a aumentar un poco esto acercándonos más a un entorno real</h2>.</p><p></p><p><a href="https://github.com/safebuffer/vulnerable-AD">https://github.com/safebuffer/vulnerable-AD</a></p><p></p><p>Esto aumentará mucho los objetos del domino como usuarios, grupos, nuevas ACLs y aplicar ciertos parámetros de configuración  para soportar lo ataques que indica.</p><p></p><p>Ahora simplemente lo llevamos nuestro DomainControler y lo ejecutamos:</p><p></p><p><img src="images/21-1.png" alt="images/21-1.png" /></p><p></p><p><div class="codebox"><pre><br /><span style="color:#edd400;font-weight:400">Invoke-VulnAD</span> <span style="color:#000000;font-weight:700">-</span>UsersLimit <span style="color:#ce5c00;font-weight:400">100</span> <span style="color:#000000;font-weight:700">-</span>DomainName <span style="color:#edd400;font-weight:400">&quot;corp.local&quot;</span></pre></div></p><p></p><p>Todo esto creará la estructura:</p><p></p><p><img src="images/21-2.png" alt="images/21-2.png" /></p></div>
+</body>
+</html>

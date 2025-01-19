@@ -1,0 +1,161 @@
+/* Met Office external website
+
+Colours:
+- black/dark grey: #202A2C
+- dark grey: #666666
+- grey: #DDDDDD (thin lines)
+- light grey: #EEEEEE (background colour)
+- darkish green: #BCDB0C
+- green: #CCFF33
+- darkish blue: #4BA8BA
+- blue: #00ADD0
+
+*/
+
+/*******************************************************************************
+ * GENERAL
+ ******************************************************************************/
+/*<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700' rel='stylesheet' type='text/css'>*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700);
+
+body {
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif !important;
+    white-space: pre-wrap;
+}
+
+p,
+body {
+    color:aliceblue;
+}
+
+span,
+body {
+    color: #cfcfcf;
+}
+
+#index_header {
+    text-align: center;
+}
+
+div.page-panel {
+    flex: 80vw;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+div.page-panel iframe {
+    width: 100%;
+    border: 0px;
+    margin-top: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+div.page {
+    padding: 20px;
+}
+
+.clear {
+    clear: both
+}
+/*******************************************************************************
+ * NODE PAGES
+ ******************************************************************************/
+
+/* TABLES */
+
+table {
+    border: 1px solid #202A2C;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(193, 193, 193);
+}
+
+td,
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #202A2C;
+    text-align: center;
+}
+
+/* HEADINGS */
+
+div.page h1 {
+    font-weight: bold;
+    display: inline;
+    color: aliceblue;
+}
+
+div.page h1.title {
+    text-align: center;
+    background: rgb(121, 121, 121);
+    margin: 0 auto 1vh auto;
+    width: 100%;
+    display: inline-block;
+    border-radius: 5px;
+    
+}
+
+div.page h2 {
+    padding-top: 1em;
+    /*padding-bottom: 0.5em;*/
+    font-weight: bold;
+    font-size: 150%;
+    color:aliceblue;
+    display: inline;
+}
+
+div.page h3 {
+    padding-top: 0.75em;
+    font-weight: bold;
+    font-size: 125%;
+    color: azure;
+    display: inline;
+}
+
+span.code-node {
+    color: #FFFF00;  /* yellow */
+}
+
+div.page code,
+div.page pre {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: normal;
+    font-size: 13px;
+    background-color: rgba(80, 89, 92, 0.699);
+    border: 1px solid;
+    color: #202A2C;
+}
+
+div .codebox {
+    display: inline-block;
+    padding: 5px 7px;
+    min-width: 100%;
+}
+
+div.page p.tagged-text,
+div.page code {
+    /*color: #859C00;*/
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+div.page pre {
+    padding: 0.25em;
+    overflow: auto !important;
+    width: 75%;
+}
+
+
+/* IMAGES */
+
+/*img {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}*/

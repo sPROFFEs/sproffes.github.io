@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Otras herramientas</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Otras herramientas</h1><br/><p></p><p>Es una herramienta algo más antigua y menos completa que FOCA.</p><p></p><p><a href="https://github.com/laramies/metagoofil">https://github.com/laramies/metagoofil</a></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> apt <span style="color:#000000;font-weight:700">install</span> metagoofil</pre></div></p><p></p><p><img src="images/85-1.png" alt="images/85-1.png" /></p><p></p><p><div class="codebox"><pre><br />metagoofil -d dominio -l 10 -t pdf,doc,txt -o Desktop<span style="color:#000000;font-weight:700">/</span> </pre></div></p><p></p><p><img src="images/85-2.png" alt="images/85-2.png" /></p><p></p><p>La siguiente herramienta es una aplicación web:</p><p></p><p><a href="https://metashieldclean-up.elevenpaths.com/">https://metashieldclean-up.elevenpaths.com/</a></p><p></p><p></p><p>Metagoofile no extrae los metadatos de los archivos, para ello debemos usar otra herramienta.</p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> apt <span style="color:#000000;font-weight:700">install</span> exiftool<br /><br />exiftool -f *.pdf <span style="color:#000000;font-weight:700">|</span> <span style="color:#000000;font-weight:700">egrep</span> -i <span style="color:#edd400;font-weight:400">&quot;Author|Creator|Email|Producer|Templeate&quot;</span> <span style="color:#000000;font-weight:700">|</span> <span style="color:#000000;font-weight:700">sort</span> -u<br /></pre></div></p><p></p><p>Recorre todos los archivos pdf que tengamos y busca una serie de campos para devolver el resultado.</p><p></p><p></p></div>
+</body>
+</html>

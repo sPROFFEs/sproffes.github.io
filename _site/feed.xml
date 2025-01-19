@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>CiberDocs</title>
   <subtitle>Explorando la seguridad cibernética.</subtitle>
-  <updated>2025-01-19T16:29:27+01:00</updated>
+  <updated>2025-01-19T20:25:46+01:00</updated>
   <author>
     <name>Pr0ff3</name>
     <uri>http://localhost:4000/</uri>
@@ -36,7 +36,7 @@
     
     <category term="Defensivo" />
     
-    <category term="Velociraptor" />
+    <category term="IDS" />
     
   
 
@@ -67,45 +67,177 @@ wget https://github.com/Velocidex...</summary>
 
   
   <entry>
-    <title>Análisis de NTFS</title>
-    <link href="http://localhost:4000/posts/analisis-ntfs/" rel="alternate" type="text/html" title="Análisis de NTFS" />
-    <published>2024-01-19T00:00:00+01:00</published>
+    <title>Reto DFIR 3 - Atenea CCN</title>
+    <link href="http://localhost:4000/posts/atenea_dfir_3/" rel="alternate" type="text/html" title="Reto DFIR 3 - Atenea CCN" />
+    <published>2025-01-17T18:16:41+01:00</published>
   
-    <updated>2025-01-19T16:26:46+01:00</updated>
+    <updated>2025-01-17T18:16:41+01:00</updated>
   
-    <id>http://localhost:4000/posts/analisis-ntfs/</id>
-    <content type="text/html" src="http://localhost:4000/posts/analisis-ntfs/" />
+    <id>http://localhost:4000/posts/atenea_dfir_3/</id>
+    <content type="text/html" src="http://localhost:4000/posts/atenea_dfir_3/" />
     <author>
-      <name>Author Name</name>
+      <name>Pr0ff3</name>
+    </author>
+
+  
+    
+    <category term="Labs &amp; CTF" />
+    
+    <category term="Walkthrough" />
+    
+    <category term="DFIR" />
+    
+  
+
+  <summary>Recursos
+
+Volcado de memoria utilizado
+
+Google Drive
+
+Análisis de procesos
+
+
+./vol2 -f Hell.img –profile=Win7SP1x64 pstree
+
+Hay una cadena de anidamiento sospechosa de cmd.exe -&amp;amp;gt; powershell.exe que se repite varias veces:
+cmd.exe (2680)
+ └─ powershell.exe (700)
+    └─ cmd.exe (1876)
+       └─ powershell.exe (2532)
+          └─ cmd.exe (2236)
+             └─ powershell.exe (2696)
+            ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Reto DFIR 2 - Atenea CCN</title>
+    <link href="http://localhost:4000/posts/atenea_dfir_2/" rel="alternate" type="text/html" title="Reto DFIR 2 - Atenea CCN" />
+    <published>2025-01-15T19:12:49+01:00</published>
+  
+    <updated>2025-01-15T19:12:49+01:00</updated>
+  
+    <id>http://localhost:4000/posts/atenea_dfir_2/</id>
+    <content type="text/html" src="http://localhost:4000/posts/atenea_dfir_2/" />
+    <author>
+      <name>Pr0ff3</name>
+    </author>
+
+  
+    
+    <category term="Labs &amp; CTF" />
+    
+    <category term="Walkthrough" />
+    
+    <category term="DFIR" />
+    
+  
+
+  <summary>Recursos
+
+Enlace del fichero usado (Google Drive)
+
+Contexto
+
+Información
+
+Sospechamos que el volcado de memoria adjunto se corresponde con una máquina que ha
+sido infectada de forma persistente por algún tipo de malware, posiblemente un dropper.
+Nos gustaría identificar el dominio dañino utilizado por el mismo.
+
+Análisis de procesos
+
+
+Aquí podemos ver algunos procesos interesantes y algunas ano...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Reto DFIR 1 - Atenea CCN</title>
+    <link href="http://localhost:4000/posts/atenea_dfir_1/" rel="alternate" type="text/html" title="Reto DFIR 1 - Atenea CCN" />
+    <published>2025-01-15T10:19:16+01:00</published>
+  
+    <updated>2025-01-15T10:19:16+01:00</updated>
+  
+    <id>http://localhost:4000/posts/atenea_dfir_1/</id>
+    <content type="text/html" src="http://localhost:4000/posts/atenea_dfir_1/" />
+    <author>
+      <name>Pr0ff3</name>
+    </author>
+
+  
+    
+    <category term="Labs &amp; CTF" />
+    
+    <category term="Walkthrough" />
+    
+    <category term="DFIR" />
+    
+  
+
+  <summary>Recursos
+
+Descarga del dump usado (Google Drive)
+
+Contexto
+
+La policía ha detenido a un sujeto y tenemos como evidencia el ordenador encendido.
+Se le ha realizado una captura de RAM y análisis de la memoria no volátil. En ella se ha
+encontrado un extraño fichero que no saben de que puede ser.
+
+Tenemos un fichero llamado magic_file sin extension del cual no sabemos nada, solo que parece encripta...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Volatility 2 &amp; 3</title>
+    <link href="http://localhost:4000/posts/volatility_avanzado/" rel="alternate" type="text/html" title="Volatility 2 &amp;amp; 3" />
+    <published>2025-01-14T12:58:38+01:00</published>
+  
+    <updated>2025-01-14T12:58:38+01:00</updated>
+  
+    <id>http://localhost:4000/posts/volatility_avanzado/</id>
+    <content type="text/html" src="http://localhost:4000/posts/volatility_avanzado/" />
+    <author>
+      <name>Pr0ff3</name>
     </author>
 
   
     
     <category term="Forense" />
     
-    <category term="Práctica" />
+    <category term="Herramientas" />
     
   
 
-  <summary>Tabla de Contenidos
+  <summary>Concepto
 
-  Active Disk Editor
-  Identificación a bajo nivel
-  MFT2CSV
-  NTFSLogFile
-  UsnJrnl2Csv
-  ANJP
-  Análisis del origen de archivos
-  Indx2Csv
-  Recuva VS FTK Imager
+En esta sección vamos a realizar un ejemplo de uso medio/avanzado de la herramienta Volatility 2 y 3.
+
+En el proceso vamos a ir obteniendo diferentes datos sobre el sistema a partir de un volcado de memoria ram.
+
+Instalación
+
+Volatility 2
+
+Github oficial de volatility 2
+
+Volatility 3
+
+Github oficial de volatility 3
+
+pip install volatility3
 
 
-1. Active Disk Editor
+Recursos
 
-Vamos a identificar con la herramienta ADE, mediante la inspección de los registros MFT (1KB), cuales de ellos han sido borrados en base a la propiedad FLAGS (campo “in use” = ‘0’)
+Volcado de memoria utilizado
 
-
-Vemo...</summary>
+En ...</summary>
 
   </entry>
 

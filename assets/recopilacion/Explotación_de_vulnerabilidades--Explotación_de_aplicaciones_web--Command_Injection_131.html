@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Command Injection</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Command Injection</h1><br/><p>Esta vulnerabilidad se va a basar como muchas de las que hemos visto anteriormente en una inyección de código,pero el contexto de esta inyección va a ser un comando que se va a ejecutar en el sistema operativo del web server.</p><p></p><p><img src="images/131-1.png" alt="images/131-1.png" /></p><p></p><p>Cuando tenemos un formulario como este en el que rellenamos, hace una resolución en el web server y nos devuelve respuesta, significa que el servidor lo ejecuta en el sistema operativo del servidor utilizando alguna herramienta como DNSLookUp o similares.</p><p></p><p>Lo que significa que mandemos en el input se ejecutará como comando en el webserver por lo que podemos concatenar comandos.</p><p></p><p><img src="images/131-2.png" alt="images/131-2.png" /></p><p></p><p></p><p></p></div>
+</body>
+</html>

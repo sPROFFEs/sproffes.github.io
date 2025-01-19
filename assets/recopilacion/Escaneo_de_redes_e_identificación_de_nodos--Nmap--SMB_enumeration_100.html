@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>SMB enumeration</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>SMB enumeration</h1><br/><p></p><p></p><p><strong><h1>Protocolo SMB</h1></strong></p><p></p><p>Es un protocolo de red que se lleva utilizando durante muchos años en sistemas operativos Windows con el objetivo de compartir cosas como por ejemplo ficheros, carpetas compartidas, impresoras y cosas de este estilo a diferentes equipos, diferentes nodos que se encuentran en una red.</p><p></p><p>Ya nace como un protocolo que tiene un montón de problemas de seguridad.</p><p></p><p>SMB1, que lo implementan, pues algunos sistemas como por ejemplo Windows 2000 o Windows XP Windows 2003.</p><p></p><p>A lo largo del tiempo sale la segunda versión SMB 2 que comienza a implementarse con Windows Vista, luego SMB 2.1 que lo implementa Windows 7, SMB3 con Windows 8</p><p></p><p>Con el paso del tiempo han seguido surgiendo determinados problemas con este protocolo y además nosotros podemos utilizar este protocolo para tratar de hacer un descubrimiento de alguna manera de estos recursos compartidos que está ofreciendo una máquina determinada.</p><p></p><p></p><p><strong><h2>Comandos:</h2></strong></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sS -p 139,445 192.168.20.129</pre></div></p><p></p><p><img src="images/100-1.png" alt="images/100-1.png" /></p><p></p><p>Podemos usar script para recopilar recursos que se estén compartiendo mediante este protocolo.</p><p></p><p><img src="images/100-2.png" alt="images/100-2.png" /></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sS -p 139,445 --script=smb-os-discovery 192.168.20.129</pre></div></p><p></p><p><img src="images/100-3.png" alt="images/100-3.png" /></p><p></p><p>Analiza, entre otras cosas, esos paquetes que se intercambian y en función de esa información sabe si pertenece en este caso a un sistema operativo u otro.</p><p></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sS -p 139,445 --script=smb-enum-shares 192.168.20.129</pre></div></p><p></p><p><img src="images/100-4.png" alt="images/100-4.png" /></p><p></p></div>
+</body>
+</html>

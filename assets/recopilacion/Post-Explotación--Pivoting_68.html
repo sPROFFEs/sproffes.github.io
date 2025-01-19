@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Pivoting</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Pivoting</h1><br/><p></p><p>Visto el potencial del Port-Forwarding podemos aprovecharlo para otras muchas cosas.</p><p></p><p>Por ejemplo en vez de redirigir el tráfico de un puerto determinado a través de esa máquina objetivo, enviar todo el tráfico, exploits, escaneos de puertos, servicios, host.</p><p></p><p>En esencia es utilizar la máquina objetivo legítima como una máquina que vamos a pivotar a otros nodos o host de la infraestructura.</p><p></p><p>Partimos del meterpreter inyectado anteriormente la mandamos al background de metasploit con CTRL+Z:</p><p></p><p><img src="images/68-1.png" alt="images/68-1.png" /></p><p></p><p>Vamos a enrutar el tráfico dirigido a la máquina WS01 a través de la WS02.</p><p></p><p><div class="codebox"><pre><br />route add 192.168.20.133 255.255.255.0 1</pre></div></p><p></p><p>Donde la dirección es la de la máquina objetivo con su máscara de red y el 1 la sesión de meterpreter.</p><p></p><p>Para probarlo podemos usar algunas herramientas de escaneo de puertos en metasploit.</p><p></p><p><div class="codebox"><pre><br />use use auxiliary<span style="color:#000000;font-weight:700">/</span>scanner<span style="color:#000000;font-weight:700">/</span>portscan<span style="color:#000000;font-weight:700">/</span>tcp<br /><span style="color:#000000;font-weight:700">set</span> ports 100-150<br /><span style="color:#000000;font-weight:700">set</span> rhosts 192.168.20.133<br />run<br /></pre></div></p><p></p><p><img src="images/68-2.png" alt="images/68-2.png" /></p><p></p><p>Si capturamos con wireshark veremos qué maquina está escaneando al objetivo.</p><p></p><p><img src="images/68-3.png" alt="images/68-3.png" /></p><p></p><p>Como vemos la Ip de la máquina kali no es porque corresponde a 192.168.20.129</p><p></p><p>Pero:</p><p></p><p><img src="images/68-4.png" alt="images/68-4.png" /></p><p></p><p><img src="images/68-5.png" alt="images/68-5.png" /></p></div>
+</body>
+</html>

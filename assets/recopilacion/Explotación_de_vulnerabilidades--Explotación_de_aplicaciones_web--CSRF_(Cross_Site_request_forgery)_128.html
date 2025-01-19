@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>CSRF (Cross Site request forgery)</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>CSRF (Cross Site request forgery)</h1><br/><p>Consiste fundamentalmente en forzar a que un usuario legítimo que está logueado en una aplicación web realice una acción que ni siquiera sabe que está realizando.</p><p></p><p>Un CSRF es como si estuviesemos explotando un XSS reflect o stored pero insertando un código que provoca que el usuario realice una acción sobre la web que nos resulte en un beneficio.</p><p></p><p>Como ejemplos tenemos:</p><p><ul><li>Forzar que un usuario añada una entrada con el texto que queramos.</li><li>Forzar registros de cuentas.</li><li>Etc</li></ul></p><p></p><p><img src="images/128-1.png" alt="images/128-1.png" /></p><p></p><p>Cuando un usuario visite nuestra entrada de blog, se va a ejecutar por detrás y va a crear una entrada nueva en su nombre.</p><p></p><p>Interceptamos con <a href="Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--BurpSuite_118.html">BurpSuite</a>.</p><p></p><p><img src="images/128-2.png" alt="images/128-2.png" /></p><p></p><p>Codificamos en URL.</p><p></p><p><img src="images/128-3.png" alt="images/128-3.png" /></p><p></p><p><img src="images/128-4.png" alt="images/128-4.png" /></p><p></p><p><img src="images/128-5.png" alt="images/128-5.png" /></p><p></p><p>Probamos el registro de otra cuenta:</p><p></p><p><img src="images/128-6.png" alt="images/128-6.png" /></p><p></p><p>Mismo proceso anterior.</p><p></p><p><img src="images/128-7.png" alt="images/128-7.png" /></p><p></p><p><img src="images/128-8.png" alt="images/128-8.png" /></p><p></p><p><img src="images/128-9.png" alt="images/128-9.png" /></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
+</body>
+</html>

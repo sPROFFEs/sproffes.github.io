@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Recopilacion</title>
+        <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="res/styles-try.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <style>
+                :root {
+                        --primary-color: #1a1a1a;
+                        --secondary-color: #2c2c2c;
+                        --accent-color: #4a90e2;
+                        --text-color: #f0f0f0;
+                        --hover-color: #3a3a3a;
+                }
+
+                body {
+                        font-family: "Roboto", sans-serif;
+                        background-color: var(--primary-color);
+                        color: var(--text-color);
+                        line-height: 1.6;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                .w3-sidebar {
+                        background-color: var(--secondary-color);
+                        color: var(--text-color);
+                        width: 250px;
+                        padding-top: 20px;
+                        position: fixed;
+                        height: 100%;
+                        overflow-y: auto;
+                }
+
+                .w3-sidebar a {
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        font-size: 15px;
+                        color: var(--text-color);
+                        display: block;
+                        transition: 0.3s;
+                }
+
+                .w3-sidebar a:hover {
+                        background-color: var(--hover-color);
+                }
+
+                .w3-sidebar .w3-button {
+                        width: 100%;
+                        text-align: left;
+                }
+
+                .w3-main {
+                        margin-left: 250px;
+                        padding: 20px;
+                }
+
+                .w3-container h3 {
+                        margin-bottom: 20px;
+                }
+
+                iframe {
+                        border: none;
+                        width: 100%;
+                        height: calc(100vh - 100px);
+                }
+
+                .icon-tabler {
+                        vertical-align: middle;
+                        margin-right: 5px;
+                }
+
+                .w3-bar-item svg {
+                        margin-right: 10px;
+                }
+
+                @media (max-width: 600px) {
+                        .w3-sidebar {
+                                width: 100%;
+                                position: relative;
+                        }
+
+                        .w3-main {
+                                margin-left: 0;
+                        }
+                }
+
+                #footer {
+                        background-color: var(--secondary-color);
+                        color: var(--text-color);
+                        text-align: center;
+                        padding: 10px;
+                        position: fixed;
+                        bottom: 0;
+                        width: 100%;
+                }
+
+                #footer a {
+                        color: var(--accent-color);
+                }
+
+        </style>
+</head>
+
+<body>
+
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" id="mySidebar">
+                <div class="w3-container">
+                        <a href="../../index.html" class="logo">
+                                <h1 class="glow-effect">VOLVER</h1>
+                        </a>
+                </div>
+                <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+                        <ul class='outermost'>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('VMWARE_linux_54.html')">VMWARE linux</a></li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Crear_red_virtual_privada_VMWARE_11.html')">Crear
+                                                red
+                                                virtual privada VMWARE</a></li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Metodologías_principales_73.html')">Metodologías
+                                                principales</a></li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Anonimato_91.html')">Anonimato</a></li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Entorno_Metasploitable3_93.html')">Entorno
+                                                Metasploitable3</a></li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Amazon_AWS_72.html')">Amazon AWS</a></li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Resolucion_de_TROLL1_6.html')">Resolucion de
+                                                TROLL1</a>
+                                </li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Snort_2.html')">Snort</a></li>
+                                <li><a class="w3-button w3-block w3-left-align" href='#'
+                                                onclick="changeFrame('Reconocimiento_de_alcance_47.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>Reconocimiento de alcance</a></li>
+                                <ul class='subtree'>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva_74.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Identificación pasiva</a></li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--Google_Hacking_75.html')">Google
+                                                                Hacking</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--Shodan_76.html')">Shodan</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--Censys_77.html')">Censys</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--Whois_78.html')">Whois</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--Archive_79.html')">Archive</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--TheHarvester_80.html')">TheHarvester</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--Maltego_81.html')">Maltego</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_pasiva--Recon-Ng_82.html')">Recon-Ng</a>
+                                                </li>
+                                        </ul>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva_83.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Identificación semi-pasiva</a></li>
+                                        <ul class='subtree'>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Metadatos_150.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>Metadatos</a>
+                                                </li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Metadatos--FOCA_84.html')">FOCA</a>
+                                                        </li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Metadatos--Otras_herramientas_85.html')">Otras
+                                                                        herramientas</a></li>
+                                                </ul>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Protocolo_DNS_86.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>Protocolo DNS</a></li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Protocolo_DNS--CentralOps-DNSdumpster_87.html')">CentralOps/DNSdumpster</a>
+                                                        </li>
+                                                </ul>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Sniffers_88.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>Sniffers</a>
+                                                </li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Sniffers--Wireshark_89.html')">Wireshark</a>
+                                                        </li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Reconocimiento_de_alcance--Identificación_semi-pasiva--Sniffers--TCPDump_90.html')">TCPDump</a>
+                                                        </li>
+                                                </ul>
+                                        </ul>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Reconocimiento_de_alcance--Recopilación_Activa_92.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Recopilación Activa</a>
+                                        </li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Recopilación_Activa--DNSrecoon_y_transferencia_de_zona_95.html')">DNSrecoon
+                                                                y transferencia de zona</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Recopilación_Activa--Identificando_Subdominios_49.html')">Identificando
+                                                                Subdominios</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Recopilación_Activa--Identificando_tecnologías_50.html')">Identificando
+                                                                tecnologías</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Reconocimiento_de_alcance--Recopilación_Activa--Content_Discovery_51.html')">Content
+                                                                Discovery</a></li>
+                                        </ul>
+                                </ul>
+                                <li><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos_7.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>Escaneo de redes e
+                                                identificación de nodos</a></li>
+                                <ul class='subtree'>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Nmap_3.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Nmap</a>
+                                        </li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Nmap--Escaneo_de_hosts_96.html')">Escaneo
+                                                                de hosts</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Nmap--Escaneo_de_puertos_97.html')">Escaneo
+                                                                de puertos</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Nmap--Identificación_de_sistema_operativo_99.html')">Identificación
+                                                                de sistema operativo</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Nmap--SMB_enumeration_100.html')">SMB
+                                                                enumeration</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Nmap--SNMP_enumeration_101.html')">SNMP
+                                                                enumeration</a></li>
+                                        </ul>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Naabu_y_Netcat_4.html')">Naabu
+                                                        y
+                                                        Netcat</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--Masscan_5.html')">Masscan</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Escaneo_de_redes_e_identificación_de_nodos--AMap_98.html')">AMap</a>
+                                        </li>
+                                </ul>
+                                <li><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Análisis_de_vulnerabilidades_52.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>Análisis de vulnerabilidades</a>
+                                </li>
+                                <ul class='subtree'>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--CVE,_CVSS,_CPE_104.html')">CVE,
+                                                        CVSS,
+                                                        CPE</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--Nmap_scripts_105.html')">Nmap
+                                                        scripts</a></li>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--Nessus_106.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Nessus</a></li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Análisis_de_vulnerabilidades--Nessus--Análisis_básico_107.html')">Análisis
+                                                                básico</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Análisis_de_vulnerabilidades--Nessus--Análisis_avanzado_108.html')">Análisis
+                                                                avanzado</a></li>
+                                        </ul>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--ZapProxy_102.html')">ZapProxy</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--Nikto_y_Skipfish_103.html')">Nikto
+                                                        y
+                                                        Skipfish</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--Nuclei_-_Templates_53.html')">Nuclei
+                                                        /
+                                                        Templates</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--Fuzzing_55.html')">Fuzzing</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--Otras_herramientas_109.html')">Otras
+                                                        herramientas</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Análisis_de_vulnerabilidades--Herramientas_útiles_57.html')">Herramientas
+                                                        útiles</a></li>
+                                </ul>
+                                <li><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Explotación_de_vulnerabilidades_56.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>Explotación de vulnerabilidades</a></li>
+                                <ul class='subtree'>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_hosts_111.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Explotación
+                                                        en
+                                                        hosts</a></li>
+                                        <ul class='subtree'>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_hosts--Metasploit_94.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>Metasploit</a>
+                                                </li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_hosts--Metasploit--Nivel_básico_112.html')">Nivel
+                                                                        básico</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_hosts--Metasploit--Nivel_avanzado_113.html')">Nivel
+                                                                        avanzado</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_hosts--Metasploit--MsfVenom_114.html')">MsfVenom</a>
+                                                        </li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_hosts--Metasploit--Importar_resultados_con_nessus_115.html')">Importar
+                                                                        resultados con nessus</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_hosts--Metasploit--Interfaz_gráfica_Armitage_116.html')">Interfaz
+                                                                        gráfica Armitage</a></li>
+                                                </ul>
+                                        </ul>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web_117.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Explotación de aplicaciones web</a></li>
+                                        <ul class='subtree'>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--BurpSuite_118.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>BurpSuite</a>
+                                                </li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--BurpSuite--Sipdering_y_crawling_119.html')">Sipdering
+                                                                        y crawling</a></li>
+                                                </ul>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Inyecciones_de_código_y_contexto_120.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>Inyecciones de código y contexto</a></li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Inyecciones_de_código_y_contexto--SQL_Injection_121.html')">SQL
+                                                                        Injection</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Inyecciones_de_código_y_contexto--Blind_SQLInjection_122.html')">Blind
+                                                                        SQLInjection</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Inyecciones_de_código_y_contexto--SQLMap_123.html')">SQLMap</a>
+                                                        </li>
+                                                </ul>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--PathTraversal_124.html')">PathTraversal</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Webshells_125.html')">Webshells</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Urestricted_file_upload_126.html')">Urestricted
+                                                                file upload</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--HTML_Injection_y_XSS_127.html')">HTML
+                                                                Injection y XSS</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--CSRF_(Cross_Site_request_forgery)_128.html')">CSRF
+                                                                (Cross Site request forgery)</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--XSStrike_129.html')">XSStrike</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Cookie_Tampering_130.html')">Cookie
+                                                                Tampering</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Command_Injection_131.html')">Command
+                                                                Injection</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--Commix_110.html')">Commix</a>
+                                                </li>
+                                        </ul>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red_132.html')">Explotación
+                                                        en
+                                                        red</a></li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red--Bettercap_133.html')">Bettercap</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red--ARP_Spoofing_134.html')">ARP
+                                                                Spoofing</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red--DNS_Spoofing_135.html')">DNS
+                                                                Spoofing</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red--Social_Engineering_Toolkit_(SET)_136.html')">Social
+                                                                Engineering Toolkit (SET)</a></li>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red--Manipulación_de_tráfico_de_red_en_tiempo_real_137.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>Manipulación de tráfico de red en tiempo real</a>
+                                                </li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red--Manipulación_de_tráfico_de_red_en_tiempo_real--ICMP_(primeros_pasos)_138.html')">ICMP
+                                                                        (primeros pasos)</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-small"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Explotación_de_vulnerabilidades--Explotación_en_red--Manipulación_de_tráfico_de_red_en_tiempo_real--tráfico_MQTT_139.html')">tráfico
+                                                                        MQTT</a></li>
+                                                </ul>
+                                        </ul>
+                                </ul>
+                                <li><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Post-Explotación_66.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>Post-Explotación</a></li>
+                                <ul class='subtree'>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Port-Forwarding_67.html')">Port-Forwarding</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Pivoting_68.html')">Pivoting</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Netcat_Port-Pivot_Relay_69.html')">Netcat
+                                                        Port-Pivot
+                                                        Relay</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Local_Tunneling_LocalTunel_Y_Ngrok_70.html')">Local
+                                                        Tunneling:
+                                                        LocalTunel Y Ngrok</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Transferencia_de_ficheros_71.html')">Transferencia
+                                                        de
+                                                        ficheros</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Linux_meterpreter_140.html')">Linux
+                                                        meterpreter</a></li>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Windows_meterpreter_141.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Windows meterpreter</a></li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Post-Explotación--Windows_meterpreter--UAC_Bypass_142.html')">UAC
+                                                                Bypass</a>
+                                                </li>
+                                        </ul>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Volcado_memoria_Mimikatz_143.html')">Volcado
+                                                        memoria
+                                                        Mimikatz</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Procdump_e_Isass.exe_144.html')">Procdump
+                                                        e
+                                                        Isass.exe</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--John_y_Hashcat_145.html')">John
+                                                        y
+                                                        Hashcat</a></li>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Backdoors_en_binarios_146.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Backdoors en binarios</a></li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Post-Explotación--Backdoors_en_binarios--Migrar_procesos_147.html')">Migrar
+                                                                procesos</a></li>
+                                        </ul>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Post-Explotación--Eliminación_de_rastros_148.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Eliminación de rastros</a>
+                                        </li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-small" href='#'
+                                                                onclick="changeFrame('Post-Explotación--Eliminación_de_rastros--Archivos_importantes_a_eliminar_149.html')">Archivos
+                                                                importantes a eliminar</a></li>
+                                        </ul>
+                                </ul>
+                                <li><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)_8.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>Entornos de directorio activo (ACTIVE DIRECTORY)</a></li>
+                                <ul class='subtree'>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Instalando_WindowsServer_9.html')">Instalando
+                                                        WindowsServer</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Workstations_10.html')">Workstations</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Administracion_del_DC_12.html')">Administracion
+                                                        del DC</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--POWERVIEW-POWERSPLOIT_14.html')">POWERVIEW/POWERSPLOIT</a>
+                                        </li>
+                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información_13.html')">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                width="20" height="20" viewBox="0 0 24 24"
+                                                                stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                        </svg>Recopilación de información</a></li>
+                                        <ul class='subtree'>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--Recopilacion_LOCAL_15.html')">Recopilacion
+                                                                LOCAL</a></li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--Recopilacion_REMOTA_16.html')">Recopilacion
+                                                                REMOTA</a></li>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--Recopilación_por_LDAP_17.html')">Recopilación
+                                                                por LDAP</a></li>
+                                                <ul class='subtree'>
+                                                        <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--Recopilación_por_LDAP--Enumeración_NTDS_18.html')">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                                width="20" height="20"
+                                                                                viewBox="0 0 24 24" stroke-width="1.5"
+                                                                                stroke="#ffffff" fill="none"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round">
+                                                                                <path stroke="none" d="M0 0h24v24H0z"
+                                                                                        fill="none" />
+                                                                                <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                        </svg>Enumeración NTDS</a></li>
+                                                        <ul class='subtree'>
+                                                                <li class='leaf'><a
+                                                                                class="w3-bar-item w3-button w3-small"
+                                                                                href='#'
+                                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--Recopilación_por_LDAP--Enumeración_NTDS--BLOODHOUND_19.html')">BLOODHOUND</a>
+                                                                </li>
+                                                        </ul>
+                                                </ul>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--ACL_(Listas_de_control_de_acceso)_20.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>ACL (Listas de control de acceso)</a></li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--ACL_(Listas_de_control_de_acceso)--Aumentar_AD_21.html')">Aumentar
+                                                                        AD</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('rectorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--ACL_(Listas_de_control_de_acceso)--Identificación_ACLs_vulnerables_22.html')">Identificación
+                                                                        ACLs vulnerables</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--ACL_(Listas_de_control_de_acceso)--Explotación_ACLs_vulnerables_23.html')">Explotación
+                                                                        ACLs vulnerables</a></li>
+                                                </ul>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--DCSync_24.html')">DCSync</a>
+                                                </li>
+                                                <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--Password_Spraying_25.html')">Password
+                                                                Spraying</a></li>
+                                                <li><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                                onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--PROTOCOLO_KERBEROS_26.html')">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="icon icon-tabler icon-tabler-arrow-badge-down"
+                                                                        width="20" height="20" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke="#ffffff" fill="none"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                                </svg>
+                                                                PROTOCOLO KERBEROS</a></li>
+                                                <ul class='subtree'>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--PROTOCOLO_KERBEROS--Kerberos_en_AD_27.html')">Kerberos
+                                                                        en AD</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--PROTOCOLO_KERBEROS--Recopilación_Kerberos_28.html')">Recopilación
+                                                                        Kerberos</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--PROTOCOLO_KERBEROS--AS-REQ_Roasting_29.html')">AS-REQ
+                                                                        Roasting</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--PROTOCOLO_KERBEROS--Instalación_RUBEUS_30.html')">Instalación
+                                                                        RUBEUS</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--PROTOCOLO_KERBEROS--AS-REP_Roasting_31.html')">AS-REP
+                                                                        Roasting</a></li>
+                                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium"
+                                                                        href='#'
+                                                                        onclick="changeFrame('Entornos_de_directorio_activo_(ACTIVE_DIRECTORY)--Recopilación_de_información--PROTOCOLO_KERBEROS--TGS-REP_Roasting_(Kerberoasting)_32.html')">TGS-REP
+                                                                        Roasting (Kerberoasting)</a></li>
+                                                </ul>
+                                        </ul>
+                                </ul>
+                                <li><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy_33.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>
+                                                Aplicación de técnicas fuera de ActiveDirectoy</a></li>
+                                <ul class='subtree'>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--Autenticación_y_autorización_en_Windows_34.html')">Autenticación
+                                                        y autorización en Windows</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--Volcado_ISASS_y_SAM_35.html')">Volcado
+                                                        ISASS y SAM</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--VolcadoCredenciales_de_dominio_cacheadas_(mscash)_36.html')">VolcadoCredenciales
+                                                        de dominio cacheadas (mscash)</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--PassTheHash_37.html')">PassTheHash</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--OverPassTheHash-PassTheKey_38.html')">OverPassTheHash/PassTheKey</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--PassTheTicket_39.html')">PassTheTicket</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--ASK-TGT-TGS_40.html')">ASK-TGT/TGS</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--GoldenTicket-SilverTicket_41.html')">GoldenTicket/SilverTicket</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--NTLM_Roasting_42.html')">NTLM
+                                                        Roasting</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--LLMNR-NBTNS_Poisoning_43.html')">LLMNR/NBTNS
+                                                        Poisoning</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--NTLM-SMB_Relay_44.html')">NTLM/SMB
+                                                        Relay</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Aplicación_de_técnicas_fuera_de_ActiveDirectoy--Token_Impersonation_45.html')">Token
+                                                        Impersonation</a></li>
+                                </ul>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Covenant_Framework_46.html')">Covenant
+                                                Framework</a></li>
+                                <li class='leaf'><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('BugBounty_48.html')">BugBounty</a></li>
+                                <li><a class="w3-bar-item w3-button" href='#'
+                                                onclick="changeFrame('Detección_y_evasión_de_defensas_58.html')">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-arrow-badge-down" width="20"
+                                                        height="20" viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="#ffffff" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+                                                </svg>
+                                                Detección y evasión de defensas
+                                        </a>
+                                </li>
+                                <ul class='subtree'>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--LoadBalancingDetector_59.html')">LoadBalancingDetector</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--WAF_Detector_60.html')">WAF
+                                                        Detector</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--Evasión_de_antivirus_con_C~_61.html')">Evasión
+                                                        de
+                                                        antivirus con C#</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--Evasión_de_detección_en_tiempo_de_ejecución_62.html')">Evasión
+                                                        de detección en tiempo de ejecución</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--Evasión_con_GreatSCT_63.html')">Evasión
+                                                        con
+                                                        GreatSCT</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--TheFatRat_64.html')">TheFatRat</a>
+                                        </li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--Otras_herramientas_65.html')">Otras
+                                                        herramientas</a></li>
+                                        <li class='leaf'><a class="w3-bar-item w3-button w3-medium" href='#'
+                                                        onclick="changeFrame('Detección_y_evasión_de_defensas--Pesidious_151.html')">Pesidious</a>
+                                        </li>
+                                </ul>
+                        </ul>
+        </nav>
+
+        <!-- Top menu on small screens -->
+        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+                <div class="w3-bar-item w3-padding-24 w3-wide">OFFENSIVE</div>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <line x1="4" y1="6" x2="20" y2="6"></line>
+                                <line x1="4" y1="12" x2="20" y2="12"></line>
+                                <line x1="4" y1="18" x2="20" y2="18"></line>
+                        </svg>
+                </a>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+                id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main">
+                <!-- Push down content on small screens -->
+                <div class="w3-hide-large" style="margin-top:83px"></div>
+
+                <div class="page-panel">
+                        <iframe src="" id="page_frame"></iframe>
+                </div>
+        </div>
+
+        <script src="res/script3.js"></script>
+</body>
+
+</html>

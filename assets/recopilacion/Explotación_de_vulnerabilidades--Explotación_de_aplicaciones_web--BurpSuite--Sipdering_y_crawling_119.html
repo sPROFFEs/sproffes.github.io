@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Sipdering y crawling</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Sipdering y crawling</h1><br/><p></p><p></p><p>En el apartado de Target encontramos los directorios y archivos de la aplicación web que hemos interceptado.</p><p></p><p><img src="images/119-1.png" alt="images/119-1.png" /></p><p></p><p>Todos estos apartados los descubre de forma automática y si están marcados en negro significa que han sido visitados.</p><p></p><p>Todo esto lo ha sacado del código fuente que recibe del servidor.</p><p>cuando recibe esa petición desde el servidor con la página web parsea la petición, coge todos los enlaces que puedan hacer referencia a otros apartados dentro de esa aplicación web y te los muestra aquí.</p><p></p><p>Este spidering es pasivo.</p><p></p><p>Se puede realizar un spidering activo con <a href="Explotación_de_vulnerabilidades--Explotación_de_aplicaciones_web--BurpSuite_118.html">BurpSuite</a> pero en la versión de pago o en la comunity v1.x</p><p></p><p>También podemos utilizar otras herramientas como SkipFish.</p><p></p><p><div class="codebox"><pre><br />skipfish -YO -o Desktop<span style="color:#000000;font-weight:700">/</span>fish http<span style="color:#000000;font-weight:700">://</span>192.168.20.132<span style="color:#000000;font-weight:700">:</span>1336<span style="color:#000000;font-weight:700">/</span>index.php </pre></div></p><p></p><p>Esta sería la primera fase que realizaríamos en el proceso de explotación de vulnerabilidades en aplicaciones web, y es simplemente la fase de tratar de recopilar todos los apartados de esa página web para ver cuáles pueden ser los interesantes.</p><p></p><p></p><p></p></div>
+</body>
+</html>

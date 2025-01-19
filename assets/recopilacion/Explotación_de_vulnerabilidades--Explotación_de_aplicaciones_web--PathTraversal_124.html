@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>PathTraversal</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>PathTraversal</h1><br/><p></p><p>Consiste en una inyección de código pero en el contexto de una ruta al sistema de ficheros.</p><p></p><p>La clave es tratar de influir en la ruta para, en lugar de obtener el fichero que se está buscando, tratar de obtener otros ficheros u otros archivos del sistema de ficheros del web server.</p><p></p><p><img src="images/124-1.png" alt="images/124-1.png" /></p><p></p><p>La manera de obtener esta página es a través de un parámetro de URL.</p><p></p><p><img src="images/124-2.png" alt="images/124-2.png" /></p><p></p><p>Si no hay un control por parte del backend cuando se ha implementado esa función que obtiene ese fichero, ese archivo del sistema de ficheros, lo que va a ocurrir es que me voy a escapar un poco de la carpeta mutillidae y me voy a ir a obtener otros archivos que se encuentran dentro del sistema de ficheros del web server.</p><p></p><p><img src="images/124-3.png" alt="images/124-3.png" /></p><p></p><p>Si es en windows sería contrabarra <a href="file:///">\</a></p><p></p><p></p><p></p></div>
+</body>
+</html>

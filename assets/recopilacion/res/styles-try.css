@@ -1,0 +1,260 @@
+/* Variables globales */
+:root {
+  --primary: #00fff2;
+  --secondary: #ff00a0;
+  --background: #0a0b0e;
+  --surface: #1a1b1f;
+  --surface-alt: #252629;
+  --accent: #7928ca;
+  --text: #e0e0e0;
+  --text-dim: #a0a0a0;
+  --danger: #ff4444;
+  --success: #00ff9d;
+  --warning: #ffb800;
+}
+
+/* Estilos base */
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Contenedores W3 */
+.w3-container {
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid rgba(0, 255, 242, 0.1);
+  border-radius: 4px;
+}
+
+.w3-main {
+  margin-left: 280px;
+  transition: margin-left 0.3s;
+}
+
+/* Sidebar */
+.w3-sidebar {
+  width: 280px;
+  background: var(--surface);
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  overflow-x: hidden;
+  border-right: 1px solid rgba(0, 255, 242, 0.1);
+  transition: 0.3s;
+}
+
+/* Barra superior */
+.w3-bar {
+  background: var(--surface);
+  padding: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 255, 242, 0.1);
+}
+
+.w3-bar-item {
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.w3-button {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.w3-button:hover {
+  background: rgba(0, 255, 242, 0.1);
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+/* Tamaños de texto */
+.w3-large {
+  font-size: 1.1rem;
+}
+
+.w3-medium {
+  font-size: 0.95rem;
+  padding-left: 1.5rem;
+}
+
+.w3-small {
+  font-size: 0.85rem;
+  padding-left: 3rem;
+}
+
+/* Colores de texto */
+.w3-text-grey {
+  color: var(--text-dim);
+}
+
+/* Efectos de texto */
+.w3-wide {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Logo y título */
+.logo {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.glow-effect {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px var(--primary); }
+  50% { text-shadow: 0 0 20px var(--primary), 0 0 30px var(--secondary); }
+}
+
+/* Padding y márgenes */
+.w3-padding-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* Overlay */
+.w3-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+  display: none;
+}
+
+/* Iconos */
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Panel de página */
+.page-panel {
+  min-height: calc(100vh - 83px);
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 0 20px rgba(0, 255, 242, 0.1);
+}
+
+/* Utilidades */
+.w3-hide-large {
+  display: none;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .w3-main {
+      margin-left: 0;
+  }
+  
+  .w3-sidebar {
+      display: none;
+  }
+  
+  .w3-hide-large {
+      display: block;
+  }
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Animaciones */
+.w3-animate-left {
+  position: relative;
+  animation: animateLeft 0.3s;
+}
+
+@keyframes animateLeft {
+  from {
+      left: -300px;
+      opacity: 0;
+  }
+  to {
+      left: 0;
+      opacity: 1;
+  }
+}
+
+/* Enlaces y navegación */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+  text-shadow: 0 0 10px var(--secondary);
+}
+
+/* Menú móvil */
+.w3-top {
+  position: fixed;
+  width: 100%;
+  z-index: 98;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  margin: 6px 0;
+  transition: 0.3s;
+}

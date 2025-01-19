@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>XSStrike</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>XSStrike</h1><br/><p></p><p></p><p>Se trata de una herramienta para realizar XSS de una manera más automatizada.</p><p></p><p><a href="https://github.com/s0md3v/XSStrike">https://github.com/s0md3v/XSStrike</a></p><p></p><p>Es necesario el gestor de paquetes python:</p><p></p><p><div class="codebox"><pre><br />sudo apt install python3-pip</pre></div></p><p></p><p>Clonamos repositorio.</p><p></p><p><div class="codebox"><pre><br />git clone https://github.com/s0md3v/XSStrike</pre></div></p><p></p><p>Instalamos dependencias.</p><p></p><p><img src="images/129-1.png" alt="images/129-1.png" /></p><p></p><p><div class="codebox"><pre><br />sudo pip3 install -r requirements.txt </pre></div></p><p></p><p><div class="codebox"><pre><br />python3 xsstrike.py<br /></pre></div></p><p></p><p><img src="images/129-2.png" alt="images/129-2.png" /></p><p></p><p>Para ver el uso completo o sus parámetros: <a href="https://github.com/s0md3v/XSStrike/wiki">https://github.com/s0md3v/XSStrike/wiki</a></p><p></p><p>Vamos a comprobar una de las páginas de mutillidae.</p><p></p><p><div class="codebox"><pre><br />sudo python3 xsstrike.py -u &quot;http://192.168.20.132:1336/index.php?page=user-info.php&quot; --timeout 50</pre></div></p><p></p><p><img src="images/129-3.png" alt="images/129-3.png" /></p><p></p></div>
+</body>
+</html>

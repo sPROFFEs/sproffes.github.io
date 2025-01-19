@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Wireshark</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Wireshark</h1><br/><p></p><p></p><p><a href="https://www.wireshark.org/download.html">https://www.wireshark.org/download.html</a></p><p></p><p>Es una herramienta de las más conocidas y potentes que por defecto en Kali ya viene instalado.</p><p></p><p><img src="images/89-1.png" alt="images/89-1.png" /></p><p></p><p><img src="images/89-2.png" alt="images/89-2.png" /></p><p></p><p>Los paquetes se dividen en capas</p><p></p><p><img src="images/89-3.png" alt="images/89-3.png" /></p><p></p><p>Para poder visualizar los paquetes en los que se ha realizado la consulta de los nombres DNS damos click en la lupa.</p><p></p><p><img src="images/89-4.png" alt="images/89-4.png" /></p><p></p><p><img src="images/89-5.png" alt="images/89-5.png" /></p><p></p><p>Aquí es donde se realiza la petición para resolver ese nombre de dominio.</p><p></p><p><img src="images/89-6.png" alt="images/89-6.png" /></p><p></p><p>Aquí vemos las respuestas con los hostnames y sus IP tanto IPV4 como IPV6 como se observa en el siguiente paquete.</p><p></p><p></p><p><img src="images/89-7.png" alt="images/89-7.png" /></p><p></p><p>Bueno, sabéis que HTTP va por encima de la capa TCP y muchas veces cuando nosotros estamos intercambiando</p><p>información que tiene un tamaño muy grande, como puede ser por ejemplo una página web, al final nosotros</p><p>hacemos una petición al servidor web, le decimos.</p><p>Oye, mándame esa página web.</p><p>El servidor web te manda a la página web.</p><p>Pero claro, una página web es un montón de información.</p><p>Vale, entonces los paquetes de red o la cantidad de información que va en una ristra de bits que se</p><p>intercambia, tiene un tamaño limitado.</p><p>No es un tamaño infinito.</p><p>Y por lo tanto, si la página web o la información que intercambiamos es demasiado grande, no podemos</p><p>mandarla toda en un mismo segmento, en una misma ristra de bits o en un mismo paquete de red.</p><p>Por lo tanto, tenemos que fragmentar de alguna manera esa información e ir mandándola en segmentos</p><p>diferentes o en paquetes de red diferentes.</p><p></p><p></p><p></p></div>
+</body>
+</html>

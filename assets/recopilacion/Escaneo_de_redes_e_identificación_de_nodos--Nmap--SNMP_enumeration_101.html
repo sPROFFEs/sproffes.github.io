@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>SNMP enumeration</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>SNMP enumeration</h1><br/><p></p><p></p><p><strong><h1>Protocolo SNMP</h1></strong></p><p></p><p>Es un protocolo de red que nos sirve fundamentalmente para gestionar, ya sea obtener datos, cambiar algunos aspectos de la configuración del comportamiento de dispositivos de red, como puede ser por ejemplo, un router, un switch pero, también de servidores</p><p></p><p>Es un protocolo que en la mayoría de las ocasiones está mal configurado en muchos servidores y permite la obtención de mucha información.</p><p></p><p></p><p>Este protocolo se ejecuta en el puerto 161 y funciona por UDP</p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sU -p 161 192.168.20.129</pre></div></p><p></p><p><img src="images/101-1.png" alt="images/101-1.png" /></p><p></p><p></p><p></p><p><h3>Mediante los scripts:</h3></p><p></p><p><img src="images/101-2.png" alt="images/101-2.png" /></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sU -p 161 --script=snmp-win32-software 192.168.20.129</pre></div></p><p></p><p><img src="images/101-3.png" alt="images/101-3.png" /></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sU -p 161 --script=snmp-win32-users 192.168.20.129</pre></div></p><p></p><p><img src="images/101-4.png" alt="images/101-4.png" /></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sU -p 161 --script=snmp-processes 192.168.20.129</pre></div></p><p></p><p><img src="images/101-5.png" alt="images/101-5.png" /></p><p></p><p></p><p><div class="codebox"><pre><br /><span style="color:#000000;font-weight:700">sudo</span> nmap -v -sU -p 161 --script=snmp-netstat 192.168.20.129</pre></div></p><p></p><p><img src="images/101-6.png" alt="images/101-6.png" /></p><p></p></div>
+</body>
+</html>

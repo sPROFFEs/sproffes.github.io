@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Instalación RUBEUS</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Instalación RUBEUS</h1><br/><p><h1>HERRAMIENTA RUBEUS WINDOWS</h1></p><p></p><p></p><p><a href="https://github.com/GhostPack/Rubeus">https://github.com/GhostPack/Rubeus</a></p><p></p><p>Contiene prácticamente todas la técnicas de ataque contra Kerberos a día de hoy.</p><p></p><p>Para poder ejecutarlo tendremos que compilarlo nosotros y lo haremos en la maquina WS01.</p><p></p><p>Dentro de WS01 vamos al repositorio y en la tabla de contenido </p><p></p><p><img src="images/30-1.png" alt="images/30-1.png" /></p><p></p><p>Descargamos VisualStudio&gt; <a href="https://visualstudio.microsoft.com/es/vs/community/">https://visualstudio.microsoft.com/es/vs/community/</a></p><p></p><p>Descargamos también el repositorio o la release</p><p></p><p><img src="images/30-2.png" alt="images/30-2.png" /></p><p></p><p>Con visual estudio instalado vamos a compilar el proyecto:</p><p></p><p><img src="images/30-3.png" alt="images/30-3.png" /></p><p></p><p>Abrimos el proyecto VisualStudio</p><p></p><p><img src="images/30-4.png" alt="images/30-4.png" /></p><p></p><p>Seleccionamos la raíz</p><p></p><p><img src="images/30-5.png" alt="images/30-5.png" /></p><p></p><p>Compilamos:</p><p></p><p><img src="images/30-6.png" alt="images/30-6.png" /></p><p><img src="images/30-7.png" alt="images/30-7.png" /></p><p></p><p>Este tipo de herramientas son tan populares que cualquier antivirus o EDR las va a detectar así que por ahora quitamos el antivirus.</p><p></p><p>Ahora devolvemos la maquina a red virtual del dominio.</p><p></p><p>Recordatorio del dns:</p><p><img src="images/30-8.png" alt="images/30-8.png" /></p><p></p><p><img src="images/30-9.png" alt="images/30-9.png" /></p><p></p><p>Comprobamos la conexión con el dominio y vamos a ejecutar Rubeus</p><p></p><p><img src="images/30-10.png" alt="images/30-10.png" /></p><p></p><p><div class="codebox"><pre><br />.<span style="color:#000000;font-weight:700">\</span>Rubeus.exe <span style="color:#000000;font-weight:700">-</span><span style="color:#729fcf;font-weight:400">h</span></pre></div></p></div>
+</body>
+</html>
