@@ -231,7 +231,7 @@ Dejando el resto de parámetros por defecto excepto el separador que indicaremos
 
 En la carpeta creada contamos con varios CSV, abrimos el primero con algún procesador de hojas de cálculo
 
-![Configuración importación CSV](/assets/img/20241127_004906_Screenshot_From_2024-11-27_00-48-47.png)
+![Configuración importación CSV](/assets/img/posts/analisis_ntfs/20241127_004906_Screenshot_From_2024-11-27_00-48-47.png)
 _Importante tomar esa configuración para formatear el contenido correctamente_
 
 Nos interesa estudiar qué archivos se han borrado y en qué fecha por lo que vamos a aplicar unos filtros bien sean por "in_use = 0" o "RecordActive" = DELETED/ALLOCATED
@@ -311,7 +311,7 @@ _Exportamos $J_
 
 Ahora si podemos importarlo en la herramienta para poder ser procesado
 
-![Configuración UsnJrnl2Csv](/assets/img/20241127_165644_Screenshot_From_2024-11-27_16-56-39.png)
+![Configuración UsnJrnl2Csv](/assets/img/posts/analisis_ntfs/20241127_165644_Screenshot_From_2024-11-27_16-56-39.png)
 _Recordad establecer el separador en ";" y dump everything_
 
 Una vez procesado lo encontramos en la misma carpeta del programa. Lo abrimos con un editor al igual que antes
