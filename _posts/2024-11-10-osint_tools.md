@@ -28,7 +28,7 @@ tags: [osint, security, investigation, tools]
 
 
 
-## [](#table-of-contents) Table of contents
+## [] Table of contents
 - [Maps, Geolocation and Transport](#maps-geolocation-and-transport)
     - [Social media and photos](#social-media-and-photos)
     - [Nature](#nature)
@@ -47,7 +47,7 @@ tags: [osint, security, investigation, tools]
     - [Street View](#street-view)
     - [Satellite/aerial imagery](#satelliteaerial-imagery)
     - [Military tracking](#military-tracking)
-    - [Military visalisation](#military-visalisation)
+    - [Military visualization](#military-visualization)
     - [Other](#other)
 - [Social Media](#social-media)
     - [Twitter](#twitter)
@@ -474,7 +474,7 @@ tags: [osint, security, investigation, tools]
 | [Understanding War Map Room](https://www.understandingwar.org/map-room) | collection of maps illustrating military conflicts in different countries. |
 | [US Military Bases Interactive Worldwide Map](https://worldbeyondwar.org/no-bases/) | Use the map to find out the number of people at the base, the approximate area, the opening date, and to get links to articles with more information. |
 
-### [](#military-visalisation)Military visualisation
+### [](#military-visualization)Military visualization
 
 | Link | Description |
 | --- | --- |
