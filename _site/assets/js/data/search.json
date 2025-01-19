@@ -1,11 +1,11 @@
 [
   
   {
-    "title": "\"asd\"",
+    "title": "\"Guía de Instalación y Configuración de Velociraptor en Ubuntu Server\"",
     "url": "/posts/blog-post/",
-    "categories": "asd",
-    "tags": "asd",
-    "date": "2025-01-19 11:26:57 +0100",
+    "categories": "tutorial, defensivo",
+    "tags": "ids, velociraptor, defensivo",
+    "date": "2025-01-19 12:58:38 +0100",
     
 
 
@@ -13,8 +13,8 @@
 
 
     
-    "snippet": "  Este es un ejemplo de blockquote      Y este es un blockquote anidado  graph TD;A--&gt;B;B--&gt;C;  Elemento 1          Subelemento 1.1        Elemento 2      Este es un ejemplo de prompt.       ...",
-    "content": "  Este es un ejemplo de blockquote      Y este es un blockquote anidado  graph TD;A--&gt;B;B--&gt;C;  Elemento 1          Subelemento 1.1        Elemento 2      Este es un ejemplo de prompt.              Header 1      Header 2                  Cell 1      Cell 2      "
+    "snippet": "  Requisitos Previos          Un servidor Ubuntu Server (recomendado 20.04 LTS o superior)      Acceso de usuario con privilegios sudo      Conexión a internet      Pasos de InstalaciónActualizar e...",
+    "content": "  Requisitos Previos          Un servidor Ubuntu Server (recomendado 20.04 LTS o superior)      Acceso de usuario con privilegios sudo      Conexión a internet      Pasos de InstalaciónActualizar el Sistemasudo apt updatesudo apt upgrade -yDescargar Velociraptor# Verificar la última versión en https://github.com/Velocidex/velociraptor/releaseswget https://github.com/Velocidex/velociraptor/releases/download/v0.73/velociraptor-v0.73.1-linux-amd64chmod +x velociraptor-v0.73.1-linux-amd64Configuración Inicial# Crear directorio de configuraciónsudo mkdir /opt/velociraptor# Generar configuración de servidorsudo ./velociraptor-v0.73.1-linux-amd64 config generate -i   Durante la configuración interactiva, te preguntará:          Tipo de despliegue (server, client, o standalone)      Dirección IP del servidor      Puertos a utilizar      Configuración de CA y certificados      Configurar IP de la interfazsudo nano /opt/velociraptor/server.config.yamlCrear instalador de serviciosudo ./velociraptor-v0.73.1-linux-amd64 --config /opt/velociraptor/server.config.yaml debian server --binary velociraptor-v0.73.1-linux-amd64sudo dpkg -i velociraptor_server_0.73.1_amd64.debIniciar y Habilitar el Servicio# Recargar systemdsudo systemctl daemon-reload# Iniciar serviciosudo systemctl start velociraptor# Habilitar inicio automáticosudo systemctl enable velociraptor# Verificar estadosudo systemctl status velociraptorAcceso WebEjemplo de Prueba: Monitoreo de un ClienteEn el Servidor: Generar Configuración de Clientewget https://github.com/Velocidex/velociraptor/releases/download/v0.73/velociraptor-v0.73.1-windows-amd64.exe# Generar paquete de instalación para cliente Linuxsudo ./velociraptor-v0.73.1-linux-amd64 config repack --exe velociraptor-v0.73.1-windows-amd64.exe /opt/velociraptor/client.config.yaml VelociraptorClient.exeEn el Cliente Windows:.\\VelociraptorClient.exe service install En la interfaz web:"
   }
   
 ]
