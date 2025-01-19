@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>CiberDocs</title>
   <subtitle>Explorando la seguridad cibernética.</subtitle>
-  <updated>2025-01-19T00:28:42+01:00</updated>
+  <updated>2025-01-19T11:38:19+01:00</updated>
   <author>
     <name>Pr0ff3</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,11 @@
 
   
   <entry>
-    <title>"asdasdasda"</title>
-    <link href="http://localhost:4000/posts/blog-post/" rel="alternate" type="text/html" title="&amp;quot;asdasdasda&amp;quot;" />
-    <published>2025-01-19T00:22:44+01:00</published>
+    <title>"asd"</title>
+    <link href="http://localhost:4000/posts/blog-post/" rel="alternate" type="text/html" title="&amp;quot;asd&amp;quot;" />
+    <published>2025-01-19T11:26:57+01:00</published>
   
-    <updated>2025-01-19T00:22:44+01:00</updated>
+    <updated>2025-01-19T11:26:57+01:00</updated>
   
     <id>http://localhost:4000/posts/blog-post/</id>
     <content type="text/html" src="http://localhost:4000/posts/blog-post/" />
@@ -34,9 +34,11 @@
 
   
     
+    <category term="asd" />
+    
   
 
-  <summary>asdasdasd</summary>
+  <summary>asd</summary>
 
   </entry>
 
