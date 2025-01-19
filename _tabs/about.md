@@ -4,37 +4,40 @@ icon: fas fa-info-circle
 order: 4
 ---
 
----
-title: "Sobre mí"
-layout: page
-permalink: /about/
-image: /assets/images/mi-imagen.jpg
----
+![imagen](https://github.com/sPROFFEs/sPROFFEs/assets/150958256/ae33b499-1274-4d9a-88a5-2e3d52a04e1d)
+# 💫 About Me:
+🔒 Cybersecurity analyst & Red Team Operator focused on adversary emulation and infrastructure exploitation. Skilled in pentesting solutions, social engineering, and post-exploitation tactics. Experience on network security monitoring. Working on open-source security tools and vulnerability research.<br><br>⚡ Skills: Network Security | Active Directory | Malware Analysis | Social Engineering | Python | Bash<br>💻 Currently learning: Threat Hunting | Cloud Security 
 
-## ¡Hola! Soy [Tu Nombre] 👋
 
-Bienvenido a mi blog, donde comparto mis pensamientos, experiencias y todo lo que me apasiona. Soy un [profesión o hobby] con un amor por [temas de interés, como tecnología, arte, diseño, viajes, etc.]. Aquí encontrarás una mezcla de contenido relacionado con [tema del blog], proyectos personales, reflexiones sobre [tema de interés], y mucho más.
+## 🌐 Socials:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/pr0ff3) 
 
-### Un poco más sobre mí
+# 💻 Tech Stack:
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=plastic&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=plastic&logo=php&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=plastic&logo=gnu-bash&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=plastic&logo=windows-terminal&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=plastic&logo=apache&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=plastic&logo=nginx&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=plastic&logo=mysql&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=plastic&logo=mariadb&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=plastic&logo=sqlite&logoColor=white) ![Gimp](https://img.shields.io/badge/Gimp-657D8B?style=plastic&logo=gimp&logoColor=FFFFFF) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=plastic&logo=adobe%20photoshop&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=plastic&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=plastic&logo=gitlab&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=sPROFFEs&theme=neon&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=sPROFFEs&theme=neon&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=sPROFFEs&theme=neon&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-Mi viaje comenzó en [contexto personal breve: formación, experiencia profesional o motivaciones]. A lo largo de los años, he tenido el privilegio de [logros importantes o experiencias clave]. Mi pasión por [tema relacionado con tu blog] me ha llevado a explorar temas como [subtemas de interés] y, a través de este blog, espero compartir lo que aprendo y conectarme con personas que comparten intereses similares.
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=sPROFFEs&theme=neon&no-frame=false&no-bg=true&margin-w=4)
 
-### ¿Por qué este blog?
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-Este espacio está dedicado a [explicar el propósito de tu blog, por ejemplo: "compartir mis ideas sobre tecnología y desarrollo web", "documentar mis viajes por el mundo", "explorar la creatividad en diseño y arte"]. A través de cada publicación, espero inspirar, enseñar o simplemente ofrecer una perspectiva diferente sobre los temas que me apasionan.
-
-Si alguna vez tienes una pregunta o quieres conectarte, ¡no dudes en contactarme! Siempre estoy abierto a nuevas ideas y colaboraciones.
-
-### Datos curiosos sobre mí:
-- 🎯 Mi meta para el próximo año es [meta personal o profesional].
-- 🌍 He viajado a [destinos que te han dejado huella].
-- 📚 Mi libro favorito es [tu libro favorito].
-- 🎨 Cuando no estoy escribiendo, me gusta [otro hobby o actividad].
-
-¡Gracias por visitar mi blog y espero que disfrutes del contenido!
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=sPROFFEs&limit=5&theme=neon&combine_all_yearly_contributions=true)
 
 ---
+[![](https://visitcount.itsvg.in/api?id=sPROFFEs&icon=0&color=0)](https://visitcount.itsvg.in)
 
-**Contacto**: [Tu correo o enlace a redes sociales]
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->                                                                                                                                                      
+
+
+                                                                                                                         
+
+
+
+
 
 
