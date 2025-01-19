@@ -19,7 +19,7 @@ tags: [osint, security, investigation, tools]
 | Messengers                                | [Explore](#messengers)                       |
 | Code                                      | [Explore](#code)                       |
 | Search engines                            | [Explore](#search-engines)                       |
-| IOT                                       | [Explore](#IOT-ip-search-engines)                       |
+| IOT                                       | [Explore]                      |
 | Archives                                  | [Explore](#archives)                       |
 | Passwords                                  | [Explore](#passwords)                       |
 | Emails                                  | [Explore](#emails)                       |
@@ -132,11 +132,11 @@ tags: [osint, security, investigation, tools]
     - [Filesharing Search Engines](#filesharing-search-engines)
     - [Tools for DuckDuckGo](#tools-for-duckduckgo)
     - [Tools for Google](#tools-for-google)
-- [IOT](#IOT-ip-search-engines)
+- [IOT]
 - [Archives](#archives)
     - [Tools for working with web archives](#tools-for-working-with-web-archives)
     - [Archives of documents/newspapers](#archives-of-documentsnewspapers)
-    - [tools-for-working-with-warc-WebARChive-files](#tools-for-working-with-warc-WebARChive-files)
+    - [tools-for-working-with-warc-WebARChive-files]
 - [Datasets](#datasets)
 - [Science](#science)
 - [Passwords](#passwords)
@@ -1693,7 +1693,7 @@ Google lens is not too user friendly for investigations. But this tool will help
 
 
 
-### [](#IOT-ip-search-engines)IOT-ip-search-engines
+### []IOT-ip-search-engines
 
 | Link | Description |
 | --- | --- |
@@ -1747,7 +1747,7 @@ Google lens is not too user friendly for investigations. But this tool will help
 
 
 
-### [](#tools-for-working-with-warc-WebARChive-files)tools-for-working-with-warc-WebARChive-files
+### []tools-for-working-with-warc-WebARChive-files
 
 | Link | Description |
 | --- | --- |
