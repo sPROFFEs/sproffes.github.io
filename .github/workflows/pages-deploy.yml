@@ -48,7 +48,7 @@ jobs:
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
-          JEKYLL_ENV: "production"
+          JEKYLL_ENV: "development"
           DISABLE_EXTERNAL_LINKS_CHECK: true
 
       - name: Test site
