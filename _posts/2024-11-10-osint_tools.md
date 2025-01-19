@@ -136,7 +136,7 @@ tags: [osint, security, investigation, tools]
 - [Archives](#archives)
     - [Tools for working with web archives](#tools-for-working-with-web-archives)
     - [Archives of documents/newspapers](#archives-of-documentsnewspapers)
-    - [Tools for working with WARC (WebARChive) files](#tools-for-working-with-warc-WebARChive-files)
+    - [tools-for-working-with-warc-WebARChive-files](#tools-for-working-with-warc-WebARChive-files)
 - [Datasets](#datasets)
 - [Science](#science)
 - [Passwords](#passwords)
@@ -1693,7 +1693,7 @@ Google lens is not too user friendly for investigations. But this tool will help
 
 
 
-### [](#IOT-ip-search-engines)IOT (ip search engines)
+### [](#IOT-ip-search-engines)IOT-ip-search-engines
 
 | Link | Description |
 | --- | --- |
@@ -1747,7 +1747,7 @@ Google lens is not too user friendly for investigations. But this tool will help
 
 
 
-### [](#tools-for-working-with-warc-WebARChive-files)Tools for working with WARC (WebARChive) files
+### [](#tools-for-working-with-warc-WebARChive-files)tools-for-working-with-warc-WebARChive-files
 
 | Link | Description |
 | --- | --- |
