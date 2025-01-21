@@ -237,7 +237,7 @@ Vamos a ver que usuarios hay en el dominio.
 Import-Module ActiveDirectory
 
 Get-ADUser -Filter *
-´´´
+```
 
 [![AD](/assets/img/posts/escapeTwo/certusers.png)](/assets/img/posts/escapeTwo/certusers.png)
 
