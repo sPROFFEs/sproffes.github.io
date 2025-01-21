@@ -721,6 +721,12 @@ Nota* Esa no es mi IP pública real, la he modificado por supuesto
 
 ### Windows SuperFetch
 
+> **Nota**: Windows SuperFetch (ahora llamado SysMain en versiones más recientes de Windows) es un servicio de optimización del rendimiento.
+- Analiza los patrones de uso del sistema y las aplicaciones
+- Precarga en la memoria RAM los programas que usas con más frecuencia
+- Aprende de tus hábitos de uso para mejorar los tiempos de carga
+{: .prompt-info }
+
 ```
 C:\Windows\Prefetch\Ag*.db
 ```
@@ -730,6 +736,9 @@ C:\Windows\Prefetch\Ag*.db
 ![Windows SuperFetch](/assets/img/posts/artefactos_en_windows/20241212_103306_Peek_2024-12-12_11-32.gif)
 
 ### ShimCache
+
+> **Nota**: El ShimCache (también conocido como AppCompatCache) es un componente importante de Windows que ayuda con la compatibilidad de aplicaciones. .
+{: .prompt-info }
 
 - [AppCompatCacheParser](https://github.com/EricZimmerman/AppCompatCacheParser)
 
@@ -741,6 +750,12 @@ SYSTEM\CurrentControlSet\Control\SessionManager\AppcompatCache\AppCompatCache
 
 ### AmCache
 
+> **Nota**: AMCache (Application Maintenance Cache) es otro artefacto forense importante.
+- Mantiene información sobre programas instalados y ejecutados
+- Parte del framework de compatibilidad de aplicaciones de Windows
+- Complementa la información del ShimCache
+{: .prompt-info }
+
 ```
 C:\Windows\AppCompat\Programas\Amcache.hve
 ```
@@ -748,6 +763,9 @@ C:\Windows\AppCompat\Programas\Amcache.hve
 ![AmCache](/assets/img/posts/artefactos_en_windows/20241212_112750_Peek_2024-12-12_12-26.gif)
 
 ### BAM
+
+> **Nota**: Este artefacto se puede encontrar en el sistema de archivos de la máquina.
+{: .prompt-info }
 
 ```
 SYSTEM\CurrentControlSet\Services\bam\UserSettings\{SID}
@@ -767,6 +785,13 @@ C:\Windows\system32\winevt\Logs
 ![Eventos](/assets/img/posts/artefactos_en_windows/20241212_115024_Peek_2024-12-12_12-49.gif)
 
 ### SRUM
+
+> **Nota**: SRUM (System Resource Usage Monitor) es una característica de Windows que registra detalladamente el uso de recursos del sistema.
+- Monitoriza el uso de recursos por aplicación
+- Registra el consumo de red y energía
+- Ayuda a Windows a optimizar el rendimiento y la duración de la batería
+- Mantiene estadísticas detalladas de uso
+{: .prompt-info }
 
 - [Network usage view](https://www.nirsoft.net/utils/network_usage_view.html)
 
