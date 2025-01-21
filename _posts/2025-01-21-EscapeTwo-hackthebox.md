@@ -239,7 +239,7 @@ Import-Module ActiveDirectory
 Get-ADUser -Filter *
 ```
 
-[![AD](/assets/img/posts/escapeTwo/certusers.png)](/assets/img/posts/escapeTwo/certusers.png)
+[![AD](/assets/img/posts/escapeTwo/certuser.png)](/assets/img/posts/escapeTwo/certuser.png)
 
 
 Viendo los usuarios y sabiendo que podemos visualizar los certificados podemos intentar obtener los permisos de ryan sobre las ACLs de los certificados.
