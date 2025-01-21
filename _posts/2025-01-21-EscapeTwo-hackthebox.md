@@ -241,18 +241,21 @@ Get-ADUser -Filter *
 
 [![AD](/assets/img/posts/escapeTwo/certuser.png)](/assets/img/posts/escapeTwo/certuser.png)
 
+La cuenta ca_svc tiene SamAccountName diferente al DisplayName (Certification Authority)
 
-Viendo los usuarios y sabiendo que podemos visualizar los certificados podemos intentar obtener los permisos de ryan sobre las ACLs de los certificados.
+Viendo los usuarios y sabiendo que podemos visualizar los certificados podemos intentar obtener los permisos de ryan sobre el administrador de los certificados.
 
 ```powershell
-Get-Acl "AD:\CN=Certification Authority,CN=Users,DC=sequel,DC=htb" | Select -ExpandProperty Access
+Get-Acl "AD:\CN=Certification Authority,CN=Users,DC=sequel,DC=htb" | Select-Object -ExpandProperty Access | Where-Object {$_.ActiveDirectoryRights -match "WriteOwner"}
 ```
 
 [![ACL](/assets/img/posts/escapeTwo/acls.png)](/assets/img/posts/escapeTwo/acls.png)
 
-Vemos permisos de escritura en las keys de administración de los certificados.
+Esto significa que podemos:
 
-Esto quiere decir que podemos intentar modificar la contraseña del usuario ca_svc e intentar obtener un certificado para obtener TGT como otro usuario.
+- Modificar la contraseña del usuario ca_svc ya que tenemos control sobre los permisos de certificados
+- Usar esas credenciales para solicitar un certificado como otro usuario (por ejemplo, Administrator)
+- Usar ese certificado para obtener un TGT y escalar privilegios"
 
 ```powershell
 # Obtener el ACL actual
