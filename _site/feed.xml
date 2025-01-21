@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>CiberDocs</title>
   <subtitle>Explorando la seguridad cibernética.</subtitle>
-  <updated>2025-01-19T21:25:02+01:00</updated>
+  <updated>2025-01-21T16:10:41+01:00</updated>
   <author>
     <name>Pr0ff3</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,34 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>EscapeTwo - Hackthebox - Season7</title>
+    <link href="http://localhost:4000/posts/EscapeTwo-hackthebox/" rel="alternate" type="text/html" title="EscapeTwo - Hackthebox - Season7" />
+    <published>2025-01-21T00:00:00+01:00</published>
+  
+    <updated>2025-01-21T00:00:00+01:00</updated>
+  
+    <id>http://localhost:4000/posts/EscapeTwo-hackthebox/</id>
+    <content type="text/html" src="http://localhost:4000/posts/EscapeTwo-hackthebox/" />
+    <author>
+      <name>Pr0ff3</name>
+    </author>
+
+  
+    
+    <category term="Labs &amp; CTF" />
+    
+    <category term="Windows" />
+    
+    <category term="Walktrought" />
+    
+  
+
+  <summary>Hackthebox EscapeTwo Active Directory Guia en español</summary>
+
+  </entry>
 
   
   <entry>
@@ -189,55 +217,6 @@ Se le ha realizado una captura de RAM y análisis de la memoria no volátil. En 
 encontrado un extraño fichero que no saben de que puede ser.
 
 Tenemos un fichero llamado magic_file sin extension del cual no sabemos nada, solo que parece encripta...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Volatility 2 &amp; 3</title>
-    <link href="http://localhost:4000/posts/volatility_avanzado/" rel="alternate" type="text/html" title="Volatility 2 &amp;amp; 3" />
-    <published>2025-01-14T12:58:38+01:00</published>
-  
-    <updated>2025-01-14T12:58:38+01:00</updated>
-  
-    <id>http://localhost:4000/posts/volatility_avanzado/</id>
-    <content type="text/html" src="http://localhost:4000/posts/volatility_avanzado/" />
-    <author>
-      <name>Pr0ff3</name>
-    </author>
-
-  
-    
-    <category term="Forense" />
-    
-    <category term="Herramientas" />
-    
-  
-
-  <summary>Concepto
-
-En esta sección vamos a realizar un ejemplo de uso medio/avanzado de la herramienta Volatility 2 y 3.
-
-En el proceso vamos a ir obteniendo diferentes datos sobre el sistema a partir de un volcado de memoria ram.
-
-Instalación
-
-Volatility 2
-
-Github oficial de volatility 2
-
-Volatility 3
-
-Github oficial de volatility 3
-
-pip install volatility3
-
-
-Recursos
-
-Volcado de memoria utilizado
-
-En ...</summary>
 
   </entry>
 
