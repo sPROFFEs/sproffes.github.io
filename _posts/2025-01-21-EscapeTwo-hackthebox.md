@@ -123,7 +123,7 @@ Entre estas opciones encontramos que el servicio MSSQL es accesible.
 ```bash
 impacket-mssqlclient sequel.htb/rose:KxEPkKe6R8su@10.10.11.51 -windows-auth
 ```
-[![SQL](/assets/img/posts/ecapeTwo/sql_rose.png)](/assets/img/posts/ecapeTwo/sql_rose.png)
+[![SQL](/assets/img/posts/escapeTwo/sql_rose.png)](/assets/img/posts/escapeTwo/sql_rose.png)
 
 Tras un rato indagando vemos que el usuario proporcionado solo tiene permisos de consulta, pero si observamos los roles dentro de las bases de datos observamos un 
 usuario "sa" que tiene permisos de administrador.
