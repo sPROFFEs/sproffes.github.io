@@ -179,6 +179,33 @@ Ponmocup
     Regla relacionada: Coincide con Ponmocup, un malware conocido por actividades de robo de 
 información.
 
+## Identificación del beacon
+
+Ahora que sabemos todo esto e investigamos el malware cobalt strike podemos intentar identificar el beacon o el punto de conexión princiapal con el servidor C&2.
+
+Cuando el malware esta en ejecución este establece una conexión en el equipo de tipo beacon, esto signfica que por ejemplo al igual que un punto de acceso wifi, este está continuamente mandando paquetes (esta vez dirigidos al C&2) para indicarle que está en línea y activo para recibir comandos.
+
+Los "beacons" (balizas) son el componente principal de comunicación que:
+
+- Establece un canal de comunicación encriptado entre el sistema comprometido y el servidor de comando y control
+- Puede operar sobre HTTP, HTTPS o DNS para evitar detección
+- Permite ejecutar comandos remotamente en el sistema infectado
+- Puede permanecer inactivo por períodos configurables para dificultar su detección
+
+### Herramientas para identificar los paquetes beacon
+
+[Enlace github](https://github.com/XD-bot/ToolsFromDidierStevensSuite/blob/master/1768.py)
+
+Este proceso de identificación se puede realizar de forma manual o tras una pequeña investigación podemos encontrar scripts o herramientas que nos ayudan a identificar los paquetes beacon.
+
+#### Uso de la herramienta
+
+```bash
+python3 1768.py hell.img
+```
+
+![Python](/assets/img/posts/atenea_dfir_3/2025-01-21_19-48.png)
+
 ## Conclusión
 
 Tomando en cuenta todo lo analizado podemos intentar deducir que se trata de una infección por inyección de dll.
@@ -198,6 +225,6 @@ Esto encaja con el patrón completo que hemos visto:
 - MSI_v1.0.3.exe parece ser el payload principal de Cobalt Strike
 - La cadena de cmd/powershell probablemente fue usada para realizar la inyección de las DLLs
 
-![Proceso de escaneo](/assets/img/posts/atenea_dfir_3//20250117_201123_Peek_2025-01-17_21-08.gif)
+![Proceso de escaneo](/assets/img/posts/atenea_dfir_3/20250117_201123_Peek_2025-01-17_21-08.gif)
 
 Posiblemente parte de los procesos infectados hacen uso o provinen de otros procesos que hacen uso de estas dll.
