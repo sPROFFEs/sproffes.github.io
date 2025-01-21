@@ -238,6 +238,7 @@ Import-Module ActiveDirectory
 
 Get-ADUser -Filter *
 ´´´
+
 [![AD](/assets/img/posts/escapeTwo/certusers.png)](/assets/img/posts/escapeTwo/certusers.png)
 
 
@@ -246,6 +247,7 @@ Viendo los usuarios y sabiendo que podemos visualizar los certificados podemos i
 ```powershell
 Get-Acl "AD:\CN=Certification Authority,CN=Users,DC=sequel,DC=htb" | Select -ExpandProperty Access
 ```
+
 [![ACL](/assets/img/posts/escapeTwo/acls.png)](/assets/img/posts/escapeTwo/acls.png)
 
 Vemos permisos de escritura en las keys de administración de los certificados.
