@@ -58,7 +58,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 Basado en los resultados del escaneo nmap, podemos ver que la máquina objetivo ejecuta un servidor SSH (puerto 22), un servidor HTTPS (puerto 443) y un servidor HTTP (puerto 8000). 
-El servidor HTTPS probablemente aloja una aplicación web, mientras que el servidor HTTP en el puerto 8000 podría estar alojando una aplicación diferente o una página predeterminada.
 
 1. Puerto 8000: Tiene dos archivos interesantes:
    - disable_tls.patch
