@@ -1,8 +1,8 @@
 ---
 title: EscapeTwo - Hackthebox - Season7
 date: 2025-01-21 
-categories: [Labs & CTF, Windows, Walktrought]
-tags: [Pentest, windows, ctf, Hackthebox, labs] 
+categories: [Labs & CTF,Hackthebox, Windows, Walkthrought]
+tags: [Pentest, windows, ctf, , labs] 
 image:
   path: /assets/img/posts/escapeTwo/cabecera.png
   alt: EscapeTwo
