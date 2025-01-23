@@ -1,8 +1,8 @@
 ---
 title: Backfire - Hackthebox - Season7
 date: 2025-01-22 18:41:00
-categories: [Labs & CTF, Hackthebox, Linux, Walkthrought]
-tags: [Pentest, Linux, ctf, labs] 
+categories: [Labs & CTF, Write Up, Hackthebox]
+tags: [Linux, Havoc, JWT, CTF] 
 image:
   path: /assets/img/posts/backfire-hackthebox/cabecera.png
   alt: Backfire Hackthebox
