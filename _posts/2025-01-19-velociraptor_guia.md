@@ -1,7 +1,7 @@
 ---
 categories:
 - Defensivo
-- IDS
+- Guía
 date: 2025-01-19 11:58:38 +0000
 math: false
 mermaid: false
@@ -10,7 +10,6 @@ render_with_liquid: true
 tags:
 - ids
 - velociraptor
-- defensivo
 title: 'Guía de Instalación y Configuración de Velociraptor en Ubuntu Server'
 ---
 
