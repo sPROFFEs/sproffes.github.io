@@ -1,8 +1,8 @@
 ---
 title: Baron Samedit - Escalación de privilegios en Linux
 date: 2025-01-11 13:01:50 +0100
-categories: [Labs & CTF, Privilege Escalation]
-tags: [linux, privilege escalation, sudo, vulnerability, cve-2021-3156]
+categories: [Labs & CTF, Write Up, Privilege Escalation]
+tags: [Linux, privilege escalation, vulnerability, cve-2021-3156]
 ---
 
 En enero de 2021, Qualys publicó un artículo en su blog explicando una nueva vulnerabilidad crítica en el programa sudo de Unix.
