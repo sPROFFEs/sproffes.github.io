@@ -4,7 +4,7 @@ date: 2025-01-24 00:00:00 +0000
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, CTF] 
 image:
-  path: /assets/img/posts/escapeTwo/cabecera.png
+  path: /assets/img/posts/heal_htb/cabecera.png
   alt: Heal
 description: >
   Heal Guia en español
