@@ -276,6 +276,7 @@ Bettercap tiene una gran cantidad de comandos que pueden ser utilizados para rea
 
 
 ### DNS Spoofing
+
 | Comando | Descripción | Ejemplo |
 |---------|-------------|---------|
 | `dns.spoof` | Envía respuestas falsas a las consultas DNS | dns.spoof on |
@@ -311,6 +312,7 @@ Bettercap tiene una gran cantidad de comandos que pueden ser utilizados para rea
 | `set hstshijack.replacements` | Configura la redirección a la IP del objetivo | set hstshijack.replacements 192.168.100.210:443,192.168.100.210:80 |
 
 ### Proxy Http/Https
+
 | Comando | Descripción | Ejemplo |
 |---------|-------------|---------|
 | `set http.proxy.port` | Configura el puerto del proxy | set http.proxy.port 8080 |
@@ -331,6 +333,7 @@ Bettercap tiene una gran cantidad de comandos que pueden ser utilizados para rea
   - Interceptar credenciales web
 
 ### Proxy TCP
+
 | Comando | Descripción | Ejemplo |
 |---------|-------------|---------|
 | `set tcp.proxy.port` | Configura el puerto del proxy | set tcp.proxy.port 443 |
@@ -346,6 +349,7 @@ Bettercap tiene una gran cantidad de comandos que pueden ser utilizados para rea
   - Bloquear DoH (DNS over HTTPS)
 
 ### WiFi
+
 | Comando | Descripción | Ejemplo |
 |---------|-------------|---------|
 | `wifi.recon on` | Activa el WiFi reconocimiento | wifi.recon on |
@@ -354,6 +358,7 @@ Bettercap tiene una gran cantidad de comandos que pueden ser utilizados para rea
 | `wifi.deauth` | Envía una petición de desautenticación WiFi | wifi.deauth on |
 
 ### Bluetooth
+
 | Comando | Descripción | Ejemplo |
 |---------|-------------|---------|
 |`ble.recon on` | Activa el reconocimiento de dispositivos Bluetooth | ble.recon on |
