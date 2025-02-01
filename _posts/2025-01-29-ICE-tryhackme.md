@@ -5,7 +5,7 @@ categories: [Labs & CTF, Write Up, TryHackMe]
 tags: [Windows, Metasploit, Tryhackme]
 image:
   path: /assets/img/posts/ICE-tryhackme/cabecera.png
-  alt: Texto alternativo para la imagen
+  alt: cabecera
   caption: ICE  
 description: >
   Write Up Ice - TryHackMe
