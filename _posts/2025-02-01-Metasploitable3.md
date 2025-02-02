@@ -5,7 +5,7 @@ categories: [Labs & CTF, Write Up, Rapid7]
 tags: [Windows, Metasploit, Rapid7]
 image:
   path: /assets/img/posts/rapid7-metasploitable3/cabecera.png
-  alt: cabecera
+  alt: Metasploitable 3
   caption: ICE  
 description: >
   Algunas vulnerabilidades que encontramos en Metasploitable 3
