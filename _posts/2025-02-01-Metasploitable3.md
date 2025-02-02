@@ -1,5 +1,5 @@
 ---
-title: Metasplitable 3 - Rapid7
+title: Metasploitable 3 - Rapid7
 date: 2025-02-01 11:00:00 -0000
 categories: [Labs & CTF, Write Up, Rapid7]
 tags: [Windows, Metasploit, Rapid7]
@@ -8,7 +8,7 @@ image:
   alt: cabecera
   caption: ICE  
 description: >
-  Write Up Ice - TryHackMe
+  Algunas vulnerabilidades que encontramos en Metasploitable 3
 pin: false  
 toc: true   
 math: false 
