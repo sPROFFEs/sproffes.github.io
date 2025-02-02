@@ -5,7 +5,7 @@ categories: [Labs & CTF, Write Up, TryHackMe]
 tags: [Windows, TryHackMe, SSRF, Gobuster, Meterpreter, PowerShell]
 image:
   path: /assets/img/posts/ironcorp-thm/cabecera.png
-  alt: cabecera
+  alt: Iron Corp
   caption: 
 description: >
   Write Up Iron Corp - TryHackMe
