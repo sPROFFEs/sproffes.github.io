@@ -80,11 +80,9 @@ Dentro del directorio cat.htb tenemos toda la estructura de la web.
 
 Vemos como verifica si el usuario que accede a admin.php es "axel" o no. Ya tenemos el nombre de usuario administrador de la web.
 
-### contest.php
+### config.php
 
 ![alt text](/assets/img/posts/cat_htb/image-2.png)
-
-### config.php
 
 En config vemos que existe una base de datos sqlite en /databases/cat.db
 
@@ -138,7 +136,7 @@ Ahora en el navegador podemos modificar las cookies para tener acceso al admin.p
 
 ![alt text](/assets/img/posts/cat_htb/image-12.png)
 
-Ahora vamos podemos acceder al panel admin.php pero no vemos ningun reques de gato, debemos volver a subir un gato.
+Ahora vamos podemos acceder al panel admin.php pero no vemos ninguna petición de aceptar gato, debemos volver a subir un gato.
 
 ![alt text](/assets/img/posts/cat_htb/image-13.png)
 
