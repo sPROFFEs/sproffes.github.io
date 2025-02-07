@@ -51,7 +51,7 @@ Vemos puerto 22 ssh abierto y puerto 80 http abierto.
 
 # Puerto 80 http
 
-![alt text](/assets/img/posts/cat_htb/image-1.png)
+![alt text](/assets/img/posts/cat_htb/image.png)
 
 Vemos una web con un formulario de registro. 
 La web parece de ir sobre un concurso de best cats.
