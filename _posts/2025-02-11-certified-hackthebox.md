@@ -14,9 +14,6 @@ math: false
 mermaid: false 
 ---
 
-![
-
-](image.png)
 # Escaneo de puertos
 
 ```bash
