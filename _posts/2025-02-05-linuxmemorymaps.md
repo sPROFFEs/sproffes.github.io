@@ -177,8 +177,8 @@ go build
 Se nos creará un binario llamado `dwarf2json` que será el ejecutable para poder generar los perfiles de datos formato json.xz que utiliza Volatility 3.
 
 ```bash
-./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-XXXX > linux-image-XXXX-memmap.json.xz
-./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-XXXX --system-map /usr/lib/debug/boot/system.map-XXXX > linux-image-XXXX-memmap.json.xz
+./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-XXXX | xz -9 linux-image-XXXX-memmap.json.xz
+./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-XXXX --system-map /usr/lib/debug/boot/system.map-XXXX | xz -9 linux-image-XXXX-memmap.json.xz
 ```
 
 Ahora movemos los mapas de memoria RAM a la carpeta /volatility3/volatility3/symbols/linux
