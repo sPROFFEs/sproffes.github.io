@@ -4,7 +4,7 @@ date: 2025-02-14 11:00:00 +0000
 categories: [HacktheBox, CTF, Web]
 tags: [HacktheBox, CTF, Web]
 image:
-  path: /assets/img/cabeceras_genericas/htb.png
+  path: /assets/img/cabeceras_genericas/htb.jpg
   alt: Guild Web CTF - HackTheBox
 description: >
   Guía de explotación de vulnerabilidades en el CTF HackTheBox Guild Web.
