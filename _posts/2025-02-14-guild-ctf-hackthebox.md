@@ -90,7 +90,7 @@ def share(link):
 
 Si observamos las variables que se le pasan al render_template_string, vemos que se pasa el modelo User completo. En Flask/SQLAlchemy podemos usar esto para hacer queries. Por lo tanto podríamos intentar pasar una query consultando el correo de la cuenta de administrador.
 
-`{{User.query.filter_by(username='admin').first().email}}`
+`User.query.filter_by (username='admin').first().email`
 
 ## Exploit
 
