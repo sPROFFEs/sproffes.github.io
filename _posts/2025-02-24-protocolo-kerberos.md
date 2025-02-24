@@ -9,7 +9,7 @@ math: false
 mermaid: false 
 ---
 
-# ¿QUÉ ES KERBEROS?
+## ¿QUÉ ES KERBEROS?
 
 Se trata de un protocolo de autenticación desarrollado originalmente en el MIT en 1983 para el proyecto ATHENA cuyos objetivos incluían la integración de:
 
@@ -18,7 +18,7 @@ Se trata de un protocolo de autenticación desarrollado originalmente en el MIT 
 - Entorno gráfico unificado (X Windows)
 - Servicio de convención de nombres (como DNS)
 
-# KERBEROS Y MICROSOFT WINDOWS
+## KERBEROS Y MICROSOFT WINDOWS
 
 En este sistema la autenticación de usuarios y hosts basada en dominio se realiza a través de Kerberos.
 
@@ -32,7 +32,7 @@ En la web del MIT podemos encontrar un diálogo entre dos personas Athena y Eur�
 
 [Diálogo](http://web.mit.edu/kerberos/www/dialogue.html)
 
-# ¿CÓMO FUNCIONA KERBEROS?
+## ¿CÓMO FUNCIONA KERBEROS?
 
 El usuario manda un paquete plano con su **USUARIO** al servicio de autenticación normalmente acompañado de otro paquete con un **timestap** cifrado con la clave del usuario,
 
@@ -84,7 +84,7 @@ En la **autenticación** mutua:
 
 ![alt text](/assets/img/posts/teoria-protocolo-kerberos/image.png)
 
-# ¿CÓMO SE IMPLEMENTA ESTE PROTOCOLO EN ACTIVE DIRECTORY?
+## ¿CÓMO SE IMPLEMENTA ESTE PROTOCOLO EN ACTIVE DIRECTORY?
 
 Durante el proceso de autenticación de Kerberos se utilizan ciertos nombres que están asociados con AD.
 
