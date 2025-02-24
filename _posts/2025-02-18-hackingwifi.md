@@ -3,6 +3,8 @@ title: Hacking de redes WiFi
 date: 2025-02-17 11:00:00 +0000
 categories: [Labs & CTF, Guía]
 tags: [WiFi, WEP, WPA2, Hacking, Labs]
+description: >
+  Guía rápida para realizar ataques de hacking de redes WiFi
 pin: false  
 toc: true   
 math: false 
