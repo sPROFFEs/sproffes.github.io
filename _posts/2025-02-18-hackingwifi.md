@@ -123,8 +123,6 @@ Para ello, vamos a utilizar el siguiente comando:
 aircrack-ng WEP-WifiOld-01.cap
 ```
 
-![alt text](/assets/img/posts/hackingwifi/image-5.png)
-
 Una vez que hemos obtenido la contraseña, podemos conectarnos a la red.
 
 ![alt text](/assets/img/posts/hackingwifi/image-5.png)
