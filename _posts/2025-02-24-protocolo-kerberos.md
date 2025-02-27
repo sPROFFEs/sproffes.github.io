@@ -3,6 +3,9 @@ title: Protocolo Kerberos en Active Directory
 date: 2025-02-23 11:00:00 +0000
 categories: [Teoría, Active Directory]
 tags: [Guía, Auditoria, Active Directory, Windows, Kerberos, NTLM, Hash, Pass-the-Hash, Pass-the-Ticket, AS-REP Roasting, Golden Ticket, Silver Ticket, Silver Ticket]
+image:
+  path: /assets/img/cabeceras_genericas/microsoft-active-directory.jpg
+  alt:  Microsoft Active Directory
 description: >
   Funcionamiento de Kerberos en Active Directory
 pin: false  

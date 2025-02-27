@@ -3,6 +3,9 @@ title: Autenticación y autorización en Windows
 date: 2025-02-27 11:00:00 +0000
 categories: [Teoría, Active Directory, Windows]
 tags: [Guía, Auditoria, Active Directory, Windows, Kerberos, NTLM, Hash, Pass-the-Hash, Pass-the-Ticket, AS-REP Roasting, Golden Ticket, Silver Ticket, Silver Ticket]
+image:
+  path: /assets/img/posts/autenticacion_windows/windows-sesion.jpg
+  alt:  Autenticación en windows
 description: >
   Funcionamiento de Windows en el contexto de autenticación y autorización.
 pin: false  
