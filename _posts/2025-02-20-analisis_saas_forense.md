@@ -24,40 +24,54 @@ Además, enfrenta desafíos legales derivados de características como la multi-
 
 En el contexto del análisis forense de la nube, las principales fuentes de evidencia digital incluyen: 
 
-    Dispositivos Locales (Endpoints):  
+- Dispositivos Locales (Endpoints):  
 
-        Archivos y Carpetas Sincronizados:  Archivos y carpetas sincronizadas entre el dispositivo local y la nube.
-        Papelera de Reciclaje:  Contiene archivos eliminados que pueden ser recuperados.
-        Registros del Sistema:  Event logs, registros de aplicaciones y seguridad.
-        Archivos de Prefetch:  Información sobre aplicaciones ejecutadas recientemente.
-        Archivos DLL y LNK:  Archivos de biblioteca dinámica y atajos que pueden revelar información sobre programas ejecutados.
-        Caché y Cookies del Navegador:  Datos temporales y credenciales almacenadas por navegadores web.
-        Historial del Navegador:  Registros de sitios visitados y actividades relacionadas con servicios en la nube.
-        Memoria Volátil (RAM):  Procesos activos y datos en uso durante la ejecución de aplicaciones de la nube.
+    - **Archivos y Carpetas Sincronizados**:  Archivos y carpetas sincronizadas entre el dispositivo local y la nube.
+    
+    - **Papelera de Reciclaje**:  Contiene archivos eliminados que pueden ser recuperados.
+        
+    - **Registros del Sistema**:  Event logs, registros de aplicaciones y seguridad.
+        
+    - **Archivos de Prefetch**:  Información sobre aplicaciones ejecutadas recientemente.
+        
+    - **Archivos DLL y LNK**:  Archivos de biblioteca dinámica y atajos que pueden revelar 
+        información sobre programas ejecutados.
+        
+    - **Caché y Cookies del Navegador**:  Datos temporales y credenciales almacenadas por navegadores web.
+        
+    - **Historial del Navegador**:  Registros de sitios visitados y actividades relacionadas con servicios en la nube.
+        
+    - **Memoria Volátil (RAM)**:  Procesos activos y datos en uso durante la ejecución de aplicaciones de la nube.
          
 
-    Proveedores de Servicios en la Nube:  
+- Proveedores de Servicios en la Nube:  
 
-        APIs de los Proveedores:  Permiten acceder a metadatos y contenido de archivos directamente desde la nube.
-        Registros de Actividad:  Logs de operaciones realizadas por el usuario, como subidas, descargas, ediciones y eliminaciones.
-        Revisiones y Metadatos:  Historial de versiones y detalles técnicos sobre los archivos.
+    - **APIs de los Proveedores**:  Permiten acceder a metadatos y contenido de archivos directamente desde la nube.
+        
+    - **Registros de Actividad**:  Logs de operaciones realizadas por el usuario, como subidas, descargas, ediciones y eliminaciones.
+        
+    - **Revisiones y Metadatos**:  Historial de versiones y detalles técnicos sobre los archivos.
          
 ### ¿Qué posibilidades nos ofrece explotar las API que nos ofrecen los proveedores de servicios en la nube?
 
 Las APIs de los proveedores de servicios en la nube ofrecen varias posibilidades para la recolección de evidencia forense: 
 
-    Acceso Directo a Datos en la Nube:  
+- Acceso Directo a Datos en la Nube:  
 
-        Las APIs permiten a los investigadores acceder a datos almacenados en la nube sin necesidad de depender únicamente de copias locales.
+    - Las APIs permiten a los investigadores acceder a datos almacenados en la nube sin necesidad de depender únicamente de copias locales.
          
 
-    Recolección de Metadatos:  
+- Recolección de Metadatos:  
 
-        Contenido de Archivos:  Se puede obtener el contenido específico de archivos almacenados en la nube.
-        Metadatos de Archivos:  Incluyen nombre, tamaño, ID, hash, tipo MIME, fecha y hora de creación/modificación, ubicación, etc.
-        Historial de Revisiones:  Registra cambios realizados en un archivo, permitiendo analizar versiones anteriores.
-        Logs de Operaciones:  Registros de actividades como subidas, descargas, compartición, edición y eliminación de archivos.
-        Notificaciones Especiales:  Información sobre eventos importantes relacionados con los archivos o carpetas.
+    - Contenido de Archivos:  Se puede obtener el contenido específico de archivos almacenados en la nube.
+        
+    - Metadatos de Archivos:  Incluyen nombre, tamaño, ID, hash, tipo MIME, fecha y hora de creación/modificación, ubicación, etc.
+        
+    - Historial de Revisiones:  Registra cambios realizados en un archivo, permitiendo analizar versiones anteriores.
+        
+    - Logs de Operaciones:  Registros de actividades como subidas, descargas, compartición, edición y eliminación de archivos.
+        
+    - Notificaciones Especiales:  Información sobre eventos importantes relacionados con los archivos o carpetas.
 
 ### Clientes más utilizados a la hora de acceder a servicios en la nube 
 
