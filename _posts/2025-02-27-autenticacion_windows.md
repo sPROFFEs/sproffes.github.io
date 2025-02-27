@@ -4,7 +4,7 @@ date: 2025-02-27 11:00:00 +0000
 categories: [Teoría, Active Directory, Windows]
 tags: [Guía, Auditoria, Active Directory, Windows, Kerberos, NTLM, Hash, Pass-the-Hash, Pass-the-Ticket, AS-REP Roasting, Golden Ticket, Silver Ticket, Silver Ticket]
 description: >
-  TÉCNICAS COMO SUPLANTACIÓN DE USUARIOS, MOVIMIENTOS LATERALES, ETC
+  Funcionamiento de Windows en el contexto de autenticación y autorización.
 pin: false  
 toc: true   
 math: false 
