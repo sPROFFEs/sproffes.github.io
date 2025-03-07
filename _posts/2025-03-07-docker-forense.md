@@ -385,6 +385,7 @@ Si el malware solo se ejecuta bajo ciertas condiciones del contenedor, `docker i
 
 
 ### **Diferencias clave entre `save`/`load` y `export`/`import`**  
+
 | Comando          | Objetivo       | Incluye metadatos/capas | Forense ideal para:                  |
 |------------------|----------------|-------------------------|--------------------------------------|
 | `docker save`    | Imagen         | Sí                      | Preservar imágenes sospechosas       |
