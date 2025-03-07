@@ -1,5 +1,5 @@
 ---
-title: Docker en Proxmox VE - Analisis forense
+title: Docker - Analisis forense
 date: 2025-03-07 14:00:00 +0000
 categories: [Forense, Proxmox VE, Docker]
 tags: [Proxmox VE, Forense, Docker, Analisis forense]
@@ -7,7 +7,7 @@ image:
   path: /assets/img/cabeceras_genericas/docker.jpg
   alt:  Docker
 description: >
-  Guía para volcado de memoria y disco en Proxmox VE
+  Guía para analisis forense en Docker 
 pin: false  
 toc: true   
 math: false 
