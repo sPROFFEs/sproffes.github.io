@@ -4,7 +4,7 @@ date: 2025-03-09 11:00:00 +0000
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, CTF, Write Up, Hackthebox]
 image:
-  path: /assets/img/cabeceras_genericas/cypher.png
+  path: /assets/img/posts/cypher_htb_s7/cypher.png
   alt: HackTheBox
 description: >
   Guía en español para Cypher - HackTheBox Season 7
