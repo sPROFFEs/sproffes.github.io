@@ -4,7 +4,7 @@ date: 2025-03-15 20:30:00 +0000
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, CTF, Write Up, Hackthebox]
 image:
-  path: /assets/img/cabeceras_genericas/htb.jpg
+  path: /assets/img/posts/dog_htb_s7/cabecera.png
   alt: HackTheBox
 description: >
   Guía en español para Dog - HackTheBox Season 7
