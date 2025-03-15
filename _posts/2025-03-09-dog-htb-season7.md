@@ -359,7 +359,7 @@ mysql> SHOW tables
 59 rows in set (0.00 sec)
 ```
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-16.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-16.png)
 
 Como podemos listar los usuario del sistema con sus directorios en /home o en /etc/passwd nos vamos a centrar en crackear la contraseña de uno de ellos.
 
