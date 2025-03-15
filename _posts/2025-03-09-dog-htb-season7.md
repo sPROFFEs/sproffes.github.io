@@ -1,6 +1,6 @@
 ---
 title: Dog - HackTheBox Season 7
-date: 2025-03-15 20:30:00 +0000
+date: 2025-03-15 20:00:00 +0000
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, CTF, Write Up, Hackthebox]
 image:
