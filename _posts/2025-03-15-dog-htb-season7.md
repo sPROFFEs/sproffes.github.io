@@ -1,7 +1,7 @@
 ---
 title: Dog - HackTheBox Season 7
 date: 2025-03-15 20:30:00 +0000
-categories: [Labs & CTF, Write Up, Hackthebox]
+categories: [Labs CTF, Write Up, Hackthebox]
 tags: [Linux, CTF, Write Up, Hackthebox]
 image:
   path: /assets/img/posts/dog_htb_s7/cabecera.png
@@ -63,7 +63,7 @@ Lo primero que observamos interesante es un sección about, posts donde podemos 
 
 Al final de la web podemos ver la tecnología con la que se a construido el sitio web.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-1.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-1.png)
 
 Explorando el login de la web, encontramos que nos verficar si el usuario es o no correcto antes de poder entrar, lo que nos permite filtrar posibles usuarios aun sin saber la contraseña.
 
@@ -71,7 +71,7 @@ En el about encontramos un correo de soporte `support@dog.htb` que nos da a cono
 
 Si intentamos acceder a la web con este mail nos indica que no existe pero, tras un rato probando usuarios típicos como `admin` tampoco existen.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-2.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-2.png)
 
 Encontramos un posible usuario pero seguimos sin saber la contraseña.
 
@@ -79,7 +79,7 @@ Mientras podríamos intentar una fuerza bruta pero tiene un manejo de inicio de 
 
 Aqui lo podemos ver en BurpSuite.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-3.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-3.png)
 
 Este id se regenera con cada intento de inicio de sesión.
 
@@ -93,7 +93,7 @@ Mientras exploramos la web podemos ir ejecutando un scrapeo de directorios y sub
 
 Aquí encontramos algo muy interesante y es que parece haber un directorio .git, lo que indica que potencialmente podemos descargar el código fuente del sitio web.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-4.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-4.png)
 
 Usamos [GitDumper](https://github.com/arthaud/git-dumper)
 
@@ -107,7 +107,7 @@ Una vez descargados los archivos vamos a ir explorando el código fuente.
 
 Para resumir, en el código lo más interesante que encontré fue el contenido del archivo `settings.php` que nos da información sobre la base de datos de MySQL.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-5.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-5.png)
 
 Ahora que tenemos unas credenciales supuestamente válidas para SQL, siempre podemos probarlas en cualquier login por si no se siguen buenas prácticas de seguridad.
 
@@ -125,13 +125,13 @@ El comando en este caso lo hemos ejecutado en la ruta donde se encuentran los ar
 
 Esto revela un usuario dentro de la configuración.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-6.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-6.png)
  
 ## Login en la web
 
 Con este nuevo usuario y la contraseña encontrada podemos entrar en la web.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-7.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-7.png)
 
 En este punto y tras un rato explorando todas las opciones que ofrece Backdrop CMS desde el panel busqué posibles vulnerabilidades realacionadas con el CMS.
 
@@ -241,27 +241,27 @@ if __name__ == "__main__":
 
 Usando este script obtenemos el modulo listo para instalar.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-8.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-8.png)
 
 Para instalar el módulo, en el panel de administración navegamos hasta functionalidades -> instalar módulos nuevos
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-9.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-9.png)
 
 Indicamos instalación manual y subimos el archivo `shell.tar.gz` que hemos creado.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-10.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-10.png)
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-11.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-11.png)
 
 Cuando lo instalemos podemos navegar a la ruta `/modules/shell/shell.php` no sin antes ejecutar nuestro netcat para recibir la shell.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-12.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-12.png)
 
 Deberíamos recibir la shell rápidamente.
 
 Ahora la estabilizamos y nos disponemos a explorar el sistema.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-13.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-13.png)
 
 ## Explorando el sistema
 
@@ -269,9 +269,9 @@ La shell obtenida es como `www-data` por lo que no tenemos permisos para acceder
 
 Verificando de nuevo que los datos de la base MYSQL son los mismos que os del código fuento, podemos intentar acceder a la base de datos.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-14.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-14.png)
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-15.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-15.png)
 
 En la tabla de users encontramos todos los usuarios de la web.
 
@@ -359,11 +359,11 @@ mysql> SHOW tables
 59 rows in set (0.00 sec)
 ```
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-16.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-16.png)
 
 Como podemos listar los usuario del sistema con sus directorios en /home o en /etc/passwd nos vamos a centrar en crackear la contraseña de uno de ellos.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-17.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-17.png)
 
 Como el usuario de la flag es `johncusack` podemos intentar crackear su contraseña.
 
@@ -399,19 +399,19 @@ ssh johncusack@dog.htb
 
 ### User flag
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-18.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-18.png)
 
 ### Escalado de privilegios
 
 Ahora que tenemos acceso y su contraseña, con un simple `sudo -l` podemos ver que podemos ejecutar comandos como root.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-19.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-19.png)
 
 Tenemos el permiso para ejecutar `bee`. Bee es una herramienta de línea de comandos para Backdrop CMS (similar a drush en Drupal). Se utiliza para ejecutar tareas administrativas, evaluar código PHP, y gestionar el sitio.
 
 Viendo los comandos de los que dispone, encontramos uno que nos puede permitir ejecutar comandos PHP con privilegios de root.
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-20.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-20.png)
 
 Probé con este comando
 
@@ -441,5 +441,5 @@ sudo /usr/local/bin/bee --root=/var/www/html eval "echo shell_exec('cat /root/ro
 
 ### Root flag
 
-![alt text](/assets/img/posts/dog_htb_s7/image.pngimage-21.png)
+![alt text](/assets/img/posts/dog_htb_s7/image-21.png)
 
