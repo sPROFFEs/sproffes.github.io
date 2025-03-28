@@ -16,7 +16,7 @@ timezone: Europe/Madrid
 
 title: CiberDocs # the main title
 
-tagline: Documentación sobre ciberseguridad # it will display as the subtitle
+tagline: Stay Anonymous # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Explorando la seguridad cibernética.
@@ -170,6 +170,7 @@ collections:
   tabs:
     output: true
     sort_by: order
+
 
 defaults:
   - scope:
