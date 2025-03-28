@@ -170,7 +170,9 @@ collections:
   tabs:
     output: true
     sort_by: order
-
+  writeups:
+    output: true
+    permalink: /writeups/:path/
 
 defaults:
   - scope:
