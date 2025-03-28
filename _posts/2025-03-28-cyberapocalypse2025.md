@@ -19,6 +19,9 @@ mermaid: false
 
 ---
 
+Los retos realizados por nuestro equipo se muestran en este blog, pero también se referencias los writeups oficiales de Hack The Box para aquellos no conseguidos.
+
+---
 ## Lista de Writeups
 
 ### AI
@@ -28,6 +31,22 @@ mermaid: false
 - [Embassy](/writeups/cyberapocalypse2025/embassy) - Manipulación de contexto simulando un entorno de prueba.
 - [LunarOrb](/writeups/cyberapocalypse2025/lunarorb) - Alteración de contexto para obtener la ruta secreta.
 - [MirrorWitch](/writeups/cyberapocalypse2025/mirrorwitch) - Desbloqueo narrativo de lugares prohibidos con inyección literaria.
+
+### Blockchain
+
+- [EldorianGates](/writeups/cyberapocalypse2025/eldoriangates) - Desbordamiento en `uint8` y bypass de autenticación.
+- [Eldorio](/writeups/cyberapocalypse2025/eldorio) - Multicall para derrotar a Eldorion en un solo bloque.
+- [HeliosDEX](/writeups/cyberapocalypse2025/heliosdex) - Explotación de redondeo y refund abusando `Math.mulDiv`.
+
+### Crypto
+
+- [Prelim](/writeups/cyberapocalypse2025/prelim) - Recuperación de permutación y key inversion vía ciclos.
+- [Traces](/writeups/cyberapocalypse2025/traces) - Vulnerabilidad de reutilización de keystream en AES-CTR.
+- [Copperbox](https://github.com/hackthebox/cyber-apocalypse-2025/tree/main/crypto/Copperbox)
+- [Kewiri](https://github.com/hackthebox/cyber-apocalypse-2025/tree/main/crypto/Kewiri)
+- [Twin Oracles](https://github.com/hackthebox/cyber-apocalypse-2025/tree/main/crypto/Twin%20Oracles)
+- [Verilicious](https://github.com/hackthebox/cyber-apocalypse-2025/tree/main/crypto/Verilicious)
+- [Hourcle](https://github.com/hackthebox/cyber-apocalypse-2025/tree/main/crypto/hourcle)
 
 ---
 
