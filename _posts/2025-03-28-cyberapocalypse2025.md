@@ -21,6 +21,14 @@ mermaid: false
 
 ## 🗂️ Lista de Writeups
 
+### 🧠 AI
+
+- [CursedGateKeeper](/writeups/cyberapocalypse2025/cursedgatekeeper) - Prompt Injection para obtener el canto oculto.
+- [ElixirEmporium](/writeups/cyberapocalypse2025/elixiremporium) - Evadir censura mediante deletreo controlado.
+- [Embassy](/writeups/cyberapocalypse2025/embassy) - Manipulación de contexto simulando un entorno de prueba.
+- [LunarOrb](/writeups/cyberapocalypse2025/lunarorb) - Alteración de contexto para obtener la ruta secreta.
+- [MirrorWitch](/writeups/cyberapocalypse2025/mirrorwitch) - Desbloqueo narrativo de lugares prohibidos con inyección literaria.
+
 ### 🔐 Crypto
 - [BabyRSA](/writeups/cyberapocalypse2025/babyrsa) - RSA básico y factorización.
 
