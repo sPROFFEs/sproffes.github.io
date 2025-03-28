@@ -1,7 +1,7 @@
 ---
 title: IronCorp - THM
 date: 2025-02-02 11:00:00 -0000
-categories: [Labs & CTF, Write Up, TryHackMe]
+categories: [TryHackMe, Labs]
 tags: [Windows, TryHackMe, SSRF, Gobuster, Meterpreter, PowerShell]
 image:
   path: /assets/img/posts/ironcorp-thm/cabecera.png

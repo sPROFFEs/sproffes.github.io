@@ -2,7 +2,7 @@
 title: OSINT Tools Collection
 author: cipher387
 date: 2024-01-19
-categories: [OSINT, Tools]
+categories: [Herramientas, OSINT]
 tags: [osint, security, investigation, tools]
 ---
 

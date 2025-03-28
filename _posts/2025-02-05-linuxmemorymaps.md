@@ -1,7 +1,7 @@
 ---
 title: Creación de mapas de memoria RAM en linux
 date: 2025-02-05 14:00:00 -0000
-categories: [Forense, Linux, RAM]
+categories: [Forense, Linux]
 tags: [Forense, memoria ram, linux, dump, memdump, volatility]
 description: >
   Guía rápida de como crear mapas de memoria RAM en linux para Volatility 2 y 3.

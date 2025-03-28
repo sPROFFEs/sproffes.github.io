@@ -1,7 +1,7 @@
 ---
 title: Volatility 2 & 3
 date: 2025-01-14 11:58:38 +0000
-categories: [Forense, Herramientas]
+categories: [Forense, Memoria RAM]
 tags: [forense, volatility, ram, memoria, windows]
 ---
 

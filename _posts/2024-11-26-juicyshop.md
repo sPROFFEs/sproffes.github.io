@@ -1,7 +1,7 @@
 ---
 title: Guía de Vulnerabilidades Juice Shop
 date: 2024-11-26
-categories: [Labs & CTF, Web Vulnerabilities]
+categories: [Laboratorios, Web]
 tags: [pentesting, juice-shop, web-security]
 ---
 

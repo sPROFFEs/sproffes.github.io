@@ -1,7 +1,7 @@
 ---
 title: Montaje LVM EXT LUKS - Linux
 date: 2025-02-14 11:00:00 +0000
-categories: [Forense, Linux, Discos]
+categories: [Forense, Linux]
 tags: [Linux, Forense, Discos, Montaje, LVM, EXT, LUKS]
 description: >
   Guía de montaje de discos EXT LUKS LVM de linux para análisis de datos.

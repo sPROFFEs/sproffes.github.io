@@ -1,7 +1,7 @@
 ---
 title: Baron Samedit - Escalación de privilegios en Linux
 date: 2025-01-11 13:01:50 +0100
-categories: [Labs & CTF, Write Up, Privilege Escalation]
+categories: [Laboratorios, Exploits]
 tags: [Linux, privilege escalation, vulnerability, cve-2021-3156]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Ice - TryHackMe
 date: 2025-01-29 11:00:00 -0000
-categories: [Labs & CTF, Write Up, TryHackMe]
+categories: [TryHackMe, Labs]
 tags: [Windows, Metasploit, Tryhackme]
 image:
   path: /assets/img/posts/ICE-tryhackme/cabecera.png

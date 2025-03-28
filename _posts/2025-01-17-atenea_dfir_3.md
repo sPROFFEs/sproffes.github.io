@@ -1,7 +1,7 @@
 ---
 title: Reto DFIR 3 - Atenea CCN
 date: 2025-01-17 18:16:41 +0100
-categories: [Labs & CTF, Write Up, DFIR]
+categories: [Laboratorios, DFIR]
 tags: [dfir, forensics, malware analysis, memory analysis, volatility, cobalt strike]
 ---
 

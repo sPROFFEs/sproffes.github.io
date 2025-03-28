@@ -1,7 +1,7 @@
 ---
 title: Metadatos
 date: 2023-06-07 00:00:00 +0000
-categories: [Reconocimiento, Metadata]
+categories: [Reconocimiento]
 tags: [metadata, reconnaissance, osint]
 ---
 

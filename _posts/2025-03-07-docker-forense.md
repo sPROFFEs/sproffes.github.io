@@ -1,7 +1,7 @@
 ---
 title: Docker - Analisis forense
 date: 2025-03-07 11:00:00 +0000
-categories: [Forense, Proxmox VE, Docker]
+categories: [Forense, Docker]
 tags: [Proxmox VE, Forense, Docker, Analisis forense]
 image:
   path: /assets/img/cabeceras_genericas/docker.jpg

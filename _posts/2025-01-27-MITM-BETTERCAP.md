@@ -1,7 +1,7 @@
 ---
 title: Man in The Middle Attack
 date: 2025-01-27 12:00:00 -0500
-categories: [Hacking, Bettercap]
+categories: [Laboratorios, MiTM
 tags: [Bettercap, MiTM, ARP spoofing, DNS spoofing, Net sniffing, HTTPS downgrade, Proxy, WiFi, Bluetooth]
 image:
   path: /assets/img/posts/mitm-bettercap/cabecera.png

@@ -1,7 +1,7 @@
 ---
 title: Análisis básico de memoria RAM en Linux
 date: 2025-02-05 14:00:00 -0000
-categories: [Forense, Linux, RAM]
+categories: [Forense, Linux]
 tags: [Forense, memoria ram, linux, dump, memdump, fmem, LiME, avml]
 description: >
   Repaso y guía rapida de algunos comandos para realizar análisis de memoria RAM en Linux.

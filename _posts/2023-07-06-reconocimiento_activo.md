@@ -1,7 +1,7 @@
 ---
 title: Recopilación Activa
 date: 2023-07-06
-categories: [Reconocimiento, Recopilación, Activa]
+categories: [Reconocimiento]
 tags: [recon, dns, subdominios, tecnologias, content-discovery]
 ---
 

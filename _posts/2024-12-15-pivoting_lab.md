@@ -1,7 +1,7 @@
 ---
 title: Cyberlab - Pivoting con Ligolo
 date: 2024-12-15
-categories: [Labs & CTF, Network Pivoting]
+categories: [Laboratorios, Redes]
 tags: [ligolo, pivoting, pentest, dvwa, hacking]
 toc: true
 ---

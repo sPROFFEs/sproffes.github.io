@@ -1,7 +1,7 @@
 ---
 title: Naabu y Netcat
 date: 2023-06-07 00:00:00 +0000
-categories: [Reconocimiento, Naabu & Netcat]
+categories: [Reconocimiento]
 tags: [network, scanning, naabu, netcat]
 ---
 

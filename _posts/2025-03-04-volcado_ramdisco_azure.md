@@ -1,7 +1,7 @@
 ---
 title: Dump de memoria RAM y disco en entornos IaaS (Azure)
 date: 2025-03-03 14:00:00 +0000
-categories: [Forense, Azure, Memory Dump, Disk Dump]
+categories: [Forense, Azure]
 tags: [Forense, Memory Dump, Disk Dump, Azure, Memory Dump, Disk Dump]
 image:
   path: /assets/img/cabeceras_genericas/azure.webp

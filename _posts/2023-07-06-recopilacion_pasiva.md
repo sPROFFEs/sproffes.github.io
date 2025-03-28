@@ -1,7 +1,7 @@
 ---
 title: Recopilación pasiva
 date: 2024-01-19
-categories: [Reconocimiento, Recopilación, Pasiva]
+categories: [Reconocimiento]
 tags: [passive-recon, google-dorks, shodan, censys, whois, maltego]
 ---
 

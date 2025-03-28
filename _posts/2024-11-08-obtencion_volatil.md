@@ -1,7 +1,7 @@
 ---
 title: Adquisición de Evidencias Volátiles
 date: 2024-11-08 11:58:38 +0000
-categories: [Forense, Herramientas]
+categories: [Forense, Memoria RAM]
 tags: [memoria, ram, windows, linux, dumpit, belkasoft, lime, avml]
 ---
 

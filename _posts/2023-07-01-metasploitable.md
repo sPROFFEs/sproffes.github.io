@@ -1,7 +1,7 @@
 ---
 title: Configuración de Metasploitable 3
 date: 2023-07-01
-categories: [Labs & CTF, Metasploitable]
+categories: [Guia, Maquinas]
 tags: [metasploitable3, vmware, security-lab]
 ---
 

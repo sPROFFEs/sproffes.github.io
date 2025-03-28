@@ -1,7 +1,7 @@
 ---
 title: Análisis de NTFS
 date: 2024-11-27 11:58:38 +0000
-categories: [Forense, NTFS]
+categories: [Forense, Discos]
 tags: [forense, ntfs, windows, file-system]
 pin: false
 math: true

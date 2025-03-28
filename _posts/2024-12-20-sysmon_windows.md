@@ -1,7 +1,7 @@
 ---
 title: Sysmon en Windows
 date: 2024-12-20 11:58:38 +0000
-categories: [Forense, Monitorización]
+categories: [Forense, Windows]
 tags: [sysmon, windows, monitorización, seguridad]
 pin: false
 math: false

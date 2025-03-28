@@ -1,7 +1,7 @@
 ---
 title: Reto DFIR 1 - Atenea CCN
 date: 2025-01-15 10:19:16 +0100
-categories: [Labs & CTF, Write Up, DFIR]
+categories: [Laboratorios, DFIR]
 tags: [dfir, forensics, truecrypt, memory analysis, volatility]
 ---
 
