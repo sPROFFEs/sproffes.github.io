@@ -1,7 +1,7 @@
 ---
 title: Certified - Hackthebox - Season7
 date: 2025-02-11 11:00:00 +0000
-categories: [HackTheBox, Labs]
+categories: [HacktheBox, Labs]
 tags: [Windows, CTF, Active Directory] 
 image:
   path: /assets/img/posts/certified_htb/cabecera.png

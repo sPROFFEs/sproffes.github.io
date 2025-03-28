@@ -1,7 +1,7 @@
 ---
 title: Metasploitable 3 - Rapid7
 date: 2025-02-01 11:00:00 -0000
-categories: [Laboratorios, Rapid7]
+categories: [Laboratorios]
 tags: [Windows, Metasploit, Rapid7]
 image:
   path: /assets/img/posts/rapid7-metasploitable3/cabecera.png
