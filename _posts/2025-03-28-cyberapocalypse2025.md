@@ -23,11 +23,11 @@ mermaid: false
 
 ### 🧠 AI
 
-- [CursedGateKeeper](/_writeups/cyberapocalypse2025/CursedGateKeeper.md) - Prompt Injection para obtener el canto oculto.
-- [ElixirEmporium](/_writeups/cyberapocalypse2025/ElixirEmporium.md) - Evadir censura mediante deletreo controlado.
-- [Embassy](/_writeups/cyberapocalypse2025/Embassy.md) - Manipulación de contexto simulando un entorno de prueba.
-- [LunarOrb](/_writeups/cyberapocalypse2025/LunarOrb.md) - Alteración de contexto para obtener la ruta secreta.
-- [MirrorWitch](/_writeups/cyberapocalypse2025/MirrorWitch.md) - Desbloqueo narrativo de lugares prohibidos con inyección literaria.
+- [CursedGateKeeper](/_writeups/cyberapocalypse2025/CursedGateKeeper) - Prompt Injection para obtener el canto oculto.
+- [ElixirEmporium](/_writeups/cyberapocalypse2025/ElixirEmporium) - Evadir censura mediante deletreo controlado.
+- [Embassy](/_writeups/cyberapocalypse2025/Embassy) - Manipulación de contexto simulando un entorno de prueba.
+- [LunarOrb](/_writeups/cyberapocalypse2025/LunarOrb) - Alteración de contexto para obtener la ruta secreta.
+- [MirrorWitch](/_writeups/cyberapocalypse2025/MirrorWitch) - Desbloqueo narrativo de lugares prohibidos con inyección literaria.
 
 ---
 
