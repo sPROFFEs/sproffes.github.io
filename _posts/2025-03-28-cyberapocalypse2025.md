@@ -19,21 +19,15 @@ mermaid: false
 
 ---
 
-## 🗂️ Lista de Writeups
+## Lista de Writeups
 
 ### 🧠 AI
 
-- [CursedGateKeeper](/writeups/cyberapocalypse2025/cursedgatekeeper) - Prompt Injection para obtener el canto oculto.
-- [ElixirEmporium](/writeups/cyberapocalypse2025/elixiremporium) - Evadir censura mediante deletreo controlado.
-- [Embassy](/writeups/cyberapocalypse2025/embassy) - Manipulación de contexto simulando un entorno de prueba.
-- [LunarOrb](/writeups/cyberapocalypse2025/lunarorb) - Alteración de contexto para obtener la ruta secreta.
-- [MirrorWitch](/writeups/cyberapocalypse2025/mirrorwitch) - Desbloqueo narrativo de lugares prohibidos con inyección literaria.
-
----
-
-## 💬 Notas Personales
-
-> Esta ha sido una de las ediciones más divertidas de Cyber Apocalypse, destacando especialmente en los retos de Crypto y Pwn.
+- [CursedGateKeeper](/assets/writeups/cyberapocalypse2025/cursedgatekeeper) - Prompt Injection para obtener el canto oculto.
+- [ElixirEmporium](/assets/writeups/cyberapocalypse2025/elixiremporium) - Evadir censura mediante deletreo controlado.
+- [Embassy](/assets/writeups/cyberapocalypse2025/embassy) - Manipulación de contexto simulando un entorno de prueba.
+- [LunarOrb](/assets/writeups/cyberapocalypse2025/lunarorb) - Alteración de contexto para obtener la ruta secreta.
+- [MirrorWitch](/assets/writeups/cyberapocalypse2025/mirrorwitch) - Desbloqueo narrativo de lugares prohibidos con inyección literaria.
 
 ---
 
