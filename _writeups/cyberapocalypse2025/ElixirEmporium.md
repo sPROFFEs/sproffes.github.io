@@ -1,5 +1,7 @@
 ---
 title: "ElixirEmporium - Cyber Apocalypse 2025"
+layout: page
+permalink: /writeups/cyberapocalypse2025/cursedgatekeeper
 date: 2025-03-28 12:45:00 +0000
 categories: [HacktheBox, CTF]
 tags: [CyberApocalypse, HTB, AI, PromptInjection]

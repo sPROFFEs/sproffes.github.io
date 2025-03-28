@@ -172,7 +172,8 @@ collections:
     sort_by: order
   writeups:
     output: true
-    permalink: /_writeups/:path/
+    permalink: /writeups/:collection/:path/
+
 
 defaults:
   - scope:
