@@ -1,7 +1,7 @@
 ---
 title: "MirrorWitch - Cyber Apocalypse 2025"
 layout: page
-permalink: /writeups/cyberapocalypse2025/cursedgatekeeper
+permalink: /writeups/cyberapocalypse2025/mirrorwitch
 date: 2025-03-28 13:30:00 +0000
 categories: [HacktheBox, CTF]
 tags: [CyberApocalypse, HTB, AI, PromptInjection]
