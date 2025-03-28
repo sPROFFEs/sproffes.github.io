@@ -7,7 +7,7 @@ image:
   path: /assets/img/cabeceras_genericas/cyberapocalypse2025.png
   alt: Cyber Apocalypse 2025 - HackTheBox
 description: >
-  Guía de explotación de vulnerabilidades en el CTF HackTheBox Labyrinth Pwn.
+  Guía de explotación de vulnerabilidades en el CTF HackTheBox
 pin: false  
 toc: true   
 math: false 
