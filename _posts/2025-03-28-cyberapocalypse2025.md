@@ -29,31 +29,6 @@ mermaid: false
 - [LunarOrb](/writeups/cyberapocalypse2025/lunarorb) - Alteración de contexto para obtener la ruta secreta.
 - [MirrorWitch](/writeups/cyberapocalypse2025/mirrorwitch) - Desbloqueo narrativo de lugares prohibidos con inyección literaria.
 
-### 🔐 Crypto
-- [BabyRSA](/writeups/cyberapocalypse2025/babyrsa) - RSA básico y factorización.
-
-### 🌐 Web
-- [Broken Auth](/writeups/cyberapocalypse2025/brokenauth) - Vulnerabilidad de autenticación.
-
-### 🟣 Pwn
-- [Babyheap](/writeups/cyberapocalypse2025/babyheap) - Exploit de double free.
-
-### 🕵️ Forensics
-- [HiddenFlag](/writeups/cyberapocalypse2025/hiddenflag) - Análisis de disco y búsqueda de strings.
-
----
-
-## 📚 Sobre este Writeup
-
-- ✅ Cada writeup incluye:
-    - Descripción del reto.
-    - Enunciado original (resumido).
-    - Proceso completo de resolución.
-    - Scripts, comandos y técnicas empleadas.
-    - Flag final.
-- ✅ Todos los writeups están en `/writeups/cyberapocalypse2025/` y **no aparecen como posts**, solo accesibles desde este índice.
-- ✅ Los retos son 100% basados en mi participación real en el CTF.
-
 ---
 
 ## 💬 Notas Personales
