@@ -35,7 +35,7 @@ Los retos realizados por nuestro equipo se muestran en este blog, pero también 
 ### Blockchain
 
 - [EldorianGates](/writeups/cyberapocalypse2025/eldoriangates) - Desbordamiento en `uint8` y bypass de autenticación.
-- [Eldorio](/writeups/cyberapocalypse2025/eldorio) - Multicall para derrotar a Eldorion en un solo bloque.
+- [Eldorion](/writeups/cyberapocalypse2025/eldorion) - Multicall para derrotar a Eldorion en un solo bloque.
 - [HeliosDEX](/writeups/cyberapocalypse2025/heliosdex) - Explotación de redondeo y refund abusando `Math.mulDiv`.
 
 ### Crypto

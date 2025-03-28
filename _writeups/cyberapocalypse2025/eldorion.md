@@ -208,8 +208,6 @@ exploit_contract = w3.eth.contract(address=exploit_addr, abi=exploit_abi)
 exploit_contract.functions.win(target_addr).build_transaction({...})
 ```
 
-Puedes ver el script completo [aquí](./htb/solver.py).
-
 ---
 
 ## Bonus
