@@ -1,5 +1,7 @@
 ---
 title: Labyrinth Pwn CTF - HackTheBox
+layout: page
+permalink: /writeups/HTB/CTF/labyrinth
 date: 2025-02-16 11:00:00 +0000
 categories: [HacktheBox, CTF, Pwn]
 tags: [HacktheBox, CTF, Pwn]

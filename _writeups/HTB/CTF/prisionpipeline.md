@@ -1,5 +1,7 @@
 ---
 title: Prision Pipeline Misc CTF - HackTheBox
+layout: page
+permalink: /writeups/HTB/CTF/prisionpipeline
 date: 2025-03-01 11:00:00 +0000
 categories: [HacktheBox, CTF, Misc]
 tags: [HacktheBox, CTF, Misc, npm, API]

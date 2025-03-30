@@ -8,7 +8,7 @@ image:
   alt: Cyber Apocalypse 2025 - HackTheBox
 description: >
   Guía de explotación de vulnerabilidades en el CTF HackTheBox
-pin: false  
+pin: true  
 toc: true   
 math: false 
 mermaid: false 

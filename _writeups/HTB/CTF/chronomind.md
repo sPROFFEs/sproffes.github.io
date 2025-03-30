@@ -1,5 +1,7 @@
 ---
 title: Chrono Mind Misc CTF - HackTheBox
+layout: page
+permalink: /writeups/HTB/CTF/chronomind
 date: 2025-02-16 11:00:00 +0000
 categories: [HacktheBox, CTF, Misc]
 tags: [HacktheBox, CTF, Misc]

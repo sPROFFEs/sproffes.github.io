@@ -1,5 +1,7 @@
 ---
 title: Guild Web CTF - HackTheBox
+layout: page
+permalink: /writeups/HTB/CTF/guild
 date: 2025-02-14 11:00:00 +0000
 categories: [HacktheBox, CTF, Web]
 tags: [HacktheBox, CTF, Web]

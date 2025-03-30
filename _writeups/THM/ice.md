@@ -1,5 +1,7 @@
 ---
 title: Ice - TryHackMe
+layout: page
+permalink: /writeups/THM/ice
 date: 2025-01-29 11:00:00 -0000
 categories: [TryHackMe]
 tags: [Windows, Metasploit, Tryhackme]
