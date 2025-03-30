@@ -1,5 +1,7 @@
 ---
 title: Atenea - DFIR - Reto Linux
+layout: page
+permalink: /writeups/DFIR/2025-02-10-atenea-linux
 date: 2025-02-10 11:00:00 +0000
 categories: [Laboratorios, DFIR]
 tags: [Linux, Challenges, Write Up, DFIR, Atenea]
