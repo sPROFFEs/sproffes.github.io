@@ -102,7 +102,7 @@ Creamos una snapshot de la máquina virtual:
 sudo lvcreate -L 12G -s -n vm-118-disk-snap /dev/pve/vm-118-disk-0
 ```
 > Aviso : Hay que tener en cuenta que el tamaño del snapshot tiene que ser el mismo que el del disco duro de la máquina virtual que podemos ver en el comando `qm config <ID de la máquina virtual>`.
-{: .notice--warning}
+{: .prompt-warning}
 
 Pasamos el snapshot a formato raw:
 

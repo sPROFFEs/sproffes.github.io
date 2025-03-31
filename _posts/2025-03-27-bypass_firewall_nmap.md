@@ -24,11 +24,13 @@ Simular una red interna protegida por un firewall/router, desde la cual:
 
     La máquina atacante (Kali) actúa como un administrador remoto o atacante externo.
 
+```plaintext
 ┌────────────┐        ┌────────────┐        ┌────────────┐
 │   Kali     │ <----->│   Router   │ <----->│  Servidor  │
 │10.0.1.10   │        │10.0.1.1/   │        │10.0.2.10   │
 │(externa)   │        │10.0.2.1    │        │(interna)   │
 └────────────┘        └────────────┘        └────────────┘
+```
 
 - Kali y el router están en la red 10.0.1.0/24
 
@@ -302,7 +304,7 @@ nmap -sT -p 80,8080,2022 10.0.1.1
     En este caso, nmap ve puertos abiertos del router mismo (10.0.1.1), no del servidor (10.0.2.10).
 
 > Motivo: Estos escaneos usan data lengths de 40 bytes y no envían SYN, por lo que pueden pasar por alto una regla que solo bloquea SYN. Con Wireshark puedes confirmar los flags y el tamaño de cada paquete.
-{. prompt-info }
+{: prompt-info}
 
 ### Bypass con escaneos FIN, NULL y XMAS
 
@@ -417,8 +419,8 @@ sudo iptables -I INPUT -p tcp -m length --length 40 -j REJECT --reject-with tcp-
 
     --data-length también si el tamaño no coincide con los bloqueados.
 
-> Motivo: La fragmentación divide el TCP header en partes pequeñas, lo que puede hacer que el filtro basado en longitud no se aplique correctamente.
-{. prompt-info }
+> Motivo: La fragmentación divide el TCP header en partes pequeñas, lo que puede hacer que el filtro basado en longitud no se aplique correctamente
+{: prompt-info}
 
 - Bloqueo por rango de longitud
 
@@ -428,8 +430,8 @@ sudo iptables -I INPUT -p tcp -m length --length 40 -j REJECT --reject-with tcp-
 sudo iptables -I INPUT -p tcp -m length --length 1:100 -j REJECT --reject-with tcp-reset
 ```
 
-> Efecto: Esto bloquea la mayoría de los tamaños pequeños, obligando al atacante a enviar paquetes de tamaño mayor (por ejemplo, --data-length 113), lo que puede ser detectado.
-{. prompt-info }
+> Efecto: Esto bloquea la mayoría de los tamaños pequeños, obligando al atacante a enviar paquetes de tamaño mayor (por ejemplo, --data-length 113), lo que puede ser detectado
+{: prompt-info}
 
 
 
@@ -445,7 +447,7 @@ Bloquear paquetes con TTL específico, por ejemplo, para bloquear paquetes con T
 iptables -I FORWARD -p tcp --ttl-eq 64 -j REJECT --reject-with tcp-reset
 ```
 
-> Motivo: Muchos escaneos envían paquetes con TTL de 64 por defecto.
+> Motivo: Muchos escaneos envían paquetes con TTL de 64 por defecto
 {. prompt-info}
 
 Bloquear paquetes con TTL menor o igual a 64
