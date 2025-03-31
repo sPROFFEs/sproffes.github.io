@@ -547,28 +547,88 @@ Esto le indica al kernel que 10.0.1.20 es una IP local, lo que permite enviar pa
 
 Desarrollar y probar un script básico NSE para ampliar las capacidades de nmap.
 
-Creamos un script de ejemplo:
+Creamos un script de ejemplo sencillo para escanear un host y verificar si existen y son accesibles los archivos `robots.txt` y `sitemap.xml`.
 
 ```lua
-description = [[Ejemplo de script NSE para detectar puerto 80]]
-author = "name"
-license = "Same as Nmap"
+---
+-- robots-sitemap-check.nse
+--
+-- Descripción:
+--   Script NSE para verificar si existen y son accesibles 'robots.txt' y 'sitemap.xml'
+--   en un servicio web.
+--
+-- Uso de ejemplo:
+--   nmap -p80,443 --script robots-sitemap-check <objetivo>
+--
+-- Autor: (sdksdk)
+-- Licencia: Igual que la de Nmap (https://nmap.org/book/man-legal.html)
+--
+
+local http = require "http"
+local shortport = require "shortport"
+local stdnse = require "stdnse"
+
+description = [[
+Comprueba si un servidor web responde con éxito (HTTP 2xx/3xx) al solicitar
+/robots.txt y /sitemap.xml, reportando si se detectan dichos archivos.
+]]
+
 categories = {"discovery"}
 
-portrule = function(host, port)
-  return port.number == 80
+-- Regla de puerto: ejecuta el script en servicios que Nmap identifique como HTTP
+portrule = shortport.http
+
+-- Función auxiliar para comprobar un recurso
+local function check_resource(host, port, path)
+  local resp = http.get(host, port, path)
+  if resp and resp.status and resp.status < 400 then
+    -- Se considera "encontrado" si HTTP status es < 400
+    -- (p.e. 200 OK, 301 Moved, etc.)
+    return true, resp.status
+  else
+    return false, resp and resp.status or nil
+  end
 end
 
 action = function(host, port)
-  return "Puerto 80 detectado en " .. host.ip
+  local results = {}
+
+  -- 1) Comprobar /robots.txt
+  local found_robots, status_robots = check_resource(host, port, "/robots.txt")
+  if found_robots then
+    table.insert(results, string.format("Encontrado /robots.txt (HTTP %d)", status_robots))
+  else
+    table.insert(results, "/robots.txt no accesible (404/403/...)")
+  end
+
+  -- 2) Comprobar /sitemap.xml
+  local found_sitemap, status_sitemap = check_resource(host, port, "/sitemap.xml")
+  if found_sitemap then
+    table.insert(results, string.format("Encontrado /sitemap.xml (HTTP %d)", status_sitemap))
+  else
+    table.insert(results, "/sitemap.xml no accesible (404/403/...)")
+  end
+
+  return table.concat(results, "\n")
 end
+
 ```
 
-Lo guardamos con extension .nse
+Copiar, actualizar y ejecutar el script:
 
-```bash
-nmap -sT --script ./script.nse 10.0.1.1
-```
+  - Copia el archivo en el directorio de scripts de Nmap.
+
+    `sudo cp robomap.nse /usr/share/nmap/scripts/`
+
+  - Actualiza el índice de scripts:
+
+    `sudo nmap --script-updatedb`
+
+  - Para escanear host(s) en puertos 80 y 443:
+
+    `nmap -p80,443 --script robots-sitemap-check <objetivo>`
+
+Si un servidor responde en otro puerto (por ejemplo, 8080) y Nmap lo detecta como HTTP, también ejecutará el script en ese puerto.
 
 ![alt text](/assets/img/posts/nmap_firewall_bypass/image-29.png)
 
