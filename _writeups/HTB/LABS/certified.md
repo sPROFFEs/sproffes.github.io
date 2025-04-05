@@ -6,7 +6,7 @@ date: 2025-02-11 11:00:00 +0000
 categories: [HacktheBox, Labs]
 tags: [Windows, CTF, Active Directory] 
 image:
-  path: /assets/img/posts/certified_htb/cabecera.png
+  path: /assets/img/writeups/hackthebox/certified_htb/cabecera.png
   alt: Certified
 description: >
   Certified - Hackthebox - Season7 - Guía en español
@@ -104,7 +104,7 @@ Importamos el `zip` a BloodHound para obtener el posible camino de entrada al AD
 
 # Análisis con BloodHound
 
-![alt text](/assets/img/posts/certified_htb/image.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image.png)
 
 - Permisos de Judith Mader:  
   - Judith Mader tiene permisos de WriteOwner sobre el grupo de Gestión.  
@@ -123,19 +123,19 @@ Sabiendo esto y teniendo nuestro punto de entrada claro vamos a explotar estas r
 
 > Utilizamos **bloodyAD** para establecer a **judith.mader** como la propietaria del grupo "Management".
 
-![alt text](/assets/img/posts/certified_htb/image-1.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-1.png)
 
 ## Concediendo Permisos de Escritura
 
 > Haciendo uso de imapacket-dacledit modificamos los permisos del grupo.
 
-![alt text](/assets/img/posts/certified_htb/image-2.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-2.png)
 
 ## Añadiendo a Judith al grupo
 
 > Añadimos al usuario `judith.mader` al grupo `Management`.
 
-![alt text](/assets/img/posts/certified_htb/image-3.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-3.png)
 
 ## Explotando KeyCredentialLink
 
@@ -143,7 +143,7 @@ Como la cuenta de servicio management_svc es parte del grupo management podemos 
 
 > Usamos `pwhysker` para crear un certificado de `management_svc`
 
-![alt text](/assets/img/posts/certified_htb/image-4.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-4.png)
 
 ## Obtención del Ticket Granting Ticket
 
@@ -163,7 +163,7 @@ sudo ntpdate -s 10.10.11.41
 
 > Creamos el TGT en nombre de `management_svc`
 
-![alt text](/assets/img/posts/certified_htb/image-5.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-5.png)
 
 Si todo ha ido bien nos genera una key y un fichero .ccache con el TGT 
 
@@ -173,11 +173,11 @@ Ahora que disponemos de un TGT a nombre de `management_svc` podemos utilizarlo p
 
 Antes de ejecutar el script es necesario indicar la ruta a nuestro fichero .ccache mediante la variable $KRB5CCNAME  
 
-![alt text](/assets/img/posts/certified_htb/image-6.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-6.png)
 
 > Extraemos el NT hash de `management_svc` usando `gettgtpkinit.py`
 
-![alt text](/assets/img/posts/certified_htb/image-7.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-7.png)
 
 Recordad indicar la key del TGT
 
@@ -185,7 +185,7 @@ Recordad indicar la key del TGT
 
 Ahora que tenemos el hash de `management_svc` podemos acceder a WinRM
 
-![alt text](/assets/img/posts/certified_htb/image-8.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-8.png)
 
 # Escalando privilegios - movimiento lateral
 
@@ -195,7 +195,7 @@ Teniendo acceso al usuario `management_svc`, como vimos en Bloodhound este usuar
 
 > Utilizamos `certipy-ad` para modificar la keyCredential de `ca_operator`
 
-![alt text](/assets/img/posts/certified_htb/image-9.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-9.png)
 
 ## Actualizamos el UserPrincipalName de ca_operator
 
@@ -203,24 +203,24 @@ Para explotar el hecho de poder crear certificados en nombre de otros usuario va
 
 > Actualizamos el UPN (UserPrincipalName) de `ca_operator` a `administrator`
 
-![alt text](/assets/img/posts/certified_htb/image-10.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-10.png)
 
 ## Generamos el certificado en nombre de administrator
 
 > Usamos de nuevo certipy-ad para generar el certificado
 
-![alt text](/assets/img/posts/certified_htb/image-11.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-11.png)
 
 ## Volvemos a actualizar el UPN a su estado anterior
 
 Para evitar que impersonemos al usuario ca_operator con el UPN modificado, debemos actualizar de nuevo este a su anterior estado.
 
-![alt text](/assets/img/posts/certified_htb/image-12.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-12.png)
 
 ## Impersonamos a administrator para obtener su NT hash
 
-![alt text](/assets/img/posts/certified_htb/image-13.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-13.png)
 
 # Acceso WinRM como administrator
 
-![alt text](/assets/img/posts/certified_htb/image-14.png)
+![alt text](/assets/img/writeups/hackthebox/certified_htb/image-14.png)

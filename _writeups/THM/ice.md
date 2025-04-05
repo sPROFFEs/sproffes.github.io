@@ -6,7 +6,7 @@ date: 2025-01-29 11:00:00 -0000
 categories: [TryHackMe]
 tags: [Windows, Metasploit, Tryhackme]
 image:
-  path: /assets/img/posts/ICE-tryhackme/cabecera.png
+  path: /assets/img/writeups/tryhackme/ICE-tryhackme/cabecera.png
   alt: ICE
   caption: ICE  
 description: >
@@ -445,7 +445,7 @@ Ahora conectarse al escritorio remoto con el siguiente comando:
 rdesktop -u remote -p remote 10.10.82.44
 ```
 
-![Conexión al escritorio remoto](/assets/img/posts/ICE-tryhackme/remote_desktop.png)
+![Conexión al escritorio remoto](/assets/img/writeups/tryhackme/ICE-tryhackme/remote_desktop.png)
 
 
 ### Otros comandos

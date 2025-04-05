@@ -167,7 +167,7 @@ async importPrisoner(url) {
 }
 ```
 
-![alt text](/assets/img/posts/prisionpipeline_htb/image.png)
+![alt text](/assets/img/writeups/hackthebox/prisionpipeline_htb/image.png)
 
 ## Token de acceso a la API del registro privado
 
@@ -199,7 +199,7 @@ npm publish --registry $REGISTRY_URL
 
 Como vimos antes el npm cli es ejecutado desde el usuario node por lo que podemos extraer el token de acceso desde /home/node/.npmrc.
 
-![alt text](/assets/img/posts/prisionpipeline_htb/image-1.png)
+![alt text](/assets/img/writeups/hackthebox/prisionpipeline_htb/image-1.png)
 
 El puerto 4873 es una redirección interna configurada en el archivo config/nginx.conf.
 
@@ -223,17 +223,17 @@ Para poder autenticarnos con este token vamos ir a la carpeta del codigo que nos
 
 Una vez allí vamos a crear un fichero .npmrc con el siguiente contenido.
 
-![alt text](/assets/img/posts/prisionpipeline_htb/image-2.png)
+![alt text](/assets/img/writeups/hackthebox/prisionpipeline_htb/image-2.png)
 
 El puerto debe ser el que nos proporciona acceso a la aplicación.
 
 En nuestro documento hosts añadimos el dominio registry.prison-pipeline.htb a la ip de la aplicación.
 
-![alt text](/assets/img/posts/prisionpipeline_htb/image-3.png)
+![alt text](/assets/img/writeups/hackthebox/prisionpipeline_htb/image-3.png)
 
 Verificamos que el token se ha autenticado correctamente.
 
-![alt text](/assets/img/posts/prisionpipeline_htb/image-4.png)
+![alt text](/assets/img/writeups/hackthebox/prisionpipeline_htb/image-4.png)
 
 Limpiamos la caché de npm.
 
@@ -271,8 +271,8 @@ Modificamos el archivo package.json para cambiar la versión del paquete.
 
 Ahora publicamos la nueva versión del paquete.
 
-![alt text](/assets/img/posts/prisionpipeline_htb/image-5.png)
+![alt text](/assets/img/writeups/hackthebox/prisionpipeline_htb/image-5.png)
 
 Ahora esperamos al cronjob para actualizar el paquete y tras unos cuantos segundos podemos hacer la ejecución del archivo /readflag.c desde la función `importPrisoner`.
 
-![alt text](/assets/img/posts/prisionpipeline_htb/image-6.png)
+![alt text](/assets/img/writeups/hackthebox/prisionpipeline_htb/image-6.png)

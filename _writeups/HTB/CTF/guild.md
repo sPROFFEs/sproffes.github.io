@@ -18,13 +18,13 @@ mermaid: false
 
 # Creación del usuario
 
-![alt text](/assets/img/posts/guild-ctf-htb/image.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image.png)
 
 Creamos un usuario cualquiera de forma sencilla.
 
 Una vez creado podemos iniciar sesión.
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-1.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-1.png)
 
 # Creación del payload
 
@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
 Con este script crearemos la imagen con el tag "artist" y podremos obtener la flag que se encuentra en la raiz de la web.
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-2.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-2.png)
 
 Una vez subida la imagen para poder ejecutar el payload hay que conseguir acceso a la cuenta de administrador.
 
@@ -96,13 +96,13 @@ Si observamos las variables que se le pasan al render_template_string, vemos que
 
 ## Exploit
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-3.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-3.png)
 
 Hacemos click donde dice "share profile" y copiamos el link.
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-4.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-4.png)
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-5.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-5.png)
 
 `4758505255527057@master.guild`
 
@@ -116,7 +116,7 @@ Necesitamos primero indicar que hemos olvidado la contraseña de la cuenta de ad
 
 Volvemos al login y hacemos click en "Forgot password?", introducimos el mail de administrador y pulsamos el botón "Send".
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-6.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-6.png)
 
 Ahora como podemos ver en el código fuente, se genera un hash sha256 con el mail de la cuenta de administrador y esto se pasa a la función changepasswd.
 
@@ -162,7 +162,7 @@ Copiamos el hash y lo pasamos a la función changepasswd.
 ❯ python3 hashmail.py
 336337986c1d078c19ef0aecef621d163fc5acc8feebde5efb2ffd79704f542e
 ```	
-![alt text](/assets/img/posts/guild-ctf-htb/image-7.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-7.png)
 
 Con esto conseguimos cambair la contraseña del usuario administrador.
 
@@ -170,9 +170,9 @@ Con esto conseguimos cambair la contraseña del usuario administrador.
 
 Ahora que acceso al panel de verificación de imágenes, podemos obtener la flag.
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-8.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-8.png)
 
 Si hacemos click en verify ejecutaremos el SSTI y obtendremos la flag.
 
-![alt text](/assets/img/posts/guild-ctf-htb/image-9.png)
+![alt text](/assets/img/writeups/hackthebox/guild-ctf-htb/image-9.png)
 

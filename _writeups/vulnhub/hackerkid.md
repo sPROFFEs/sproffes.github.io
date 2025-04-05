@@ -41,17 +41,17 @@ Network Distance: 1 hop
 
 Encontramos un portal web que parece indicar que hemos sido hackeados y nos incita a investigar más.
 
-![alt text](/assets/img/posts/hacker-kid/image.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-1.png)
 
 ## Puerto 9999
 
 Vemos un login para acceder a algún recurso de la máquina.
 
-![alt text](/assets/img/posts/hacker-kid/image-1.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-1.png)
 
 Esto parece interesante por lo que vamos a analizar las cabeceras HTTP para intentar encontrar alguna información de interés.
 
-![alt text](/assets/img/posts/hacker-kid/image-2.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-2.png)
 
 Tenemos cierta información que nos puede ser útil como la verión del framework que está utilizando `TornadoServer6.1` que es un framework web para Python. 
 
@@ -71,7 +71,7 @@ En el index de la web puerto 80 si probamos los elementos de la barra de navegac
 
 Encontramos un comentario en el código HTML que indica utilizar el método `GET` en el parámetro `page_no`para tener visualización de las páginas.
 
-![alt text](/assets/img/posts/hacker-kid/image-3.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-3.png)
 
 Vamos a realizar entonces un pequño escaneo para ver cuales de las respuestas que nos devuelven son de interés según el id.
 
@@ -98,7 +98,7 @@ Iremos variando el rango del id y nos fijaremos en el tamaño de la respuesta pa
 
 En el rango indicado vemos que el id 21 tiene un tamaño de 3849 bytes, y el resto de los ids tienen un tamaño de 3654 bytes, lo que puede indicar que hay información extra.
 
-![alt text](/assets/img/posts/hacker-kid/image-4.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-4.png)
 
 Nos indica una pista para lo que antes dudábamos. Si tiene activo el servidor de DNS solo que ahora nos indica el dominio que utiliza.
 
@@ -142,17 +142,17 @@ Tenemos numerosos subdominios por lo que para poder visitarlos vamos a tener que
 
 El único que parece útil es `hackerkid.blackhat.local`
 
-![alt text](/assets/img/posts/hacker-kid/image-5.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-5.png)
 
 ## Inyección XXE
 
 Intentando registrar un usuario, parece que siempre tenemos el mismo error sobre el campo `email`, indicando el valor el mismo y que no está disponible.
 
-![alt text](/assets/img/posts/hacker-kid/image-6.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-6.png)
 
 Si vemos las cabeceras de la petición y como se pasan estos datos al backend avergiremos que es un formulario XML.
 
-![alt text](/assets/img/posts/hacker-kid/image-7.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-7.png)
 
 [Info adicional sobre XXE](https://portswigger.net/web-security/xxe)
 
@@ -173,7 +173,7 @@ Si vemos las cabeceras de la petición y como se pasan estos datos al backend av
 
 Esto permite al atacante hacer que el XML incluya archivos del sistema, realice peticiones a servidores internos, o incluso ejecute ataques más avanzados.
 
-![alt text](/assets/img/posts/hacker-kid/image-8.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-8.png)
 
 Podemos ver que el usuario 1000 corresponde a **saket** por lo que vamos a investigar por contenido correspondiente al mismo.
 
@@ -186,25 +186,25 @@ Para poder exfiltrar contenido a través de XXE en esta aplicación PHP vamos a 
 ]>
 ```
 
-![alt text](/assets/img/posts/hacker-kid/image-9.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-9.png)
 
 Tras dwcodificar la salida obtenemos el archivo que queremos exfiltrar, bashrc.
 
-![alt text](/assets/img/posts/hacker-kid/image-10.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-10.png)
 
 Tenemos unas credenciales para la aplicación que está corriendo el framework python.
 
 ## Acceso en el panel puerto 9999
 
-![alt text](/assets/img/posts/hacker-kid/image-11.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-11.png)
 
 Parece que el usuario admin no es correcto pero probando con el usuario del sistema `saket`si nos da acceso.
 
-![alt text](/assets/img/posts/hacker-kid/image-12.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-12.png)
 
 Nos pregunta por nuestro nombre aunque no nos deja ninguna opción para introducirlo... Sabiendo que es PHP y que al inicio nos indicó el parámetro page_no podemos intentar pasar ahora un parámetro name para intentar decirle nuestro nombre.
 
-![alt text](/assets/img/posts/hacker-kid/image-13.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-13.png)
 
 Parece que funciona por lo que en este punto parece que estamos ante una posible inyección de plantillas SSTI.
 
@@ -214,9 +214,9 @@ Sabiendo que el framework es basado en python nos evitamos tener que averiguar e
 
 [Información sobre SSTI](https://book.hacktricks.wiki/en/pentesting-web/ssti-server-side-template-injection/index.html)
 
-![alt text](/assets/img/posts/hacker-kid/image-14.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-14.png)
 
-![alt text](/assets/img/posts/hacker-kid/image-15.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-15.png)
 
 Ahora que tenemos una inyección SSTI podemos realizar RCE para obtener una shell reversa.
 
@@ -230,9 +230,9 @@ Ahora que tenemos una inyección SSTI podemos realizar RCE para obtener una shel
 
 Encodeamos el payload en URL antes de enviarlo a la aplicación.
 
-![alt text](/assets/img/posts/hacker-kid/image-16.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-16.png)
 
-![alt text](/assets/img/posts/hacker-kid/image-17.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-17.png)
 
 Estabilizamos la shell y la hacemos interactiva.
 
@@ -244,7 +244,7 @@ ENTER
 export TERM=xterm
 ```
 
-![alt text](/assets/img/posts/hacker-kid/image-18.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-18.png)
 
 ## Escalado privilegios
 
@@ -252,11 +252,11 @@ Intentamos `sudo -l` para ver si tenemos privilegios sobre algún binario pero l
 
 Buscando binarios con permisos elevador interesantes tampoco encontramos gran cosa...
 
-![alt text](/assets/img/posts/hacker-kid/image-19.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-19.png)
 
 Otro comando útil para obtener las capacidades de los binarios es `/sbin/getcap -r / 2>/dev/null` que nos muestra las capacidades de los binarios de `/bin` y `/sbin`.
 
-![alt text](/assets/img/posts/hacker-kid/image-20.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-20.png)
 
 Esto significa que el binario de Python 2.7 tiene la capacidad especial CAP_SYS_PTRACE habilitada.
 
@@ -276,7 +276,7 @@ Para aprovechar esto vamos a listar los procesos del sistema que estén siendo e
 ps -eaf | grep root
 ```
 
-![alt text](/assets/img/posts/hacker-kid/image-22.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-22.png)
 
 Vamos a encontrar el proceso que ejecuta apache2.
 
@@ -427,6 +427,6 @@ if __name__ == "__main__":
     main()
 ```
 
-![alt text](/assets/img/posts/hacker-kid/image-21.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-21.png)
 
-![alt text](/assets/img/posts/hacker-kid/image-23.png)
+![alt text](/assets/img/writeups/vulnhub/hacker-kid/image-23.png)

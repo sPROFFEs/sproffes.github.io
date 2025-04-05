@@ -6,7 +6,7 @@ date: 2025-02-01 11:00:00 -0000
 categories: [Laboratorios]
 tags: [Windows, Metasploit, Rapid7]
 image:
-  path: /assets/img/posts/rapid7-metasploitable3/cabecera.png
+  path: /assets/img/writeups/vulnhub/rapid7-metasploitable3/cabecera.png
   alt: Metasploitable 3
   caption: ICE  
 description: >
@@ -103,7 +103,7 @@ Como podemos ver es una maquina con multiples servicios y puertos abiertos.
 
 Si navegamos al servicio en el puerto 9200 podemos ver que nos devuelve la inforamción del REST API de Elasticsearch.
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image.png)
 
 Investignado un poco por internet podemos encontrar como funciona la API REST de Elasticsearch y como interactuar con ella.
 
@@ -127,11 +127,11 @@ Ahora que sabemos el CVE de la vulnerabilidad en cuestion, podemos buscar exploi
 
 ### Metasploit
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-1.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-1.png)
 
 ## Ganando acceso
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-2.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-2.png)
 
 
 # SNMP
@@ -215,28 +215,28 @@ snmp-check <IP_objetivo>
 > Puertos de escucha locales
 {: .prompt-info }
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-3.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-3.png)
 
 > Información de la máquina y usuarios 
 {: .prompt-info }
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-4.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-4.png)
 
 > Procesos en ejecución
 {: .prompt-info }
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-5.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-5.png)
 
 > Esto mismo se puede hacer con metasploit
 {: .prompt-info }
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-6.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-6.png)
 
 Algo muy util para investigar y extraer información de la máquina y otros servicios expuestos que a lo mejor nmap no ha conseguido extraer.
 
 ### Extrayendo usuarios
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-7.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-7.png)
 
 Ahora que tenemos una lista de usuarios del sistema podemos intentar ataques de fuerza bruta o extracción de hashes. 
 
@@ -248,21 +248,21 @@ Aprovechando la información que nos ha brindado el servicio SNMP podemos buscar
 
 ## Escaneo de nmap 
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-9.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-9.png)
 
 
 ## Investigando el servicio
 
 - Portal web de Jenkins
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-10.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-10.png)
 
 Investigando en el portal web podemos encontrar la version de Jenkins que se está ejecutando, Jenkins ver. 1.637.
 
 Parece que esta versión cuenta con una vulnerabilidad de ejecución remota de comandos (RCE) en java,
 haciendo uso del script Jenkins-CI Groovy.
 
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-11.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-11.png)
 
 ## Explotando la vulnerabilidad
 
@@ -322,7 +322,7 @@ TARGETURI => /
 msf6 exploit(multi/http/jenkins_script_console) > set RPORT 8484
 RPORT => 8484
 ```
-![alt text](/assets/img/posts/rapid7-metasploitable3/image-12.png)
+![alt text](/assets/img/writeups/vulnhub/rapid7-metasploitable3/image-12.png)
 
 
 

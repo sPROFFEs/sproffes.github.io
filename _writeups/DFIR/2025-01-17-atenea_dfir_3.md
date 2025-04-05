@@ -15,7 +15,7 @@ tags: [dfir, forensics, malware analysis, memory analysis, volatility, cobalt st
 
 ## Análisis de procesos
 
-![Árbol de procesos](/assets/img/posts/atenea_dfir_3/20250117_181641_2025-01-17_19-16.png)
+![Árbol de procesos](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_181641_2025-01-17_19-16.png)
 _./vol2 -f Hell.img --profile=Win7SP1x64 pstree_
 
 Hay una cadena de anidamiento sospechosa de cmd.exe -> powershell.exe que se repite varias veces:
@@ -47,7 +47,7 @@ Varios procesos que podrían estar relacionados con la instalación de malware:
 
 ## Análisis de conexiones
 
-![Análisis de conexiones de red](/assets/img/posts/atenea_dfir_3/20250117_183529_2025-01-17_19-34.png)
+![Análisis de conexiones de red](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_183529_2025-01-17_19-34.png)
 _./vol2 -f Hell.img --profile=Win7SP1x64 netscan_
 
 MSI_v1.0.3.exe (PID 880) muestra un comportamiento inusual:
@@ -71,7 +71,7 @@ Hay un proceso con PID 88224 (identificado como "L?") escuchando en el puerto UD
 
 ## Análisis de autoruns
 
-![Análisis de autoruns](/assets/img/posts/atenea_dfir_3/20250117_184222_2025-01-17_19-42.png)
+![Análisis de autoruns](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_184222_2025-01-17_19-42.png)
 _vol -f Hell.img windows.autorun_
 
 Hay dos instancias de mctadmin.exe configuradas para ejecutarse en RunOnce para diferentes perfiles de servicio (LocalService y NetworkService). Esto podría ser sospechoso porque:
@@ -92,7 +92,7 @@ foremost *
 clamscan *
 ```
 
-![Análisis con malfind](/assets/img/posts/atenea_dfir_3/20250117_185547_2025-01-17_19-55.png)
+![Análisis con malfind](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_185547_2025-01-17_19-55.png)
 
 Hemos exportado los procesos que el plugin malfind encuentra para posteriormente analizarlos con el antivirus ClamAV que es opensource y gratuito.
 
@@ -102,7 +102,7 @@ Si en vez de volcar los datos simplemente los listamos veremos que entre los pro
 
 Si lo extraemos y lo analizamos veremos el mismo tipo de infección
 
-![Análisis adicional](/assets/img/posts/atenea_dfir_3/20250117_192049_2025-01-17_20-20.png)
+![Análisis adicional](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_192049_2025-01-17_20-20.png)
 
 En las conexiones de red vimos que MSI_v1.0.3.exe intentaba conectarse a 10.0.0.200 en los puertos 80 y 8080
 Estos probablemente son los intentos de conexión al servidor de comando y control
@@ -113,7 +113,7 @@ Mediante malfind encontramos varios procesos infectados entre los que se encuent
 
 Tras identificar el PID de cada uno hemos llegado a la conclusión de que uno de ellos fue la infección inicial, ya que como veremos ahora realiza varias conexiones para descargar software malicioso.
 
-![Análisis de URLs](/assets/img/posts/atenea_dfir_3/20250117_192513_2025-01-17_20-24.png)
+![Análisis de URLs](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_192513_2025-01-17_20-24.png)
 _./vol2 -f Hell.img --profile=Win7SP1x64 yarascan -Y "http" | grep -A 17 "Owner: Process svchost.exe"_
 
 Encontramos en la memoria del proceso svchost.exe (PID 744) lo que parece ser el origen real de la infección:
@@ -141,7 +141,7 @@ Por lo tanto, parece que:
 
 ## Analisis de CMD
 
-![Análisis de consolas](/assets/img/posts/atenea_dfir_3/20250117_194218_2025-01-17_20-42.png)
+![Análisis de consolas](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_194218_2025-01-17_20-42.png)
 _./vol2 -f Hell.img --profile=Win7SP1x64 consoles_
 
 Se confirma la existencia de un archivo "SHellb0t.zip" que fue descomprimido en el directorio temporal C:\Users\Baphomet\AppData\Local\Temp\Temp1_SHellb0t.zip\diec.exe
@@ -163,7 +163,7 @@ cmd.exe (2680)
 
 ## Análisis con Yara rules
 
-![Análisis con Yara](/assets/img/posts/atenea_dfir_3/20250117_195429_2025-01-17_20-53.png)
+![Análisis con Yara](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_195429_2025-01-17_20-53.png)
 
 Insta11Strings
 
@@ -206,7 +206,7 @@ Este proceso de identificación se puede realizar de forma manual o tras una peq
 python3 1768.py hell.img
 ```
 
-![Python](/assets/img/posts/atenea_dfir_3/2025-01-21_19-48.png)
+![Python](/assets/img/writeups/DFIR/atenea_dfir_3/2025-01-21_19-48.png)
 
 ## Conclusión
 
@@ -227,6 +227,6 @@ Esto encaja con el patrón completo que hemos visto:
 - MSI_v1.0.3.exe parece ser el payload principal de Cobalt Strike
 - La cadena de cmd/powershell probablemente fue usada para realizar la inyección de las DLLs
 
-![Proceso de escaneo](/assets/img/posts/atenea_dfir_3/20250117_201123_Peek_2025-01-17_21-08.gif)
+![Proceso de escaneo](/assets/img/writeups/DFIR/atenea_dfir_3/20250117_201123_Peek_2025-01-17_21-08.gif)
 
 Posiblemente parte de los procesos infectados hacen uso o provinen de otros procesos que hacen uso de estas dll.

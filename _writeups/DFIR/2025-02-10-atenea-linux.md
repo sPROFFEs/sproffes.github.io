@@ -60,7 +60,7 @@ deb http://old-releases.ubuntu.com/ubuntu/ CODENAME-security main restricted uni
 
 Lo mejor es eliminar todos los repositorios dentro del archivo y añadir solo los que necesitemos, entonces quedaría así:
 
-![alt text](/assets/img/posts/reto-atenea-linux/image.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image.png)
 
 ### Crear el mapeo de memoria 
 
@@ -78,9 +78,9 @@ sudo ./LMM.sh
 
 #### Volatility 2
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-1.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-1.png)
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-2.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-2.png)
 
 Como vemos lo ha hecho correctamente.
 
@@ -88,9 +88,9 @@ Como vemos lo ha hecho correctamente.
 
 Lamentamente no he conseguido añadir los repositorios antiguos para debug por lo que la imagen para vol3 no la he conseguido. 
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-3.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-3.png)
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-4.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-4.png)
 
 Por lo que en este caso vamos a prescindir de volatility 3.
 
@@ -107,7 +107,7 @@ Una vez añadido podemos verificar que es correcto con:
 ```bash
 vol2.py --info | grep linux
 ```
-![alt text](/assets/img/posts/reto-atenea-linux/image-5.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-5.png)
 
 ## Análisis de procesos
 
@@ -1127,19 +1127,19 @@ Antes de comenzar, aclarar que para esta parte del análisis vamos a utilizar un
 Para empezar abrimos la imagen de disco mediante FTK imager y, aunque no es necesario para su análisis desde FTK, vamos a montar la imagen en una unidad de virtual de solo lectura para que, aprovechando las
 últimas mejoras de compatibilidad en powershell con w11 podamos navegar por el disco con comandos similares o nativos de Linux y así poder realizar un análisis más CLI.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-6.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-6.png)
 
 ## Análisis de usuarios
 
 Comenzamos listando los archivos passwd y shadow para visualizar posibles usuarios no legítimos.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-7.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-7.png)
 
 Como vemos el intruso no ha sido muy creativo o no ha puesto demasiado empeño en camuflarse, tenemos un usuario que parece que, además de ser el último agregado tiene un nombre potencialmente sospechoso.
 
 Si volcamos el contenido de shadow podemos ver que únicamente tenemos el hash del usuario centosforensics y root.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-8.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-8.png)
 
 Además observamos también el último cambio de contraseña fue posterior a los "legítimos" usuarios del sistema mientras que ellos tienen 19444 el usuario sospechoso es posterior 19470.
 
@@ -1149,29 +1149,29 @@ Buscando en estos ficheros /var/log observamos que se ha realizado un ataque de 
 
 Observando el fichero secure.log
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-9.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-9.png)
 
 El actor parece haber utilizado algún diccionario de usuarios para verificar que usuarios existen en el sistema.
 
 Ahora desde FTK vamos a visualizar más facilmente el registro de estos archivos secure.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-10.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-10.png)
 
 Observamos que tienen fechas de registro y además uno parece estar eliminado. Comprobando de forma cronológica los archivos parece indicar que el proceso de intrusión fue realizado entre los meses de marzo, abril y mayo.
 
 El 19 de Marzo se crearon usuarios de servicios, lo que indica que parecen ser legítimos siempre y cuando tengamos en cuenta que es un laboratorio por lo que tiene sentido que el sistema fuese configurado poco antes de ser vulnerado.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-11.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-11.png)
 
 Toda la configuración del sistema parece continuar hasta el 28 de Marzo.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-12.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-12.png)
 
 Desde esta fecha hasta el 7 de Abril se registran lo que parecen logs de administración legítimos por parte del administrador de sistemas. 
 
 No es hasta el 23 de Abril que encontramos el primer rastro inusual, empezando este mismo día sobre las 10:33 AM el ataque de fuerza bruta sobre el protocolo SSH.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-13.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-13.png)
 
 El atacante comienza el ataque con lo que parece un diccionario de usuarios para poder encontrar los posibles usuarios registrados en el sistema.
 
@@ -1181,7 +1181,7 @@ Esto podría indicar que el atacante consiguió acceso a un equipo dentro de la 
 
 Cabe destacar que el fichero donde se encuentra el principio de este ataque es el que fue "eliminado" y es el de mayor tamaño. Contiene todo el registro de fallos de autenticación desde las 10:33 hasta las 11:23 AM
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-14.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-14.png)
 
 En el siguiente fichero observamos la continuación del proceso. Misma fecha y hora cercana a la del anterior registro vemos como el atacante parece haber encontrado los potenciales usuarios registrados en el sistema.
 
@@ -1189,19 +1189,19 @@ Podemos verificar que estos usuarios estaban registrados antes del ataque y adem
 
 Parece que el atacante únicamente intenta con los usuarios richard, john y root.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-15.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-15.png)
 
 Poco más adelante añade al ataque el usuario admin.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-16.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-16.png)
 
 No es hasta las 11:50 AM que el atacante consigue entrar al sistema como el usuario root y rápidamente crea un usuario nuevo llamado ghostHacker en el sistema y sale del usuario root.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-17.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-17.png)
 
 Al día siguiente 24 de Abril sobre las 10:30 el atacante se intenta conectar de nuevo desde una nueva IP con un nombre de usuario erroneo.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-18.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-18.png)
 
 Durante los siguientes 30 minutos realiza varias conexiones como root en el sistema.
 
@@ -1213,17 +1213,17 @@ El último registro de estos logs es el 17 de Mayo.
 
 Como vimos que el metodo de entrada al sistema fue un ataque de fuerza bruta por SSH y el usuario que sirvió como punto de entrada fue root vamos a comprobar que podemos averiguar sobre él.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-19.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-19.png)
 
 Como vemos el historial de comandos para root ha sido vaciado y el último comando registrado es exit.
 
 En la carpeta del usuario root parece que hay un keylogger escrito en python. 
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-20.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-20.png)
 
 En efecto podemos ver como en los archivos cron se ha añadido una entrada que inicia el keylogger con el sistema en segundo plano. 
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-21.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-21.png)
 
 ## Servicios
 
@@ -1235,15 +1235,15 @@ Primero vamos a comprobar los archivos de configuración del firewall en la ruta
 
 En este podemos ver dos archivos en los que efectivamente podemos observar un cambio en los puertos abiertos.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-22.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-22.png)
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-23.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-23.png)
 
 Sabiendo esto podemos dirigirnos a /etc/services y comprobarlo.
 
 El puerto parece que pertenece al protocolo Kerberos.
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-24.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-24.png)
 
 ## Posible acceso a archivos confidenciales
 
@@ -1255,10 +1255,10 @@ Para obtener una posible linea temporal de estos ficheros hemos analizado el dir
 
 Necesitamos montar la imagen de la evidencia en linux y realizar lo siguiente:
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-25.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-25.png)
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-26.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-26.png)
 
-![alt text](/assets/img/posts/reto-atenea-linux/image-27.png)
+![alt text](/assets/img/writeups/DFIR/reto-atenea-linux/image-27.png)
 
 Esas últimas fechas de acceso son posteriores a la intrusión lo que pueden indicar que han sido consultados por el atacante.

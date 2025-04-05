@@ -52,7 +52,7 @@ Como vemos también se configura una clave API para algo llamado Copilot.
 
 Ahora para poder modificar el contexto de un chat, vamos a interceptar la petición que se hace a la API de /create.
 
-![alt text](/assets/img/posts/chronomind_htb/image.png)
+![alt text](/assets/img/writeups/hackthebox/chronomind_htb/image.png)
 
 Al modificar el archivo de contexto haciendo un path traversal, le damos la clave de API que necesitamos para poder llamar a Copilot.
 
@@ -118,7 +118,7 @@ Por lo que si conseguimos inyectar codigo lo ejecutará.
 
 Bien, ahora que tenemos el chat con el contexto modificado simplemente le preguntamos a la IA cual es la clave de API.
 
-![alt text](/assets/img/posts/chronomind_htb/image-1.png)
+![alt text](/assets/img/writeups/hackthebox/chronomind_htb/image-1.png)
 
 # Obteniendo la flag
 
@@ -146,5 +146,5 @@ Si observamos hay un directorio o fichero llamado "readflag". Si nos fijamos en 
 
 Sabiendo esto podemos simplemente ejecutar el fichero y obtener la salida.
 
-![alt text](/assets/img/posts/chronomind_htb/image-2.png)
+![alt text](/assets/img/writeups/hackthebox/chronomind_htb/image-2.png)
 

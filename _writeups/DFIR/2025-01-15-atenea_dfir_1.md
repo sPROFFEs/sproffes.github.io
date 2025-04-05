@@ -23,7 +23,7 @@ Tenemos un fichero llamado magic_file sin extension del cual no sabemos nada, so
 
 Primero vamos a ver que procesos estaban abiertos en el momento
 
-![Listado de procesos en memoria](/assets/img/posts/atenea_dfir_1/20250115_101916_2025-01-15_11-19.png)
+![Listado de procesos en memoria](/assets/img/writeups/DFIR/atenea_dfir_1/20250115_101916_2025-01-15_11-19.png)
 
 De la lista de procesos en la memoria, algunos pueden llamar la atención:
 
@@ -43,7 +43,7 @@ TrueCrypt fue un popular software de encriptación descontinuado a partir de 201
 
 Por suerte para este tipo de casos ya existe un plugin en volatility que nos puede ser de utilidad con TrueCrypt
 
-![Extracción de contraseña](/assets/img/posts/atenea_dfir_1/20250115_102236_2025-01-15_11-22.png)
+![Extracción de contraseña](/assets/img/writeups/DFIR/atenea_dfir_1/20250115_102236_2025-01-15_11-22.png)
 _Extrae la contraseña de encriptación cargada en el proceso de TrueCrypt si este se encontraba en ejecución al momento de la captura_
 
 ## Identificación del fichero objetivo
@@ -68,6 +68,6 @@ Para instalar damos permisos de ejecución al script de instalación y seleccion
 
 ## Desencriptado y acceso a los datos
 
-![Proceso de desencriptado](/assets/img/posts/atenea_dfir_1/20250115_103036_2025-01-15_11-30.png)
+![Proceso de desencriptado](/assets/img/writeups/DFIR/atenea_dfir_1/20250115_103036_2025-01-15_11-30.png)
 
 Creamos la ruta para montar el volumen y utilizamos la contraseña anteriormente extraida para visualizar el contenido.

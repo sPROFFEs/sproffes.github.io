@@ -21,14 +21,14 @@ Nos gustaría identificar el dominio dañino utilizado por el mismo.
 
 ## Análisis de procesos
 
-![Listado de procesos](/assets/img/posts/atenea_dfir_2/20250115_191249_2025-01-15_20-12.png)
+![Listado de procesos](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_191249_2025-01-15_20-12.png)
 _Aquí podemos ver algunos procesos interesantes y algunas anomalías que iremos viendo más adelante_
 
 ### Identificando posibles inyecciones en los comandos
 
 En volatility disponemos de un módulo para intentar detectar inyecciónes o comportamientos anómalos en los procesos de windows.
 
-![Análisis de anomalías](/assets/img/posts/atenea_dfir_2/20250115_192639_Peek_2025-01-15_20-26.gif)
+![Análisis de anomalías](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_192639_Peek_2025-01-15_20-26.gif)
 _Podemos ver que encuentra posibles anomalías en los dos prodesos de Internet Explorer y en csrss_
 
 ### Análisis
@@ -54,7 +54,7 @@ En dos procesos de IEXPLORE.EXE (PIDs 1624 y 3728):
 
 Una vez importado este plugin nos permite ver que ejecutables están configurados para ejecutarse al inicio del sistema lo que es normal en la forma de generar persistencia en un malware.
 
-![Análisis de autoruns](/assets/img/posts/atenea_dfir_2/20250115_193253_2025-01-15_20-32.png
+![Análisis de autoruns](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_193253_2025-01-15_20-32.png
 
 ### Análisis
 
@@ -69,7 +69,7 @@ Este comando en el autoruns es muy sospechoso porque:
 -> Se ejecuta silenciosamente (/s)
 -> Está configurado para ejecutarse automáticamente al inicio del sistema
 
-![Análisis adicional de autoruns](/assets/img/posts/atenea_dfir_2/20250115_193539_2025-01-15_20-35.png)
+![Análisis adicional de autoruns](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_193539_2025-01-15_20-35.png)
 
 regsvr32 /s /n /i:U shell32
 
@@ -89,7 +89,7 @@ Esto encaja con el hallazgo anterior:
 
 ## Relación con los procesos
 
-![Árbol de procesos](/assets/img/posts/atenea_dfir_2/20250115_194308_2025-01-15_20-43.png)
+![Árbol de procesos](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_194308_2025-01-15_20-43.png)
 
 ### Relación
 
@@ -123,7 +123,7 @@ La línea temporal sugiere:
 
 ## Análisis de conexiónes
 
-![Análisis de conexiones](/assets/img/posts/atenea_dfir_2/20250115_195117_2025-01-15_20-50.png)
+![Análisis de conexiones](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_195117_2025-01-15_20-50.png)
 
 ### Análisis
 
@@ -157,7 +157,7 @@ Dado el timeline que hemos visto:
 
 El PID 1624 parece ser la infección inicial que desencadenó todo, así que es el mejor candidato para buscar la URL maliciosa.
 
-![Volcado de memoria del proceso](/assets/img/posts/atenea_dfir_2/20250115_195422_2025-01-15_20-54.png)
+![Volcado de memoria del proceso](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_195422_2025-01-15_20-54.png)
 _Lo volcamos en un txt por si es mucho contenido_
 
-![Análisis de URLs en memoria](/assets/img/posts/atenea_dfir_2/20250115_200501_2025-01-15_21-04.png)
+![Análisis de URLs en memoria](/assets/img/writeups/DFIR/atenea_dfir_2/20250115_200501_2025-01-15_21-04.png)

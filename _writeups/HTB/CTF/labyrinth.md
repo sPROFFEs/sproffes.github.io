@@ -20,7 +20,7 @@ mermaid: false
 
 En este CTF se nos proporciona un binario el cual si ejecutamos podremos ver 100 puertas posibles de seleccionar.
 
-![alt text](/assets/img/posts/labyrinth-htb/image.png)
+![alt text](/assets/img/writeups/hackthebox/labyrinth-htb/image.png)
 
 Para comenzar vamos a decompilar el binario con Ghidra.
 
@@ -28,7 +28,7 @@ Para comenzar vamos a decompilar el binario con Ghidra.
 
 Como siempre en casi cualquier caso vamos a dirigirnos a la funcion main.
 
-![alt text](/assets/img/posts/labyrinth-htb/image-1.png)
+![alt text](/assets/img/writeups/hackthebox/labyrinth-htb/image-1.png)
 
 
 Aquí vamos a ver la función main en la que se inicializan diferentes variables, se ejecuta el la función para dibujar el banner, se dibujan las 100 puertas, etc.
@@ -90,7 +90,7 @@ Justo después vemos el primer paso a tener en cuenta. Parece comprobar si el pr
 
 Si es 69 se muestra la siguiente mensaje:
 
-![alt text](/assets/img/posts/labyrinth-htb/image-2.png)
+![alt text](/assets/img/writeups/hackthebox/labyrinth-htb/image-2.png)
 
 Aquí nos están dando una pista pero cualquier input nos mostrará el error "YOU FAILED TO ESCAPE!"
 
@@ -107,7 +107,7 @@ Teniendo en cuenta el mensaje anterior y que en el main no hay más llamadas a o
 
 En el código vamos a encontrar una función llamada Escape_plan.
 
-![alt text](/assets/img/posts/labyrinth-htb/image-3.png)
+![alt text](/assets/img/writeups/hackthebox/labyrinth-htb/image-3.png)
 
 Aquí vamos a ver lo siguiente:
 
@@ -171,7 +171,7 @@ Esto como hemos mencionado es para asegurarnos de que el flujo está encaminado 
 
 Para averiguar exactamente las direcciones en memoria que necesitamos debemos centrarnos en encontrar el inicio de la función escape_plan.
 
-![alt text](/assets/img/posts/labyrinth-htb/image-4.png)
+![alt text](/assets/img/writeups/hackthebox/labyrinth-htb/image-4.png)
 
 Ahora tenemos la dirección de memoria donce comienza la función escape_plan.
 
@@ -179,7 +179,7 @@ Necesitamos el "gadget" para alinear el stack para que no se quede desplazado.
 
 Buscamos la dirección del final de la función cls(), justo antes de la función escape_plan.
 
-![alt text](/assets/img/posts/labyrinth-htb/image-5.png)
+![alt text](/assets/img/writeups/hackthebox/labyrinth-htb/image-5.png)
 
 Ahora necesitamos crear el script con el flujo que necesitamos para explotar el binario.
 
@@ -226,7 +226,7 @@ Basicamente:
 
 ## Flag
 
-![alt text](/assets/img/posts/labyrinth-htb/image-6.png)
+![alt text](/assets/img/writeups/hackthebox/labyrinth-htb/image-6.png)
 
 
 
