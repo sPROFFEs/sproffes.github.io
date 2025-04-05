@@ -32,6 +32,7 @@ Para poder obtener la flag vamos a necesitar crear una imagen .jpg con un tag "a
 
 Script para crear la imagen:
 
+{% raw %}
 ```python
 from PIL import Image
 import piexif
@@ -59,6 +60,7 @@ if __name__ == "__main__":
     create_exif_exploit()
 
 ```
+{% endraw %}
 
 Con este script crearemos la imagen con el tag "artist" y podremos obtener la flag que se encuentra en la raiz de la web.
 
