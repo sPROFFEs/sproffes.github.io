@@ -300,7 +300,7 @@ if __name__ == "__main__":
 
 Este script lo guardamos y ejecutamos una prueba.
 
-![alt text](image-3.png)
+![alt text](/assets/img/writeups/vulnhub/pinkyspalacev3/image-3.png)
 
 Ahora que podemos explorar el sistema de forma más o menos interactiva podemos buscar alternativas de tunneling para obtener una shell reversa.
 
