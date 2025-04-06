@@ -1,6 +1,6 @@
 ---
 title: Hacker Kid - Vulnhub
-layout: post
+layout: page
 permalink: /writeups/vulnhub/hackerkid
 date: 2025-04-04 11:00:00 -0000
 categories: [Laboratorios]

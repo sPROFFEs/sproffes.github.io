@@ -1,6 +1,6 @@
 ---
 title: "Traces - Cyber Apocalypse 2025"
-layout: post
+layout: page
 permalink: /writeups/cyberapocalypse2025/traces
 categories: [HacktheBox, CTF]
 tags: [CyberApocalypse, HTB, Crypto]

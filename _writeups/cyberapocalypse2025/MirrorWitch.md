@@ -1,6 +1,6 @@
 ---
 title: "MirrorWitch - Cyber Apocalypse 2025"
-layout: post
+layout: page
 permalink: /writeups/cyberapocalypse2025/mirrorwitch
 date: 2025-03-28 13:30:00 +0000
 categories: [HacktheBox, CTF]

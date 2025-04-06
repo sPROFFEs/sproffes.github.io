@@ -1,6 +1,6 @@
 ---
 title: HealthCare 1 - Vulnhub
-layout: post
+layout: page
 permalink: /writeups/vulnhub/healthcare1
 date: 2025-04-05 11:00:00 -0000
 categories: [Laboratorios]

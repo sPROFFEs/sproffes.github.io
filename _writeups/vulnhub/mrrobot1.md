@@ -1,6 +1,6 @@
 ---
 title: Mr.Robot 1 - Vulnhub
-layout: post
+layout: page
 permalink: /writeups/vulnhub/mrrobot1
 date: 2025-04-01 11:00:00 -0000
 categories: [Laboratorios]

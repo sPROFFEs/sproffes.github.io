@@ -1,6 +1,6 @@
 ---
 title: "ElixirEmporium - Cyber Apocalypse 2025"
-layout: post
+layout: page
 permalink: /writeups/cyberapocalypse2025/elixiremporium
 date: 2025-03-28 12:45:00 +0000
 categories: [HacktheBox, CTF]

@@ -1,6 +1,6 @@
 ---
 title: Reto DFIR 2 - Atenea CCN
-layout: post
+layout: page
 permalink: /writeups/DFIR/2025-01-15-atenea_dfir_2
 date: 2025-01-15 19:12:49 +0100
 categories: [Laboratorios, DFIR]

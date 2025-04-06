@@ -1,6 +1,6 @@
 ---
 title: "Prelim - Cyber Apocalypse 2025"
-layout: post
+layout: page
 permalink: /writeups/cyberapocalypse2025/prelim
 categories: [HacktheBox, CTF]
 tags: [CyberApocalypse, HTB, Crypto]
