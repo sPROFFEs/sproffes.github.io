@@ -1,6 +1,6 @@
 ---
 title: "Embassy - Cyber Apocalypse 2025"
-layout: page
+layout: post
 permalink: /writeups/cyberapocalypse2025/embassy
 date: 2025-03-28 13:00:00 +0000
 categories: [HacktheBox, CTF]

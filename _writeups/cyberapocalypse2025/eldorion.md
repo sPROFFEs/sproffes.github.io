@@ -1,6 +1,6 @@
 ---
 title: "Eldorion - Cyber Apocalypse 2025"
-layout: page
+layout: post
 permalink: /writeups/cyberapocalypse2025/eldorion
 date: 2025-03-28 14:00:00 +0000
 categories: [HacktheBox, CTF]

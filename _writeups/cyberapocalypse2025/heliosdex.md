@@ -1,6 +1,6 @@
 ---
 title: "HeliosDEX - Cyber Apocalypse 2025"
-layout: page
+layout: post
 permalink: /writeups/cyberapocalypse2025/heliosdex
 categories: [HacktheBox, CTF]
 tags: [CyberApocalypse, HTB, Blockchain, SmartContracts, DEFI]

@@ -1,6 +1,6 @@
 ---
 title: "Lunar Orb - Cyber Apocalypse 2025"
-layout: page
+layout: post
 permalink: /writeups/cyberapocalypse2025/lunarorb
 date: 2025-03-28 13:15:00 +0000
 categories: [HacktheBox, CTF]

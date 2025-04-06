@@ -1,6 +1,6 @@
 ---
 title: IronCorp - THM
-layout: page
+layout: post
 permalink: /writeups/THM/ironcorp
 date: 2025-02-02 11:00:00 -0000
 categories: [TryHackMe]

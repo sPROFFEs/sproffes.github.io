@@ -1,6 +1,6 @@
 ---
 title: Ice - TryHackMe
-layout: page
+layout: post
 permalink: /writeups/THM/ice
 date: 2025-01-29 11:00:00 -0000
 categories: [TryHackMe]

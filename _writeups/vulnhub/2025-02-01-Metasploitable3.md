@@ -1,6 +1,6 @@
 ---
 title: Metasploitable 3 - Rapid7
-layout: page
+layout: post
 permalink: /writeups/vulnhub/2025-02-01-Metasploitable3
 date: 2025-02-01 11:00:00 -0000
 categories: [Laboratorios]
