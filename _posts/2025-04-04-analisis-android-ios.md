@@ -245,17 +245,67 @@ En un entorno de investigación forense, es importante tener en cuenta que la in
 
 Tras una investigación exhaustiva de las soluciones disponibles podemos tener en cuenta la adquisición de las siguientes herramientas:
 
-1. **MOBILedit Forensic Express**: Esta solución integral ofrece extracción de datos tanto físicos como lógicos, análisis avanzado de aplicaciones y recuperación de datos eliminados. Es compatible con una amplia gama de dispositivos, incluyendo teléfonos móviles y smartwatches. Además, cuenta con funciones de bypass de seguridad y generación de informes detallados, facilitando el proceso de análisis forense. citeturn0search3
+1. **MOBILedit Forensic Express**: Esta solución integral ofrece extracción de datos tanto físicos como lógicos, análisis avanzado de aplicaciones y recuperación de datos eliminados. Es compatible con una amplia gama de dispositivos, incluyendo teléfonos móviles y smartwatches. Además, cuenta con funciones de bypass de seguridad y generación de informes detallados, facilitando el proceso de análisis forense.
 
 2. **Avilla Forensics**: Desarrollada por Daniel Avilla, esta herramienta gratuita se especializa en la extracción lógica de datos de dispositivos Android. Su módulo APK Downgrade permite la recopilación de datos de más de 15 aplicaciones sin necesidad de acceso root, lo que es esencial para investigaciones forenses. Además, se integra automáticamente con herramientas como IPED y Cellebrite Physical Analyzer, ampliando sus capacidades de análisis. citeturn0search2
 
-3. **Cellebrite UFED**: Reconocida mundialmente, esta herramienta permite la extracción y análisis de datos de una amplia variedad de dispositivos móviles. Ofrece capacidades avanzadas para acceder a datos protegidos y recuperar información eliminada, siendo una opción preferida por agencias de aplicación de la ley. citeturn0news38
+3. **Cellebrite UFED**: Reconocida mundialmente, esta herramienta permite la extracción y análisis de datos de una amplia variedad de dispositivos móviles. Ofrece capacidades avanzadas para acceder a datos protegidos y recuperar información eliminada, siendo una opción preferida por agencias de aplicación de la ley.
 
-4. **Magnet AXIOM**: Esta plataforma permite la adquisición y análisis de datos de múltiples fuentes, incluyendo dispositivos móviles, computadoras y servicios en la nube. Su capacidad para recuperar datos eliminados y analizar aplicaciones populares la convierte en una herramienta valiosa para investigaciones digitales. citeturn0search27
+4. **Magnet AXIOM**: Esta plataforma permite la adquisición y análisis de datos de múltiples fuentes, incluyendo dispositivos móviles, computadoras y servicios en la nube. Su capacidad para recuperar datos eliminados y analizar aplicaciones populares la convierte en una herramienta valiosa para investigaciones digitales.
 
-5. **Oxygen Forensic Detective**: Ofrece una solución completa para la extracción, análisis y generación de informes de datos de dispositivos móviles. Es especialmente eficaz en el análisis de datos de aplicaciones y servicios en la nube, proporcionando una visión detallada de la actividad del usuario. citeturn0search27
+5. **Oxygen Forensic Detective**: Ofrece una solución completa para la extracción, análisis y generación de informes de datos de dispositivos móviles. Es especialmente eficaz en el análisis de datos de aplicaciones y servicios en la nube, proporcionando una visión detallada de la actividad del usuario.
 
 Además de esto hemos de tener en cuenta que no siempre será sencillo o 100% posible la obtención de evidencias de cualquier dispositivo móvil. Todo dependerá de la situación ya que no es lo mismo encontrarnos ante un peritaje donde el dispositivo se proporciona de forma voluntario y por tanto se tiene acceso a las claves/pin/contraseña del usuario, a un peritaje donde el usuario no aporta o ayuda de forma voluntaria (o a fallecido) y por tanto no tenemos acceso a estos pines/contraseñas.
 
 Otra cosa a tener en cuenta es la marca del dispositivo ya que por ejemplo Samsung cuenta con software como KNOX que corre a nivel de firmware y encripta y separa ciertas particiones del sistema y otras características varias. Todo ha de tenerse en cuenta a la hora de analizar dispositivos móviles en general.
+
+## Viabilidad de realizar un peritaje forense en Android.
+
+En un peritaje sobre dispositivos Linux, Windows, Mac, etc... es usual tener en cuenta un volcado de RAM si el dispositivo se encontraba encendido, pero en Android/IOS no es así.
+
+La complejidad de realizar un dump de memoria RAM en Android es muy alta, ya que no se suele contar con los headers/herramientas de compilación necesarias para por ejemplo utilizar herramientas como LIME, Volatility, etc... y todo ello incluso teniendo acceso root al dispositivo(en el mejor de los casos).
+
+### ¿Cúal es la situación ideal que permitiría un perfecto análisis forense a un dispositivo Android?
+
+Supone disponer, sin interferencias ni alteraciones, de dos adquisiciones fundamentales:
+
+-  **Clonado de la memoria interna**: Se tendría una imagen bit a bit (forense y sin alteración) del almacenamiento persistente del dispositivo. Esto implica capturar de forma íntegra todas las   particiones relevantes (por ejemplo, sistema, datos, recuperación, cache, etc.) sin comprometer la integridad de la evidencia. El proceso debería ejecutarse sin alterar el estado original del dispositivo y sin dependencias de métodos invasivos que puedan modificar los datos almacenados.
+
+- **Volcado de la memoria volátil**: Se lograría una extracción completa y sin pérdida del contenido de la RAM en vivo, preservando toda la información transitoria (procesos en ejecución, conexiones de red, claves de cifrado, etc.). Esto es especialmente relevante porque la evidencia volatile se borra al apagar o reiniciar el dispositivo. La idealidad incluye el uso de herramientas como LiME configuradas de tal manera que puedan adquirir todas las áreas de memoria sin interrupciones ni errores (por ejemplo, sin que la eliminación de algún segmento crítico comprometa el análisis) .
+
+- **Acceso sin restricciones**: El dispositivo debe estar en un estado en que se pueda interactuar con él sin trabas, es decir, con el bootloader desbloqueado, ADB habilitado (o algún otro método de comunicación) y sin que estén activos mecanismos de bloqueo que impidan el acceso a la memoria (como cifrado sin clave accesible, bloqueo de pantalla, OEM lock o protecciones específicas como Knox).
+
+- **Disponibilidad de herramientas compatibles**: Debe existir soporte (en forma de fuentes del kernel, perfiles de Volatility y módulos de LiME) que permitan la adquisición completa y correcta tanto de la memoria interna como de la volátil sin necesidad de intervenciones que modifiquen el dispositivo.
+
+- **No pérdida de RAM por reinicio**: La captura de la memoria volátil debe ocurrir sin reiniciar el sistema, de modo que se evite perder datos críticos, lo cual exige métodos de adquisición “en caliente” (live forensics) que sean plenamente fiables.
+
+### Situación real en un dispositivo Android genérico y posibles soluciones
+
+En dispositivos Android comerciales (como Samsung, Xiaomi, etc.), la realidad es muy distinta de la ideal por una serie de desafíos técnicos y legales:
+
+- **Rooteo sin pérdida de datos**
+
+  La mayoría de los métodos de rooteo requieren reiniciar el dispositivo o incluso desbloquear el bootloader, lo que necesariamente borra la memoria volátil. De hecho, para poder instalar y activar herramientas como LiME, se necesitan permisos de superusuario, los cuales suelen obtenerse mediante un proceso que implica un reinicio (o cambio de estado) del dispositivo. Existen métodos que buscan lograr un “root sin reinicio”, como el exploit “Rage Against The Cage” aplicado en algunos dispositivos. Sin embargo, estos métodos son muy específicos, dependen del modelo y versión del sistema, y en general no garantizan la preservación completa de la RAM.
+
+- **Mecanismos de seguridad de Android**
+
+Los dispositivos modernos incorporan múltiples barreras para impedir accesos no autorizados:
+
+  - El bloqueo de pantalla (PIN, patrón, contraseña) y la desactivación por defecto del USB debugging dificultan la conexión y el control del dispositivo sin la intervención del usuario.
+  - Características como el cifrado de los datos y la protección del cargador de arranque (OEM Lock) y, en algunos casos, soluciones propietarias como Knox en dispositivos Samsung, impiden o limitan modificaciones y accesos profundos que se necesitan para la adquisición forense.
+
+  Como resultado, para poder acceder a la memoria volátil se requiere desactivar o sortear estas funciones, lo que en muchos casos involucra interacciones manuales o el uso de exploits – acciones que pueden alterar la evidencia o ser difíciles de defender en un contexto legal. Este riesgo se expone al tener que explotar vulnerabilidades para activar funcionalidades (por ejemplo, habilitar USB debugging sin la interacción del usuario) que son justamente medidas de protección de la plataforma.
+
+- **Variabilidad del hardware y software**
+
+  Cada dispositivo Android es una combinación única de hardware, particiones y configuración de kernel. Para poder utilizar herramientas de extracción (como LiME) y análisis (como Volatility), es indispensable contar con:
+
+  - Un módulo de kernel (LKM) compatible, lo cual generalmente requiere disponer de las fuentes y la configuración exacta del kernel, y
+  - Un perfil específico de Volatility para interpretar correctamente el volcado de RAM.
+
+  Esta diversidad obliga a los investigadores a compilar de forma específica el módulo de adquisición y a generar un perfil de análisis adaptado a cada dispositivo. La imposibilidad de disponer siempre de las fuentes o la configuración correcta impide estandarizar el proceso y genera una gran carga de trabajo para cada caso, reduciendo la reproducibilidad y confiabilidad del análisis.
+
+- **Limitaciones técnicas y legales**
+
+Finalmente, aunque se logre realizar el volcado de memoria, el uso de herramientas como Volatility en entornos Android aún conlleva dificultades, debido a la enorme cantidad de variantes de kernel y la falta de soporte pleno comparado con sistemas Windows. Además, la utilización de métodos no estandarizados (como algunos exploits de rooteo) puede poner en duda la integridad de la evidencia. Cualquier alteración que se produzca durante el proceso de adquisición (por ejemplo, la pérdida de la memoria volátil al reiniciar el dispositivo) o la imposición de métodos no validados puede afectar la admisibilidad de la evidencia en un juicio, incrementando además los riesgos legales para el perito forense.
 
