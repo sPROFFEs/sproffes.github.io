@@ -267,7 +267,7 @@ La complejidad de realizar un dump de memoria RAM en Android es muy alta, ya que
 
 ### ¿Cúal es la situación ideal que permitiría un perfecto análisis forense a un dispositivo Android?
 
-Supone disponer, sin interferencias ni alteraciones, de dos adquisiciones fundamentales:
+Supone disponer, sin interferencias ni alteraciones, de:
 
 -  **Clonado de la memoria interna**: Se tendría una imagen bit a bit (forense y sin alteración) del almacenamiento persistente del dispositivo. Esto implica capturar de forma íntegra todas las   particiones relevantes (por ejemplo, sistema, datos, recuperación, cache, etc.) sin comprometer la integridad de la evidencia. El proceso debería ejecutarse sin alterar el estado original del dispositivo y sin dependencias de métodos invasivos que puedan modificar los datos almacenados.
 
