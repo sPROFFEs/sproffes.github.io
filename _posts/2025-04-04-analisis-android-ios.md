@@ -255,3 +255,7 @@ Tras una investigación exhaustiva de las soluciones disponibles podemos tener e
 
 5. **Oxygen Forensic Detective**: Ofrece una solución completa para la extracción, análisis y generación de informes de datos de dispositivos móviles. Es especialmente eficaz en el análisis de datos de aplicaciones y servicios en la nube, proporcionando una visión detallada de la actividad del usuario. citeturn0search27
 
+Además de esto hemos de tener en cuenta que no siempre será sencillo o 100% posible la obtención de evidencias de cualquier dispositivo móvil. Todo dependerá de la situación ya que no es lo mismo encontrarnos ante un peritaje donde el dispositivo se proporciona de forma voluntario y por tanto se tiene acceso a las claves/pin/contraseña del usuario, a un peritaje donde el usuario no aporta o ayuda de forma voluntaria (o a fallecido) y por tanto no tenemos acceso a estos pines/contraseñas.
+
+Otra cosa a tener en cuenta es la marca del dispositivo ya que por ejemplo Samsung cuenta con software como KNOX que corre a nivel de firmware y encripta y separa ciertas particiones del sistema y otras características varias. Todo ha de tenerse en cuenta a la hora de analizar dispositivos móviles en general.
+
