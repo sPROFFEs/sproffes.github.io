@@ -80,7 +80,7 @@ También podría encontrarse en el archivo `/data/misc/bluedroid/bt_config.conf`
 ![alt text](/assets/img/posts/analisis-android-ios-postmortem/image-2.png)
 
 
-```plaintext
+```xml
  <setting id="25" name="android_id" value="630b81bde1ed068a" package="android" defaultValue="630b81bde1ed068a" defaultSysSet="true" />
  <setting id="68" name="bluetooth_name" value="Pixel 3" package="android" defaultValue="Pixel 3" defaultSysSet="true" />
 ```
