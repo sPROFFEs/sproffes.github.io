@@ -4,7 +4,6 @@ date: 2025-03-15 20:30:00 +0000
 layout: post
 permalink: /writeups/HTB/LABS/dog-htb-season7
 categories: [HacktheBox, Labs]
-tags: [Linux, CTF, Write Up, Hackthebox]
 image:
   path: /assets/img/writeups/hackthebox/dog_htb_s7/cabecera.png
   alt: HackTheBox

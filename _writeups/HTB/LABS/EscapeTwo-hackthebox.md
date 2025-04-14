@@ -4,7 +4,6 @@ date: 2025-01-21
 layout: post
 permalink: /writeups/HTB/LABS/EscapeTwo-hackthebox
 categories: [HacktheBox, Labs]
-tags: [ActiveDirectory, windows, CTF] 
 image:
   path: /assets/img/writeups/hackthebox/escapeTwo/cabecera.png
   alt: EscapeTwo

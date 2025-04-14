@@ -4,7 +4,6 @@ date: 2025-02-17 11:00:00 +0000
 layout: post
 permalink: /writeups/HTB/LABS/titanic-htb
 categories: [HacktheBox, Labs]
-tags: [Linux, CTF] 
 image:
   path: /assets/img/writeups/hackthebox/titanic_htb/cabecera.png
   alt: Titanic - Hackthebox - Season 7

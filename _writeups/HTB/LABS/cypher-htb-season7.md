@@ -4,7 +4,6 @@ date: 2025-03-09 11:00:00 +0000
 layout: post
 permalink: /writeups/HTB/LABS/cypher-htb-season7
 categories: [HacktheBox, Labs]
-tags: [Linux, CTF, Write Up, Hackthebox]
 image:
   path: /assets/img/writeups/hackthebox/cypher_htb_s7/cypher.png
   alt: HackTheBox

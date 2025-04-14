@@ -4,7 +4,6 @@ layout: page
 permalink: /writeups/HTB/LABS/certified
 date: 2025-02-11 11:00:00 +0000
 categories: [HacktheBox, Labs]
-tags: [Windows, CTF, Active Directory] 
 image:
   path: /assets/img/writeups/hackthebox/certified_htb/cabecera.png
   alt: Certified
