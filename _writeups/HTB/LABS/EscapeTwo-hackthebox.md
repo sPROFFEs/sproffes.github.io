@@ -3,7 +3,7 @@ title: EscapeTwo - Hackthebox - Season7
 date: 2025-01-21 
 layout: post
 permalink: /writeups/HTB/LABS/EscapeTwo-hackthebox
-categories: [Labs & CTF, Write Up, Hackthebox]
+categories: [HacktheBox, Labs]
 tags: [ActiveDirectory, windows, CTF] 
 image:
   path: /assets/img/writeups/hackthebox/escapeTwo/cabecera.png
