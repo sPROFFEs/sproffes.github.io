@@ -3,7 +3,6 @@ title: Dog - HackTheBox Season 7
 date: 2025-03-15 20:30:00 +0000
 layout: post
 permalink: /writeups/HTB/LABS/dog-htb-season7
-categories: [HacktheBox, Labs]
 image:
   path: /assets/img/writeups/hackthebox/dog_htb_s7/cabecera.png
   alt: HackTheBox

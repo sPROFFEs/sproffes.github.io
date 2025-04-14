@@ -3,7 +3,6 @@ title: Cypher - HackTheBox Season 7
 date: 2025-03-09 11:00:00 +0000
 layout: post
 permalink: /writeups/HTB/LABS/cypher-htb-season7
-categories: [HacktheBox, Labs]
 image:
   path: /assets/img/writeups/hackthebox/cypher_htb_s7/cypher.png
   alt: HackTheBox

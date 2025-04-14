@@ -3,7 +3,6 @@ title: Backfire - Hackthebox - Season7
 date: 2025-01-22 18:41:00
 layout: post
 permalink: /writeups/HTB/LABS/backfire-hackthebox
-categories: [HacktheBox, Labs]
 image:
   path: /assets/img/writeups/hackthebox/backfire-hackthebox/cabecera.png
   alt: Backfire Hackthebox

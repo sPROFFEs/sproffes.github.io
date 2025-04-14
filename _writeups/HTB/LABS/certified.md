@@ -3,7 +3,6 @@ title: Certified - Hackthebox - Season7
 layout: page
 permalink: /writeups/HTB/LABS/certified
 date: 2025-02-11 11:00:00 +0000
-categories: [HacktheBox, Labs]
 image:
   path: /assets/img/writeups/hackthebox/certified_htb/cabecera.png
   alt: Certified

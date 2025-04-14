@@ -3,8 +3,6 @@ title: Kenobi - TryHackMe
 layout: post
 permalink: /writeups/THM/kenobi
 date: 2025-04-07 11:00:00 -0000
-categories: [Laboratorios]
-tags: [TryHackMe]
 description: >
   Write up en español para Kenobi - TryHackMe
 pin: false  

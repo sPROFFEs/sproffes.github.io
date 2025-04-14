@@ -3,8 +3,6 @@ title: Harder - TryHackMe
 layout: post
 permalink: /writeups/THM/harder
 date: 2025-04-07 11:00:00 -0000
-categories: [Laboratorios]
-tags: [TryHackMe]
 description: >
   Write up en español para Harder - TryHackMe
 pin: false  

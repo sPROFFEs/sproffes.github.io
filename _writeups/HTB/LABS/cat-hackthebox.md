@@ -3,7 +3,6 @@ title: Cat - Hackthebox - Season7
 date: 2025-02-07 11:00:00 +0000
 layout: post
 permalink: /writeups/HTB/LABS/cat-hackthebox
-categories: [HacktheBox, Labs]
 image:
   path: /assets/img/writeups/hackthebox/cat_htb/cabecera.png
   alt: Cat
