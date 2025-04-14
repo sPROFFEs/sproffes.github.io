@@ -1,6 +1,8 @@
 ---
 title: The Frizz - HackTheBox Season 7
 date: 2025-03-22 20:30:00 +0000
+layout: post
+permalink: /writeups/HTB/LABS/the-frizz-htb-season7
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, CTF, Write Up, Hackthebox]
 image:

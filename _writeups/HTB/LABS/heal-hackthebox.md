@@ -1,6 +1,8 @@
 ---
 title: Heal - Hackthebox - Season7
 date: 2025-01-24 00:00:00 +0000
+layout: post
+permalink: /writeups/HTB/LABS/heal-hackthebox
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, CTF] 
 image:

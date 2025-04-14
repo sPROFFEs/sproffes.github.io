@@ -1,6 +1,8 @@
 ---
 title: Titanic - Hackthebox - Season 7
 date: 2025-02-17 11:00:00 +0000
+layout: post
+permalink: /writeups/HTB/LABS/titanic-htb
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, CTF] 
 image:

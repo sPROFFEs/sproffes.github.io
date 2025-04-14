@@ -1,6 +1,8 @@
 ---
 title: Backfire - Hackthebox - Season7
 date: 2025-01-22 18:41:00
+layout: post
+permalink: /writeups/HTB/LABS/backfire-hackthebox
 categories: [Labs & CTF, Write Up, Hackthebox]
 tags: [Linux, Havoc, JWT, CTF] 
 image:
