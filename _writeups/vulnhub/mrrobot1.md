@@ -155,7 +155,7 @@ Por ejemplo podemos visitar el archivo `robots.txt` para ver que es un archivo d
 
 ### Primera llave
 
-La primera llave se encuentra en ese archhivo `key-1-of-3.txt`.
+La primera llave se encuentra en ese archivo `key-1-of-3.txt`.
 
 ![alt text](/assets/img/writeups/vulnhub/mrrobot1_vulnhub/image-3.png)
 
