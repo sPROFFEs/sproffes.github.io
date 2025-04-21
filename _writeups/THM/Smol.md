@@ -1,7 +1,7 @@
 ---
 title: Smol - TryHackMe
 layout: post
-permalink: /writeups/THM/smol
+permalink: /writeups/THM/Smol
 date: 2025-04-21 11:00:00 -0000
 description: >
   Write up en español para Smol - TryHackMe
