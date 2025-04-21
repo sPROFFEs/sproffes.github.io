@@ -45,7 +45,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Dentro del directorio `/mbilling/` podemos encontrar un fichero llamado `README.md` que nos indica la verison de la aplicación.
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngimage.png)
+![alt text](/assets/img/writeups/tryhackme/billing/image.png)
 
 Si buscamos vulnerabilidades en la aplicación podemos encontrar [CVE-2023-30258](https://nvd.nist.gov/vuln/detail/CVE-2023-30258). 
 Esta vulnerabilidad nos permite ejecutar comandos mediante peticiones HTTP sin autenticación.
@@ -60,7 +60,7 @@ Al revisar el [código vulnerable](https://github.com/magnussolution/magnusbilli
 
 Esta cadena se pasa luego a la función `exec()`, lo que hace que el código sea vulnerable a inyección de comandos.
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngmagnusbilling_vulnerable_code.webp)
+![alt text](/assets/img/writeups/tryhackme/billing/magnusbilling_vulnerable_code.webp)
 
 Al probar el PoC del advisory con comandos `sleep`, se confirma la vulnerabilidad, pues el servidor tarda sistemáticamente más del tiempo especificado en nuestras órdenes `sleep`, lo que indica que se están ejecutando.
 
@@ -81,15 +81,15 @@ Sabiendo que podemos ejecutar comandos podemos obtener una reverse shell.
 
 Y la codificamos en URL.
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngimage-1.png)
+![alt text](/assets/img/writeups/tryhackme/billing/image-1.png)
 
 ## Shell con asterisk
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngimage-2.png)
+![alt text](/assets/img/writeups/tryhackme/billing/image-2.png)
 
 ### User flag
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngimage-3.png)
+![alt text](/assets/img/writeups/tryhackme/billing/image-3.png)
 
 ## Escalado de privilegios
 
@@ -115,13 +115,13 @@ Al verificar los privilegios de sudo del usuario asterisk, encontramos que dicho
 
 Verificando el estado del fail2ban-server, observamos que hay 8 jails activos:
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngimage-4.png)
+![alt text](/assets/img/writeups/tryhackme/billing/image-4.png)
 
 Los jails son básicamente configuraciones que definen qué logs monitorear, los patrones a buscar y qué acciones tomar cuando se detectan esos patrones.
 
 Al revisar el archivo /etc/fail2ban/jail.local, vemos un ejemplo de jail.
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngimage-5.png)
+![alt text](/assets/img/writeups/tryhackme/billing/image-5.png)
 
 Esta configuración indica, entre otras cosas, que el jail **asterisk-iptables** monitorea el archivo `/var/log/asterisk/messages` y busca patrones definidos en el filtro asterisk (/etc/fail2ban/filter.d/asterisk.conf). Cuando se detectan coincidencias, ejecuta la acción definida en **iptables-allports** (/etc/fail2ban/action.d/iptables-allports.conf).
 
@@ -129,7 +129,7 @@ Para usar fail2ban para ejecutar comandos como **root**, podemos modificar una d
 
 Primero, consultamos las acciones activas del jail **asterisk-iptables** y luego, modificamos la acción actionban de **iptables-allports-ASTERISK** para ejecutar un comando arbitrario, en este caso, establecer el bit setuid en **/bin/bash**.
 
-![alt text](/assets/img/writeups/tryhackme/billing/image-7.pngimage-6.png)
+![alt text](/assets/img/writeups/tryhackme/billing/image-6.png)
 
 Ahora, al banear manualmente una IP en el jail **asterisk-iptables**, se ejecutará el comando `chmod +s /bin/bash` como root.
 
