@@ -2,7 +2,7 @@
 title: Billing - TryHackMe
 layout: post
 permalink: /writeups/THM/Billing
-date: 2025-04-22 11:00:00 -0000
+date: 2025-04-21 11:00:00 -0000
 description: >
   Write up en español para Billing - TryHackMe
 pin: false  
