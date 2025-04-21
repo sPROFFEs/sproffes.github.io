@@ -2,7 +2,7 @@
 title: Smol - TryHackMe
 layout: post
 permalink: /writeups/THM/smol
-date: 2025-04-07 11:00:00 -0000
+date: 2025-04-21 11:00:00 -0000
 description: >
   Write up en español para Smol - TryHackMe
 pin: false  
@@ -282,5 +282,5 @@ Ahora como xavi podemos ejecutar sudo -l ya que tenemos su contraseña.
 
 Como vemos tenemos completo acceso root con sudo.
 
-
+![alt text](/assets/img/writeups/tryhackme/smol/image-18.png)
 
