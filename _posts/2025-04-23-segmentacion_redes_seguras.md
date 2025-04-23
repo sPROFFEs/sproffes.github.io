@@ -264,7 +264,7 @@ Usando la misma lógica que en anterior tenemos que la segunda subred es la 192.
 
 ##### 3. En la red mostrada en el siguiente diagrama, ¿Cuántos hosts pueden haber en la subred B?
 
-![alt text](image-3.png)
+![alt text](/assets/img/posts/segmentacion_redes_seguras/image-3.png)
 
 Una máscara **/28** significa que los primeros 28 bits son para la red y los últimos 4 bits para hosts.
 **Bloque de direcciones por subred:** \( 2^4 = 16 \) direcciones (14 hosts útiles, ya que se excluyen la dirección de red y broadcast).
@@ -273,7 +273,7 @@ La subred B puede tener hasta 14 hosts.
 
 ##### 4. En el diagrama siguiente, para tener un direccionamiento IP lo más eficiente posible, ¿qué red debería de utilizar una máscara /29?
 
-![alt text](image-4.png)
+![alt text](/assets/img/posts/segmentacion_redes_seguras/image-4.png)
 
 Para determinar qué red debe usar una máscara **/29** (que permite **6 hosts útiles** por subred), analizaremos los requisitos de hosts de cada red en el diagrama y compararemos con las opciones proporcionadas.
 
@@ -296,7 +296,7 @@ Para determinar qué red debe usar una máscara **/29** (que permite **6 hosts �
 
 ##### 5. En el siguiente diagrama, ¿cuál es la razón principal por la que el host no puede hacer un ping hacia el exterior?
 
-![alt text](image-5.png)
+![alt text](/assets/img/posts/segmentacion_redes_seguras/image-5.png)
 
 **Datos proporcionados:**
 
