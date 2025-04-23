@@ -162,7 +162,7 @@ Como vemos ya nos indica que google no parece ser el dominio desde el que se env
 
 ![alt text](/assets/img/posts/analisis-correo-electronico/image-11.png)
 
-También podemos analizar el contenido con [DKIM Validator](dkimvalidator.com)
+También podemos analizar el contenido con [DKIM Validator](https://dkimvalidator.com/)
 
 ![alt text](/assets/img/posts/analisis-correo-electronico/image-12.png)
 
