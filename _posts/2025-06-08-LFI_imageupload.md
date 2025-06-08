@@ -1,10 +1,17 @@
 ---
-layout: post
-title: "LFI y Subida de Archivos: Explotando Vulnerabilidades de Inclusión Local"
+title: "LFI y Subida de Archivos"
 date: 2025-06-08 11:00:00 +0000
 categories: [Web Security, Pentesting]
 tags: [LFI, file-upload, php, web-shells, penetration-testing]
-image: /assets/img/posts/lfi-file-upload/lfi-banner.png 
+image: 
+    path: /assets/img/posts/lfi-file-upload/lfi-banner.png 
+    alt:  cabecera
+description: >
+  Explotando Vulnerabilidades de Inclusión Local
+pin: false  
+toc: true   
+math: false 
+mermaid: false 
 ---
 
 La **inclusión local de archivos (LFI)** combinada con funcionalidades de subida de archivos representa una de las técnicas más efectivas para lograr **ejecución remota de código (RCE)** en aplicaciones web. En este post exploraremos diferentes métodos para explotar estas vulnerabilidades.

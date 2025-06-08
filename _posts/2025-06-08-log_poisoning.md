@@ -1,10 +1,17 @@
 ---
-layout: post
-title: "Log Poisoning: Envenenamiento de Logs para Ejecución Remota de Código"
+title: "Log Poisoning"
 date: 2025-06-08 11:00:00 +0000
 categories: [Web Security, Pentesting]
 tags: [log-poisoning, LFI, php-sessions, apache-logs, nginx-logs, RCE]
-image: /assets/img/posts/log-poisoning/log-poisoning-banner.png
+image: 
+    path: /assets/img/posts/log-poisoning/log-poisoning-banner.png
+        alt:  cabecera
+description: >
+  Envenenamiento de Logs para Ejecución Remota de Código
+pin: false  
+toc: true   
+math: false 
+mermaid: false 
 ---
 
 El **envenenamiento de logs (Log Poisoning)** es una técnica avanzada que permite lograr **ejecución remota de código** a través de vulnerabilidades LFI. Esta técnica se basa en escribir código PHP en campos que controlamos y que quedan registrados en archivos de log, para luego incluir esos logs a través de la vulnerabilidad LFI.
