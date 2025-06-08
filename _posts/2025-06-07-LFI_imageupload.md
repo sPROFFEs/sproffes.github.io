@@ -1,6 +1,6 @@
 ---
 title: LFI y Subida de Archivos
-date: 2025-06-08 11:00:00 +0000
+date: 2025-06-07 11:00:00 +0000
 categories: [Web Security, Pentesting]
 tags: [LFI, file-upload, php, web-shells, penetration-testing]
 image: 
