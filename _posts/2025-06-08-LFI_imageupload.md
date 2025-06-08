@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LFI y Subida de Archivos: Explotando Vulnerabilidades de Inclusión Local"
-date: 2025-06-08 10:00:00 -0600
+date: 2025-06-08 11:00:00 +0000
 categories: [Web Security, Pentesting]
 tags: [LFI, file-upload, php, web-shells, penetration-testing]
 image: /assets/img/posts/lfi-file-upload/lfi-banner.png 
