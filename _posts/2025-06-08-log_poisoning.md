@@ -1,11 +1,11 @@
 ---
-title: "Log Poisoning"
+title: Log Poisoning
 date: 2025-06-08 11:00:00 +0000
 categories: [Web Security, Pentesting]
 tags: [log-poisoning, LFI, php-sessions, apache-logs, nginx-logs, RCE]
 image: 
     path: /assets/img/posts/log-poisoning/log-poisoning-banner.png
-        alt:  cabecera
+    alt:  cabecera
 description: >
   Envenenamiento de Logs para Ejecución Remota de Código
 pin: false  
