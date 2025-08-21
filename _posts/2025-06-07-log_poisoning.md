@@ -105,6 +105,7 @@ http://<SERVER_IP>:<PORT>/index.php?language=/var/lib/php/sessions/sess_jt8tq8r5
 _Ejecución exitosa de comandos a través de la sesión envenenada_
 
 > **Nota:** Para ejecutar otro comando, el archivo de sesión debe ser envenenado nuevamente con el web shell, ya que se sobrescribe después de nuestra última inclusión.
+{: .prompt-notice}
 
 ---
 
@@ -129,6 +130,7 @@ Tanto Apache como Nginx mantienen varios archivos de log, como `access.log` y `e
 - **Apache:** Los logs solo son legibles por usuarios con altos privilegios (ej. grupos `root/adm`)
 
 > **Tip:** En servidores Apache antiguos o mal configurados, estos logs pueden ser legibles por usuarios con pocos privilegios.
+{: .prompt-notice}
 
 ### Verificando Acceso a Logs
 
@@ -146,6 +148,7 @@ Observamos que el log contiene la dirección IP remota, página solicitada, cód
 ### Advertencia sobre Logs
 
 > **Tip:** Los logs tienden a ser enormes, y cargarlos en una vulnerabilidad LFI puede tomar mucho tiempo, o incluso crashear el servidor en el peor de los casos. Ten cuidado y sé eficiente con ellos en un entorno de producción.
+{: .prompt-notice}
 
 ### Envenenando con Burp Suite
 

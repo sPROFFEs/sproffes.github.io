@@ -49,6 +49,7 @@ echo 'GIF8<?php system($_GET["cmd"]); ?>' > shell.gif
 ```
 
 > **Nota:** Utilizamos una imagen GIF porque sus magic bytes son fácilmente tipeables (caracteres ASCII), mientras que otras extensiones tienen magic bytes en binario que necesitarían ser URL encoded.
+{: .prompt-notice}
 
 ### Subiendo el Archivo
 
@@ -151,6 +152,7 @@ La combinación de vulnerabilidades LFI con funcionalidades de subida de archivo
 Los métodos de **ZIP** y **PHAR** deben considerarse como alternativas cuando el primer método no funciona, ya que requieren configuraciones específicas de PHP.
 
 > **Importante:** Existe otro ataque LFI/uploads obsoleto que puede ocurrir si la subida de archivos está habilitada en las configuraciones de PHP y la página phpinfo() está expuesta. Sin embargo, este ataque no es muy común ya que tiene requisitos muy específicos (LFI + uploads habilitados + PHP antiguo + phpinfo() expuesto).
+{: .prompt-warning}
 
 ---
 
