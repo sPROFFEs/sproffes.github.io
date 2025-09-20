@@ -2248,6 +2248,8 @@ Google lens is not too user friendly for investigations. But this tool will help
 | [ShrewdEye](https://shrewdeye.app/) | Online versions of popular command line #osint tools: Amass, SubFinder, AssetFinder, GAU, DNSX |
 | [OSINT Toolkit](https://github.com/dev-lu/osint_toolkit) | Self-hosted web app (one minute Docker installation) for gathering information about IPs, Domains, URLs, Emails, Hashes, CVEs and more. |
 | [OSINTTracker](https://app.osintracker.com/) | A simple and free online tool to visualize investigations and collect data about different entry points (domains, email addresses, crypto wallet numbers) using hundreds of different online services. |
+| [JSONing](https://jsoning.com/) | A free online JSON toolbox with a formatter, validator, converters, and more. |
+| [SQLable](https://sqlable.com/) | A simple online database toolbox with a SQL formatter, SQL validator, data generator, database regex tool, and more. |
 
 
 
