@@ -28,13 +28,11 @@ A diferencia de Google Translate, LibreTranslate es completamente gratuito y no 
 
 El script ya está configurado para usar múltiples instancias públicas de LibreTranslate automáticamente.
 
-### Incluir el selector de idioma
+### El selector de idioma se incluye automáticamente
 
-Agrega esto a tu layout principal (probablemente en `_layouts/default.html` o similar):
+No necesitas hacer nada adicional. El selector de idioma aparecerá automáticamente en la esquina superior derecha cuando tengas posts traducidos.
 
-```liquid
-{% include language-selector.html %}
-```
+El selector es un dropdown simple y discreto que no interfiere con el tema Chirpy.
 
 ### Activar el plugin (si usas Jekyll local)
 

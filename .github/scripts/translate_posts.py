@@ -253,10 +253,21 @@ def main():
 
     print("🔍 Buscando posts para traducir con LibreTranslate...")
 
+    # Limitar a 3 posts por ejecución para evitar timeouts
+    posts_to_process = []
     for post_file in posts_dir.glob('*.md'):
-        if not should_translate_file(post_file):
-            continue
+        if should_translate_file(post_file):
+            posts_to_process.append(post_file)
+        if len(posts_to_process) >= 3:
+            break
 
+    if not posts_to_process:
+        print("✅ No hay posts nuevos para traducir.")
+        return
+
+    print(f"📊 Encontrados {len(posts_to_process)} posts para traducir")
+
+    for post_file in posts_to_process:
         print(f"📝 Procesando: {post_file.name}")
 
         try:

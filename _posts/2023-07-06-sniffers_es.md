@@ -1,8 +1,15 @@
 ---
-title: Sniffers
+categories:
+- Reconocimiento
+- Sniffers
 date: 2024-01-19
-categories: [Reconocimiento, Sniffers]
-tags: [sniffers, wireshark, tcpdump, network-analysis]
+lang: es
+tags:
+- sniffers
+- wireshark
+- tcpdump
+- network-analysis
+title: Sniffers
 ---
 
 ## Concepto

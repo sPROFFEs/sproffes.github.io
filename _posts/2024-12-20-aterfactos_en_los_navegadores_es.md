@@ -1,8 +1,16 @@
 ---
-title: Evidencias en los Navegadores Web
+categories:
+- Forense
+- Navegadores
 date: 2024-12-20 11:58:38 +0000
-categories: [Forense, Navegadores]
-tags: [forense, browsers, chrome, firefox, edge]
+lang: es
+tags:
+- forense
+- browsers
+- chrome
+- firefox
+- edge
+title: Evidencias en los Navegadores Web
 ---
 
 Los navegadores web son herramientas que se utilizan en diversos dispositivos, como teléfonos móviles, tabletas, netbooks y ordenadores de escritorio. Además de permitir la navegación por internet, también pueden emplearse para explorar los archivos almacenados en el propio dispositivo.
