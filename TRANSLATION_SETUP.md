@@ -176,7 +176,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Instalar dependencias
-pip install requests pyyaml frontmatter
+pip install requests pyyaml python-frontmatter
 
 # Probar traducción
 python3 test_translation.py

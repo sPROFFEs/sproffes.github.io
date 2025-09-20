@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests pyyaml frontmatter
+          pip install requests pyyaml python-frontmatter
 
       - name: Translate new posts
         run: |
