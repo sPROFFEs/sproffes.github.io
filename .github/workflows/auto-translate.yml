@@ -1,0 +1,43 @@
+name: Auto Translate Posts
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '_posts/*.md'
+  workflow_dispatch:
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pyyaml frontmatter
+
+      - name: Translate new posts
+        run: |
+          python .github/scripts/translate_posts.py
+
+      - name: Commit translated posts
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-translate new posts"
+            git push
+          fi

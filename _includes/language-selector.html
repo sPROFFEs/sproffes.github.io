@@ -1,0 +1,132 @@
+<!-- Selector de idioma -->
+<div class="language-selector">
+  <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fas fa-globe"></i>
+    {% if page.lang == 'en' %}
+      {{ site.data.locales.en.lang.en }}
+    {% elsif page.lang == 'de' %}
+      {{ site.data.locales.de.lang.de }}
+    {% elsif page.lang == 'fr' %}
+      {{ site.data.locales.fr.lang.fr }}
+    {% else %}
+      {{ site.data.locales.es.lang.es }}
+    {% endif %}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+    {% assign current_slug = page.url | split: '/' | last %}
+    {% assign base_slug = current_slug | remove: '.html' %}
+
+    <!-- Enlace a versión en español -->
+    <li>
+      {% assign es_url = page.url | replace: '/en/', '/' | replace: '/de/', '/' | replace: '/fr/', '/' %}
+      {% for post in site.posts %}
+        {% if post.lang == 'es' and post.url contains base_slug %}
+          {% assign es_url = post.url %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      <a class="dropdown-item {% if page.lang == 'es' or page.lang == nil %}active{% endif %}" href="{{ es_url }}">
+        <i class="fas fa-flag" style="color: #c60b1e;"></i>
+        {{ site.data.locales.es.lang.es }}
+      </a>
+    </li>
+
+    <!-- Enlace a versión en inglés -->
+    <li>
+      {% assign en_url = '/en' | append: page.url %}
+      {% for post in site.posts %}
+        {% if post.lang == 'en' and post.url contains base_slug %}
+          {% assign en_url = post.url %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      <a class="dropdown-item {% if page.lang == 'en' %}active{% endif %}" href="{{ en_url }}">
+        <i class="fas fa-flag" style="color: #012169;"></i>
+        {{ site.data.locales.en.lang.en }}
+      </a>
+    </li>
+
+    <!-- Enlace a versión en alemán -->
+    <li>
+      {% assign de_url = '/de' | append: page.url %}
+      {% for post in site.posts %}
+        {% if post.lang == 'de' and post.url contains base_slug %}
+          {% assign de_url = post.url %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      <a class="dropdown-item {% if page.lang == 'de' %}active{% endif %}" href="{{ de_url }}">
+        <i class="fas fa-flag" style="color: #ffce00;"></i>
+        {{ site.data.locales.de.lang.de }}
+      </a>
+    </li>
+
+    <!-- Enlace a versión en francés -->
+    <li>
+      {% assign fr_url = '/fr' | append: page.url %}
+      {% for post in site.posts %}
+        {% if post.lang == 'fr' and post.url contains base_slug %}
+          {% assign fr_url = post.url %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      <a class="dropdown-item {% if page.lang == 'fr' %}active{% endif %}" href="{{ fr_url }}">
+        <i class="fas fa-flag" style="color: #0055a4;"></i>
+        {{ site.data.locales.fr.lang.fr }}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style>
+.language-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-selector .dropdown-item.active {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+.language-selector .dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.language-selector .dropdown-item i {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .language-selector {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 1rem 0;
+  }
+}
+</style>
+
+<script>
+// Script para alternar idiomas dinámicamente
+document.addEventListener('DOMContentLoaded', function() {
+  const languageSelector = document.getElementById('languageDropdown');
+
+  // Detectar idioma automáticamente si no está establecido
+  if (!languageSelector) return;
+
+  // Manejar cambio de idioma
+  document.querySelectorAll('.language-selector .dropdown-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+      // El navegador manejará la navegación automáticamente
+      console.log('Cambiando idioma a:', this.textContent.trim());
+    });
+  });
+});
+</script>

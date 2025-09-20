@@ -1,0 +1,47 @@
+# Traducciones en español
+commons:
+  recent_posts: "Posts Recientes"
+  back_to_top: "Volver arriba"
+  toc: "Contenidos"
+  share: "Compartir"
+  button:
+    next: "Siguiente"
+    previous: "Anterior"
+    copy_code:
+      succeed: "¡Copiado!"
+    share_link:
+      title: "Copiar enlace"
+      succeed: "¡Enlace copiado con éxito!"
+
+# Selector de idioma
+lang:
+  es: "Español"
+  en: "English"
+  change_lang: "Cambiar idioma"
+
+# Navegación
+nav:
+  home: "Inicio"
+  tabs: "Pestañas"
+  categories: "Categorías"
+  tags: "Etiquetas"
+  archives: "Archivo"
+  about: "Acerca de"
+
+# Fechas
+datetime:
+  words:
+    minute: "minuto"
+    minutes: "minutos"
+    hour: "hora"
+    hours: "horas"
+    day: "día"
+    days: "días"
+    week: "semana"
+    weeks: "semanas"
+    month: "mes"
+    months: "meses"
+    year: "año"
+    years: "años"
+  ago: "hace"
+  just_now: "justo ahora"
