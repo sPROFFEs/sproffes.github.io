@@ -4,7 +4,6 @@ author: cipher387
 date: 2024-01-19
 categories: [Herramientas, OSINT]
 tags: [osint, security, investigation, tools]
-pin: true
 ---
 
 ## Most important categories

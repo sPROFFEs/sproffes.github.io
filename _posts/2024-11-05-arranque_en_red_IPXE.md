@@ -1,21 +1,14 @@
 ---
-categories:
-- Légal
-- Grille
+title: Arranque de Herramientas Forenses desde la Red (PXE)
 date: 2024-11-05 11:58:38 +0000
-lang: fr
-original_lang: es
-tags:
-- pxe
-- kali
-- forensics
-- ipxe
-title: Les outils médico-légaux commencent à partir du réseau (PXE)
+categories: [Forense, Red]
+tags: [pxe, kali, forensics, ipxe]
 ---
 
-## Configuration manuelle IPXE
 
-### Installation des exigences
+## Configuración manual de IPXE
+
+### Instalación de Requisitos
 
 ```bash
 sudo su
@@ -28,12 +21,12 @@ apt update && apt upgrade && apt install dnsmasq ipxe
 sudo nano /etc/dnsmasq.conf
 ```
 
-! [Dncsmasq.conf] (/assets/img/posts/start_en_ipxe/1.png)
-_Dnsmasq.conf_
+![dncsmasq.conf](/assets/img/posts/arranque_en_red_IPXE/1.png)
+_dnsmasq.conf_
 
-Où l'interface et l'IP dépendent de la machine.
+Donde la interfaz y la IP dependen de la máquina.
 
-### Création de répertoires
+### Creación de Directorios
 
 ```bash
 sudo mkdir -p /tftpboot/kali
@@ -51,7 +44,7 @@ sudo cp /mnt/iso/live/initrd.img /tftpboot/kali/
 sudo cp /mnt/iso/live/filesystem.squashfs /tftpboot/kali/
 ```
 
-### Configuration boot.ipxe
+### Configuración de boot.ipxe
 
 ```bash
 sudo nano /tftpboot/boot.ipxe
@@ -74,7 +67,7 @@ imgargs vmlinuz initrd=initrd.img boot=live components fetch=tftp://${next-serve
 boot || goto retry_boot
 ```
 
-### Configuration du permain
+### Configuración de Permisos
 
 ```bash
 sudo chmod -R 755 /tftpboot
@@ -87,7 +80,7 @@ sudo chown -R nobody:nogroup /tftpboot
 sudo nano /etc/default/dnsmasq
 ```
 
-Ajouter la ligne suivante:
+Añadir la siguiente línea:
 
 ```bash
 DNSMASQ_OPTS= "--log-facility=/var/log/dnsmasq.log --tftp-max-connections=100 --tftp-timeout=600"
@@ -99,10 +92,10 @@ DNSMASQ_OPTS= "--log-facility=/var/log/dnsmasq.log --tftp-max-connections=100 --
 sudo systemctl restart dnsmasq
 ```
 
-> ** IMPORTANT **
->
-> - Le problème de ce processus est que l'utilisation de la transmission TFTP est très lente et que celle ajoutée au fait que la taille ISO en direct de Kali est d'environ 4,5 Go n'est pas la plus optimale.
->
-> - Une autre chose à garder à l'esprit est qu'il est très facile qu'un paramètre soit bien ajusté dans le processus et que la connexion est en continu ou n'est pas établie.
->
-> - Dans ce processus, l'ISO du système doit être chargé en mémoire, donc la machine doit avoir suffisamment d'espace dans RAM.
+> **Importante**
+> 
+> - El problema de este proceso es que al usar tftp la transmisión es muy lenta y eso sumado a que el tamaño de la iso de Kali Live son unos 4.5Gb no es lo más óptimo.
+> 
+> - Otra cosa a tener en cuenta es que es muy fácil que en el proceso algún parámetro no quede bien ajustado y se rompe continuamente la conexión o no se llegue a establecer.
+> 
+> - En este proceso la iso del sistema se debe cargar en memoria por lo que la máquina debera tener suficiente espacio en la memoria RAM.

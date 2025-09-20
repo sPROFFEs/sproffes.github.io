@@ -1,28 +1,16 @@
 ---
-categories:
-- Forense
-- Linux
-date: 2025-01-31 14:00:00 -0000
-description: 'Repaso y guía rapida de algunos comandos para realizar volcados de memoria
-  RAM en linux
-
-  '
-lang: es
-math: false
-mermaid: false
-pin: false
-tags:
-- Forense
-- memoria ram
-- linux
-- dump
-- memdump
-- fmem
-- LiME
-- avml
 title: Dumps de memoria RAM en Linux
-toc: true
+date: 2025-01-31 14:00:00 -0000
+categories: [Forense, Linux]
+tags: [Forense, memoria ram, linux, dump, memdump, fmem, LiME, avml]
+description: >
+  Repaso y guía rapida de algunos comandos para realizar volcados de memoria RAM en linux
+pin: false  
+toc: true   
+math: false 
+mermaid: false 
 ---
+
 
 ## Diferencia entre Linux y Windows
 
