@@ -201,7 +201,7 @@ defaults:
       comments: true
       toc: true
       lang: en
-      permalink: /en/posts/:title/
+      permalink: /posts/:title-en/
   - scope:
       path: "_posts/*_de.md"
       type: posts
@@ -210,7 +210,7 @@ defaults:
       comments: true
       toc: true
       lang: de
-      permalink: /de/posts/:title/
+      permalink: /posts/:title-de/
   - scope:
       path: "_posts/*_fr.md"
       type: posts
@@ -219,7 +219,7 @@ defaults:
       comments: true
       toc: true
       lang: fr
-      permalink: /fr/posts/:title/
+      permalink: /posts/:title-fr/
   - scope:
       path: _drafts
     values:

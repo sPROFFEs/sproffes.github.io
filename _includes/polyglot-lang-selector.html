@@ -1,0 +1,144 @@
+<!-- Selector de idiomas mejorado -->
+<div class="lang-selector-container" id="langSelectorContainer" style="display: none;">
+  <select class="lang-selector" id="langSelector" onchange="changeLang(this.value)">
+    <!-- Las opciones se generarán dinámicamente con JavaScript -->
+  </select>
+</div>
+
+<script>
+function changeLang(url) {
+  window.location.href = url;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const path = window.location.pathname;
+
+  // Solo mostrar en páginas de posts o writeups
+  if (!path.includes('/posts/') && !path.includes('/writeups/')) return;
+
+  // Determinar el slug base del post/writeup actual
+  const pathParts = path.split('/').filter(part => part);
+  let currentSlug = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
+
+  // Remover trailing slash si existe
+  currentSlug = currentSlug.replace('/', '');
+
+  // Detectar idioma actual y slug base
+  let baseSlug = currentSlug;
+  let currentLang = 'es';
+
+  if (currentSlug.endsWith('-en')) {
+    baseSlug = currentSlug.replace('-en', '');
+    currentLang = 'en';
+  } else if (currentSlug.endsWith('-de')) {
+    baseSlug = currentSlug.replace('-de', '');
+    currentLang = 'de';
+  } else if (currentSlug.endsWith('-fr')) {
+    baseSlug = currentSlug.replace('-fr', '');
+    currentLang = 'fr';
+  }
+
+  // Construir prefijo correcto (posts o writeups)
+  let urlPrefix = '/posts/';
+  if (path.includes('/writeups/')) {
+    // Mantener la estructura de writeups
+    const writeupParts = pathParts.slice(0, -1);
+    urlPrefix = '/' + writeupParts.join('/') + '/';
+  }
+
+  // Definir idiomas disponibles
+  const languages = [
+    { code: 'es', name: '🇪🇸 Español', suffix: '' },
+    { code: 'en', name: '🇬🇧 English', suffix: '-en' },
+    { code: 'de', name: '🇩🇪 Deutsch', suffix: '-de' },
+    { code: 'fr', name: '🇫🇷 Français', suffix: '-fr' }
+  ];
+
+  const selector = document.getElementById('langSelector');
+  const container = document.getElementById('langSelectorContainer');
+
+  // Limpiar opciones existentes
+  selector.innerHTML = '';
+
+  // Verificar si existen traducciones
+  let hasTranslations = false;
+
+  languages.forEach(lang => {
+    const url = urlPrefix + baseSlug + lang.suffix + '/';
+
+    const option = document.createElement('option');
+    option.value = url;
+    option.textContent = lang.name;
+
+    if (lang.code === currentLang) {
+      option.selected = true;
+      hasTranslations = true;
+    }
+
+    selector.appendChild(option);
+  });
+
+  // Solo mostrar si estamos en un post/writeup con potenciales traducciones
+  if (hasTranslations) {
+    container.style.display = 'block';
+  }
+});
+</script>
+
+<style>
+.lang-selector-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--main-bg);
+  border: 1px solid var(--main-border-color);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.lang-selector {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.lang-selector:hover {
+  background: var(--btn-border-color);
+}
+
+.lang-selector option {
+  background: var(--main-bg);
+  color: var(--text-color);
+}
+
+/* Responsive: ocultar en móviles muy pequeños */
+@media (max-width: 480px) {
+  .lang-selector-container {
+    top: 10px;
+    right: 10px;
+    padding: 6px;
+  }
+
+  .lang-selector {
+    font-size: 11px;
+  }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .lang-selector-container {
+    background: var(--main-bg);
+    border-color: var(--main-border-color);
+  }
+}
+</style>
