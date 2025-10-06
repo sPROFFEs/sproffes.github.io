@@ -33,13 +33,14 @@ Se accede a los recursos a través de HTTP mediante una URL, que ofrece muchas m
 
 | Elemento           | Ejemplo            | Explicación                                                                                                                                                                                                            |
 | ------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Esquema            | http://` `https:// | Se utiliza para identificar el protocolo al que accede el cliente y termina con dos puntos y dos barras (://).                                                                                                         |
-| Info de usuario    | admin:password@    | Este es un componente opcional que contiene las credenciales (separadas por dos puntos :) utilizadas para autenticarse en el host, y se separa del host con un signo de arroba (@).                                    |
-| Host               | example.com        | El host indica la ubicación del recurso. Puede ser un nombre de host o una dirección IP.                                                                                                                               |
-| Puerto             | :80                | El puerto se separa del host mediante dos puntos (:). Si no se especifica ningún puerto, los esquemas http utilizan por defecto el puerto 80 y los https el puerto 443.                                                |
-| Ruta               | /login.php         | Esto apunta al recurso al que se accede, que puede ser un archivo o una carpeta. Si no se especifica ninguna ruta, el servidor devuelve el índice predeterminado (por ejemplo, index.html).                            |
-| Cadena de consulta | ?login=true        | La cadena de consulta comienza con un signo de interrogación (?) y consta de un parámetro (por ejemplo, inicio de sesión) y un valor (por ejemplo, verdadero). Se pueden separar varios parámetros con un símbolo «&». |
+| Esquema            | `http://` / `https://` | Se utiliza para identificar el protocolo al que accede el cliente y termina con dos puntos y dos barras (://).                                                                                                         |
+| Info de usuario    | `admin:password@`    | Este es un componente opcional que contiene las credenciales (separadas por dos puntos :) utilizadas para autenticarse en el host, y se separa del host con un signo de arroba (@).                                    |
+| Host               | `example.com`        | El host indica la ubicación del recurso. Puede ser un nombre de host o una dirección IP.                                                                                                                               |
+| Puerto             | `:80`                | El puerto se separa del host mediante dos puntos (:). Si no se especifica ningún puerto, los esquemas http utilizan por defecto el puerto 80 y los https el puerto 443.                                                |
+| Ruta               | `/login.php`         | Esto apunta al recurso al que se accede, que puede ser un archivo o una carpeta. Si no se especifica ninguna ruta, el servidor devuelve el índice predeterminado (por ejemplo, index.html).                            |
+| Cadena de consulta | `?login=true`        | La cadena de consulta comienza con un signo de interrogación (?) y consta de un parámetro (por ejemplo, inicio de sesión) y un valor (por ejemplo, verdadero). Se pueden separar varios parámetros con un símbolo «&». |
 | Fragmentos         | `#status`          | Los fragmentos son procesados por los navegadores en el lado del cliente para localizar secciones dentro del recurso principal (por ejemplo, un encabezado o una sección de la página).                                |
+
 Los campos obligatorios principales son el esquema y el host, sin los cuales la solicitud no tendría ningún recurso que solicitar.
 
 ### Flujo HTTP
