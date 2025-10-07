@@ -3,6 +3,9 @@ title: Peticiones Web HTTP
 date: 2025-10-06 11:00:00 +0000
 categories: [Web, apuntes]
 tags: [HTTP, web]
+image:
+  path: /assets/img/posts/peticiones-http/banner_http.jpg
+  alt: cabecera
 description: >
   Bases de las peticiones web HTTP.
 
