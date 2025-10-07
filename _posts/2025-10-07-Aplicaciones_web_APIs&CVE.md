@@ -4,7 +4,7 @@ date: 2025-10-07 11:00:00 +0000
 categories: [Web, apuntes]
 tags: [HTTP, web, API, CVE]
 image:
-  path: /assets/img/posts/cabeceras_genericas/banner_api.png
+  path: /assets/img/cabeceras_genericas/banner_api.png
   alt: cabecera
 description: >
   APIs & CVE
