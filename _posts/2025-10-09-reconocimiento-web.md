@@ -20,7 +20,7 @@ El reconocimiento web es la base de una evaluación de seguridad exhaustiva. Est
 
 Constituye una parte fundamental de la fase de «recopilación de información» del proceso de pruebas de penetración.
 
-![image](20251007142255.png)
+![image](/assets/img/posts/reconocimiento-web/20251007142255.png)
 
 **Identificación de activos**: Descubrimiento de todos los componentes de acceso público del objetivo, como páginas web, subdominios, direcciones IP y tecnologías utilizadas. Este paso proporciona una visión general completa de la presencia en línea del objetivo.
 
@@ -480,7 +480,7 @@ Este mecanismo, diseñado para replicar registros DNS entre servidores de DNS.
 
 Una transferencia de zona DNS es, básicamente, una copia completa de todos los registros DNS dentro de una zona (un dominio y sus subdominios) de un servidor de nombres a otro. Este proceso es esencial para mantener la coherencia y la redundancia entre los servidores DNS. Sin embargo, si no se protege adecuadamente, terceros no autorizados pueden descargar todo el archivo de zona, revelando una lista completa de subdominios, sus direcciones IP asociadas y otros datos DNS confidenciales.
 
-![image](20251007221044.png)
+![image](/assets/img/posts/reconocimiento-web/20251007221044.png)
 
 **Solicitud de Transferencia de Zona (AXFR)**: El servidor DNS secundario inicia el proceso enviando una solicitud de transferencia de zona al servidor primario. Esta solicitud generalmente utiliza el tipo AXFR (Transferencia Completa de Zona).
 
@@ -580,7 +580,7 @@ Los hosts virtuales también se pueden configurar para utilizar diferentes domin
 </VirtualHost>
 ```
 
-![image](20251007225049.png)
+![image](/assets/img/posts/reconocimiento-web/20251007225049.png)
 
 **El Navegador Solicita un Sitio Web**: Tu navegador inicia una solicitud HTTP al servidor web asociado con la dirección IP de ese dominio.
 
