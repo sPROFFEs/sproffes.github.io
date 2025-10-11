@@ -1,13 +1,13 @@
 ---
 title: Web fuzzing
-date: 2025-10-08 11:00:00 +0000
+date: 2025-10-11 11:00:00 +0000
 categories: [Web, apuntes]
 tags: [pentesting, web, fuzzing]
 image:
   path: /assets/img/cabeceras_genericas/web-fuzzing-banner.png
   alt: cabecera
 description: >
-  Reconocimiento web 
+   Web fuzzing 
 
 pin: false  
 toc: true   
