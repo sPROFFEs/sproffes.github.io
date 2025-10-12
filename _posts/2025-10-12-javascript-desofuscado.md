@@ -26,7 +26,7 @@ Es una técnica utilizada para dificultar la lectura de un script por parte de l
 
 Por ejemplo, los ofuscadores de código suelen convertir el código en un diccionario con todas las palabras y símbolos utilizados en él y, a continuación, intentan reconstruir el código original durante la ejecución consultando cada palabra y símbolo del diccionario. A continuación se muestra un ejemplo de un código JavaScript sencillo que se ha ofuscado:
 
-![image](/assets/img/posts/javascript-dofuscado/20251012124137.png)
+![image](/assets/img/posts/javascript-deofuscado/20251012124137.png)
 
 ### Minimizar código JavaScript
 
@@ -38,7 +38,7 @@ https://javascript-minifier.com/
 
 http://beautifytools.com/javascript-obfuscator.php
 
-![image](/assets/img/posts/javascript-dofuscado/20251012124836.png)
+![image](/assets/img/posts/javascript-deofuscado/20251012124836.png)
 
 El tipo de ofuscación anterior se conoce como «empaquetado», que suele reconocerse por los seis argumentos de función utilizados en la función inicial «function(p,a,c,k,e,d)».
 
@@ -52,7 +52,7 @@ La función (p,a,c,k,e,d) puede ser diferente de un empaquetador a otro. Sin emb
 
 https://obfuscator.io/
 
-![image](/assets/img/posts/javascript-dofuscado/20251012125315.png)
+![image](/assets/img/posts/javascript-deofuscado/20251012125315.png)
 
 Code: javascript
 
@@ -62,7 +62,7 @@ var _0x1ec6=['Bg9N','sfrciePHDMfty3jPChqGrgvVyMz1C2nHDgLVBIbnB2r1Bgu='];(functio
 
 Ahora deberíamos tener una idea clara de cómo funciona la ofuscación de código. Todavía hay muchas variaciones de herramientas de ofuscación de código, cada una de las cuales ofusca el código de manera diferente. 
 
-![image](/assets/img/posts/javascript-dofuscado/20251012125508.png)
+![image](/assets/img/posts/javascript-deofuscado/20251012125508.png)
 
 http://www.jsfuck.com/
 
@@ -77,11 +77,11 @@ Si estuviéramos utilizando Firefox, podemos abrir el depurador del navegador co
 
 Además, podemos utilizar muchas herramientas en línea o complementos de editores de código, como [Prettier](https://prettier.io/playground/) o [Beautifier](https://beautifier.io/). Copiemos el script secret.js:
 
-![image](/assets/img/posts/javascript-dofuscado/20251012130340.png)
+![image](/assets/img/posts/javascript-deofuscado/20251012130340.png)
 
 Podemos encontrar muchas herramientas online útiles para desofuscar código JavaScript y convertirlo en algo que podamos entender. Una buena herramienta es [UnPacker](https://matthewfl.com/unPacker.html). 
 
-![image](/assets/img/posts/javascript-dofuscado/20251012130613.png)
+![image](/assets/img/posts/javascript-deofuscado/20251012130613.png)
 
 El método de ofuscación utilizado anteriormente es el empaquetado. Otra forma de desempaquetar dicho código es encontrar el valor de retorno al final y utilizar console.log para imprimirlo en lugar de ejecutarlo.
 
@@ -131,7 +131,7 @@ $ curl -s http://SERVER_IP:PORT/ -X POST -d "param1=sample"
 
 ### Decodificación
 
-![image](/assets/img/posts/javascript-dofuscado/20251012133216.png)
+![image](/assets/img/posts/javascript-deofuscado/20251012133216.png)
 
 Por ese motivo, es muy frecuente encontrar código ofuscado que contiene bloques de texto codificados que se descodifican durante la ejecución. 
 
