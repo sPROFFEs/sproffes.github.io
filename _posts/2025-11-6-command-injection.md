@@ -4,7 +4,7 @@ date: 2025-11-6 11:00:00 +0000
 categories: [Web, apuntes]
 tags: [pentesting, web, command injection]
 image:
-  path: /assets/img/command-injection/cabecera.jpeg
+  path: /assets/img/posts/command-injection/cabecera.png
   alt: cabecera
 description: >
    Injección de comandos
