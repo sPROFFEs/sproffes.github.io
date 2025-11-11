@@ -1,6 +1,6 @@
 ---
 title: File Upload
-date: 2025-11-6 11:00:00 +0000
+date: 2025-11-11 11:00:00 +0000
 categories: [Web, apuntes]
 tags: [pentesting, web, File Upload]
 image:
@@ -14,7 +14,6 @@ toc: true
 math: false 
 mermaid: false 
 ---
-
 
 La carga de archivos de usuario se ha convertido en una característica clave para la mayoría de las aplicaciones web modernas, ya que permite la extensibilidad de las aplicaciones web con información de los usuarios.
 
@@ -66,7 +65,7 @@ Un método sencillo para determinar qué lenguaje ejecuta la aplicación web es 
 
 Existen otras técnicas que pueden ayudar a identificar las tecnologías que ejecutan la aplicación web, como el uso de la extensión Wappalyzer, disponible para todos los principales navegadores. 
 
-![[Pasted image 20251110194043.png]]
+![image](/assets/img/posts/file-upload/20251110194043.png)
 
 Como podemos ver, la extensión no solo nos indicó que la aplicación web se ejecuta en PHP, sino que también identificó el tipo y la versión del servidor web, el sistema operativo back-end y otras tecnologías en uso.
   
@@ -81,7 +80,7 @@ En Internet podemos encontrar muchas webshells excelentes que ofrecen funciones 
 
 Podemos descargar cualquiera de estas webshells para el lenguaje de nuestra aplicación web (PHP en nuestro caso), luego subirla a través de la función de carga vulnerable y visitar el archivo subido para interactuar con la webshell. 
 
-![[Pasted image 20251110202549.png]]
+![image](/assets/img/posts/file-upload/20251110202549.png)
 
 Como podemos ver, este shell web ofrece una experiencia similar a la de un terminal, lo que facilita enormemente la enumeración del servidor back-end para su posterior explotación. 
 
@@ -166,7 +165,7 @@ Sin embargo, como la validación del formato de archivo se realiza en el lado de
 
 Aún podemos seleccionar la opción Todos los archivos para seleccionar nuestro script PHP, pero al hacerlo, aparece un mensaje de error que dice (¡Solo se permiten imágenes!) y el botón Cargar se desactiva.
 
-![[Pasted image 20251110211016.png]]
+![image](/assets/img/posts/file-upload/20251110211016.png)
 
 Esto indica algún tipo de validación del tipo de archivo, por lo que no podemos simplemente cargar un shell web a través del formulario de carga como hicimos antes. Afortunadamente, toda la validación parece realizarse en el front-end, ya que la página nunca se actualiza ni envía ninguna solicitud HTTP después de seleccionar nuestro archivo. Por lo tanto, deberíamos poder tener un control total sobre estas validaciones del lado del cliente.
 
@@ -178,13 +177,13 @@ Cualquier código que se ejecute en el lado del cliente está bajo nuestro contr
 
 Comencemos por examinar una solicitud normal a través de Burp. Cuando seleccionamos una imagen, vemos que se refleja como nuestra imagen de perfil, y cuando hacemos clic en «Subir», nuestra imagen de perfil se actualiza y permanece tras las actualizaciones. Esto indica que nuestra imagen se ha subido al servidor, que ahora nos la muestra.
 
-![[Pasted image 20251110211423.png]]
+![image](/assets/img/posts/file-upload/20251110211423.png)
 
 La aplicación web parece estar enviando una solicitud de carga HTTP estándar a /upload.php. De esta manera, ahora podemos modificar esta solicitud para satisfacer nuestras necesidades sin tener las restricciones de validación de tipo del front-end. Si el servidor back-end no valida el tipo de archivo cargado, entonces, en teoría, deberíamos poder enviar cualquier tipo de archivo/contenido, y se cargaría en el servidor.
 
 Las dos partes importantes de la solicitud son filename="HTB.png" y el contenido del archivo al final de la solicitud. Si modificamos el nombre del archivo a shell.php y modificamos el contenido al shell web que utilizamos en la sección anterior, estaríamos subiendo un shell web PHP en lugar de una imagen.
 
-![[Pasted image 20251110212745.png]]
+![image](/assets/img/posts/file-upload/20251110212745.png)
 
 También podemos modificar el tipo de contenido del archivo cargado, aunque esto no debería tener mucha importancia en esta fase, por lo que lo dejaremos sin modificar.
 
@@ -197,7 +196,7 @@ Otro método para eludir las validaciones del lado del cliente es manipular el c
 
 Para empezar, podemos hacer clic en `[CTRL+MAYÚS+C]` para activar el inspector de páginas del navegador y, a continuación, hacer clic en la imagen de perfil, que es donde activamos el selector de archivos para el formulario de carga.
 
-![[Pasted image 20251110213048.png]]
+![image](/assets/img/posts/file-upload/20251110213048.png)
 
 ```html
 <input type="file" name="uploadFile" id="uploadFile" onchange="checkFile(this)" accept=".jpg,.jpeg,.png">
@@ -226,7 +225,7 @@ Afortunadamente, no necesitamos escribir ni modificar código JavaScript. Podemo
 
 Para ello, podemos volver a nuestro inspector, hacer clic de nuevo en la imagen de perfil, hacer doble clic en el nombre de la función (checkFile) en la línea 18 y eliminarla.
 
-![[Pasted image 20251110213313.png]]
+![image](/assets/img/posts/file-upload/20251110213313.png)
 
 Una vez eliminada la función checkFile de la entrada de archivos, deberíamos poder seleccionar nuestro shell web PHP a través del cuadro de diálogo de selección de archivos y cargarlo normalmente sin validaciones, de forma similar a lo que hicimos en la sección anterior.
 
@@ -249,7 +248,7 @@ Este caso es similar al que vimos antes, pero tiene una lista negra de extension
 
 Comencemos probando uno de los métodos de omisión del lado del cliente que aprendimos en la sección anterior para cargar un script PHP en el servidor back-end. Interceptaremos una solicitud de carga de imagen con Burp, reemplazaremos el contenido y el nombre del archivo con nuestro script PHP y reenviaremos la solicitud.
 
-![[Pasted image 20251110220802.png]]
+![image](/assets/img/posts/file-upload/20251110220802.png)
 
 Como podemos ver, nuestro ataque no tuvo éxito esta vez, ya que obtuvimos el mensaje «Extensión no permitida». Esto indica que la aplicación web puede tener algún tipo de validación de tipo de archivo en el back-end, además de las validaciones del front-end.
 
@@ -288,11 +287,11 @@ Hay muchas listas de extensiones que podemos utilizar en nuestro escaneo de fuzz
 
 Como estamos probando una aplicación PHP, descargaremos y utilizaremos la lista PHP anterior. A continuación, desde el historial de Burp, podemos localizar nuestra última solicitud a /**upload**.php.
 
-![[Pasted image 20251110221704.png]]
+![image](/assets/img/posts/file-upload/20251110221704.png)
 
 Mantendremos el contenido del archivo para este ataque, ya que solo nos interesa el fuzzing de extensiones de archivo. Por último, podemos cargar la lista de extensiones PHP anterior en la pestaña Payloads, dentro de Payload Options. También desmarcaremos la opción URL Encoding para evitar codificar el (.) antes de la extensión del archivo. Una vez hecho esto, podemos hacer clic en Start Attack para iniciar el fuzzing de las extensiones de archivo que no están en la blacklist.
 
-![[Pasted image 20251110221753.png]]
+![image](/assets/img/posts/file-upload/20251110221753.png)
 
 ### Extensiones fuera de la blacklist
 
@@ -302,7 +301,7 @@ Usemos la extensión .phtml, que los servidores web PHP suelen permitir para los
 
 Podemos hacer clic con el botón derecho del ratón en su solicitud en los resultados de Intruder y seleccionar Enviar a repetidor. Ahora, todo lo que tenemos que hacer es repetir lo que hemos hecho en las dos secciones anteriores cambiando el nombre del archivo para usar la extensión .phtml y cambiando el contenido por el de un shell web PHP.
 
-![[Pasted image 20251110221903.png]]
+![image](/assets/img/posts/file-upload/20251110221903.png)
 
 ## Filtros Whitelist
 
@@ -385,7 +384,7 @@ done
 
 Con esta lista de palabras personalizada, podemos ejecutar un análisis de fuzzing con Burp Intruder, similar a los que hicimos anteriormente. Si el back-end o el servidor web están desactualizados o tienen ciertas configuraciones incorrectas, algunos de los nombres de archivo generados pueden eludir la prueba de la lista blanca y ejecutar código PHP.
 
-![[Pasted image 20251111204334.png]]
+![image](/assets/img/posts/file-upload/20251111204334.png)
 
 ## Type filters
 
@@ -395,7 +394,7 @@ Existen dos métodos comunes para validar el contenido del archivo: el encabezad
 
 ### Content-Type
 
-![[Pasted image 20251111204937.png]]
+![image](/assets/img/posts/file-upload/20251111204937.png)
 
 Vemos que aparece un mensaje que dice «Solo se permiten imágenes». El mensaje de error persiste y nuestro archivo no se carga.
 Si cambiamos el nombre del archivo a shell.jpg.phtml o shell.php.jpg, o incluso si utilizamos shell.jpg con contenido de shell web, la carga fallará. Dado que la extensión del archivo no afecta al mensaje de error, la aplicación web debe estar comprobando el contenido del archivo para validar el tipo. Como se ha mencionado anteriormente, esto puede hacerse en el encabezado Content-Type o en el contenido del archivo.
@@ -419,7 +418,7 @@ $ wget https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/mast
 $ cat web-all-content-types.txt | grep 'image/' > image-content-types.txt
 ```
 
-![[Pasted image 20251111205245.png]]
+![image](/assets/img/posts/file-upload/20251111205245.png)
 
 Una solicitud HTTP de carga de archivos tiene dos encabezados Content-Type, uno para el archivo adjunto (en la parte inferior) y otro para la solicitud completa (en la parte superior). Normalmente necesitamos modificar el encabezado Content-Type del archivo, pero en algunos casos la solicitud solo contendrá el encabezado Content-Type principal (por ejemplo, si el contenido cargado se envió como datos POST), en cuyo caso tendremos que modificar el encabezado Content-Type principal.
 
@@ -460,11 +459,11 @@ if (!in_array($type, array('image/jpg', 'image/jpeg', 'image/png', 'image/gif'))
 
 Como podemos ver, los tipos MIME son similares a los que se encuentran en los encabezados Content-Type, pero su origen es diferente, ya que PHP utiliza la función mime_content_type() para obtener el tipo MIME de un archivo.
 
-![[Pasted image 20251111210112.png]]
+![image](/assets/img/posts/file-upload/20251111210112.png)
 
 Podemos utilizar una combinación de los dos métodos descritos, lo que puede ayudarnos a eludir algunos filtros de contenido más robustos. Por ejemplo, podemos intentar utilizar un tipo MIME permitido con un tipo de contenido no permitido, un tipo MIME/contenido permitido con una extensión no permitida, o un tipo MIME/contenido no permitido con una extensión permitida, etc. Del mismo modo, podemos probar otras combinaciones y permutaciones para intentar confundir al servidor web y, dependiendo del nivel de seguridad del código, es posible que podamos eludir varios filtros.
 
-![[Pasted image 20251111210619.png]]
+![image](/assets/img/posts/file-upload/20251111210619.png)
 
 
 ## Subida de archivos limitada
@@ -546,7 +545,7 @@ Además de estos ataques, podemos probar otros métodos para provocar un DoS en 
 
 Si la función de carga es vulnerable al recorrido de directorios, también podemos intentar cargar archivos en un directorio diferente (por ejemplo, ../../../etc/passwd), lo que también puede provocar que el servidor se bloquee.
 
-![[Pasted image 20251111213825.png]]
+![image](/assets/img/posts/file-upload/20251111213825.png)
 
 
 ## Otros tipos de ataque 
