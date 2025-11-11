@@ -23,16 +23,18 @@ Nos permite ejecutar comandos del sistema directamente en el servidor de alojami
 
 ## Métodos
 
-|Operador de Inyección|Carácter de Inyección|Carácter Codificado en URL|Comando Ejecutado|
-|---|---|---|---|
-|Punto y coma|;|%3b|Ambos|
-|Nueva línea|\n|%0a|Ambos|
-|En segundo plano|&|%26|Ambos (generalmente se muestra la segunda salida primero)|
-|Tubería (Pipe)|\||%7c|Ambos (solo se muestra la segunda salida)|
-|AND|&&|%26%26|Ambos (solo si el primero tiene éxito)|
-|OR|\||%7c%7c|Segundo (solo si el primero falla)|
-|Sub-Shell|``|%60%60|Ambos (solo en Linux)|
-|Sub-Shell|$()|%24%28%29|Ambos (solo en Linux)|
+| Operador de Inyección | Carácter de Inyección | Carácter Codificado en URL | Comando Ejecutado                                         |          |                                    |
+| --------------------- | --------------------- | -------------------------- | --------------------------------------------------------- | -------- | ---------------------------------- |
+| Punto y coma          | `;`                   | `%3b`                      | Ambos                                                     |          |                                    |
+| Nueva línea           | `\n`                  | `%0a`                      | Ambos                                                     |          |                                    |
+| En segundo plano      | `&`                   | `%26`                      | Ambos (generalmente se muestra la segunda salida primero) |          |                                    |
+| Tubería (Pipe)        | `\|` (escape: `\|`)   | `%7c`                      | Ambos (solo se muestra la segunda salida)                 |          |                                    |
+| AND                   | `&&`                  | `%26%26`                   | Ambos (solo si el primero tiene éxito)                    |          |                                    |
+| OR                    | `                     |                            | `                                                         | `%7c%7c` | Segundo (solo si el primero falla) |
+| Sub-Shell (backticks) | `` `comando` ``       | `%60%60`                   | Ambos (solo en Linux)                                     |          |                                    |
+| Sub-Shell (`$()`)     | `$(comando)`          | `%24%28%29`                | Ambos (solo en Linux)                                     |          |                                    |
+
+
 Podemos utilizar cualquiera de estos operadores para inyectar otro comando, de modo que se ejecuten ambos comandos o uno de ellos. Escribiríamos nuestra entrada esperada (por ejemplo, una IP), luego utilizaríamos cualquiera de los operadores anteriores y, a continuación, escribiríamos nuestro nuevo comando.
 
 En general, para la inyección de comandos básica, todos estos operadores se pueden utilizar para inyectar comandos independientemente del lenguaje de la aplicación web, el marco de trabajo o el servidor back-end. Por lo tanto, si estamos inyectando en una aplicación web PHP que se ejecuta en un servidor Linux, o en una aplicación web .Net que se ejecuta en un servidor back-end Windows, o en una aplicación web NodeJS que se ejecuta en un servidor back-end macOS, nuestras inyecciones deberían funcionar independientemente.

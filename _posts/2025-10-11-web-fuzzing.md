@@ -374,19 +374,21 @@ Análisis WSDL: el archivo WSDL es el recurso más valioso para comprender una A
 
 Las consultas están diseñadas para recuperar datos del servidor GraphQL. Identifican con precisión los campos, las relaciones y los objetos anidados que desea el cliente, lo que elimina el problema de la recuperación excesiva o insuficiente de datos, habitual en las API REST. Los argumentos dentro de las consultas permiten un mayor refinamiento, como el filtrado o la paginación.
 
-|Componente|Descripción|Ejemplo|
-|---|---|---|
-|**Campo (Field)**|Representa una pieza específica de datos que deseas recuperar (por ejemplo, nombre, correo electrónico).|`name`, `email`|
-|**Relación (Relationship)**|Indica una conexión entre diferentes tipos de datos (por ejemplo, las publicaciones de un usuario).|`posts`|
-|**Objeto anidado (Nested Object)**|Un campo que devuelve otro objeto, permitiéndote profundizar más en el grafo de datos.|`posts { title, body }`|
-|**Argumento (Argument)**|Modifica el comportamiento de una consulta o campo (por ejemplo, filtrado, ordenamiento, paginación).|`posts(limit: 5)` (recupera las primeras 5 publicaciones de un usuario)|
+| Componente                         | Descripción                                                                                              | Ejemplo                                                                 |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| **Campo (Field)**                  | Representa una pieza específica de datos que deseas recuperar (por ejemplo, nombre, correo electrónico). | `name`, `email`                                                         |
+| **Relación (Relationship)**        | Indica una conexión entre diferentes tipos de datos (por ejemplo, las publicaciones de un usuario).      | `posts`                                                                 |
+| **Objeto anidado (Nested Object)** | Un campo que devuelve otro objeto, permitiéndote profundizar más en el grafo de datos.                   | `posts { title, body }`                                                 |
+| **Argumento (Argument)**           | Modifica el comportamiento de una consulta o campo (por ejemplo, filtrado, ordenamiento, paginación).    | `posts(limit: 5)` (recupera las primeras 5 publicaciones de un usuario) |
+
 Las mutaciones son el equivalente a las consultas diseñadas para modificar datos en el servidor. Abarcan operaciones para crear, actualizar o eliminar datos. Al igual que las consultas, las mutaciones también pueden aceptar argumentos para definir los valores de entrada para estas operaciones.
 
-|Componente|Descripción|Ejemplo|
-|---|---|---|
-|**Operación (Operation)**|La acción que se desea realizar (por ejemplo, crear una publicación, actualizar un usuario, eliminar un comentario).|`createPost`|
-|**Argumento (Argument)**|Datos de entrada necesarios para la operación (por ejemplo, título y contenido de una nueva publicación).|`title: "New Post", body: "This is the content of the new post"`|
-|**Selección (Selection)**|Campos que deseas recuperar en la respuesta después de que se complete la mutación.|`id`, `title`|
+| Componente                | Descripción                                                                                                          | Ejemplo                                                          |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Operación (Operation)** | La acción que se desea realizar (por ejemplo, crear una publicación, actualizar un usuario, eliminar un comentario). | `createPost`                                                     |
+| **Argumento (Argument)**  | Datos de entrada necesarios para la operación (por ejemplo, título y contenido de una nueva publicación).            | `title: "New Post", body: "This is the content of the new post"` |
+| **Selección (Selection)** | Campos que deseas recuperar en la respuesta después de que se complete la mutación.                                  | `id`, `title`                                                    |
+
 ```
 mutation {
   createPost(title: "New Post", body: "This is the content of the new post") {
