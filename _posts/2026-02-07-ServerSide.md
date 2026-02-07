@@ -328,9 +328,11 @@ Necesitamos identificar el motor de plantillas que utiliza la aplicación web ob
 
 La forma más eficaz es inyectar caracteres especiales con significado semántico en los motores de plantillas y observar el comportamiento de la aplicación web. Por ello, la siguiente cadena de prueba se utiliza habitualmente para provocar un mensaje de error en una aplicación web vulnerable a SSTI, ya que contiene todos los caracteres especiales que tienen un propósito semántico concreto en los motores de plantillas más populares:
 
+{% raw %}
 ```shell
 ${{<%[%'"}}%\.
 ```
+{% endraw %}
 
 Dado que la cadena de prueba anterior casi con toda seguridad infringirá la sintaxis de la plantilla, debería dar lugar a un error si la aplicación web es vulnerable a SSTI. Este comportamiento es similar a cómo la inserción de una comilla simple (') en una aplicación web vulnerable a la inyección SQL puede romper la sintaxis de una consulta SQL, lo que da lugar a un error SQL.
 
