@@ -1,10 +1,10 @@
 ---
 title: Login Brute Force
-date: 2026-02-07 11:00:00 +0000
+date: 2026-02-10 11:00:00 +0000
 categories: [Web, apuntes]
 tags: [pentesting, web, passwords, brute force]
 image:
-  path: /assets/img/posts/login-brute-force/cabecera.jpg
+  path: /assets/img/posts/login-brute-force/cabecera.png
   alt: cabecera
 description: >
    Fuerza bruta sobre diferentes inicios de sesión
