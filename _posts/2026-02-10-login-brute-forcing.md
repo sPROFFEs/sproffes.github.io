@@ -101,7 +101,8 @@ Consideremos algunos escenarios para ilustrar el impacto de la longitud de la co
 |**Larga pero Simple**|8|Letras minúsculas (a-z)|$26^8 \approx 208,827,064,576$|
 |**Añadiendo Complejidad**|8|Minúsculas y mayúsculas (a-z, A-Z)|$52^8 \approx 53,459,728,531,456$|
 |**Máxima Complejidad**|12|Letras (Aa-Zz), números y símbolos|$94^{12} \approx 4.75 \times 10^{23}$|
-incluso un ligero aumento en la longitud de la contraseña o la inclusión de tipos de caracteres adicionales amplía drásticamente el espacio de búsqueda. Esto aumenta significativamente el número de combinaciones posibles que un atacante debe probar, lo que hace que el ataque por fuerza bruta sea cada vez más difícil y lento. Sin embargo, el tiempo que se tarda en descifrar una contraseña no solo depende del tamaño del espacio de búsqueda, sino también de la potencia computacional disponible del atacante.
+
+Incluso un ligero aumento en la longitud de la contraseña o la inclusión de tipos de caracteres adicionales amplía drásticamente el espacio de búsqueda. Esto aumenta significativamente el número de combinaciones posibles que un atacante debe probar, lo que hace que el ataque por fuerza bruta sea cada vez más difícil y lento. Sin embargo, el tiempo que se tarda en descifrar una contraseña no solo depende del tamaño del espacio de búsqueda, sino también de la potencia computacional disponible del atacante.
 
 Cuanto más potente sea el hardware del atacante (por ejemplo, el número de GPU, CPU o recursos informáticos basados en la nube que pueda utilizar), más contraseñas podrá adivinar por segundo. Mientras que una contraseña compleja puede tardar años en descifrarse por fuerza bruta con una sola máquina, un atacante sofisticado que utilice una red distribuida de recursos informáticos de alto rendimiento podría reducir ese tiempo drásticamente.
 
@@ -140,6 +141,7 @@ La distinción clave entre un ataque de fuerza bruta y uno de diccionario reside
 |**Objetivo (Targeting)**|Altamente adaptable y personalizable según el objetivo.|Sin capacidad inherente de personalización.|Las _wordlists_ pueden incluir OSINT (nombres de empresa, empleados), aumentando la tasa de éxito drásticamente.|
 |**Efectividad**|Excepcionalmente eficaz contra contraseñas débiles o comunes.|Eficaz contra cualquier contraseña, dado el tiempo suficiente.|Si la clave está en el diccionario, se halla al instante. La fuerza bruta es universal pero impráctica para contraseñas complejas.|
 |**Limitaciones**|Inútil contra contraseñas complejas o generadas aleatoriamente.|A menudo impracticable para contraseñas largas por el tiempo de cómputo.|Una clave aleatoria no aparecerá en un diccionario. El número astronómico de combinaciones hace que la fuerza bruta sea inviable en el mundo real.|
+
 ## Construcción y Utilización de Diccionarios (Wordlists)
 
 La calidad de tu ataque depende directamente de la inteligencia aplicada a tus listas de palabras. Los diccionarios pueden obtenerse de diversas fuentes:
@@ -737,6 +739,7 @@ $ medusa [target_options] [credential_options] -M module [module_options]
 |**-f** o **-F**|**Modo rápido:** Detiene el ataque al encontrar el primer login exitoso en el host actual (`-f`) o en cualquier host (`-F`).|`medusa -f ...` o `medusa -F ...`|
 |**-n PORT**|**Puerto:** Especifica un puerto no estándar para el servicio objetivo.|`medusa -n 2222 ...`|
 |**-v LEVEL**|**Salida detallada:** Nivel de verbosidad (del 1 al 6). A mayor nivel, más detalle sobre el progreso.|`medusa -v 4 ...`|
+
 ### Módulos Medusa
 
 Cada módulo de Medusa está diseñado para interactuar con mecanismos de autenticación específicos, lo que le permite enviar las solicitudes adecuadas e interpretar las respuestas para que los ataques tengan éxito. 
