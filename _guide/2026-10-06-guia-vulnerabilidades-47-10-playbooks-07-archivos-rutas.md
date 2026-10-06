@@ -5,6 +5,7 @@ tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Playbook: archivos, rutas y subidas"
 toc: true
+permalink: /guia/10-playbooks/07-archivos-rutas/
 ---
 
 > **Uso autorizado.** Ejecuta estas comprobaciones únicamente sobre activos incluidos expresamente en el alcance. Sustituye las variables por cuentas, objetos y sistemas de prueba. Comienza con una sola solicitud y detente cuando obtengas la evidencia mínima necesaria.

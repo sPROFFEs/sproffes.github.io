@@ -5,6 +5,7 @@ tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Playbook: sesiones, cookies, JWT y CSRF"
 toc: true
+permalink: /guia/10-playbooks/02-sesiones-cookies-jwt-csrf/
 ---
 
 > **Uso autorizado.** Ejecuta estas comprobaciones únicamente sobre activos incluidos expresamente en el alcance. Sustituye las variables por cuentas, objetos y sistemas de prueba. Comienza con una sola solicitud y detente cuando obtengas la evidencia mínima necesaria.

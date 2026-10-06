@@ -5,6 +5,7 @@ tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Playbooks operativos"
 toc: true
+permalink: /guia/10-playbooks/00-indice/
 ---
 
 > **Uso autorizado.** Ejecuta estas comprobaciones únicamente sobre activos incluidos expresamente en el alcance. Sustituye las variables por cuentas, objetos y sistemas de prueba. Comienza con una sola solicitud y detente cuando obtengas la evidencia mínima necesaria.
@@ -40,18 +41,18 @@ export ID_B='objeto-controlado-b'
 
 ## Índice
 
-- [Autenticación, recuperación y MFA]({% post_url 2026-02-11-10-playbooks-01-autenticacion-recuperacion-mfa %})
-- [Sesiones, cookies, JWT y CSRF]({% post_url 2026-02-12-10-playbooks-02-sesiones-cookies-jwt-csrf %})
-- [Autorización, IDOR y multitenancy]({% post_url 2026-02-13-10-playbooks-03-autorizacion-idor-multitenancy %})
-- [Inyecciones del servidor]({% post_url 2026-02-14-10-playbooks-04-inyecciones-servidor %})
-- [Navegador, XSS, CORS y clickjacking]({% post_url 2026-02-15-10-playbooks-05-navegador-xss-cors %})
-- [API REST, GraphQL, gRPC y SOAP]({% post_url 2026-02-16-10-playbooks-06-api %})
-- [Archivos, rutas y subidas]({% post_url 2026-02-17-10-playbooks-07-archivos-rutas %})
-- [SSRF, URLs, webhooks y redirecciones]({% post_url 2026-02-18-10-playbooks-08-ssrf-webhooks %})
-- [Lógica de negocio, concurrencia y límites]({% post_url 2026-02-19-10-playbooks-09-logica-race-rate-limit %})
-- [OAuth, OIDC, SAML y SSO]({% post_url 2026-02-20-10-playbooks-10-oauth-oidc-saml %})
-- [HTTP, proxies, caché y desync]({% post_url 2026-02-21-10-playbooks-11-http-proxy-cache %})
-- [Red, servicios, cloud y contenedores]({% post_url 2026-02-22-10-playbooks-12-red-cloud-contenedores %})
-- [Dependencias, secretos y CI/CD]({% post_url 2026-02-23-10-playbooks-13-dependencias-cicd %})
-- [Móvil, escritorio y extensiones]({% post_url 2026-02-24-10-playbooks-14-clientes %})
-- [LLM, RAG, MCP y agentes]({% post_url 2026-02-25-10-playbooks-15-llm-rag-agentes %})
+- [Autenticación, recuperación y MFA]({{ '/guia/10-playbooks/01-autenticacion-recuperacion-mfa/' | relative_url }})
+- [Sesiones, cookies, JWT y CSRF]({{ '/guia/10-playbooks/02-sesiones-cookies-jwt-csrf/' | relative_url }})
+- [Autorización, IDOR y multitenancy]({{ '/guia/10-playbooks/03-autorizacion-idor-multitenancy/' | relative_url }})
+- [Inyecciones del servidor]({{ '/guia/10-playbooks/04-inyecciones-servidor/' | relative_url }})
+- [Navegador, XSS, CORS y clickjacking]({{ '/guia/10-playbooks/05-navegador-xss-cors/' | relative_url }})
+- [API REST, GraphQL, gRPC y SOAP]({{ '/guia/10-playbooks/06-api/' | relative_url }})
+- [Archivos, rutas y subidas]({{ '/guia/10-playbooks/07-archivos-rutas/' | relative_url }})
+- [SSRF, URLs, webhooks y redirecciones]({{ '/guia/10-playbooks/08-ssrf-webhooks/' | relative_url }})
+- [Lógica de negocio, concurrencia y límites]({{ '/guia/10-playbooks/09-logica-race-rate-limit/' | relative_url }})
+- [OAuth, OIDC, SAML y SSO]({{ '/guia/10-playbooks/10-oauth-oidc-saml/' | relative_url }})
+- [HTTP, proxies, caché y desync]({{ '/guia/10-playbooks/11-http-proxy-cache/' | relative_url }})
+- [Red, servicios, cloud y contenedores]({{ '/guia/10-playbooks/12-red-cloud-contenedores/' | relative_url }})
+- [Dependencias, secretos y CI/CD]({{ '/guia/10-playbooks/13-dependencias-cicd/' | relative_url }})
+- [Móvil, escritorio y extensiones]({{ '/guia/10-playbooks/14-clientes/' | relative_url }})
+- [LLM, RAG, MCP y agentes]({{ '/guia/10-playbooks/15-llm-rag-agentes/' | relative_url }})
