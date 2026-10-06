@@ -1,7 +1,6 @@
 ---
+layout: page
 date: 2026-10-06 10:35:00 +0200
-categories: [Metodología, Análisis de vulnerabilidades]
-tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Fase 2. Inventario de superficie de ataque"
 permalink: /guia/01-preparacion/02-inventario-de-superficie-de-ataque/

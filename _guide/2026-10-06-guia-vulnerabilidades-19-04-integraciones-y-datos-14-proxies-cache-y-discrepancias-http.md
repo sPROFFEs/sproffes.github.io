@@ -1,7 +1,6 @@
 ---
+layout: page
 date: 2026-10-06 10:35:00 +0200
-categories: [Metodología, Análisis de vulnerabilidades]
-tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Fase 14. Proxies, caché y discrepancias HTTP"
 permalink: /guia/04-integraciones-y-datos/14-proxies-cache-y-discrepancias-http/

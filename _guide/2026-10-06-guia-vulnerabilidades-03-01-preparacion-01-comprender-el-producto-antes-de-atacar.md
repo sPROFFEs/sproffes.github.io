@@ -1,7 +1,6 @@
 ---
+layout: page
 date: 2026-10-06 10:35:00 +0200
-categories: [Metodología, Análisis de vulnerabilidades]
-tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Fase 1. Comprender el producto antes de atacar"
 permalink: /guia/01-preparacion/01-comprender-el-producto-antes-de-atacar/

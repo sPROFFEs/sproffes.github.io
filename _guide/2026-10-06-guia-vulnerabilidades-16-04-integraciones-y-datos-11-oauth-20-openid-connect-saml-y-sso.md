@@ -1,7 +1,6 @@
 ---
+layout: page
 date: 2026-10-06 10:35:00 +0200
-categories: [Metodología, Análisis de vulnerabilidades]
-tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Fase 11. OAuth 2.0, OpenID Connect, SAML y SSO"
 permalink: /guia/04-integraciones-y-datos/11-oauth-20-openid-connect-saml-y-sso/

@@ -1,7 +1,6 @@
 ---
+layout: page
 date: 2026-10-06 10:35:00 +0200
-categories: [Metodología, Análisis de vulnerabilidades]
-tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Fase 20. Cloud, contenedores y plataforma"
 permalink: /guia/06-plataformas/20-cloud-contenedores-y-plataforma/

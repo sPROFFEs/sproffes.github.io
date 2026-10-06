@@ -1,7 +1,6 @@
 ---
+layout: page
 date: 2026-10-06 10:35:00 +0200
-categories: [Metodología, Análisis de vulnerabilidades]
-tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Fase 10. APIs: REST, GraphQL, gRPC y SOAP"
 permalink: /guia/03-entradas-y-cliente/10-apis-rest-graphql-grpc-y-soap/

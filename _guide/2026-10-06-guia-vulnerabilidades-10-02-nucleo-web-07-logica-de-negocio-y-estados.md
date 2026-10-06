@@ -1,7 +1,6 @@
 ---
+layout: page
 date: 2026-10-06 10:35:00 +0200
-categories: [Metodología, Análisis de vulnerabilidades]
-tags: [pentesting, appsec, seguridad, owasp, metodologia]
 pin: false
 title: "Fase 7. Lógica de negocio y estados"
 permalink: /guia/02-nucleo-web/07-logica-de-negocio-y-estados/
