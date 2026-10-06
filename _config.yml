@@ -167,6 +167,9 @@ kramdown:
       start_line: 1
 
 collections:
+  guide:
+    output: true
+    permalink: /guia/:path/
   tabs:
     output: true
     sort_by: order
@@ -176,6 +179,14 @@ collections:
 
 
 defaults:
+  - scope:
+      path: ""
+      type: guide
+    values:
+      layout: post
+      toc: true
+      comments: false
+
   - scope:
       path: "" # An empty string here means all files in the project
       type: posts

@@ -1,0 +1,838 @@
+---
+date: 2026-10-06 10:35:00 +0200
+categories: [Metodología, Análisis de vulnerabilidades]
+tags: [pentesting, appsec, seguridad, owasp, metodologia]
+pin: false
+title: "Catálogo local de técnicas y productos"
+permalink: /guia/09-catalogos/catalogo-local-hacktricks/
+order: 990
+toc: true
+comments: false
+math: false
+mermaid: true
+---
+
+# Catálogo local de técnicas y productos
+
+> Índice generado desde el corpus disponible. La presencia de una referencia no implica aplicabilidad. Usar primero el [motor de aplicabilidad]({{ site.baseurl }}/guia/00-inicio/motor-de-aplicabilidad/).
+
+## Web
+
+Entradas disponibles: **171**.
+
+- `hacktricks/src/pentesting-web/2fa-bypass.md` · 2fa bypass
+- `hacktricks/src/pentesting-web/abusing-hop-by-hop-headers.md` · abusing hop by hop headers
+- `hacktricks/src/pentesting-web/account-takeover.md` · account takeover
+- `hacktricks/src/pentesting-web/browser-extension-pentesting-methodology/README.md` · browser extension pentesting methodology
+- `hacktricks/src/pentesting-web/browser-extension-pentesting-methodology/browext-clickjacking.md` · browext clickjacking
+- `hacktricks/src/pentesting-web/browser-extension-pentesting-methodology/browext-permissions-and-host_permissions.md` · browext permissions and host_permissions
+- `hacktricks/src/pentesting-web/browser-extension-pentesting-methodology/browext-xss-example.md` · browext xss example
+- `hacktricks/src/pentesting-web/browser-extension-pentesting-methodology/forced-extension-load-preferences-mac-forgery-windows.md` · forced extension load preferences mac forgery windows
+- `hacktricks/src/pentesting-web/bypass-payment-process.md` · bypass payment process
+- `hacktricks/src/pentesting-web/cache-deception/README.md` · cache deception
+- `hacktricks/src/pentesting-web/cache-deception/cache-poisoning-to-dos.md` · cache poisoning to dos
+- `hacktricks/src/pentesting-web/cache-deception/cache-poisoning-via-url-discrepancies.md` · cache poisoning via url discrepancies
+- `hacktricks/src/pentesting-web/captcha-bypass.md` · captcha bypass
+- `hacktricks/src/pentesting-web/clickjacking.md` · clickjacking
+- `hacktricks/src/pentesting-web/client-side-path-traversal.md` · client side path traversal
+- `hacktricks/src/pentesting-web/client-side-template-injection-csti.md` · client side template injection csti
+- `hacktricks/src/pentesting-web/command-injection.md` · command injection
+- `hacktricks/src/pentesting-web/content-security-policy-csp-bypass/README.md` · content security policy csp bypass
+- `hacktricks/src/pentesting-web/content-security-policy-csp-bypass/csp-bypass-self-+-unsafe-inline-with-iframes.md` · csp bypass self + unsafe inline with iframes
+- `hacktricks/src/pentesting-web/cors-bypass.md` · cors bypass
+- `hacktricks/src/pentesting-web/crlf-0d-0a.md` · crlf 0d 0a
+- `hacktricks/src/pentesting-web/csrf-cross-site-request-forgery.md` · csrf cross site request forgery
+- `hacktricks/src/pentesting-web/dangling-markup-html-scriptless-injection/README.md` · dangling markup html scriptless injection
+- `hacktricks/src/pentesting-web/dangling-markup-html-scriptless-injection/ss-leaks.md` · ss leaks
+- `hacktricks/src/pentesting-web/dapps-DecentralizedApplications.md` · dapps DecentralizedApplications
+- `hacktricks/src/pentesting-web/dependency-confusion.md` · dependency confusion
+- `hacktricks/src/pentesting-web/deserialization/README.md` · deserialization
+- `hacktricks/src/pentesting-web/deserialization/basic-.net-deserialization-objectdataprovider-gadgets-expandedwrapper-and-json.net.md` · basic .net deserialization objectdataprovider gadgets expandedwrapper and json.net
+- `hacktricks/src/pentesting-web/deserialization/basic-java-deserialization-objectinputstream-readobject.md` · basic java deserialization objectinputstream readobject
+- `hacktricks/src/pentesting-web/deserialization/exploiting-__viewstate-knowing-the-secret.md` · exploiting __viewstate knowing the secret
+- `hacktricks/src/pentesting-web/deserialization/exploiting-__viewstate-parameter.md` · exploiting __viewstate parameter
+- `hacktricks/src/pentesting-web/deserialization/java-dns-deserialization-and-gadgetprobe.md` · java dns deserialization and gadgetprobe
+- `hacktricks/src/pentesting-web/deserialization/java-jsf-viewstate-.faces-deserialization.md` · java jsf viewstate .faces deserialization
+- `hacktricks/src/pentesting-web/deserialization/java-signedobject-gated-deserialization.md` · java signedobject gated deserialization
+- `hacktricks/src/pentesting-web/deserialization/java-transformers-to-rutime-exec-payload.md` · java transformers to rutime exec payload
+- `hacktricks/src/pentesting-web/deserialization/jndi-java-naming-and-directory-interface-and-log4shell.md` · jndi java naming and directory interface and log4shell
+- `hacktricks/src/pentesting-web/deserialization/livewire-hydration-synthesizer-abuse.md` · livewire hydration synthesizer abuse
+- `hacktricks/src/pentesting-web/deserialization/nodejs-proto-prototype-pollution/README.md` · nodejs proto prototype pollution
+- `hacktricks/src/pentesting-web/deserialization/nodejs-proto-prototype-pollution/client-side-prototype-pollution.md` · client side prototype pollution
+- `hacktricks/src/pentesting-web/deserialization/nodejs-proto-prototype-pollution/express-prototype-pollution-gadgets.md` · express prototype pollution gadgets
+- `hacktricks/src/pentesting-web/deserialization/nodejs-proto-prototype-pollution/prototype-pollution-to-rce.md` · prototype pollution to rce
+- `hacktricks/src/pentesting-web/deserialization/php-deserialization-+-autoload-classes.md` · php deserialization + autoload classes
+- `hacktricks/src/pentesting-web/deserialization/python-yaml-deserialization.md` · python yaml deserialization
+- `hacktricks/src/pentesting-web/deserialization/ruby-_json-pollution.md` · ruby _json pollution
+- `hacktricks/src/pentesting-web/deserialization/ruby-class-pollution.md` · ruby class pollution
+- `hacktricks/src/pentesting-web/domain-subdomain-takeover.md` · domain subdomain takeover
+- `hacktricks/src/pentesting-web/email-injections.md` · email injections
+- `hacktricks/src/pentesting-web/file-inclusion/README.md` · file inclusion
+- `hacktricks/src/pentesting-web/file-inclusion/lfi2rce-via-compress.zlib-+-php_stream_prefer_studio-+-path-disclosure.md` · lfi2rce via compress.zlib + php_stream_prefer_studio + path disclosure
+- `hacktricks/src/pentesting-web/file-inclusion/lfi2rce-via-eternal-waiting.md` · lfi2rce via eternal waiting
+- `hacktricks/src/pentesting-web/file-inclusion/lfi2rce-via-nginx-temp-files.md` · lfi2rce via nginx temp files
+- `hacktricks/src/pentesting-web/file-inclusion/lfi2rce-via-php-filters.md` · lfi2rce via php filters
+- `hacktricks/src/pentesting-web/file-inclusion/lfi2rce-via-phpinfo.md` · lfi2rce via phpinfo
+- `hacktricks/src/pentesting-web/file-inclusion/lfi2rce-via-segmentation-fault.md` · lfi2rce via segmentation fault
+- `hacktricks/src/pentesting-web/file-inclusion/lfi2rce-via-temp-file-uploads.md` · lfi2rce via temp file uploads
+- `hacktricks/src/pentesting-web/file-inclusion/phar-deserialization.md` · phar deserialization
+- `hacktricks/src/pentesting-web/file-inclusion/via-php_session_upload_progress.md` · via php_session_upload_progress
+- `hacktricks/src/pentesting-web/file-upload/README.md` · file upload
+- `hacktricks/src/pentesting-web/file-upload/pdf-upload-xxe-and-cors-bypass.md` · pdf upload xxe and cors bypass
+- `hacktricks/src/pentesting-web/formula-csv-doc-latex-ghostscript-injection.md` · formula csv doc latex ghostscript injection
+- `hacktricks/src/pentesting-web/grpc-web-pentest.md` · grpc web pentest
+- `hacktricks/src/pentesting-web/h2c-smuggling.md` · h2c smuggling
+- `hacktricks/src/pentesting-web/hacking-jwt-json-web-tokens.md` · hacking jwt json web tokens
+- `hacktricks/src/pentesting-web/hacking-with-cookies/README.md` · hacking with cookies
+- `hacktricks/src/pentesting-web/hacking-with-cookies/cookie-bomb.md` · cookie bomb
+- `hacktricks/src/pentesting-web/hacking-with-cookies/cookie-jar-overflow.md` · cookie jar overflow
+- `hacktricks/src/pentesting-web/hacking-with-cookies/cookie-tossing.md` · cookie tossing
+- `hacktricks/src/pentesting-web/http-connection-contamination.md` · http connection contamination
+- `hacktricks/src/pentesting-web/http-connection-request-smuggling.md` · http connection request smuggling
+- `hacktricks/src/pentesting-web/http-request-smuggling/README.md` · http request smuggling
+- `hacktricks/src/pentesting-web/http-request-smuggling/browser-http-request-smuggling.md` · browser http request smuggling
+- `hacktricks/src/pentesting-web/http-request-smuggling/request-smuggling-in-http-2-downgrades.md` · request smuggling in http 2 downgrades
+- `hacktricks/src/pentesting-web/http-response-smuggling-desync.md` · http response smuggling desync
+- `hacktricks/src/pentesting-web/idor.md` · idor
+- `hacktricks/src/pentesting-web/iframe-traps.md` · iframe traps
+- `hacktricks/src/pentesting-web/json-xml-yaml-hacking.md` · json xml yaml hacking
+- `hacktricks/src/pentesting-web/ldap-injection.md` · ldap injection
+- `hacktricks/src/pentesting-web/login-bypass/README.md` · login bypass
+- `hacktricks/src/pentesting-web/login-bypass/sql-login-bypass.md` · sql login bypass
+- `hacktricks/src/pentesting-web/mass-assignment-cwe-915.md` · mass assignment cwe 915
+- `hacktricks/src/pentesting-web/nosql-injection.md` · nosql injection
+- `hacktricks/src/pentesting-web/oauth-to-account-takeover.md` · oauth to account takeover
+- `hacktricks/src/pentesting-web/open-redirect.md` · open redirect
+- `hacktricks/src/pentesting-web/orm-injection.md` · orm injection
+- `hacktricks/src/pentesting-web/parameter-pollution.md` · parameter pollution
+- `hacktricks/src/pentesting-web/phone-number-injections.md` · phone number injections
+- `hacktricks/src/pentesting-web/pocs-and-polygloths-cheatsheet/README.md` · pocs and polygloths cheatsheet
+- `hacktricks/src/pentesting-web/pocs-and-polygloths-cheatsheet/web-vulns-list.md` · web vulns list
+- `hacktricks/src/pentesting-web/postmessage-vulnerabilities/README.md` · postmessage vulnerabilities
+- `hacktricks/src/pentesting-web/postmessage-vulnerabilities/blocking-main-page-to-steal-postmessage.md` · blocking main page to steal postmessage
+- `hacktricks/src/pentesting-web/postmessage-vulnerabilities/bypassing-sop-with-iframes-1.md` · bypassing sop with iframes 1
+- `hacktricks/src/pentesting-web/postmessage-vulnerabilities/bypassing-sop-with-iframes-2.md` · bypassing sop with iframes 2
+- `hacktricks/src/pentesting-web/postmessage-vulnerabilities/steal-postmessage-modifying-iframe-location.md` · steal postmessage modifying iframe location
+- `hacktricks/src/pentesting-web/proxy-waf-protections-bypass.md` · proxy waf protections bypass
+- `hacktricks/src/pentesting-web/race-condition.md` · race condition
+- `hacktricks/src/pentesting-web/rate-limit-bypass.md` · rate limit bypass
+- `hacktricks/src/pentesting-web/registration-vulnerabilities.md` · registration vulnerabilities
+- `hacktricks/src/pentesting-web/regular-expression-denial-of-service-redos.md` · regular expression denial of service redos
+- `hacktricks/src/pentesting-web/reset-password.md` · reset password
+- `hacktricks/src/pentesting-web/reverse-tab-nabbing.md` · reverse tab nabbing
+- `hacktricks/src/pentesting-web/rsql-injection.md` · rsql injection
+- `hacktricks/src/pentesting-web/saml-attacks/README.md` · saml attacks
+- `hacktricks/src/pentesting-web/saml-attacks/saml-basics.md` · saml basics
+- `hacktricks/src/pentesting-web/server-side-inclusion-edge-side-inclusion-injection.md` · server side inclusion edge side inclusion injection
+- `hacktricks/src/pentesting-web/soap-jax-ws-threadlocal-auth-bypass.md` · soap jax ws threadlocal auth bypass
+- `hacktricks/src/pentesting-web/sql-injection/README.md` · sql injection
+- `hacktricks/src/pentesting-web/sql-injection/cypher-injection-neo4j.md` · cypher injection neo4j
+- `hacktricks/src/pentesting-web/sql-injection/ms-access-sql-injection.md` · ms access sql injection
+- `hacktricks/src/pentesting-web/sql-injection/mssql-injection.md` · mssql injection
+- `hacktricks/src/pentesting-web/sql-injection/mysql-injection/README.md` · mysql injection
+- `hacktricks/src/pentesting-web/sql-injection/mysql-injection/mysql-ssrf.md` · mysql ssrf
+- `hacktricks/src/pentesting-web/sql-injection/oracle-injection.md` · oracle injection
+- `hacktricks/src/pentesting-web/sql-injection/postgresql-injection/README.md` · postgresql injection
+- `hacktricks/src/pentesting-web/sql-injection/postgresql-injection/big-binary-files-upload-postgresql.md` · big binary files upload postgresql
+- `hacktricks/src/pentesting-web/sql-injection/postgresql-injection/dblink-lo_import-data-exfiltration.md` · dblink lo_import data exfiltration
+- `hacktricks/src/pentesting-web/sql-injection/postgresql-injection/network-privesc-port-scanner-and-ntlm-chanllenge-response-disclosure.md` · network privesc port scanner and ntlm chanllenge response disclosure
+- `hacktricks/src/pentesting-web/sql-injection/postgresql-injection/pl-pgsql-password-bruteforce.md` · pl pgsql password bruteforce
+- `hacktricks/src/pentesting-web/sql-injection/postgresql-injection/rce-with-postgresql-extensions.md` · rce with postgresql extensions
+- `hacktricks/src/pentesting-web/sql-injection/postgresql-injection/rce-with-postgresql-languages.md` · rce with postgresql languages
+- `hacktricks/src/pentesting-web/sql-injection/sqlmap/README.md` · sqlmap
+- `hacktricks/src/pentesting-web/sql-injection/sqlmap/second-order-injection-sqlmap.md` · second order injection sqlmap
+- `hacktricks/src/pentesting-web/sql-injection/sqlmap.md` · sqlmap
+- `hacktricks/src/pentesting-web/ssrf-server-side-request-forgery/README.md` · ssrf server side request forgery
+- `hacktricks/src/pentesting-web/ssrf-server-side-request-forgery/cloud-ssrf.md` · cloud ssrf
+- `hacktricks/src/pentesting-web/ssrf-server-side-request-forgery/ssrf-vulnerable-platforms.md` · ssrf vulnerable platforms
+- `hacktricks/src/pentesting-web/ssrf-server-side-request-forgery/url-format-bypass.md` · url format bypass
+- `hacktricks/src/pentesting-web/ssti-server-side-template-injection/README.md` · ssti server side template injection
+- `hacktricks/src/pentesting-web/ssti-server-side-template-injection/el-expression-language.md` · el expression language
+- `hacktricks/src/pentesting-web/ssti-server-side-template-injection/jinja2-ssti.md` · jinja2 ssti
+- `hacktricks/src/pentesting-web/timing-attacks.md` · timing attacks
+- `hacktricks/src/pentesting-web/unicode-injection/README.md` · unicode injection
+- `hacktricks/src/pentesting-web/unicode-injection/unicode-normalization.md` · unicode normalization
+- `hacktricks/src/pentesting-web/uuid-insecurities.md` · uuid insecurities
+- `hacktricks/src/pentesting-web/web-tool-wfuzz.md` · web tool wfuzz
+- `hacktricks/src/pentesting-web/web-vulnerabilities-methodology.md` · web vulnerabilities methodology
+- `hacktricks/src/pentesting-web/websocket-attacks.md` · websocket attacks
+- `hacktricks/src/pentesting-web/xpath-injection.md` · xpath injection
+- `hacktricks/src/pentesting-web/xs-search/README.md` · xs search
+- `hacktricks/src/pentesting-web/xs-search/connection-pool-by-destination-example.md` · connection pool by destination example
+- `hacktricks/src/pentesting-web/xs-search/connection-pool-example.md` · connection pool example
+- `hacktricks/src/pentesting-web/xs-search/cookie-bomb-+-onerror-xs-leak.md` · cookie bomb + onerror xs leak
+- `hacktricks/src/pentesting-web/xs-search/css-injection/README.md` · css injection
+- `hacktricks/src/pentesting-web/xs-search/css-injection/css-injection-code.md` · css injection code
+- `hacktricks/src/pentesting-web/xs-search/css-injection/less-code-injection.md` · less code injection
+- `hacktricks/src/pentesting-web/xs-search/event-loop-blocking-+-lazy-images.md` · event loop blocking + lazy images
+- `hacktricks/src/pentesting-web/xs-search/javascript-execution-xs-leak.md` · javascript execution xs leak
+- `hacktricks/src/pentesting-web/xs-search/performance.now-+-force-heavy-task.md` · performance.now + force heavy task
+- `hacktricks/src/pentesting-web/xs-search/performance.now-example.md` · performance.now example
+- `hacktricks/src/pentesting-web/xs-search/url-max-length-client-side.md` · url max length client side
+- `hacktricks/src/pentesting-web/xslt-server-side-injection-extensible-stylesheet-language-transformations.md` · xslt server side injection extensible stylesheet language transformations
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/README.md` · xss cross site scripting
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/abusing-service-workers.md` · abusing service workers
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/chrome-cache-to-xss.md` · chrome cache to xss
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/debugging-client-side-js.md` · debugging client side js
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/dom-clobbering.md` · dom clobbering
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/dom-invader.md` · dom invader
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/dom-xss.md` · dom xss
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/iframes-in-xss-and-csp.md` · iframes in xss and csp
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/integer-overflow.md` · integer overflow
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/js-hoisting.md` · js hoisting
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/other-js-tricks.md` · other js tricks
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/pdf-injection.md` · pdf injection
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/server-side-xss-dynamic-pdf.md` · server side xss dynamic pdf
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/shadow-dom.md` · shadow dom
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/sniff-leak.md` · sniff leak
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/some-same-origin-method-execution.md` · some same origin method execution
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/steal-info-js.md` · steal info js
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/wasm-linear-memory-template-overwrite-xss.md` · wasm linear memory template overwrite xss
+- `hacktricks/src/pentesting-web/xss-cross-site-scripting/xss-in-markdown.md` · xss in markdown
+- `hacktricks/src/pentesting-web/xssi-cross-site-script-inclusion.md` · xssi cross site script inclusion
+- `hacktricks/src/pentesting-web/xxe-xee-xml-external-entity.md` · xxe xee xml external entity
+
+## Productos web
+
+Entradas disponibles: **89**.
+
+- `hacktricks/src/network-services-pentesting/pentesting-web/403-and-401-bypasses.md` · 403 and 401 bypasses
+- `hacktricks/src/network-services-pentesting/pentesting-web/README.md` · pentesting web
+- `hacktricks/src/network-services-pentesting/pentesting-web/aem-adobe-experience-cloud.md` · aem adobe experience cloud
+- `hacktricks/src/network-services-pentesting/pentesting-web/angular.md` · angular
+- `hacktricks/src/network-services-pentesting/pentesting-web/apache-tapestry.md` · apache tapestry
+- `hacktricks/src/network-services-pentesting/pentesting-web/apache.md` · apache
+- `hacktricks/src/network-services-pentesting/pentesting-web/artifactory-hacking-guide.md` · artifactory hacking guide
+- `hacktricks/src/network-services-pentesting/pentesting-web/bolt-cms.md` · bolt cms
+- `hacktricks/src/network-services-pentesting/pentesting-web/buckets/README.md` · buckets
+- `hacktricks/src/network-services-pentesting/pentesting-web/buckets/firebase-database.md` · firebase database
+- `hacktricks/src/network-services-pentesting/pentesting-web/cgi.md` · cgi
+- `hacktricks/src/network-services-pentesting/pentesting-web/code-review-tools.md` · code review tools
+- `hacktricks/src/network-services-pentesting/pentesting-web/custom-protocols.md` · custom protocols
+- `hacktricks/src/network-services-pentesting/pentesting-web/django.md` · django
+- `hacktricks/src/network-services-pentesting/pentesting-web/dotnet-soap-wsdl-client-exploitation.md` · dotnet soap wsdl client exploitation
+- `hacktricks/src/network-services-pentesting/pentesting-web/dotnetnuke-dnn.md` · dotnetnuke dnn
+- `hacktricks/src/network-services-pentesting/pentesting-web/drupal/README.md` · drupal
+- `hacktricks/src/network-services-pentesting/pentesting-web/drupal/drupal-rce.md` · drupal rce
+- `hacktricks/src/network-services-pentesting/pentesting-web/electron-desktop-apps/README.md` · electron desktop apps
+- `hacktricks/src/network-services-pentesting/pentesting-web/electron-desktop-apps/electron-contextisolation-rce-via-electron-internal-code.md` · electron contextisolation rce via electron internal code
+- `hacktricks/src/network-services-pentesting/pentesting-web/electron-desktop-apps/electron-contextisolation-rce-via-ipc.md` · electron contextisolation rce via ipc
+- `hacktricks/src/network-services-pentesting/pentesting-web/electron-desktop-apps/electron-contextisolation-rce-via-preload-code.md` · electron contextisolation rce via preload code
+- `hacktricks/src/network-services-pentesting/pentesting-web/flask.md` · flask
+- `hacktricks/src/network-services-pentesting/pentesting-web/fortinet-fortiweb.md` · fortinet fortiweb
+- `hacktricks/src/network-services-pentesting/pentesting-web/geonetwork.md` · geonetwork
+- `hacktricks/src/network-services-pentesting/pentesting-web/git.md` · git
+- `hacktricks/src/network-services-pentesting/pentesting-web/golang.md` · golang
+- `hacktricks/src/network-services-pentesting/pentesting-web/grafana.md` · grafana
+- `hacktricks/src/network-services-pentesting/pentesting-web/graphql.md` · graphql
+- `hacktricks/src/network-services-pentesting/pentesting-web/h2-java-sql-database.md` · h2 java sql database
+- `hacktricks/src/network-services-pentesting/pentesting-web/iis-internet-information-services.md` · iis internet information services
+- `hacktricks/src/network-services-pentesting/pentesting-web/imagemagick-security.md` · imagemagick security
+- `hacktricks/src/network-services-pentesting/pentesting-web/ispconfig.md` · ispconfig
+- `hacktricks/src/network-services-pentesting/pentesting-web/jboss.md` · jboss
+- `hacktricks/src/network-services-pentesting/pentesting-web/jira.md` · jira
+- `hacktricks/src/network-services-pentesting/pentesting-web/joomla.md` · joomla
+- `hacktricks/src/network-services-pentesting/pentesting-web/jsp.md` · jsp
+- `hacktricks/src/network-services-pentesting/pentesting-web/laravel.md` · laravel
+- `hacktricks/src/network-services-pentesting/pentesting-web/meshcentral.md` · meshcentral
+- `hacktricks/src/network-services-pentesting/pentesting-web/microsoft-sharepoint.md` · microsoft sharepoint
+- `hacktricks/src/network-services-pentesting/pentesting-web/moodle.md` · moodle
+- `hacktricks/src/network-services-pentesting/pentesting-web/nextjs.md` · nextjs
+- `hacktricks/src/network-services-pentesting/pentesting-web/nginx.md` · nginx
+- `hacktricks/src/network-services-pentesting/pentesting-web/nodejs-express.md` · nodejs express
+- `hacktricks/src/network-services-pentesting/pentesting-web/perl-tricks.md` · perl tricks
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/README.md` · php tricks esp
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-rce-abusing-object-creation-new-usd_get-a-usd_get-b.md` · php rce abusing object creation new usd_get a usd_get b
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-ssrf.md` · php ssrf
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/README.md` · php useful functions disable_functions open_basedir bypass
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-dl-function.md` · disable_functions bypass dl function
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-imagick-less-than-3.3.0-php-greater-than-5.4-exploit.md` · disable_functions bypass imagick less than 3.3.0 php greater than 5.4 exploit
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-mod_cgi.md` · disable_functions bypass mod_cgi
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-4-greater-than-4.2.0-php-5-pcntl_exec.md` · disable_functions bypass php 4 greater than 4.2.0 php 5 pcntl_exec
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-5.2-fopen-exploit.md` · disable_functions bypass php 5.2 fopen exploit
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-5.2.3-win32std-ext-protections-bypass.md` · disable_functions bypass php 5.2.3 win32std ext protections bypass
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-5.2.4-and-5.2.5-php-curl.md` · disable_functions bypass php 5.2.4 and 5.2.5 php curl
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-7.0-7.4-nix-only.md` · disable_functions bypass php 7.0 7.4 nix only
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-fpm-fastcgi.md` · disable_functions bypass php fpm fastcgi
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-less-than-5.2.9-on-windows.md` · disable_functions bypass php less than 5.2.9 on windows
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-perl-extension-safe_mode-bypass-exploit.md` · disable_functions bypass php perl extension safe_mode bypass exploit
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-php-safe_mode-bypass-via-proc_open-and-custom-environment-exploit.md` · disable_functions bypass php safe_mode bypass via proc_open and custom environment exploit
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-bypass-via-mem.md` · disable_functions bypass via mem
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-php-5.2.4-ioncube-extension-exploit.md` · disable_functions php 5.2.4 ioncube extension exploit
+- `hacktricks/src/network-services-pentesting/pentesting-web/php-tricks-esp/php-useful-functions-disable_functions-open_basedir-bypass/disable_functions-php-5.x-shellshock-exploit.md` · disable_functions php 5.x shellshock exploit
+- `hacktricks/src/network-services-pentesting/pentesting-web/prestashop.md` · prestashop
+- `hacktricks/src/network-services-pentesting/pentesting-web/proxmox-ve.md` · proxmox ve
+- `hacktricks/src/network-services-pentesting/pentesting-web/put-method-webdav.md` · put method webdav
+- `hacktricks/src/network-services-pentesting/pentesting-web/python.md` · python
+- `hacktricks/src/network-services-pentesting/pentesting-web/rocket-chat.md` · rocket chat
+- `hacktricks/src/network-services-pentesting/pentesting-web/roundcube.md` · roundcube
+- `hacktricks/src/network-services-pentesting/pentesting-web/ruby-tricks.md` · ruby tricks
+- `hacktricks/src/network-services-pentesting/pentesting-web/servicenow.md` · servicenow
+- `hacktricks/src/network-services-pentesting/pentesting-web/sitecore/README.md` · sitecore
+- `hacktricks/src/network-services-pentesting/pentesting-web/special-http-headers.md` · special http headers
+- `hacktricks/src/network-services-pentesting/pentesting-web/spring-actuators.md` · spring actuators
+- `hacktricks/src/network-services-pentesting/pentesting-web/symphony.md` · symphony
+- `hacktricks/src/network-services-pentesting/pentesting-web/telerik-ui-aspnet-ajax-unsafe-reflection-webresource-axd.md` · telerik ui aspnet ajax unsafe reflection webresource axd
+- `hacktricks/src/network-services-pentesting/pentesting-web/tomcat/README.md` · tomcat
+- `hacktricks/src/network-services-pentesting/pentesting-web/traefik.md` · traefik
+- `hacktricks/src/network-services-pentesting/pentesting-web/uncovering-cloudflare.md` · uncovering cloudflare
+- `hacktricks/src/network-services-pentesting/pentesting-web/veeam-service-provider-console.md` · veeam service provider console
+- `hacktricks/src/network-services-pentesting/pentesting-web/vmware-esx-vcenter....md` · vmware esx vcenter...
+- `hacktricks/src/network-services-pentesting/pentesting-web/vuejs.md` · vuejs
+- `hacktricks/src/network-services-pentesting/pentesting-web/web-api-pentesting.md` · web api pentesting
+- `hacktricks/src/network-services-pentesting/pentesting-web/werkzeug.md` · werkzeug
+- `hacktricks/src/network-services-pentesting/pentesting-web/wordpress.md` · wordpress
+- `hacktricks/src/network-services-pentesting/pentesting-web/wsgi.md` · wsgi
+- `hacktricks/src/network-services-pentesting/pentesting-web/zabbix.md` · zabbix
+- `hacktricks/src/network-services-pentesting/pentesting-web/zoneminder-motioneye-motion.md` · zoneminder motioneye motion
+
+## Servicios de red
+
+Entradas disponibles: **111**.
+
+- `hacktricks/src/network-services-pentesting/10000-network-data-management-protocol-ndmp.md` · 10000 network data management protocol ndmp
+- `hacktricks/src/network-services-pentesting/1026-pentesting-rusersd.md` · 1026 pentesting rusersd
+- `hacktricks/src/network-services-pentesting/1080-pentesting-socks.md` · 1080 pentesting socks
+- `hacktricks/src/network-services-pentesting/1099-pentesting-java-rmi.md` · 1099 pentesting java rmi
+- `hacktricks/src/network-services-pentesting/11211-memcache/README.md` · 11211 memcache
+- `hacktricks/src/network-services-pentesting/11211-memcache/memcache-commands.md` · memcache commands
+- `hacktricks/src/network-services-pentesting/113-pentesting-ident.md` · 113 pentesting ident
+- `hacktricks/src/network-services-pentesting/12346-udp-pentesting-cisco-sd-wan-control-plane.md` · 12346 udp pentesting cisco sd wan control plane
+- `hacktricks/src/network-services-pentesting/135-pentesting-msrpc.md` · 135 pentesting msrpc
+- `hacktricks/src/network-services-pentesting/137-138-139-pentesting-netbios.md` · 137 138 139 pentesting netbios
+- `hacktricks/src/network-services-pentesting/1414-pentesting-ibmmq.md` · 1414 pentesting ibmmq
+- `hacktricks/src/network-services-pentesting/1521-1522-1529-pentesting-oracle-listener.md` · 1521 1522 1529 pentesting oracle listener
+- `hacktricks/src/network-services-pentesting/15672-pentesting-rabbitmq-management.md` · 15672 pentesting rabbitmq management
+- `hacktricks/src/network-services-pentesting/1723-pentesting-pptp.md` · 1723 pentesting pptp
+- `hacktricks/src/network-services-pentesting/1883-pentesting-mqtt-mosquitto.md` · 1883 pentesting mqtt mosquitto
+- `hacktricks/src/network-services-pentesting/2375-pentesting-docker.md` · 2375 pentesting docker
+- `hacktricks/src/network-services-pentesting/24007-24008-24009-49152-pentesting-glusterfs.md` · 24007 24008 24009 49152 pentesting glusterfs
+- `hacktricks/src/network-services-pentesting/27017-27018-mongodb.md` · 27017 27018 mongodb
+- `hacktricks/src/network-services-pentesting/3128-pentesting-squid.md` · 3128 pentesting squid
+- `hacktricks/src/network-services-pentesting/32100-udp-pentesting-pppp-cs2-p2p-cameras.md` · 32100 udp pentesting pppp cs2 p2p cameras
+- `hacktricks/src/network-services-pentesting/3260-pentesting-iscsi.md` · 3260 pentesting iscsi
+- `hacktricks/src/network-services-pentesting/3299-pentesting-saprouter.md` · 3299 pentesting saprouter
+- `hacktricks/src/network-services-pentesting/3632-pentesting-distcc.md` · 3632 pentesting distcc
+- `hacktricks/src/network-services-pentesting/3690-pentesting-subversion-svn-server.md` · 3690 pentesting subversion svn server
+- `hacktricks/src/network-services-pentesting/3702-udp-pentesting-ws-discovery.md` · 3702 udp pentesting ws discovery
+- `hacktricks/src/network-services-pentesting/4222-pentesting-nats.md` · 4222 pentesting nats
+- `hacktricks/src/network-services-pentesting/43-pentesting-whois.md` · 43 pentesting whois
+- `hacktricks/src/network-services-pentesting/4369-pentesting-erlang-port-mapper-daemon-epmd.md` · 4369 pentesting erlang port mapper daemon epmd
+- `hacktricks/src/network-services-pentesting/44134-pentesting-tiller-helm.md` · 44134 pentesting tiller helm
+- `hacktricks/src/network-services-pentesting/44818-ethernetip.md` · 44818 ethernetip
+- `hacktricks/src/network-services-pentesting/47808-udp-bacnet.md` · 47808 udp bacnet
+- `hacktricks/src/network-services-pentesting/4786-cisco-smart-install.md` · 4786 cisco smart install
+- `hacktricks/src/network-services-pentesting/4840-pentesting-opc-ua.md` · 4840 pentesting opc ua
+- `hacktricks/src/network-services-pentesting/49-pentesting-tacacs+.md` · 49 pentesting tacacs+
+- `hacktricks/src/network-services-pentesting/5000-pentesting-docker-registry.md` · 5000 pentesting docker registry
+- `hacktricks/src/network-services-pentesting/50030-50060-50070-50075-50090-pentesting-hadoop.md` · 50030 50060 50070 50075 50090 pentesting hadoop
+- `hacktricks/src/network-services-pentesting/512-pentesting-rexec.md` · 512 pentesting rexec
+- `hacktricks/src/network-services-pentesting/515-pentesting-line-printer-daemon-lpd.md` · 515 pentesting line printer daemon lpd
+- `hacktricks/src/network-services-pentesting/5353-udp-multicast-dns-mdns.md` · 5353 udp multicast dns mdns
+- `hacktricks/src/network-services-pentesting/5439-pentesting-redshift.md` · 5439 pentesting redshift
+- `hacktricks/src/network-services-pentesting/554-8554-pentesting-rtsp.md` · 554 8554 pentesting rtsp
+- `hacktricks/src/network-services-pentesting/5555-android-debug-bridge.md` · 5555 android debug bridge
+- `hacktricks/src/network-services-pentesting/5601-pentesting-kibana.md` · 5601 pentesting kibana
+- `hacktricks/src/network-services-pentesting/5671-5672-pentesting-amqp.md` · 5671 5672 pentesting amqp
+- `hacktricks/src/network-services-pentesting/584-pentesting-afp.md` · 584 pentesting afp
+- `hacktricks/src/network-services-pentesting/5984-pentesting-couchdb.md` · 5984 pentesting couchdb
+- `hacktricks/src/network-services-pentesting/5985-5986-pentesting-omi.md` · 5985 5986 pentesting omi
+- `hacktricks/src/network-services-pentesting/5985-5986-pentesting-winrm.md` · 5985 5986 pentesting winrm
+- `hacktricks/src/network-services-pentesting/6000-pentesting-x11.md` · 6000 pentesting x11
+- `hacktricks/src/network-services-pentesting/623-udp-ipmi.md` · 623 udp ipmi
+- `hacktricks/src/network-services-pentesting/6379-pentesting-redis.md` · 6379 pentesting redis
+- `hacktricks/src/network-services-pentesting/69-udp-tftp.md` · 69 udp tftp
+- `hacktricks/src/network-services-pentesting/7-tcp-udp-pentesting-echo.md` · 7 tcp udp pentesting echo
+- `hacktricks/src/network-services-pentesting/700-pentesting-epp.md` · 700 pentesting epp
+- `hacktricks/src/network-services-pentesting/8009-pentesting-apache-jserv-protocol-ajp.md` · 8009 pentesting apache jserv protocol ajp
+- `hacktricks/src/network-services-pentesting/8086-pentesting-influxdb.md` · 8086 pentesting influxdb
+- `hacktricks/src/network-services-pentesting/8089-splunkd.md` · 8089 splunkd
+- `hacktricks/src/network-services-pentesting/8333-18333-38333-18444-pentesting-bitcoin.md` · 8333 18333 38333 18444 pentesting bitcoin
+- `hacktricks/src/network-services-pentesting/873-pentesting-rsync.md` · 873 pentesting rsync
+- `hacktricks/src/network-services-pentesting/9000-pentesting-fastcgi.md` · 9000 pentesting fastcgi
+- `hacktricks/src/network-services-pentesting/9001-pentesting-hsqldb.md` · 9001 pentesting hsqldb
+- `hacktricks/src/network-services-pentesting/9100-pjl.md` · 9100 pjl
+- `hacktricks/src/network-services-pentesting/9200-pentesting-elasticsearch.md` · 9200 pentesting elasticsearch
+- `hacktricks/src/network-services-pentesting/cassandra.md` · cassandra
+- `hacktricks/src/network-services-pentesting/ipsec-ike-vpn-pentesting.md` · ipsec ike vpn pentesting
+- `hacktricks/src/network-services-pentesting/nfs-service-pentesting.md` · nfs service pentesting
+- `hacktricks/src/network-services-pentesting/pentesting-264-check-point-firewall-1.md` · pentesting 264 check point firewall 1
+- `hacktricks/src/network-services-pentesting/pentesting-631-internet-printing-protocol-ipp.md` · pentesting 631 internet printing protocol ipp
+- `hacktricks/src/network-services-pentesting/pentesting-compaq-hp-insight-manager.md` · pentesting compaq hp insight manager
+- `hacktricks/src/network-services-pentesting/pentesting-dns.md` · pentesting dns
+- `hacktricks/src/network-services-pentesting/pentesting-finger.md` · pentesting finger
+- `hacktricks/src/network-services-pentesting/pentesting-ftp/README.md` · pentesting ftp
+- `hacktricks/src/network-services-pentesting/pentesting-ftp/ftp-bounce-attack.md` · ftp bounce attack
+- `hacktricks/src/network-services-pentesting/pentesting-ftp/ftp-bounce-download-2oftp-file.md` · ftp bounce download 2oftp file
+- `hacktricks/src/network-services-pentesting/pentesting-imap.md` · pentesting imap
+- `hacktricks/src/network-services-pentesting/pentesting-irc.md` · pentesting irc
+- `hacktricks/src/network-services-pentesting/pentesting-iso-8583-payment-sockets.md` · pentesting iso 8583 payment sockets
+- `hacktricks/src/network-services-pentesting/pentesting-jdwp-java-debug-wire-protocol.md` · pentesting jdwp java debug wire protocol
+- `hacktricks/src/network-services-pentesting/pentesting-kerberos-88/README.md` · pentesting kerberos 88
+- `hacktricks/src/network-services-pentesting/pentesting-kerberos-88/harvesting-tickets-from-linux.md` · harvesting tickets from linux
+- `hacktricks/src/network-services-pentesting/pentesting-kerberos-88/harvesting-tickets-from-windows.md` · harvesting tickets from windows
+- `hacktricks/src/network-services-pentesting/pentesting-ldap.md` · pentesting ldap
+- `hacktricks/src/network-services-pentesting/pentesting-modbus.md` · pentesting modbus
+- `hacktricks/src/network-services-pentesting/pentesting-mssql-microsoft-sql-server/README.md` · pentesting mssql microsoft sql server
+- `hacktricks/src/network-services-pentesting/pentesting-mssql-microsoft-sql-server/types-of-mssql-users.md` · types of mssql users
+- `hacktricks/src/network-services-pentesting/pentesting-mysql.md` · pentesting mysql
+- `hacktricks/src/network-services-pentesting/pentesting-ntp.md` · pentesting ntp
+- `hacktricks/src/network-services-pentesting/pentesting-pop.md` · pentesting pop
+- `hacktricks/src/network-services-pentesting/pentesting-postgresql.md` · pentesting postgresql
+- `hacktricks/src/network-services-pentesting/pentesting-rdp.md` · pentesting rdp
+- `hacktricks/src/network-services-pentesting/pentesting-remote-gdbserver.md` · pentesting remote gdbserver
+- `hacktricks/src/network-services-pentesting/pentesting-rlogin.md` · pentesting rlogin
+- `hacktricks/src/network-services-pentesting/pentesting-rpcbind.md` · pentesting rpcbind
+- `hacktricks/src/network-services-pentesting/pentesting-rsh.md` · pentesting rsh
+- `hacktricks/src/network-services-pentesting/pentesting-sap.md` · pentesting sap
+- `hacktricks/src/network-services-pentesting/pentesting-smb/README.md` · pentesting smb
+- `hacktricks/src/network-services-pentesting/pentesting-smb/ksmbd-attack-surface-and-fuzzing-syzkaller.md` · ksmbd attack surface and fuzzing syzkaller
+- `hacktricks/src/network-services-pentesting/pentesting-smb/rpcclient-enumeration.md` · rpcclient enumeration
+- `hacktricks/src/network-services-pentesting/pentesting-smtp/README.md` · pentesting smtp
+- `hacktricks/src/network-services-pentesting/pentesting-smtp/smtp-commands.md` · smtp commands
+- `hacktricks/src/network-services-pentesting/pentesting-smtp/smtp-smuggling.md` · smtp smuggling
+- `hacktricks/src/network-services-pentesting/pentesting-snmp/README.md` · pentesting snmp
+- `hacktricks/src/network-services-pentesting/pentesting-snmp/cisco-snmp.md` · cisco snmp
+- `hacktricks/src/network-services-pentesting/pentesting-snmp/snmp-rce.md` · snmp rce
+- `hacktricks/src/network-services-pentesting/pentesting-ssh.md` · pentesting ssh
+- `hacktricks/src/network-services-pentesting/pentesting-telnet.md` · pentesting telnet
+- `hacktricks/src/network-services-pentesting/pentesting-veeam-backup-and-replication.md` · pentesting veeam backup and replication
+- `hacktricks/src/network-services-pentesting/pentesting-vnc.md` · pentesting vnc
+- `hacktricks/src/network-services-pentesting/pentesting-voip/README.md` · pentesting voip
+- `hacktricks/src/network-services-pentesting/pentesting-voip/basic-voip-protocols/README.md` · basic voip protocols
+- `hacktricks/src/network-services-pentesting/pentesting-voip/basic-voip-protocols/sip-session-initiation-protocol.md` · sip session initiation protocol
+
+## Móvil
+
+Entradas disponibles: **67**.
+
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/README.md` · android app pentesting
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/abusing-android-media-pipelines-image-parsers.md` · abusing android media pipelines image parsers
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/accessibility-services-abuse.md` · accessibility services abuse
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/adb-commands.md` · adb commands
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-anti-instrumentation-and-ssl-pinning-bypass.md` · android anti instrumentation and ssl pinning bypass
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-application-level-virtualization.md` · android application level virtualization
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-applications-basics.md` · android applications basics
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-enterprise-work-profile-bypass.md` · android enterprise work profile bypass
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-hce-nfc-emv-relay-attacks.md` · android hce nfc emv relay attacks
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-physical-attacks.md` · android physical attacks
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-task-hijacking.md` · android task hijacking
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/android-vpn-bypass.md` · android vpn bypass
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/apk-decompilers.md` · apk decompilers
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/avd-android-virtual-device.md` · avd android virtual device
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/baseband-and-soc-isolation-exploitation.md` · baseband and soc isolation exploitation
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/bypass-biometric-authentication-android.md` · bypass biometric authentication android
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/content-protocol.md` · content protocol
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/drozer-tutorial/README.md` · drozer tutorial
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/drozer-tutorial/exploiting-content-providers.md` · exploiting content providers
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/exploiting-a-debuggeable-applciation.md` · exploiting a debuggeable applciation
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/firmware-level-zygote-backdoor-libandroid_runtime.md` · firmware level zygote backdoor libandroid_runtime
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/flutter.md` · flutter
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/frida-tutorial/README.md` · frida tutorial
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-1.md` · frida tutorial 1
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-2.md` · frida tutorial 2
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/frida-tutorial/objection-tutorial.md` · objection tutorial
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/frida-tutorial/owaspuncrackable-1.md` · owaspuncrackable 1
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/google-ctf-2018-shall-we-play-a-game.md` · google ctf 2018 shall we play a game
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/in-memory-jni-shellcode-execution.md` · in memory jni shellcode execution
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/inputmethodservice-ime-abuse.md` · inputmethodservice ime abuse
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/insecure-in-app-update-rce.md` · insecure in app update rce
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/install-burp-certificate.md` · install burp certificate
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/intent-injection.md` · intent injection
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/make-apk-accept-ca-certificate.md` · make apk accept ca certificate
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/manual-deobfuscation.md` · manual deobfuscation
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/play-integrity-attestation-bypass.md` · play integrity attestation bypass
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/react-native-application.md` · react native application
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/reversing-native-libraries.md` · reversing native libraries
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/shizuku-privileged-api.md` · shizuku privileged api
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/smali-changes.md` · smali changes
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/spoofing-your-location-in-play-store.md` · spoofing your location in play store
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/tapjacking.md` · tapjacking
+- `hacktricks/src/mobile-pentesting/android-app-pentesting/webview-attacks.md` · webview attacks
+- `hacktricks/src/mobile-pentesting/android-checklist.md` · android checklist
+- `hacktricks/src/mobile-pentesting/cordova-apps.md` · cordova apps
+- `hacktricks/src/mobile-pentesting/ios-pentesting/README.md` · ios pentesting
+- `hacktricks/src/mobile-pentesting/ios-pentesting/air-keyboard-remote-input-injection.md` · air keyboard remote input injection
+- `hacktricks/src/mobile-pentesting/ios-pentesting/basic-ios-testing-operations.md` · basic ios testing operations
+- `hacktricks/src/mobile-pentesting/ios-pentesting/burp-configuration-for-ios.md` · burp configuration for ios
+- `hacktricks/src/mobile-pentesting/ios-pentesting/extracting-entitlements-from-compiled-application.md` · extracting entitlements from compiled application
+- `hacktricks/src/mobile-pentesting/ios-pentesting/frida-configuration-in-ios.md` · frida configuration in ios
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-app-extensions.md` · ios app extensions
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-basics.md` · ios basics
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-custom-uri-handlers-deeplinks-custom-schemes.md` · ios custom uri handlers deeplinks custom schemes
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-hooking-with-objection.md` · ios hooking with objection
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-pentesting-without-jailbreak.md` · ios pentesting without jailbreak
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-protocol-handlers.md` · ios protocol handlers
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-serialisation-and-encoding.md` · ios serialisation and encoding
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-testing-environment.md` · ios testing environment
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-uiactivity-sharing.md` · ios uiactivity sharing
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-uipasteboard.md` · ios uipasteboard
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-universal-links.md` · ios universal links
+- `hacktricks/src/mobile-pentesting/ios-pentesting/ios-webviews.md` · ios webviews
+- `hacktricks/src/mobile-pentesting/ios-pentesting/itunesstored-bookassetd-sandbox-escape.md` · itunesstored bookassetd sandbox escape
+- `hacktricks/src/mobile-pentesting/ios-pentesting/zero-click-messaging-image-parser-chains.md` · zero click messaging image parser chains
+- `hacktricks/src/mobile-pentesting/ios-pentesting-checklist.md` · ios pentesting checklist
+- `hacktricks/src/mobile-pentesting/xamarin-apps.md` · xamarin apps
+
+## IA
+
+Entradas disponibles: **25**.
+
+- `hacktricks/src/AI/AI-Assisted-Fuzzing-and-Vulnerability-Discovery.md` · AI Assisted Fuzzing and Vulnerability Discovery
+- `hacktricks/src/AI/AI-Burp-MCP.md` · AI Burp MCP
+- `hacktricks/src/AI/AI-Deep-Learning.md` · AI Deep Learning
+- `hacktricks/src/AI/AI-MCP-Servers.md` · AI MCP Servers
+- `hacktricks/src/AI/AI-Model-Data-Preparation-and-Evaluation.md` · AI Model Data Preparation and Evaluation
+- `hacktricks/src/AI/AI-Models-RCE.md` · AI Models RCE
+- `hacktricks/src/AI/AI-Prompts.md` · AI Prompts
+- `hacktricks/src/AI/AI-Reinforcement-Learning-Algorithms.md` · AI Reinforcement Learning Algorithms
+- `hacktricks/src/AI/AI-Risk-Frameworks.md` · AI Risk Frameworks
+- `hacktricks/src/AI/AI-Supervised-Learning-Algorithms.md` · AI Supervised Learning Algorithms
+- `hacktricks/src/AI/AI-Unsupervised-Learning-Algorithms.md` · AI Unsupervised Learning Algorithms
+- `hacktricks/src/AI/AI-llm-architecture/0.-basic-llm-concepts.md` · 0. basic llm concepts
+- `hacktricks/src/AI/AI-llm-architecture/1.-tokenizing.md` · 1. tokenizing
+- `hacktricks/src/AI/AI-llm-architecture/2.-data-sampling.md` · 2. data sampling
+- `hacktricks/src/AI/AI-llm-architecture/3.-token-embeddings.md` · 3. token embeddings
+- `hacktricks/src/AI/AI-llm-architecture/4.-attention-mechanisms.md` · 4. attention mechanisms
+- `hacktricks/src/AI/AI-llm-architecture/5.-llm-architecture.md` · 5. llm architecture
+- `hacktricks/src/AI/AI-llm-architecture/6.-pre-training-and-loading-models.md` · 6. pre training and loading models
+- `hacktricks/src/AI/AI-llm-architecture/7.0.-lora-improvements-in-fine-tuning.md` · 7.0. lora improvements in fine tuning
+- `hacktricks/src/AI/AI-llm-architecture/7.1.-fine-tuning-for-classification.md` · 7.1. fine tuning for classification
+- `hacktricks/src/AI/AI-llm-architecture/7.2.-fine-tuning-to-follow-instructions.md` · 7.2. fine tuning to follow instructions
+- `hacktricks/src/AI/AI-llm-architecture/README.md` · AI llm architecture
+- `hacktricks/src/AI/KYC-Bypass-Using-AI.md` · KYC Bypass Using AI
+- `hacktricks/src/AI/README.md` · AI
+- `hacktricks/src/AI/Web-Black-Box-AI-Pentester-Bots.md` · Web Black Box AI Pentester Bots
+
+## Cloud y hardening Linux
+
+Entradas disponibles: **90**.
+
+- `hacktricks/src/linux-hardening/README.md` · linux hardening
+- `hacktricks/src/linux-hardening/containers-namespaces/README.md` · containers namespaces
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/README.md` · container security
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/assessment-and-hardening.md` · assessment and hardening
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/authorization-plugins.md` · authorization plugins
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/distroless.md` · distroless
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/image-security-and-secrets.md` · image security and secrets
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/privileged-containers.md` · privileged containers
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/README.md` · protections
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/apparmor.md` · apparmor
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/capabilities.md` · capabilities
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/cgroups.md` · cgroups
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/masked-paths.md` · masked paths
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/README.md` · namespaces
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/cgroup-namespace.md` · cgroup namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/ipc-namespace.md` · ipc namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/mount-namespace.md` · mount namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/network-namespace.md` · network namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/pid-namespace.md` · pid namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/time-namespace.md` · time namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/user-namespace.md` · user namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/namespaces/uts-namespace.md` · uts namespace
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/no-new-privileges.md` · no new privileges
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/read-only-paths.md` · read only paths
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/seccomp.md` · seccomp
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/protections/selinux.md` · selinux
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/runtime-api-and-daemon-exposure.md` · runtime api and daemon exposure
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/runtimes-and-engines.md` · runtimes and engines
+- `hacktricks/src/linux-hardening/containers-namespaces/container-security/sensitive-host-mounts.md` · sensitive host mounts
+- `hacktricks/src/linux-hardening/containers-namespaces/containerd-ctr-privilege-escalation.md` · containerd ctr privilege escalation
+- `hacktricks/src/linux-hardening/containers-namespaces/runc-privilege-escalation.md` · runc privilege escalation
+- `hacktricks/src/linux-hardening/interesting-files-permissions/README.md` · interesting files permissions
+- `hacktricks/src/linux-hardening/interesting-files-permissions/ld.so.conf-example.md` · ld.so.conf example
+- `hacktricks/src/linux-hardening/interesting-files-permissions/linux-capabilities.md` · linux capabilities
+- `hacktricks/src/linux-hardening/interesting-files-permissions/nfs-no_root_squash-misconfiguration-pe.md` · nfs no_root_squash misconfiguration pe
+- `hacktricks/src/linux-hardening/interesting-files-permissions/selinux.md` · selinux
+- `hacktricks/src/linux-hardening/interesting-files-permissions/suid-sgid-and-acl-triage.md` · suid sgid and acl triage
+- `hacktricks/src/linux-hardening/interesting-files-permissions/suid-shared-library-and-linker-abuse.md` · suid shared library and linker abuse
+- `hacktricks/src/linux-hardening/interesting-files-permissions/wildcards-spare-tricks.md` · wildcards spare tricks
+- `hacktricks/src/linux-hardening/interesting-files-permissions/write-to-root.md` · write to root
+- `hacktricks/src/linux-hardening/linux-basics/README.md` · linux basics
+- `hacktricks/src/linux-hardening/linux-basics/bypass-linux-restrictions/README.md` · bypass linux restrictions
+- `hacktricks/src/linux-hardening/linux-basics/bypass-linux-restrictions/bypass-fs-protections-read-only-no-exec-distroless/README.md` · bypass fs protections read only no exec distroless
+- `hacktricks/src/linux-hardening/linux-basics/bypass-linux-restrictions/bypass-fs-protections-read-only-no-exec-distroless/ddexec.md` · ddexec
+- `hacktricks/src/linux-hardening/linux-basics/linux-environment-variables.md` · linux environment variables
+- `hacktricks/src/linux-hardening/linux-basics/linux-privilege-escalation/README.md` · linux privilege escalation
+- `hacktricks/src/linux-hardening/linux-basics/shell-startup-aliases-and-history.md` · shell startup aliases and history
+- `hacktricks/src/linux-hardening/linux-basics/useful-linux-commands.md` · useful linux commands
+- `hacktricks/src/linux-hardening/main-system-information/README.md` · main system information
+- `hacktricks/src/linux-hardening/main-system-information/escaping-from-limited-bash.md` · escaping from limited bash
+- `hacktricks/src/linux-hardening/main-system-information/filesystem-inodes-and-recovery.md` · filesystem inodes and recovery
+- `hacktricks/src/linux-hardening/main-system-information/filesystem-links-and-file-descriptors.md` · filesystem links and file descriptors
+- `hacktricks/src/linux-hardening/main-system-information/kernel-lpe-cves/README.md` · kernel lpe cves
+- `hacktricks/src/linux-hardening/main-system-information/kernel-lpe-cves/copy-fail-af_alg-splice-page-cache-overwrite-cve-2026-31431.md` · copy fail af_alg splice page cache overwrite cve 2026 31431
+- `hacktricks/src/linux-hardening/main-system-information/kernel-lpe-cves/linux-ptrace-exit-race-pidfd_getfd-fd-theft.md` · linux ptrace exit race pidfd_getfd fd theft
+- `hacktricks/src/linux-hardening/main-system-information/kernel-lpe-cves/posix-cpu-timers-toctou-cve-2025-38352.md` · posix cpu timers toctou cve 2025 38352
+- `hacktricks/src/linux-hardening/main-system-information/kernel-lpe-cves/vmware-tools-service-discovery-untrusted-search-path-cve-2025-41244.md` · vmware tools service discovery untrusted search path cve 2025 41244
+- `hacktricks/src/linux-hardening/main-system-information/kernel-modules-and-modprobe.md` · kernel modules and modprobe
+- `hacktricks/src/linux-hardening/main-system-information/kernel-vulnerability-assessment.md` · kernel vulnerability assessment
+- `hacktricks/src/linux-hardening/main-system-information/linux-privilege-escalation-checklist.md` · linux privilege escalation checklist
+- `hacktricks/src/linux-hardening/main-system-information/sudo-command-abuse.md` · sudo command abuse
+- `hacktricks/src/linux-hardening/network-information/README.md` · network information
+- `hacktricks/src/linux-hardening/network-information/cisco-vmanage.md` · cisco vmanage
+- `hacktricks/src/linux-hardening/network-information/local-network-and-socket-triage.md` · local network and socket triage
+- `hacktricks/src/linux-hardening/network-information/socket-command-injection.md` · socket command injection
+- `hacktricks/src/linux-hardening/network-information/traffic-capture-and-firewall-egress.md` · traffic capture and firewall egress
+- `hacktricks/src/linux-hardening/post-exploitation/README.md` · post exploitation
+- `hacktricks/src/linux-hardening/post-exploitation/cloud-instance-metadata.md` · cloud instance metadata
+- `hacktricks/src/linux-hardening/post-exploitation/trojanized-system-daemons-and-reverse-proxies.md` · trojanized system daemons and reverse proxies
+- `hacktricks/src/linux-hardening/processes-crontab-systemd-dbus/README.md` · processes crontab systemd dbus
+- `hacktricks/src/linux-hardening/processes-crontab-systemd-dbus/cron-and-systemd-timers.md` · cron and systemd timers
+- `hacktricks/src/linux-hardening/processes-crontab-systemd-dbus/d-bus-enumeration-and-command-injection-privilege-escalation.md` · d bus enumeration and command injection privilege escalation
+- `hacktricks/src/linux-hardening/processes-crontab-systemd-dbus/payloads-to-execute.md` · payloads to execute
+- `hacktricks/src/linux-hardening/processes-crontab-systemd-dbus/process-enumeration-and-service-paths.md` · process enumeration and service paths
+- `hacktricks/src/linux-hardening/software-information/README.md` · software information
+- `hacktricks/src/linux-hardening/software-information/android-rooting-frameworks-manager-auth-bypass-syscall-hook.md` · android rooting frameworks manager auth bypass syscall hook
+- `hacktricks/src/linux-hardening/software-information/databases-and-secret-material.md` · databases and secret material
+- `hacktricks/src/linux-hardening/software-information/electron-cef-chromium-debugger-abuse.md` · electron cef chromium debugger abuse
+- `hacktricks/src/linux-hardening/software-information/freeipa-pentesting.md` · freeipa pentesting
+- `hacktricks/src/linux-hardening/software-information/local-web-and-auth-services.md` · local web and auth services
+- `hacktricks/src/linux-hardening/software-information/logstash.md` · logstash
+- `hacktricks/src/linux-hardening/software-information/pam-pluggable-authentication-modules.md` · pam pluggable authentication modules
+- `hacktricks/src/linux-hardening/software-information/splunk-lpe-and-persistence.md` · splunk lpe and persistence
+- `hacktricks/src/linux-hardening/user-information/README.md` · user information
+- `hacktricks/src/linux-hardening/user-information/euid-ruid-suid.md` · euid ruid suid
+- `hacktricks/src/linux-hardening/user-information/interesting-groups-linux-pe/README.md` · interesting groups linux pe
+- `hacktricks/src/linux-hardening/user-information/interesting-groups-linux-pe/lxd-privilege-escalation.md` · lxd privilege escalation
+- `hacktricks/src/linux-hardening/user-information/linux-active-directory.md` · linux active directory
+- `hacktricks/src/linux-hardening/user-information/ssh-forward-agent-exploitation.md` · ssh forward agent exploitation
+- `hacktricks/src/linux-hardening/user-information/user-and-session-triage.md` · user and session triage
+
+## Windows y directorio
+
+Entradas disponibles: **109**.
+
+- `hacktricks/src/windows-hardening/active-directory-methodology/README.md` · active directory methodology
+- `hacktricks/src/windows-hardening/active-directory-methodology/TimeRoasting.md` · TimeRoasting
+- `hacktricks/src/windows-hardening/active-directory-methodology/abusing-ad-mssql.md` · abusing ad mssql
+- `hacktricks/src/windows-hardening/active-directory-methodology/acl-persistence-abuse/BadSuccessor.md` · BadSuccessor
+- `hacktricks/src/windows-hardening/active-directory-methodology/acl-persistence-abuse/README.md` · acl persistence abuse
+- `hacktricks/src/windows-hardening/active-directory-methodology/acl-persistence-abuse/shadow-credentials.md` · shadow credentials
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/README.md` · ad certificates
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/account-persistence.md` · account persistence
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/certificate-theft.md` · certificate theft
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/domain-escalation.md` · domain escalation
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/domain-persistence.md` · domain persistence
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates.md` · ad certificates
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-dns-records.md` · ad dns records
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-dynamic-objects-anti-forensics.md` · ad dynamic objects anti forensics
+- `hacktricks/src/windows-hardening/active-directory-methodology/ad-information-in-printers.md` · ad information in printers
+- `hacktricks/src/windows-hardening/active-directory-methodology/adws-enumeration.md` · adws enumeration
+- `hacktricks/src/windows-hardening/active-directory-methodology/asreproast.md` · asreproast
+- `hacktricks/src/windows-hardening/active-directory-methodology/badsuccessor-dmsa-migration-abuse.md` · badsuccessor dmsa migration abuse
+- `hacktricks/src/windows-hardening/active-directory-methodology/bloodhound.md` · bloodhound
+- `hacktricks/src/windows-hardening/active-directory-methodology/constrained-delegation.md` · constrained delegation
+- `hacktricks/src/windows-hardening/active-directory-methodology/custom-ssp.md` · custom ssp
+- `hacktricks/src/windows-hardening/active-directory-methodology/dcshadow.md` · dcshadow
+- `hacktricks/src/windows-hardening/active-directory-methodology/dcsync.md` · dcsync
+- `hacktricks/src/windows-hardening/active-directory-methodology/diamond-ticket.md` · diamond ticket
+- `hacktricks/src/windows-hardening/active-directory-methodology/dsrm-credentials.md` · dsrm credentials
+- `hacktricks/src/windows-hardening/active-directory-methodology/external-forest-domain-one-way-outbound.md` · external forest domain one way outbound
+- `hacktricks/src/windows-hardening/active-directory-methodology/external-forest-domain-oneway-inbound.md` · external forest domain oneway inbound
+- `hacktricks/src/windows-hardening/active-directory-methodology/golden-dmsa-gmsa.md` · golden dmsa gmsa
+- `hacktricks/src/windows-hardening/active-directory-methodology/golden-ticket.md` · golden ticket
+- `hacktricks/src/windows-hardening/active-directory-methodology/kerberoast.md` · kerberoast
+- `hacktricks/src/windows-hardening/active-directory-methodology/kerberos-authentication.md` · kerberos authentication
+- `hacktricks/src/windows-hardening/active-directory-methodology/kerberos-double-hop-problem.md` · kerberos double hop problem
+- `hacktricks/src/windows-hardening/active-directory-methodology/lansweeper-security.md` · lansweeper security
+- `hacktricks/src/windows-hardening/active-directory-methodology/laps.md` · laps
+- `hacktricks/src/windows-hardening/active-directory-methodology/ldap-signing-and-channel-binding.md` · ldap signing and channel binding
+- `hacktricks/src/windows-hardening/active-directory-methodology/over-pass-the-hash-pass-the-key.md` · over pass the hash pass the key
+- `hacktricks/src/windows-hardening/active-directory-methodology/pass-the-ticket.md` · pass the ticket
+- `hacktricks/src/windows-hardening/active-directory-methodology/password-spraying.md` · password spraying
+- `hacktricks/src/windows-hardening/active-directory-methodology/printers-spooler-service-abuse.md` · printers spooler service abuse
+- `hacktricks/src/windows-hardening/active-directory-methodology/printnightmare.md` · printnightmare
+- `hacktricks/src/windows-hardening/active-directory-methodology/privileged-groups-and-token-privileges.md` · privileged groups and token privileges
+- `hacktricks/src/windows-hardening/active-directory-methodology/rdp-sessions-abuse.md` · rdp sessions abuse
+- `hacktricks/src/windows-hardening/active-directory-methodology/resource-based-constrained-delegation.md` · resource based constrained delegation
+- `hacktricks/src/windows-hardening/active-directory-methodology/sccm-management-point-relay-sql-policy-secrets.md` · sccm management point relay sql policy secrets
+- `hacktricks/src/windows-hardening/active-directory-methodology/security-descriptors.md` · security descriptors
+- `hacktricks/src/windows-hardening/active-directory-methodology/sid-history-injection.md` · sid history injection
+- `hacktricks/src/windows-hardening/active-directory-methodology/silver-ticket.md` · silver ticket
+- `hacktricks/src/windows-hardening/active-directory-methodology/skeleton-key.md` · skeleton key
+- `hacktricks/src/windows-hardening/active-directory-methodology/unconstrained-delegation.md` · unconstrained delegation
+- `hacktricks/src/windows-hardening/authentication-credentials-uac-and-efs/README.md` · authentication credentials uac and efs
+- `hacktricks/src/windows-hardening/authentication-credentials-uac-and-efs/uac-user-account-control.md` · uac user account control
+- `hacktricks/src/windows-hardening/authentication-credentials-uac-and-efs.md` · authentication credentials uac and efs
+- `hacktricks/src/windows-hardening/av-bypass.md` · av bypass
+- `hacktricks/src/windows-hardening/basic-cmd-for-pentesters.md` · basic cmd for pentesters
+- `hacktricks/src/windows-hardening/basic-powershell-for-pentesters/README.md` · basic powershell for pentesters
+- `hacktricks/src/windows-hardening/basic-powershell-for-pentesters/powerview.md` · powerview
+- `hacktricks/src/windows-hardening/checklist-windows-privilege-escalation.md` · checklist windows privilege escalation
+- `hacktricks/src/windows-hardening/cobalt-strike.md` · cobalt strike
+- `hacktricks/src/windows-hardening/lateral-movement/README.md` · lateral movement
+- `hacktricks/src/windows-hardening/lateral-movement/atexec.md` · atexec
+- `hacktricks/src/windows-hardening/lateral-movement/dcomexec.md` · dcomexec
+- `hacktricks/src/windows-hardening/lateral-movement/psexec-and-winexec.md` · psexec and winexec
+- `hacktricks/src/windows-hardening/lateral-movement/rdpexec.md` · rdpexec
+- `hacktricks/src/windows-hardening/lateral-movement/scmexec.md` · scmexec
+- `hacktricks/src/windows-hardening/lateral-movement/winrm.md` · winrm
+- `hacktricks/src/windows-hardening/lateral-movement/wmiexec.md` · wmiexec
+- `hacktricks/src/windows-hardening/mythic.md` · mythic
+- `hacktricks/src/windows-hardening/ntlm/README.md` · ntlm
+- `hacktricks/src/windows-hardening/ntlm/places-to-steal-ntlm-creds.md` · places to steal ntlm creds
+- `hacktricks/src/windows-hardening/protocol-handler-shell-execute-abuse.md` · protocol handler shell execute abuse
+- `hacktricks/src/windows-hardening/stealing-credentials/README.md` · stealing credentials
+- `hacktricks/src/windows-hardening/stealing-credentials/credentials-mimikatz.md` · credentials mimikatz
+- `hacktricks/src/windows-hardening/stealing-credentials/credentials-protections.md` · credentials protections
+- `hacktricks/src/windows-hardening/stealing-credentials/wts-impersonator.md` · wts impersonator
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/README.md` · windows local privilege escalation
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/abusing-auto-updaters-and-ipc.md` · abusing auto updaters and ipc
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/access-tokens.md` · access tokens
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/acls-dacls-sacls-aces.md` · acls dacls sacls aces
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/appenddata-addsubdirectory-permission-over-service-registry.md` · appenddata addsubdirectory permission over service registry
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/arbitrary-kernel-rw-token-theft.md` · arbitrary kernel rw token theft
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/com-hijacking.md` · com hijacking
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/create-msi-with-wix.md` · create msi with wix
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/dll-hijacking/README.md` · dll hijacking
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/dll-hijacking/advanced-html-staged-dll-sideloading.md` · advanced html staged dll sideloading
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/dll-hijacking/windows-cpython-build-landmark-sys-path-hijacking.md` · windows cpython build landmark sys path hijacking
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/dll-hijacking/writable-sys-path-dll-hijacking-privesc.md` · writable sys path dll hijacking privesc
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/dpapi-extracting-passwords.md` · dpapi extracting passwords
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/from-high-integrity-to-system-with-name-pipes.md` · from high integrity to system with name pipes
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/integrity-levels.md` · integrity levels
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/juicypotato.md` · juicypotato
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/kernel-race-condition-object-manager-slowdown.md` · kernel race condition object manager slowdown
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation.md` · leaked handle exploitation
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/local-ntlm-reflection-via-smb-arbitrary-port.md` · local ntlm reflection via smb arbitrary port
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/msi-wrapper.md` · msi wrapper
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/named-pipe-client-impersonation.md` · named pipe client impersonation
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/notepad-plus-plus-plugin-autoload-persistence.md` · notepad plus plus plugin autoload persistence
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens.md` · privilege escalation abusing tokens
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/privilege-escalation-with-autorun-binaries.md` · privilege escalation with autorun binaries
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/roguepotato-and-printspoofer.md` · roguepotato and printspoofer
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/secure-desktop-accessibility-registry-propagation-regpwn.md` · secure desktop accessibility registry propagation regpwn
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/sedebug-+-seimpersonate-copy-token.md` · sedebug + seimpersonate copy token
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/seimpersonate-from-high-to-system.md` · seimpersonate from high to system
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/semanagevolume-perform-volume-maintenance-tasks.md` · semanagevolume perform volume maintenance tasks
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/service-triggers.md` · service triggers
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/telephony-tapsrv-arbitrary-dword-write-to-rce.md` · telephony tapsrv arbitrary dword write to rce
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/uiaccess-admin-protection-bypass.md` · uiaccess admin protection bypass
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/windows-c-payloads.md` · windows c payloads
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/windows-kernel-rootkits-and-dkom.md` · windows kernel rootkits and dkom
+- `hacktricks/src/windows-hardening/windows-local-privilege-escalation/windows-registry-hive-exploitation.md` · windows registry hive exploitation
+
+## Binarios
+
+Entradas disponibles: **105**.
+
+- `hacktricks/src/binary-exploitation/arbitrary-write-2-exec/README.md` · arbitrary write 2 exec
+- `hacktricks/src/binary-exploitation/arbitrary-write-2-exec/aw2exec-__malloc_hook.md` · aw2exec __malloc_hook
+- `hacktricks/src/binary-exploitation/arbitrary-write-2-exec/aw2exec-__printf_arginfo_table.md` · aw2exec __printf_arginfo_table
+- `hacktricks/src/binary-exploitation/arbitrary-write-2-exec/aw2exec-got-plt.md` · aw2exec got plt
+- `hacktricks/src/binary-exploitation/arbitrary-write-2-exec/aw2exec-sips-icc-profile.md` · aw2exec sips icc profile
+- `hacktricks/src/binary-exploitation/arbitrary-write-2-exec/www2exec-.dtors-and-.fini_array.md` · www2exec .dtors and .fini_array
+- `hacktricks/src/binary-exploitation/arbitrary-write-2-exec/www2exec-atexit.md` · www2exec atexit
+- `hacktricks/src/binary-exploitation/array-indexing.md` · array indexing
+- `hacktricks/src/binary-exploitation/basic-stack-binary-exploitation-methodology/README.md` · basic stack binary exploitation methodology
+- `hacktricks/src/binary-exploitation/basic-stack-binary-exploitation-methodology/elf-tricks.md` · elf tricks
+- `hacktricks/src/binary-exploitation/basic-stack-binary-exploitation-methodology/tools/README.md` · tools
+- `hacktricks/src/binary-exploitation/basic-stack-binary-exploitation-methodology/tools/pwntools.md` · pwntools
+- `hacktricks/src/binary-exploitation/chrome-exploiting.md` · chrome exploiting
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/README.md` · common binary protections and bypasses
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/aslr/README.md` · aslr
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/aslr/ret2plt.md` · ret2plt
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/aslr/ret2ret.md` · ret2ret
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack.md` · cet and shadow stack
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/libc-protections.md` · libc protections
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/memory-tagging-extension-mte.md` · memory tagging extension mte
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/no-exec-nx.md` · no exec nx
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/pie/README.md` · pie
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/pie/bypassing-canary-and-pie.md` · bypassing canary and pie
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/relro.md` · relro
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/stack-canaries/README.md` · stack canaries
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/stack-canaries/bf-forked-stack-canaries.md` · bf forked stack canaries
+- `hacktricks/src/binary-exploitation/common-binary-protections-and-bypasses/stack-canaries/print-stack-canary.md` · print stack canary
+- `hacktricks/src/binary-exploitation/common-exploiting-problems-unsafe-relocation-fixups.md` · common exploiting problems unsafe relocation fixups
+- `hacktricks/src/binary-exploitation/common-exploiting-problems.md` · common exploiting problems
+- `hacktricks/src/binary-exploitation/format-strings/README.md` · format strings
+- `hacktricks/src/binary-exploitation/format-strings/format-strings-arbitrary-read-example.md` · format strings arbitrary read example
+- `hacktricks/src/binary-exploitation/format-strings/format-strings-template.md` · format strings template
+- `hacktricks/src/binary-exploitation/freebsd-ptrace-rfi-vm_map-prot_exec-bypass-ps5.md` · freebsd ptrace rfi vm_map prot_exec bypass ps5
+- `hacktricks/src/binary-exploitation/integer-overflow-and-underflow.md` · integer overflow and underflow
+- `hacktricks/src/binary-exploitation/ios-exploiting/CVE-2020-27950-mach_msg_trailer_t.md` · CVE 2020 27950 mach_msg_trailer_t
+- `hacktricks/src/binary-exploitation/ios-exploiting/CVE-2021-30807-IOMobileFrameBuffer.md` · CVE 2021 30807 IOMobileFrameBuffer
+- `hacktricks/src/binary-exploitation/ios-exploiting/README.md` · ios exploiting
+- `hacktricks/src/binary-exploitation/ios-exploiting/imessage-media-parser-zero-click-coreaudio-pac-bypass.md` · imessage media parser zero click coreaudio pac bypass
+- `hacktricks/src/binary-exploitation/ios-exploiting/ios-corellium.md` · ios corellium
+- `hacktricks/src/binary-exploitation/ios-exploiting/ios-example-heap-exploit.md` · ios example heap exploit
+- `hacktricks/src/binary-exploitation/ios-exploiting/ios-physical-uaf-iosurface.md` · ios physical uaf iosurface
+- `hacktricks/src/binary-exploitation/ios-exploiting/webkit-dfg-store-barrier-uaf-angle-oob.md` · webkit dfg store barrier uaf angle oob
+- `hacktricks/src/binary-exploitation/ios-exploiting/xnu-vm-map-cow-vnode-toctou.md` · xnu vm map cow vnode toctou
+- `hacktricks/src/binary-exploitation/libc-heap/README.md` · libc heap
+- `hacktricks/src/binary-exploitation/libc-heap/bins-and-memory-allocations.md` · bins and memory allocations
+- `hacktricks/src/binary-exploitation/libc-heap/double-free.md` · double free
+- `hacktricks/src/binary-exploitation/libc-heap/fast-bin-attack.md` · fast bin attack
+- `hacktricks/src/binary-exploitation/libc-heap/gnu-obstack-function-pointer-hijack.md` · gnu obstack function pointer hijack
+- `hacktricks/src/binary-exploitation/libc-heap/heap-memory-functions/README.md` · heap memory functions
+- `hacktricks/src/binary-exploitation/libc-heap/heap-memory-functions/free.md` · free
+- `hacktricks/src/binary-exploitation/libc-heap/heap-memory-functions/heap-functions-security-checks.md` · heap functions security checks
+- `hacktricks/src/binary-exploitation/libc-heap/heap-memory-functions/malloc-and-sysmalloc.md` · malloc and sysmalloc
+- `hacktricks/src/binary-exploitation/libc-heap/heap-memory-functions/unlink.md` · unlink
+- `hacktricks/src/binary-exploitation/libc-heap/heap-overflow.md` · heap overflow
+- `hacktricks/src/binary-exploitation/libc-heap/house-of-einherjar.md` · house of einherjar
+- `hacktricks/src/binary-exploitation/libc-heap/house-of-force.md` · house of force
+- `hacktricks/src/binary-exploitation/libc-heap/house-of-lore.md` · house of lore
+- `hacktricks/src/binary-exploitation/libc-heap/house-of-orange.md` · house of orange
+- `hacktricks/src/binary-exploitation/libc-heap/house-of-rabbit.md` · house of rabbit
+- `hacktricks/src/binary-exploitation/libc-heap/house-of-roman.md` · house of roman
+- `hacktricks/src/binary-exploitation/libc-heap/house-of-spirit.md` · house of spirit
+- `hacktricks/src/binary-exploitation/libc-heap/large-bin-attack.md` · large bin attack
+- `hacktricks/src/binary-exploitation/libc-heap/off-by-one-overflow.md` · off by one overflow
+- `hacktricks/src/binary-exploitation/libc-heap/overwriting-a-freed-chunk.md` · overwriting a freed chunk
+- `hacktricks/src/binary-exploitation/libc-heap/tcache-bin-attack.md` · tcache bin attack
+- `hacktricks/src/binary-exploitation/libc-heap/unlink-attack.md` · unlink attack
+- `hacktricks/src/binary-exploitation/libc-heap/unsorted-bin-attack.md` · unsorted bin attack
+- `hacktricks/src/binary-exploitation/libc-heap/use-after-free/README.md` · use after free
+- `hacktricks/src/binary-exploitation/libc-heap/use-after-free/first-fit.md` · first fit
+- `hacktricks/src/binary-exploitation/libc-heap/virtualbox-slirp-nat-packet-heap-exploitation.md` · virtualbox slirp nat packet heap exploitation
+- `hacktricks/src/binary-exploitation/linux-kernel-exploitation/adreno-a7xx-sds-rb-priv-bypass-gpu-smmu-kernel-rw.md` · adreno a7xx sds rb priv bypass gpu smmu kernel rw
+- `hacktricks/src/binary-exploitation/linux-kernel-exploitation/af-unix-msg-oob-uaf-skb-primitives.md` · af unix msg oob uaf skb primitives
+- `hacktricks/src/binary-exploitation/linux-kernel-exploitation/arm64-static-linear-map-kaslr-bypass.md` · arm64 static linear map kaslr bypass
+- `hacktricks/src/binary-exploitation/linux-kernel-exploitation/futex-pi-uaf-pipe-buffer-workqueue-usermodehelper.md` · futex pi uaf pipe buffer workqueue usermodehelper
+- `hacktricks/src/binary-exploitation/linux-kernel-exploitation/ksmbd-streams_xattr-oob-write-cve-2025-37947.md` · ksmbd streams_xattr oob write cve 2025 37947
+- `hacktricks/src/binary-exploitation/linux-kernel-exploitation/pixel-bigwave-bigo-job-timeout-uaf-kernel-write.md` · pixel bigwave bigo job timeout uaf kernel write
+- `hacktricks/src/binary-exploitation/linux-kernel-exploitation/posix-cpu-timers-toctou-cve-2025-38352.md` · posix cpu timers toctou cve 2025 38352
+- `hacktricks/src/binary-exploitation/qemu-kvm-vm-escape-chains.md` · qemu kvm vm escape chains
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/README.md` · rop return oriented programing
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/brop-blind-return-oriented-programming.md` · brop blind return oriented programming
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2csu.md` · ret2csu
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2dlresolve.md` · ret2dlresolve
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2esp-ret2reg.md` · ret2esp ret2reg
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2lib/README.md` · ret2lib
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2lib/one-gadget.md` · one gadget
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2lib/ret2lib-printf-leak-arm64.md` · ret2lib printf leak arm64
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2lib/rop-leaking-libc-address/README.md` · rop leaking libc address
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2lib/rop-leaking-libc-address/rop-leaking-libc-template.md` · rop leaking libc template
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/ret2vdso.md` · ret2vdso
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/rop-syscall-execv/README.md` · rop syscall execv
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/rop-syscall-execv/ret2syscall-arm64.md` · ret2syscall arm64
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/srop-sigreturn-oriented-programming/README.md` · srop sigreturn oriented programming
+- `hacktricks/src/binary-exploitation/rop-return-oriented-programing/srop-sigreturn-oriented-programming/srop-arm64.md` · srop arm64
+- `hacktricks/src/binary-exploitation/stack-overflow/README.md` · stack overflow
+- `hacktricks/src/binary-exploitation/stack-overflow/pointer-redirecting.md` · pointer redirecting
+- `hacktricks/src/binary-exploitation/stack-overflow/ret2win/README.md` · ret2win
+- `hacktricks/src/binary-exploitation/stack-overflow/ret2win/ret2win-arm64.md` · ret2win arm64
+- `hacktricks/src/binary-exploitation/stack-overflow/stack-pivoting.md` · stack pivoting
+- `hacktricks/src/binary-exploitation/stack-overflow/stack-shellcode/README.md` · stack shellcode
+- `hacktricks/src/binary-exploitation/stack-overflow/stack-shellcode/stack-shellcode-arm64.md` · stack shellcode arm64
+- `hacktricks/src/binary-exploitation/stack-overflow/uninitialized-variables.md` · uninitialized variables
+- `hacktricks/src/binary-exploitation/stack-overflow/windows-seh-overflow.md` · windows seh overflow
+- `hacktricks/src/binary-exploitation/vmware-workstation-pvscsi-lfh-escape.md` · vmware workstation pvscsi lfh escape
+- `hacktricks/src/binary-exploitation/windows-exploiting-basic-guide-oscp-lvl.md` · windows exploiting basic guide oscp lvl
+- `hacktricks/src/binary-exploitation/windows-vectored-overloading.md` · windows vectored overloading
+
+## Hardware y firmware
+
+Entradas disponibles: **9**.
+
+- `hacktricks/src/hardware-physical-access/escaping-from-gui-applications.md` · escaping from gui applications
+- `hacktricks/src/hardware-physical-access/firmware-analysis/README.md` · firmware analysis
+- `hacktricks/src/hardware-physical-access/firmware-analysis/android-mediatek-secure-boot-bl2_ext-bypass-el3.md` · android mediatek secure boot bl2_ext bypass el3
+- `hacktricks/src/hardware-physical-access/firmware-analysis/bootloader-testing.md` · bootloader testing
+- `hacktricks/src/hardware-physical-access/firmware-analysis/firmware-integrity.md` · firmware integrity
+- `hacktricks/src/hardware-physical-access/firmware-analysis/mediatek-xflash-carbonara-da2-hash-bypass.md` · mediatek xflash carbonara da2 hash bypass
+- `hacktricks/src/hardware-physical-access/firmware-analysis/synology-encrypted-archive-decryption.md` · synology encrypted archive decryption
+- `hacktricks/src/hardware-physical-access/firmware-analysis/uefi-ifr-nvram-security-setting-patching.md` · uefi ifr nvram security setting patching
+- `hacktricks/src/hardware-physical-access/physical-attacks.md` · physical attacks
